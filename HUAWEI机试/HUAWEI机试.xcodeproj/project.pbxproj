@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04AF5EDA2418743B00369266 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AF5ED92418743B00369266 /* AppDelegate.swift */; };
+		04AF5EDC2418743B00369266 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AF5EDB2418743B00369266 /* SceneDelegate.swift */; };
+		04AF5EDE2418743B00369266 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AF5EDD2418743B00369266 /* ViewController.swift */; };
+		04AF5EE12418743B00369266 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04AF5EDF2418743B00369266 /* Main.storyboard */; };
+		04AF5EE32418743C00369266 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04AF5EE22418743C00369266 /* Assets.xcassets */; };
+		04AF5EE62418743C00369266 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04AF5EE42418743C00369266 /* LaunchScreen.storyboard */; };
+		04AF5EF12418743C00369266 /* HUAWEI__Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AF5EF02418743C00369266 /* HUAWEI__Tests.swift */; };
+		04AF5EFC2418743D00369266 /* HUAWEI__UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AF5EFB2418743D00369266 /* HUAWEI__UITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04AF5EED2418743C00369266 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04AF5ECE2418743B00369266 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04AF5ED52418743B00369266;
+			remoteInfo = "HUAWEI机试";
+		};
+		04AF5EF82418743D00369266 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04AF5ECE2418743B00369266 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04AF5ED52418743B00369266;
+			remoteInfo = "HUAWEI机试";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04AF5ED62418743B00369266 /* HUAWEI机试.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HUAWEI机试.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04AF5ED92418743B00369266 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		04AF5EDB2418743B00369266 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		04AF5EDD2418743B00369266 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		04AF5EE02418743B00369266 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		04AF5EE22418743C00369266 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04AF5EE52418743C00369266 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		04AF5EE72418743C00369266 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04AF5EEC2418743C00369266 /* HUAWEI机试Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HUAWEI机试Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04AF5EF02418743C00369266 /* HUAWEI__Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUAWEI__Tests.swift; sourceTree = "<group>"; };
+		04AF5EF22418743C00369266 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04AF5EF72418743D00369266 /* HUAWEI机试UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HUAWEI机试UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04AF5EFB2418743D00369266 /* HUAWEI__UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUAWEI__UITests.swift; sourceTree = "<group>"; };
+		04AF5EFD2418743D00369266 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04AF5ED32418743B00369266 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04AF5EE92418743C00369266 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04AF5EF42418743D00369266 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04AF5ECD2418743B00369266 = {
+			isa = PBXGroup;
+			children = (
+				04AF5ED82418743B00369266 /* HUAWEI机试 */,
+				04AF5EEF2418743C00369266 /* HUAWEI机试Tests */,
+				04AF5EFA2418743D00369266 /* HUAWEI机试UITests */,
+				04AF5ED72418743B00369266 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		04AF5ED72418743B00369266 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04AF5ED62418743B00369266 /* HUAWEI机试.app */,
+				04AF5EEC2418743C00369266 /* HUAWEI机试Tests.xctest */,
+				04AF5EF72418743D00369266 /* HUAWEI机试UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04AF5ED82418743B00369266 /* HUAWEI机试 */ = {
+			isa = PBXGroup;
+			children = (
+				04AF5ED92418743B00369266 /* AppDelegate.swift */,
+				04AF5EDB2418743B00369266 /* SceneDelegate.swift */,
+				04AF5EDD2418743B00369266 /* ViewController.swift */,
+				04AF5EDF2418743B00369266 /* Main.storyboard */,
+				04AF5EE22418743C00369266 /* Assets.xcassets */,
+				04AF5EE42418743C00369266 /* LaunchScreen.storyboard */,
+				04AF5EE72418743C00369266 /* Info.plist */,
+			);
+			path = "HUAWEI机试";
+			sourceTree = "<group>";
+		};
+		04AF5EEF2418743C00369266 /* HUAWEI机试Tests */ = {
+			isa = PBXGroup;
+			children = (
+				04AF5EF02418743C00369266 /* HUAWEI__Tests.swift */,
+				04AF5EF22418743C00369266 /* Info.plist */,
+			);
+			path = "HUAWEI机试Tests";
+			sourceTree = "<group>";
+		};
+		04AF5EFA2418743D00369266 /* HUAWEI机试UITests */ = {
+			isa = PBXGroup;
+			children = (
+				04AF5EFB2418743D00369266 /* HUAWEI__UITests.swift */,
+				04AF5EFD2418743D00369266 /* Info.plist */,
+			);
+			path = "HUAWEI机试UITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04AF5ED52418743B00369266 /* HUAWEI机试 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04AF5F002418743D00369266 /* Build configuration list for PBXNativeTarget "HUAWEI机试" */;
+			buildPhases = (
+				04AF5ED22418743B00369266 /* Sources */,
+				04AF5ED32418743B00369266 /* Frameworks */,
+				04AF5ED42418743B00369266 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HUAWEI机试";
+			productName = "HUAWEI机试";
+			productReference = 04AF5ED62418743B00369266 /* HUAWEI机试.app */;
+			productType = "com.apple.product-type.application";
+		};
+		04AF5EEB2418743C00369266 /* HUAWEI机试Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04AF5F032418743D00369266 /* Build configuration list for PBXNativeTarget "HUAWEI机试Tests" */;
+			buildPhases = (
+				04AF5EE82418743C00369266 /* Sources */,
+				04AF5EE92418743C00369266 /* Frameworks */,
+				04AF5EEA2418743C00369266 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04AF5EEE2418743C00369266 /* PBXTargetDependency */,
+			);
+			name = "HUAWEI机试Tests";
+			productName = "HUAWEI机试Tests";
+			productReference = 04AF5EEC2418743C00369266 /* HUAWEI机试Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		04AF5EF62418743D00369266 /* HUAWEI机试UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04AF5F062418743D00369266 /* Build configuration list for PBXNativeTarget "HUAWEI机试UITests" */;
+			buildPhases = (
+				04AF5EF32418743D00369266 /* Sources */,
+				04AF5EF42418743D00369266 /* Frameworks */,
+				04AF5EF52418743D00369266 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04AF5EF92418743D00369266 /* PBXTargetDependency */,
+			);
+			name = "HUAWEI机试UITests";
+			productName = "HUAWEI机试UITests";
+			productReference = 04AF5EF72418743D00369266 /* HUAWEI机试UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04AF5ECE2418743B00369266 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = TLLTD;
+				TargetAttributes = {
+					04AF5ED52418743B00369266 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					04AF5EEB2418743C00369266 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 04AF5ED52418743B00369266;
+					};
+					04AF5EF62418743D00369266 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 04AF5ED52418743B00369266;
+					};
+				};
+			};
+			buildConfigurationList = 04AF5ED12418743B00369266 /* Build configuration list for PBXProject "HUAWEI机试" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 04AF5ECD2418743B00369266;
+			productRefGroup = 04AF5ED72418743B00369266 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04AF5ED52418743B00369266 /* HUAWEI机试 */,
+				04AF5EEB2418743C00369266 /* HUAWEI机试Tests */,
+				04AF5EF62418743D00369266 /* HUAWEI机试UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04AF5ED42418743B00369266 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04AF5EE62418743C00369266 /* LaunchScreen.storyboard in Resources */,
+				04AF5EE32418743C00369266 /* Assets.xcassets in Resources */,
+				04AF5EE12418743B00369266 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04AF5EEA2418743C00369266 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04AF5EF52418743D00369266 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04AF5ED22418743B00369266 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04AF5EDE2418743B00369266 /* ViewController.swift in Sources */,
+				04AF5EDA2418743B00369266 /* AppDelegate.swift in Sources */,
+				04AF5EDC2418743B00369266 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04AF5EE82418743C00369266 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04AF5EF12418743C00369266 /* HUAWEI__Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04AF5EF32418743D00369266 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04AF5EFC2418743D00369266 /* HUAWEI__UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04AF5EEE2418743C00369266 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04AF5ED52418743B00369266 /* HUAWEI机试 */;
+			targetProxy = 04AF5EED2418743C00369266 /* PBXContainerItemProxy */;
+		};
+		04AF5EF92418743D00369266 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04AF5ED52418743B00369266 /* HUAWEI机试 */;
+			targetProxy = 04AF5EF82418743D00369266 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		04AF5EDF2418743B00369266 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04AF5EE02418743B00369266 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		04AF5EE42418743C00369266 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04AF5EE52418743C00369266 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		04AF5EFE2418743D00369266 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		04AF5EFF2418743D00369266 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		04AF5F012418743D00369266 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LPF3349M6Q;
+				INFOPLIST_FILE = "HUAWEI机试/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "TLTech.HUAWEI--";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		04AF5F022418743D00369266 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LPF3349M6Q;
+				INFOPLIST_FILE = "HUAWEI机试/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "TLTech.HUAWEI--";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		04AF5F042418743D00369266 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LPF3349M6Q;
+				INFOPLIST_FILE = "HUAWEI机试Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "TLTech.HUAWEI--Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HUAWEI机试.app/HUAWEI机试";
+			};
+			name = Debug;
+		};
+		04AF5F052418743D00369266 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LPF3349M6Q;
+				INFOPLIST_FILE = "HUAWEI机试Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "TLTech.HUAWEI--Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HUAWEI机试.app/HUAWEI机试";
+			};
+			name = Release;
+		};
+		04AF5F072418743D00369266 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LPF3349M6Q;
+				INFOPLIST_FILE = "HUAWEI机试UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "TLTech.HUAWEI--UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "HUAWEI机试";
+			};
+			name = Debug;
+		};
+		04AF5F082418743D00369266 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LPF3349M6Q;
+				INFOPLIST_FILE = "HUAWEI机试UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "TLTech.HUAWEI--UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "HUAWEI机试";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04AF5ED12418743B00369266 /* Build configuration list for PBXProject "HUAWEI机试" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04AF5EFE2418743D00369266 /* Debug */,
+				04AF5EFF2418743D00369266 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04AF5F002418743D00369266 /* Build configuration list for PBXNativeTarget "HUAWEI机试" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04AF5F012418743D00369266 /* Debug */,
+				04AF5F022418743D00369266 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04AF5F032418743D00369266 /* Build configuration list for PBXNativeTarget "HUAWEI机试Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04AF5F042418743D00369266 /* Debug */,
+				04AF5F052418743D00369266 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04AF5F062418743D00369266 /* Build configuration list for PBXNativeTarget "HUAWEI机试UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04AF5F072418743D00369266 /* Debug */,
+				04AF5F082418743D00369266 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 04AF5ECE2418743B00369266 /* Project object */;
+}

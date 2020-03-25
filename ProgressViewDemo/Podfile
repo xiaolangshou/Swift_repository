@@ -1,0 +1,14 @@
+platform :ios, ‘9.0’
+use_frameworks!
+inhibit_all_warnings!
+
+target 'ProgressViewDemo' do
+    pod 'SnapKit'
+    pod 'RxSwift'
+    pod 'RxCocoa'
+end
+
+
+
+
+

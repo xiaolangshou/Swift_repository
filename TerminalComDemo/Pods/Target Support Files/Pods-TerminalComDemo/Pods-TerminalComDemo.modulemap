@@ -1,0 +1,6 @@
+framework module Pods_TerminalComDemo {
+  umbrella header "Pods-TerminalComDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}

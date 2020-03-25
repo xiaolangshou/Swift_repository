@@ -1,0 +1,20 @@
+platform :ios, ‘9.0’
+use_frameworks!
+inhibit_all_warnings!
+
+target 'XMLParseDemo' do
+    pod 'SnapKit'
+    pod 'Alamofire'
+    pod 'SwiftyJSON'
+    pod 'YYKit'
+    pod 'ObjectMapper'
+    pod 'SwiftyXMLParser', :git => 'https://github.com/yahoojapan/SwiftyXMLParser.git'
+    pod 'RxSwift'
+    pod 'RxCocoa'
+    pod 'RxDataSources'
+end
+
+
+
+
+

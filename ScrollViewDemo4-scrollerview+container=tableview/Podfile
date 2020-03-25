@@ -1,0 +1,6 @@
+platform :ios, '9.0'
+use_frameworks!
+
+target 'ScrollViewDemo4' do
+    pod 'SnapKit'
+end

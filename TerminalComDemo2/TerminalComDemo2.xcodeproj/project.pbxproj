@@ -1,0 +1,686 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		042765E02216C36D00AB4ACA /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042765DF2216C36D00AB4ACA /* UIColor+Extension.swift */; };
+		04CF9DC722151EFE003DBB02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF9DC622151EFE003DBB02 /* AppDelegate.swift */; };
+		04CF9DC922151EFE003DBB02 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF9DC822151EFE003DBB02 /* ViewController.swift */; };
+		04CF9DCC22151EFE003DBB02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CF9DCA22151EFE003DBB02 /* Main.storyboard */; };
+		04CF9DCE22151EFF003DBB02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04CF9DCD22151EFF003DBB02 /* Assets.xcassets */; };
+		04CF9DD122151EFF003DBB02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CF9DCF22151EFF003DBB02 /* LaunchScreen.storyboard */; };
+		04CF9DDC22151EFF003DBB02 /* TerminalComDemo2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF9DDB22151EFF003DBB02 /* TerminalComDemo2Tests.swift */; };
+		04CF9DE722151EFF003DBB02 /* TerminalComDemo2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF9DE622151EFF003DBB02 /* TerminalComDemo2UITests.swift */; };
+		04CF9DF522152FC1003DBB02 /* ClientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF9DF422152FC1003DBB02 /* ClientViewController.swift */; };
+		04CF9DF722152FCC003DBB02 /* ServerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF9DF622152FCC003DBB02 /* ServerViewController.swift */; };
+		414102E22DD6E3A29680815B /* Pods_TerminalComDemo2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4873A3923CFD54D04F3062EA /* Pods_TerminalComDemo2.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04CF9DD822151EFF003DBB02 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04CF9DBB22151EFE003DBB02 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04CF9DC222151EFE003DBB02;
+			remoteInfo = TerminalComDemo2;
+		};
+		04CF9DE322151EFF003DBB02 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04CF9DBB22151EFE003DBB02 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04CF9DC222151EFE003DBB02;
+			remoteInfo = TerminalComDemo2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		042765DF2216C36D00AB4ACA /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		04CF9DC322151EFE003DBB02 /* TerminalComDemo2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TerminalComDemo2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		04CF9DC622151EFE003DBB02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		04CF9DC822151EFE003DBB02 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		04CF9DCB22151EFE003DBB02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		04CF9DCD22151EFF003DBB02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04CF9DD022151EFF003DBB02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		04CF9DD222151EFF003DBB02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04CF9DD722151EFF003DBB02 /* TerminalComDemo2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TerminalComDemo2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04CF9DDB22151EFF003DBB02 /* TerminalComDemo2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminalComDemo2Tests.swift; sourceTree = "<group>"; };
+		04CF9DDD22151EFF003DBB02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04CF9DE222151EFF003DBB02 /* TerminalComDemo2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TerminalComDemo2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04CF9DE622151EFF003DBB02 /* TerminalComDemo2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminalComDemo2UITests.swift; sourceTree = "<group>"; };
+		04CF9DE822151EFF003DBB02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04CF9DF422152FC1003DBB02 /* ClientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientViewController.swift; sourceTree = "<group>"; };
+		04CF9DF622152FCC003DBB02 /* ServerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerViewController.swift; sourceTree = "<group>"; };
+		4873A3923CFD54D04F3062EA /* Pods_TerminalComDemo2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TerminalComDemo2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5EC3A4048418F76DDB03F1D /* Pods-TerminalComDemo2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TerminalComDemo2.release.xcconfig"; path = "Pods/Target Support Files/Pods-TerminalComDemo2/Pods-TerminalComDemo2.release.xcconfig"; sourceTree = "<group>"; };
+		F25395C10C6683E1CCC15F4F /* Pods-TerminalComDemo2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TerminalComDemo2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TerminalComDemo2/Pods-TerminalComDemo2.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04CF9DC022151EFE003DBB02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				414102E22DD6E3A29680815B /* Pods_TerminalComDemo2.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04CF9DD422151EFF003DBB02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04CF9DDF22151EFF003DBB02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04CF9DBA22151EFE003DBB02 = {
+			isa = PBXGroup;
+			children = (
+				04CF9DC522151EFE003DBB02 /* TerminalComDemo2 */,
+				04CF9DDA22151EFF003DBB02 /* TerminalComDemo2Tests */,
+				04CF9DE522151EFF003DBB02 /* TerminalComDemo2UITests */,
+				04CF9DC422151EFE003DBB02 /* Products */,
+				7C1D1FCD72836F7FBB8CE143 /* Pods */,
+				CC2D8602D5C4DA67B56A07DC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		04CF9DC422151EFE003DBB02 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04CF9DC322151EFE003DBB02 /* TerminalComDemo2.app */,
+				04CF9DD722151EFF003DBB02 /* TerminalComDemo2Tests.xctest */,
+				04CF9DE222151EFF003DBB02 /* TerminalComDemo2UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04CF9DC522151EFE003DBB02 /* TerminalComDemo2 */ = {
+			isa = PBXGroup;
+			children = (
+				04CF9DC622151EFE003DBB02 /* AppDelegate.swift */,
+				04CF9DC822151EFE003DBB02 /* ViewController.swift */,
+				04CF9DF422152FC1003DBB02 /* ClientViewController.swift */,
+				04CF9DF622152FCC003DBB02 /* ServerViewController.swift */,
+				04CF9DCA22151EFE003DBB02 /* Main.storyboard */,
+				04CF9DCD22151EFF003DBB02 /* Assets.xcassets */,
+				04CF9DCF22151EFF003DBB02 /* LaunchScreen.storyboard */,
+				04CF9DD222151EFF003DBB02 /* Info.plist */,
+				042765DF2216C36D00AB4ACA /* UIColor+Extension.swift */,
+			);
+			path = TerminalComDemo2;
+			sourceTree = "<group>";
+		};
+		04CF9DDA22151EFF003DBB02 /* TerminalComDemo2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				04CF9DDB22151EFF003DBB02 /* TerminalComDemo2Tests.swift */,
+				04CF9DDD22151EFF003DBB02 /* Info.plist */,
+			);
+			path = TerminalComDemo2Tests;
+			sourceTree = "<group>";
+		};
+		04CF9DE522151EFF003DBB02 /* TerminalComDemo2UITests */ = {
+			isa = PBXGroup;
+			children = (
+				04CF9DE622151EFF003DBB02 /* TerminalComDemo2UITests.swift */,
+				04CF9DE822151EFF003DBB02 /* Info.plist */,
+			);
+			path = TerminalComDemo2UITests;
+			sourceTree = "<group>";
+		};
+		7C1D1FCD72836F7FBB8CE143 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F25395C10C6683E1CCC15F4F /* Pods-TerminalComDemo2.debug.xcconfig */,
+				D5EC3A4048418F76DDB03F1D /* Pods-TerminalComDemo2.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CC2D8602D5C4DA67B56A07DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4873A3923CFD54D04F3062EA /* Pods_TerminalComDemo2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04CF9DC222151EFE003DBB02 /* TerminalComDemo2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04CF9DEB22151EFF003DBB02 /* Build configuration list for PBXNativeTarget "TerminalComDemo2" */;
+			buildPhases = (
+				02641701AEE865695281E25F /* [CP] Check Pods Manifest.lock */,
+				04CF9DBF22151EFE003DBB02 /* Sources */,
+				04CF9DC022151EFE003DBB02 /* Frameworks */,
+				04CF9DC122151EFE003DBB02 /* Resources */,
+				7A2C694FEDCF5618215F75EE /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TerminalComDemo2;
+			productName = TerminalComDemo2;
+			productReference = 04CF9DC322151EFE003DBB02 /* TerminalComDemo2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		04CF9DD622151EFF003DBB02 /* TerminalComDemo2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04CF9DEE22151EFF003DBB02 /* Build configuration list for PBXNativeTarget "TerminalComDemo2Tests" */;
+			buildPhases = (
+				04CF9DD322151EFF003DBB02 /* Sources */,
+				04CF9DD422151EFF003DBB02 /* Frameworks */,
+				04CF9DD522151EFF003DBB02 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04CF9DD922151EFF003DBB02 /* PBXTargetDependency */,
+			);
+			name = TerminalComDemo2Tests;
+			productName = TerminalComDemo2Tests;
+			productReference = 04CF9DD722151EFF003DBB02 /* TerminalComDemo2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		04CF9DE122151EFF003DBB02 /* TerminalComDemo2UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04CF9DF122151EFF003DBB02 /* Build configuration list for PBXNativeTarget "TerminalComDemo2UITests" */;
+			buildPhases = (
+				04CF9DDE22151EFF003DBB02 /* Sources */,
+				04CF9DDF22151EFF003DBB02 /* Frameworks */,
+				04CF9DE022151EFF003DBB02 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04CF9DE422151EFF003DBB02 /* PBXTargetDependency */,
+			);
+			name = TerminalComDemo2UITests;
+			productName = TerminalComDemo2UITests;
+			productReference = 04CF9DE222151EFF003DBB02 /* TerminalComDemo2UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04CF9DBB22151EFE003DBB02 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = TLLTD;
+				TargetAttributes = {
+					04CF9DC222151EFE003DBB02 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					04CF9DD622151EFF003DBB02 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 04CF9DC222151EFE003DBB02;
+					};
+					04CF9DE122151EFF003DBB02 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 04CF9DC222151EFE003DBB02;
+					};
+				};
+			};
+			buildConfigurationList = 04CF9DBE22151EFE003DBB02 /* Build configuration list for PBXProject "TerminalComDemo2" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 04CF9DBA22151EFE003DBB02;
+			productRefGroup = 04CF9DC422151EFE003DBB02 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04CF9DC222151EFE003DBB02 /* TerminalComDemo2 */,
+				04CF9DD622151EFF003DBB02 /* TerminalComDemo2Tests */,
+				04CF9DE122151EFF003DBB02 /* TerminalComDemo2UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04CF9DC122151EFE003DBB02 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04CF9DD122151EFF003DBB02 /* LaunchScreen.storyboard in Resources */,
+				04CF9DCE22151EFF003DBB02 /* Assets.xcassets in Resources */,
+				04CF9DCC22151EFE003DBB02 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04CF9DD522151EFF003DBB02 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04CF9DE022151EFF003DBB02 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		02641701AEE865695281E25F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TerminalComDemo2-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A2C694FEDCF5618215F75EE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TerminalComDemo2/Pods-TerminalComDemo2-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TerminalComDemo2/Pods-TerminalComDemo2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04CF9DBF22151EFE003DBB02 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04CF9DC922151EFE003DBB02 /* ViewController.swift in Sources */,
+				04CF9DC722151EFE003DBB02 /* AppDelegate.swift in Sources */,
+				04CF9DF522152FC1003DBB02 /* ClientViewController.swift in Sources */,
+				04CF9DF722152FCC003DBB02 /* ServerViewController.swift in Sources */,
+				042765E02216C36D00AB4ACA /* UIColor+Extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04CF9DD322151EFF003DBB02 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04CF9DDC22151EFF003DBB02 /* TerminalComDemo2Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04CF9DDE22151EFF003DBB02 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04CF9DE722151EFF003DBB02 /* TerminalComDemo2UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04CF9DD922151EFF003DBB02 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04CF9DC222151EFE003DBB02 /* TerminalComDemo2 */;
+			targetProxy = 04CF9DD822151EFF003DBB02 /* PBXContainerItemProxy */;
+		};
+		04CF9DE422151EFF003DBB02 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04CF9DC222151EFE003DBB02 /* TerminalComDemo2 */;
+			targetProxy = 04CF9DE322151EFF003DBB02 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		04CF9DCA22151EFE003DBB02 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04CF9DCB22151EFE003DBB02 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		04CF9DCF22151EFF003DBB02 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04CF9DD022151EFF003DBB02 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		04CF9DE922151EFF003DBB02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		04CF9DEA22151EFF003DBB02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		04CF9DEC22151EFF003DBB02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F25395C10C6683E1CCC15F4F /* Pods-TerminalComDemo2.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LPF3349M6Q;
+				INFOPLIST_FILE = TerminalComDemo2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TLTech.TerminalComDemo2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		04CF9DED22151EFF003DBB02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5EC3A4048418F76DDB03F1D /* Pods-TerminalComDemo2.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LPF3349M6Q;
+				INFOPLIST_FILE = TerminalComDemo2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TLTech.TerminalComDemo2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		04CF9DEF22151EFF003DBB02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LPF3349M6Q;
+				INFOPLIST_FILE = TerminalComDemo2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TLTech.TerminalComDemo2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TerminalComDemo2.app/TerminalComDemo2";
+			};
+			name = Debug;
+		};
+		04CF9DF022151EFF003DBB02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LPF3349M6Q;
+				INFOPLIST_FILE = TerminalComDemo2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TLTech.TerminalComDemo2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TerminalComDemo2.app/TerminalComDemo2";
+			};
+			name = Release;
+		};
+		04CF9DF222151EFF003DBB02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LPF3349M6Q;
+				INFOPLIST_FILE = TerminalComDemo2UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TLTech.TerminalComDemo2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TerminalComDemo2;
+			};
+			name = Debug;
+		};
+		04CF9DF322151EFF003DBB02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LPF3349M6Q;
+				INFOPLIST_FILE = TerminalComDemo2UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TLTech.TerminalComDemo2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TerminalComDemo2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04CF9DBE22151EFE003DBB02 /* Build configuration list for PBXProject "TerminalComDemo2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04CF9DE922151EFF003DBB02 /* Debug */,
+				04CF9DEA22151EFF003DBB02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04CF9DEB22151EFF003DBB02 /* Build configuration list for PBXNativeTarget "TerminalComDemo2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04CF9DEC22151EFF003DBB02 /* Debug */,
+				04CF9DED22151EFF003DBB02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04CF9DEE22151EFF003DBB02 /* Build configuration list for PBXNativeTarget "TerminalComDemo2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04CF9DEF22151EFF003DBB02 /* Debug */,
+				04CF9DF022151EFF003DBB02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04CF9DF122151EFF003DBB02 /* Build configuration list for PBXNativeTarget "TerminalComDemo2UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04CF9DF222151EFF003DBB02 /* Debug */,
+				04CF9DF322151EFF003DBB02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 04CF9DBB22151EFE003DBB02 /* Project object */;
+}

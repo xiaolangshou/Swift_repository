@@ -1,0 +1,66 @@
+//
+//  ViewController.swift
+//  LanguageChage
+//
+//  Created by 杜博 on 2017/1/5.
+//  Copyright © 2017年 杜博. All rights reserved.
+//
+
+import UIKit
+
+class ViewController: UIViewController {
+
+    var lab: UILabel?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setupView()
+    }
+    
+    func setupView() {
+        
+        view.backgroundColor = UIColor.white
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(ViewController.changeLanguage),
+                                               name: NSNotification.Name(rawValue: "LanguageChanged"),
+                                               object: nil)
+        
+        let button = UIButton(frame: CGRect(x:10, y:150, width:50, height:50))
+        button.addTarget(self, action: #selector(ViewController.changelangage1), for: .touchUpInside)
+        
+        self.view.addSubview(button)
+        button.backgroundColor = UIColor.red
+        
+        let button2 = UIButton(frame: CGRect(x:100, y:150, width:100, height:30))
+        button2.addTarget(self, action: #selector(ViewController.changelangage2), for: .touchUpInside)
+        
+        self.view.addSubview(button2)
+        button2.backgroundColor = UIColor.green
+        
+        lab = UILabel.init(frame: .init(x: 10, y: 100, width: 300, height: 20))
+        self.view.addSubview(lab!)
+        
+        lab?.text = LanguageHelper.getString(key: "GOOD_MORNING")
+    }
+    
+    func changeLanguage() -> Void {
+        
+        lab?.text = LanguageHelper.getString(key: "GOOD_MORNING")
+    }
+    
+    func changelangage2() -> Void {
+        
+        LanguageHelper.shareInstance.setLanguage(langeuage: "en")
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "LanguageChanged"), object: nil)
+    }
+    
+    func changelangage1() -> Void {
+        
+        LanguageHelper.shareInstance.setLanguage(langeuage: "zh-Hans")
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "LanguageChanged"), object: nil)
+    }
+
+}
+

@@ -1,0 +1,20 @@
+platform :ios, ‘9.0’
+use_frameworks!
+inhibit_all_warnings!
+
+target 'MVVMDemo' do
+    # 网络
+    pod 'Alamofire'
+    pod 'Kingfisher'
+    pod 'Starscream'
+    # JSON
+    pod 'SwiftyJSON'
+    # Reactive
+    pod 'RxSwift'
+    pod 'RxCocoa'
+    pod 'RxDataSources'
+    # UI
+    pod 'SnapKit'
+    pod 'MJRefresh'
+    pod 'Charts'
+end

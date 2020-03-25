@@ -1,0 +1,17 @@
+platform :ios, '9.0'
+use_frameworks!
+inhibit_all_warnings!
+
+target 'CameraDemo' do
+    # 网络
+    pod 'Alamofire'
+    pod 'CocoaAsyncSocket'
+    # JSON
+    pod 'SwiftyJSON'
+    # Reactive
+    pod 'RxSwift'
+    pod 'RxCocoa'
+    pod 'RxDataSources'
+    # UI
+    pod 'SnapKit'
+end

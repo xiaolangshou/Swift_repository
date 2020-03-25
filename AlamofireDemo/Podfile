@@ -1,0 +1,19 @@
+platform :ios, ‘9.0’
+use_frameworks!
+inhibit_all_warnings!
+
+target 'AlamofireDemo' do
+    # 网络
+    pod 'Alamofire'
+    pod 'Kingfisher'
+    # JSON
+    pod 'SwiftyJSON'
+    # Reactive
+    pod 'RxSwift'
+    pod 'RxCocoa'
+    pod 'RxDataSources'
+    # UI
+    pod 'SnapKit'
+    pod 'MJRefresh'
+    pod 'Charts'
+end

@@ -1,0 +1,6 @@
+framework module Pods_ProgressViewDemo {
+  umbrella header "Pods-ProgressViewDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}

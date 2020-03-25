@@ -1,0 +1,676 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04EFAC8B21AEA1A900985023 /* FeedLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFAC8A21AEA1A900985023 /* FeedLog.swift */; };
+		04EFAC8D21AEA3CF00985023 /* DB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFAC8C21AEA3CF00985023 /* DB.swift */; };
+		814BF6F923DFBDB078A270B6 /* Pods_SQliteDemo3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC606D6B55FCDAEDC8DC0B90 /* Pods_SQliteDemo3.framework */; };
+		CFAD018721AE3D0300BC3FAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAD018621AE3D0300BC3FAD /* AppDelegate.swift */; };
+		CFAD018921AE3D0300BC3FAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAD018821AE3D0300BC3FAD /* ViewController.swift */; };
+		CFAD018C21AE3D0300BC3FAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFAD018A21AE3D0300BC3FAD /* Main.storyboard */; };
+		CFAD018E21AE3D0400BC3FAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFAD018D21AE3D0400BC3FAD /* Assets.xcassets */; };
+		CFAD019121AE3D0400BC3FAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFAD018F21AE3D0400BC3FAD /* LaunchScreen.storyboard */; };
+		CFAD019C21AE3D0500BC3FAD /* SQliteDemo3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAD019B21AE3D0500BC3FAD /* SQliteDemo3Tests.swift */; };
+		CFAD01A721AE3D0500BC3FAD /* SQliteDemo3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAD01A621AE3D0500BC3FAD /* SQliteDemo3UITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CFAD019821AE3D0500BC3FAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFAD017B21AE3D0300BC3FAD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CFAD018221AE3D0300BC3FAD;
+			remoteInfo = SQliteDemo3;
+		};
+		CFAD01A321AE3D0500BC3FAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFAD017B21AE3D0300BC3FAD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CFAD018221AE3D0300BC3FAD;
+			remoteInfo = SQliteDemo3;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04EFAC8A21AEA1A900985023 /* FeedLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLog.swift; sourceTree = "<group>"; };
+		04EFAC8C21AEA3CF00985023 /* DB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB.swift; sourceTree = "<group>"; };
+		1399C2AEC1FF0CCCFCA1D2BA /* Pods-SQliteDemo3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SQliteDemo3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SQliteDemo3/Pods-SQliteDemo3.debug.xcconfig"; sourceTree = "<group>"; };
+		AC606D6B55FCDAEDC8DC0B90 /* Pods_SQliteDemo3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SQliteDemo3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFAD018321AE3D0300BC3FAD /* SQliteDemo3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SQliteDemo3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFAD018621AE3D0300BC3FAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CFAD018821AE3D0300BC3FAD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CFAD018B21AE3D0300BC3FAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CFAD018D21AE3D0400BC3FAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CFAD019021AE3D0400BC3FAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CFAD019221AE3D0500BC3FAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFAD019721AE3D0500BC3FAD /* SQliteDemo3Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SQliteDemo3Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFAD019B21AE3D0500BC3FAD /* SQliteDemo3Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQliteDemo3Tests.swift; sourceTree = "<group>"; };
+		CFAD019D21AE3D0500BC3FAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFAD01A221AE3D0500BC3FAD /* SQliteDemo3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SQliteDemo3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFAD01A621AE3D0500BC3FAD /* SQliteDemo3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQliteDemo3UITests.swift; sourceTree = "<group>"; };
+		CFAD01A821AE3D0500BC3FAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E72F2A08DDF755ABC4156ABF /* Pods-SQliteDemo3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SQliteDemo3.release.xcconfig"; path = "Pods/Target Support Files/Pods-SQliteDemo3/Pods-SQliteDemo3.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CFAD018021AE3D0300BC3FAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				814BF6F923DFBDB078A270B6 /* Pods_SQliteDemo3.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFAD019421AE3D0500BC3FAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFAD019F21AE3D0500BC3FAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8C3B23AE638FF6237AE84D36 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1399C2AEC1FF0CCCFCA1D2BA /* Pods-SQliteDemo3.debug.xcconfig */,
+				E72F2A08DDF755ABC4156ABF /* Pods-SQliteDemo3.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A6CB17EF5663200720D0676C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AC606D6B55FCDAEDC8DC0B90 /* Pods_SQliteDemo3.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CFAD017A21AE3D0300BC3FAD = {
+			isa = PBXGroup;
+			children = (
+				CFAD018521AE3D0300BC3FAD /* SQliteDemo3 */,
+				CFAD019A21AE3D0500BC3FAD /* SQliteDemo3Tests */,
+				CFAD01A521AE3D0500BC3FAD /* SQliteDemo3UITests */,
+				CFAD018421AE3D0300BC3FAD /* Products */,
+				8C3B23AE638FF6237AE84D36 /* Pods */,
+				A6CB17EF5663200720D0676C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CFAD018421AE3D0300BC3FAD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CFAD018321AE3D0300BC3FAD /* SQliteDemo3.app */,
+				CFAD019721AE3D0500BC3FAD /* SQliteDemo3Tests.xctest */,
+				CFAD01A221AE3D0500BC3FAD /* SQliteDemo3UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CFAD018521AE3D0300BC3FAD /* SQliteDemo3 */ = {
+			isa = PBXGroup;
+			children = (
+				CFAD018621AE3D0300BC3FAD /* AppDelegate.swift */,
+				CFAD018821AE3D0300BC3FAD /* ViewController.swift */,
+				04EFAC8C21AEA3CF00985023 /* DB.swift */,
+				04EFAC8A21AEA1A900985023 /* FeedLog.swift */,
+				CFAD018A21AE3D0300BC3FAD /* Main.storyboard */,
+				CFAD018D21AE3D0400BC3FAD /* Assets.xcassets */,
+				CFAD018F21AE3D0400BC3FAD /* LaunchScreen.storyboard */,
+				CFAD019221AE3D0500BC3FAD /* Info.plist */,
+			);
+			path = SQliteDemo3;
+			sourceTree = "<group>";
+		};
+		CFAD019A21AE3D0500BC3FAD /* SQliteDemo3Tests */ = {
+			isa = PBXGroup;
+			children = (
+				CFAD019B21AE3D0500BC3FAD /* SQliteDemo3Tests.swift */,
+				CFAD019D21AE3D0500BC3FAD /* Info.plist */,
+			);
+			path = SQliteDemo3Tests;
+			sourceTree = "<group>";
+		};
+		CFAD01A521AE3D0500BC3FAD /* SQliteDemo3UITests */ = {
+			isa = PBXGroup;
+			children = (
+				CFAD01A621AE3D0500BC3FAD /* SQliteDemo3UITests.swift */,
+				CFAD01A821AE3D0500BC3FAD /* Info.plist */,
+			);
+			path = SQliteDemo3UITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CFAD018221AE3D0300BC3FAD /* SQliteDemo3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFAD01AB21AE3D0500BC3FAD /* Build configuration list for PBXNativeTarget "SQliteDemo3" */;
+			buildPhases = (
+				292595575346443AEEF2AFA8 /* [CP] Check Pods Manifest.lock */,
+				CFAD017F21AE3D0300BC3FAD /* Sources */,
+				CFAD018021AE3D0300BC3FAD /* Frameworks */,
+				CFAD018121AE3D0300BC3FAD /* Resources */,
+				8E2E36268718B73A9D5F1888 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SQliteDemo3;
+			productName = SQliteDemo3;
+			productReference = CFAD018321AE3D0300BC3FAD /* SQliteDemo3.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CFAD019621AE3D0500BC3FAD /* SQliteDemo3Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFAD01AE21AE3D0500BC3FAD /* Build configuration list for PBXNativeTarget "SQliteDemo3Tests" */;
+			buildPhases = (
+				CFAD019321AE3D0500BC3FAD /* Sources */,
+				CFAD019421AE3D0500BC3FAD /* Frameworks */,
+				CFAD019521AE3D0500BC3FAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CFAD019921AE3D0500BC3FAD /* PBXTargetDependency */,
+			);
+			name = SQliteDemo3Tests;
+			productName = SQliteDemo3Tests;
+			productReference = CFAD019721AE3D0500BC3FAD /* SQliteDemo3Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CFAD01A121AE3D0500BC3FAD /* SQliteDemo3UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFAD01B121AE3D0500BC3FAD /* Build configuration list for PBXNativeTarget "SQliteDemo3UITests" */;
+			buildPhases = (
+				CFAD019E21AE3D0500BC3FAD /* Sources */,
+				CFAD019F21AE3D0500BC3FAD /* Frameworks */,
+				CFAD01A021AE3D0500BC3FAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CFAD01A421AE3D0500BC3FAD /* PBXTargetDependency */,
+			);
+			name = SQliteDemo3UITests;
+			productName = SQliteDemo3UITests;
+			productReference = CFAD01A221AE3D0500BC3FAD /* SQliteDemo3UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CFAD017B21AE3D0300BC3FAD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Liu Tao";
+				TargetAttributes = {
+					CFAD018221AE3D0300BC3FAD = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					CFAD019621AE3D0500BC3FAD = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = CFAD018221AE3D0300BC3FAD;
+					};
+					CFAD01A121AE3D0500BC3FAD = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = CFAD018221AE3D0300BC3FAD;
+					};
+				};
+			};
+			buildConfigurationList = CFAD017E21AE3D0300BC3FAD /* Build configuration list for PBXProject "SQliteDemo3" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CFAD017A21AE3D0300BC3FAD;
+			productRefGroup = CFAD018421AE3D0300BC3FAD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CFAD018221AE3D0300BC3FAD /* SQliteDemo3 */,
+				CFAD019621AE3D0500BC3FAD /* SQliteDemo3Tests */,
+				CFAD01A121AE3D0500BC3FAD /* SQliteDemo3UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CFAD018121AE3D0300BC3FAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFAD019121AE3D0400BC3FAD /* LaunchScreen.storyboard in Resources */,
+				CFAD018E21AE3D0400BC3FAD /* Assets.xcassets in Resources */,
+				CFAD018C21AE3D0300BC3FAD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFAD019521AE3D0500BC3FAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFAD01A021AE3D0500BC3FAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		292595575346443AEEF2AFA8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SQliteDemo3-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E2E36268718B73A9D5F1888 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SQliteDemo3/Pods-SQliteDemo3-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SQliteDemo3/Pods-SQliteDemo3-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CFAD017F21AE3D0300BC3FAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04EFAC8B21AEA1A900985023 /* FeedLog.swift in Sources */,
+				04EFAC8D21AEA3CF00985023 /* DB.swift in Sources */,
+				CFAD018921AE3D0300BC3FAD /* ViewController.swift in Sources */,
+				CFAD018721AE3D0300BC3FAD /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFAD019321AE3D0500BC3FAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFAD019C21AE3D0500BC3FAD /* SQliteDemo3Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFAD019E21AE3D0500BC3FAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFAD01A721AE3D0500BC3FAD /* SQliteDemo3UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CFAD019921AE3D0500BC3FAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CFAD018221AE3D0300BC3FAD /* SQliteDemo3 */;
+			targetProxy = CFAD019821AE3D0500BC3FAD /* PBXContainerItemProxy */;
+		};
+		CFAD01A421AE3D0500BC3FAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CFAD018221AE3D0300BC3FAD /* SQliteDemo3 */;
+			targetProxy = CFAD01A321AE3D0500BC3FAD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CFAD018A21AE3D0300BC3FAD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CFAD018B21AE3D0300BC3FAD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CFAD018F21AE3D0400BC3FAD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CFAD019021AE3D0400BC3FAD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CFAD01A921AE3D0500BC3FAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CFAD01AA21AE3D0500BC3FAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CFAD01AC21AE3D0500BC3FAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1399C2AEC1FF0CCCFCA1D2BA /* Pods-SQliteDemo3.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LPF3349M6Q;
+				INFOPLIST_FILE = SQliteDemo3/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ThomasLTD.SQliteDemo3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CFAD01AD21AE3D0500BC3FAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E72F2A08DDF755ABC4156ABF /* Pods-SQliteDemo3.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LPF3349M6Q;
+				INFOPLIST_FILE = SQliteDemo3/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ThomasLTD.SQliteDemo3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CFAD01AF21AE3D0500BC3FAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LPF3349M6Q;
+				INFOPLIST_FILE = SQliteDemo3Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ThomasLTD.SQliteDemo3Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SQliteDemo3.app/SQliteDemo3";
+			};
+			name = Debug;
+		};
+		CFAD01B021AE3D0500BC3FAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LPF3349M6Q;
+				INFOPLIST_FILE = SQliteDemo3Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ThomasLTD.SQliteDemo3Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SQliteDemo3.app/SQliteDemo3";
+			};
+			name = Release;
+		};
+		CFAD01B221AE3D0500BC3FAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LPF3349M6Q;
+				INFOPLIST_FILE = SQliteDemo3UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ThomasLTD.SQliteDemo3UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SQliteDemo3;
+			};
+			name = Debug;
+		};
+		CFAD01B321AE3D0500BC3FAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LPF3349M6Q;
+				INFOPLIST_FILE = SQliteDemo3UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ThomasLTD.SQliteDemo3UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SQliteDemo3;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CFAD017E21AE3D0300BC3FAD /* Build configuration list for PBXProject "SQliteDemo3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFAD01A921AE3D0500BC3FAD /* Debug */,
+				CFAD01AA21AE3D0500BC3FAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFAD01AB21AE3D0500BC3FAD /* Build configuration list for PBXNativeTarget "SQliteDemo3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFAD01AC21AE3D0500BC3FAD /* Debug */,
+				CFAD01AD21AE3D0500BC3FAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFAD01AE21AE3D0500BC3FAD /* Build configuration list for PBXNativeTarget "SQliteDemo3Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFAD01AF21AE3D0500BC3FAD /* Debug */,
+				CFAD01B021AE3D0500BC3FAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFAD01B121AE3D0500BC3FAD /* Build configuration list for PBXNativeTarget "SQliteDemo3UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFAD01B221AE3D0500BC3FAD /* Debug */,
+				CFAD01B321AE3D0500BC3FAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CFAD017B21AE3D0300BC3FAD /* Project object */;
+}

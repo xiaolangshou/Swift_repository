@@ -1,0 +1,15 @@
+platform :ios, ‘9.0’
+use_frameworks!
+inhibit_all_warnings!
+
+target 'RxSwiftDemo' do
+    pod 'SnapKit'
+    pod 'R.swift'
+    pod 'RxSwift'
+    pod 'RxCocoa'
+end
+
+
+
+
+
