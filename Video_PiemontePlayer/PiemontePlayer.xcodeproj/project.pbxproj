@@ -1,0 +1,671 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		041CD112242ADFF100AB2A30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CD111242ADFF100AB2A30 /* AppDelegate.swift */; };
+		041CD114242ADFF100AB2A30 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CD113242ADFF100AB2A30 /* SceneDelegate.swift */; };
+		041CD116242ADFF100AB2A30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CD115242ADFF100AB2A30 /* ViewController.swift */; };
+		041CD119242ADFF100AB2A30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 041CD117242ADFF100AB2A30 /* Main.storyboard */; };
+		041CD11B242ADFF200AB2A30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 041CD11A242ADFF200AB2A30 /* Assets.xcassets */; };
+		041CD11E242ADFF200AB2A30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 041CD11C242ADFF200AB2A30 /* LaunchScreen.storyboard */; };
+		041CD129242ADFF200AB2A30 /* PiemontePlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CD128242ADFF200AB2A30 /* PiemontePlayerTests.swift */; };
+		041CD134242ADFF200AB2A30 /* PiemontePlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CD133242ADFF200AB2A30 /* PiemontePlayerUITests.swift */; };
+		CDA5C522E28180C0779D7AC1 /* Pods_PiemontePlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57EF6748654229BBB293A93B /* Pods_PiemontePlayer.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		041CD125242ADFF200AB2A30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 041CD106242ADFF100AB2A30 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 041CD10D242ADFF100AB2A30;
+			remoteInfo = PiemontePlayer;
+		};
+		041CD130242ADFF200AB2A30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 041CD106242ADFF100AB2A30 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 041CD10D242ADFF100AB2A30;
+			remoteInfo = PiemontePlayer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		041CD10E242ADFF100AB2A30 /* PiemontePlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PiemontePlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		041CD111242ADFF100AB2A30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		041CD113242ADFF100AB2A30 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		041CD115242ADFF100AB2A30 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		041CD118242ADFF100AB2A30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		041CD11A242ADFF200AB2A30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		041CD11D242ADFF200AB2A30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		041CD11F242ADFF200AB2A30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		041CD124242ADFF200AB2A30 /* PiemontePlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PiemontePlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		041CD128242ADFF200AB2A30 /* PiemontePlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiemontePlayerTests.swift; sourceTree = "<group>"; };
+		041CD12A242ADFF200AB2A30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		041CD12F242ADFF200AB2A30 /* PiemontePlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PiemontePlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		041CD133242ADFF200AB2A30 /* PiemontePlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiemontePlayerUITests.swift; sourceTree = "<group>"; };
+		041CD135242ADFF200AB2A30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57EF6748654229BBB293A93B /* Pods_PiemontePlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PiemontePlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		598B00E6B73C0D07594964C3 /* Pods-PiemontePlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiemontePlayer.debug.xcconfig"; path = "Target Support Files/Pods-PiemontePlayer/Pods-PiemontePlayer.debug.xcconfig"; sourceTree = "<group>"; };
+		BC9490489BE78732B6B31BBC /* Pods-PiemontePlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiemontePlayer.release.xcconfig"; path = "Target Support Files/Pods-PiemontePlayer/Pods-PiemontePlayer.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		041CD10B242ADFF100AB2A30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDA5C522E28180C0779D7AC1 /* Pods_PiemontePlayer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		041CD121242ADFF200AB2A30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		041CD12C242ADFF200AB2A30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		041CD105242ADFF100AB2A30 = {
+			isa = PBXGroup;
+			children = (
+				041CD110242ADFF100AB2A30 /* PiemontePlayer */,
+				041CD127242ADFF200AB2A30 /* PiemontePlayerTests */,
+				041CD132242ADFF200AB2A30 /* PiemontePlayerUITests */,
+				041CD10F242ADFF100AB2A30 /* Products */,
+				2416E42AE46AF31929573ACE /* Pods */,
+				E871A52BE178F9D04FEC2184 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		041CD10F242ADFF100AB2A30 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				041CD10E242ADFF100AB2A30 /* PiemontePlayer.app */,
+				041CD124242ADFF200AB2A30 /* PiemontePlayerTests.xctest */,
+				041CD12F242ADFF200AB2A30 /* PiemontePlayerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		041CD110242ADFF100AB2A30 /* PiemontePlayer */ = {
+			isa = PBXGroup;
+			children = (
+				041CD111242ADFF100AB2A30 /* AppDelegate.swift */,
+				041CD113242ADFF100AB2A30 /* SceneDelegate.swift */,
+				041CD115242ADFF100AB2A30 /* ViewController.swift */,
+				041CD117242ADFF100AB2A30 /* Main.storyboard */,
+				041CD11A242ADFF200AB2A30 /* Assets.xcassets */,
+				041CD11C242ADFF200AB2A30 /* LaunchScreen.storyboard */,
+				041CD11F242ADFF200AB2A30 /* Info.plist */,
+			);
+			path = PiemontePlayer;
+			sourceTree = "<group>";
+		};
+		041CD127242ADFF200AB2A30 /* PiemontePlayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				041CD128242ADFF200AB2A30 /* PiemontePlayerTests.swift */,
+				041CD12A242ADFF200AB2A30 /* Info.plist */,
+			);
+			path = PiemontePlayerTests;
+			sourceTree = "<group>";
+		};
+		041CD132242ADFF200AB2A30 /* PiemontePlayerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				041CD133242ADFF200AB2A30 /* PiemontePlayerUITests.swift */,
+				041CD135242ADFF200AB2A30 /* Info.plist */,
+			);
+			path = PiemontePlayerUITests;
+			sourceTree = "<group>";
+		};
+		2416E42AE46AF31929573ACE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				598B00E6B73C0D07594964C3 /* Pods-PiemontePlayer.debug.xcconfig */,
+				BC9490489BE78732B6B31BBC /* Pods-PiemontePlayer.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E871A52BE178F9D04FEC2184 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				57EF6748654229BBB293A93B /* Pods_PiemontePlayer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		041CD10D242ADFF100AB2A30 /* PiemontePlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 041CD138242ADFF200AB2A30 /* Build configuration list for PBXNativeTarget "PiemontePlayer" */;
+			buildPhases = (
+				B6134BDC22284F53FBFBFA71 /* [CP] Check Pods Manifest.lock */,
+				041CD10A242ADFF100AB2A30 /* Sources */,
+				041CD10B242ADFF100AB2A30 /* Frameworks */,
+				041CD10C242ADFF100AB2A30 /* Resources */,
+				FC4CCE127F287B21A540D733 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PiemontePlayer;
+			productName = PiemontePlayer;
+			productReference = 041CD10E242ADFF100AB2A30 /* PiemontePlayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		041CD123242ADFF200AB2A30 /* PiemontePlayerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 041CD13B242ADFF200AB2A30 /* Build configuration list for PBXNativeTarget "PiemontePlayerTests" */;
+			buildPhases = (
+				041CD120242ADFF200AB2A30 /* Sources */,
+				041CD121242ADFF200AB2A30 /* Frameworks */,
+				041CD122242ADFF200AB2A30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				041CD126242ADFF200AB2A30 /* PBXTargetDependency */,
+			);
+			name = PiemontePlayerTests;
+			productName = PiemontePlayerTests;
+			productReference = 041CD124242ADFF200AB2A30 /* PiemontePlayerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		041CD12E242ADFF200AB2A30 /* PiemontePlayerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 041CD13E242ADFF200AB2A30 /* Build configuration list for PBXNativeTarget "PiemontePlayerUITests" */;
+			buildPhases = (
+				041CD12B242ADFF200AB2A30 /* Sources */,
+				041CD12C242ADFF200AB2A30 /* Frameworks */,
+				041CD12D242ADFF200AB2A30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				041CD131242ADFF200AB2A30 /* PBXTargetDependency */,
+			);
+			name = PiemontePlayerUITests;
+			productName = PiemontePlayerUITests;
+			productReference = 041CD12F242ADFF200AB2A30 /* PiemontePlayerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		041CD106242ADFF100AB2A30 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = TLLTD;
+				TargetAttributes = {
+					041CD10D242ADFF100AB2A30 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					041CD123242ADFF200AB2A30 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 041CD10D242ADFF100AB2A30;
+					};
+					041CD12E242ADFF200AB2A30 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 041CD10D242ADFF100AB2A30;
+					};
+				};
+			};
+			buildConfigurationList = 041CD109242ADFF100AB2A30 /* Build configuration list for PBXProject "PiemontePlayer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 041CD105242ADFF100AB2A30;
+			productRefGroup = 041CD10F242ADFF100AB2A30 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				041CD10D242ADFF100AB2A30 /* PiemontePlayer */,
+				041CD123242ADFF200AB2A30 /* PiemontePlayerTests */,
+				041CD12E242ADFF200AB2A30 /* PiemontePlayerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		041CD10C242ADFF100AB2A30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				041CD11E242ADFF200AB2A30 /* LaunchScreen.storyboard in Resources */,
+				041CD11B242ADFF200AB2A30 /* Assets.xcassets in Resources */,
+				041CD119242ADFF100AB2A30 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		041CD122242ADFF200AB2A30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		041CD12D242ADFF200AB2A30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B6134BDC22284F53FBFBFA71 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PiemontePlayer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC4CCE127F287B21A540D733 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PiemontePlayer/Pods-PiemontePlayer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Player/Player.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Player.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PiemontePlayer/Pods-PiemontePlayer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		041CD10A242ADFF100AB2A30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				041CD116242ADFF100AB2A30 /* ViewController.swift in Sources */,
+				041CD112242ADFF100AB2A30 /* AppDelegate.swift in Sources */,
+				041CD114242ADFF100AB2A30 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		041CD120242ADFF200AB2A30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				041CD129242ADFF200AB2A30 /* PiemontePlayerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		041CD12B242ADFF200AB2A30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				041CD134242ADFF200AB2A30 /* PiemontePlayerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		041CD126242ADFF200AB2A30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 041CD10D242ADFF100AB2A30 /* PiemontePlayer */;
+			targetProxy = 041CD125242ADFF200AB2A30 /* PBXContainerItemProxy */;
+		};
+		041CD131242ADFF200AB2A30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 041CD10D242ADFF100AB2A30 /* PiemontePlayer */;
+			targetProxy = 041CD130242ADFF200AB2A30 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		041CD117242ADFF100AB2A30 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				041CD118242ADFF100AB2A30 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		041CD11C242ADFF200AB2A30 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				041CD11D242ADFF200AB2A30 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		041CD136242ADFF200AB2A30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		041CD137242ADFF200AB2A30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		041CD139242ADFF200AB2A30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 598B00E6B73C0D07594964C3 /* Pods-PiemontePlayer.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LPF3349M6Q;
+				INFOPLIST_FILE = PiemontePlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TLTech.PiemontePlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		041CD13A242ADFF200AB2A30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC9490489BE78732B6B31BBC /* Pods-PiemontePlayer.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LPF3349M6Q;
+				INFOPLIST_FILE = PiemontePlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TLTech.PiemontePlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		041CD13C242ADFF200AB2A30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LPF3349M6Q;
+				INFOPLIST_FILE = PiemontePlayerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TLTech.PiemontePlayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PiemontePlayer.app/PiemontePlayer";
+			};
+			name = Debug;
+		};
+		041CD13D242ADFF200AB2A30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LPF3349M6Q;
+				INFOPLIST_FILE = PiemontePlayerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TLTech.PiemontePlayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PiemontePlayer.app/PiemontePlayer";
+			};
+			name = Release;
+		};
+		041CD13F242ADFF200AB2A30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LPF3349M6Q;
+				INFOPLIST_FILE = PiemontePlayerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TLTech.PiemontePlayerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PiemontePlayer;
+			};
+			name = Debug;
+		};
+		041CD140242ADFF200AB2A30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LPF3349M6Q;
+				INFOPLIST_FILE = PiemontePlayerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TLTech.PiemontePlayerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PiemontePlayer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		041CD109242ADFF100AB2A30 /* Build configuration list for PBXProject "PiemontePlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				041CD136242ADFF200AB2A30 /* Debug */,
+				041CD137242ADFF200AB2A30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		041CD138242ADFF200AB2A30 /* Build configuration list for PBXNativeTarget "PiemontePlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				041CD139242ADFF200AB2A30 /* Debug */,
+				041CD13A242ADFF200AB2A30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		041CD13B242ADFF200AB2A30 /* Build configuration list for PBXNativeTarget "PiemontePlayerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				041CD13C242ADFF200AB2A30 /* Debug */,
+				041CD13D242ADFF200AB2A30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		041CD13E242ADFF200AB2A30 /* Build configuration list for PBXNativeTarget "PiemontePlayerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				041CD13F242ADFF200AB2A30 /* Debug */,
+				041CD140242ADFF200AB2A30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 041CD106242ADFF100AB2A30 /* Project object */;
+}

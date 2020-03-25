@@ -1091,6 +1091,20 @@ class ViewController: UIViewController {
         while let str = readLine(){
           deleteTheMostLessChar(str:str)
         }*/
+        
+        let str = "10000000 10000000"
+        var arr = [Int]()
+        
+        for s in str.split(separator: " ") {
+            arr.append(Int(s) ?? 0)
+        }
+        
+        var result = Int(1)
+        for i in arr {
+            result *= i
+        }
+        
+        print(result)
     }
     
     func thirty() {

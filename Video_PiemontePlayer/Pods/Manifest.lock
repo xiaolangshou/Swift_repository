@@ -1,0 +1,16 @@
+PODS:
+  - Player (0.13.1)
+
+DEPENDENCIES:
+  - Player
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Player
+
+SPEC CHECKSUMS:
+  Player: 29186e0d557898b0ebdab42d2e1b47e615838156
+
+PODFILE CHECKSUM: 46ecf362603df1e21f31a7e1873cec2aaad773be
+
+COCOAPODS: 1.6.0
