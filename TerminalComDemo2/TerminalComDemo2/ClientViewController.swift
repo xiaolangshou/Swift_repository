@@ -33,7 +33,8 @@ class ClientViewController: UIViewController {
         socket = GCDAsyncSocket(delegate: self, delegateQueue: DispatchQueue.main)
         
         do {
-            _ = try self.socket?.connect(toHost: "192.168.8.100", onPort: 7878)
+            _ = try self.socket?.connect(toHost: "10.161.22.140", onPort: 8888)
+            print("connect action")
         } catch {
             print("error")
         }

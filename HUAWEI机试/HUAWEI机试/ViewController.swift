@@ -14,7 +14,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        thirty()
+//        thirty()
+        thirtyOne()
     }
 
     // 计算字符串最后一个单词长度
@@ -1139,6 +1140,79 @@ class ViewController: UIViewController {
         }
 
         print(result)
+    }
+    
+    
+    
+    func thirtyOne() {
+        
+        let str = readLine() ?? ""
+        var strArr = [String]()
+        for v in str.split(separator: " ") {
+            strArr.append(String(v))
+        }
+        // 大数相乘
+        func bigNumMutiply(str1: String, str2: String) -> String {
+
+            var sumArr: [Int] = []
+
+            let str1 = str1.reversed()
+            let str2 = str2.reversed()
+            for (i,v1) in str1.enumerated() {
+                let num1 = Int(String(v1)) ?? 0
+                
+                for (j,v2) in str2.enumerated() {
+                    let num2 = Int(String(v2)) ?? 0
+                    let index = i + j
+                    
+                    if sumArr.count > index {
+                        sumArr.insert(sumArr[index] + num1 * num2, at: index)
+                        sumArr.remove(at: index+1)
+                    } else {
+                        sumArr.append(num1 * num2)
+                    }
+                }
+            }
+
+            var resultArr = [Int]()
+            for i in 0..<sumArr.count {
+                
+                if i < sumArr.count - 1 {
+                    if sumArr[i] >= 10 {
+                        resultArr.append(sumArr[i] % 10)
+                        sumArr[i+1] += sumArr[i] / 10
+                    } else {
+                        resultArr.append(sumArr[i])
+                    }
+                } else {
+                    if sumArr[i] >= 10 {
+                        resultArr.append(sumArr[i] % 10)
+                        resultArr.append(sumArr[i] / 10)
+                    } else {
+                        resultArr.append(sumArr[i])
+                    }
+                }
+
+            }
+
+            var result  = ""
+            for i in resultArr {
+                result.append(String(i))
+            }
+
+            let regex = "0*?$"
+            var modified = ""
+            do {
+                let RE = try NSRegularExpression(pattern: regex, options: .caseInsensitive)
+                modified = RE.stringByReplacingMatches(in: result, options: .reportProgress, range: NSRange(location: 0, length: resultArr.count), withTemplate: "")
+            } catch  {
+                print("error")
+            }
+            
+            return String(modified.reversed())
+        }
+        
+        print(bigNumMutiply(str1: strArr[0], str2: strArr[1]))
     }
 }
 
