@@ -14,8 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        thirty()
-        thirtyOne()
+        thirtyTwo()
     }
 
     // 计算字符串最后一个单词长度
@@ -1156,12 +1155,10 @@ class ViewController: UIViewController {
 
             var sumArr: [Int] = []
 
-            let str1 = str1.reversed()
-            let str2 = str2.reversed()
-            for (i,v1) in str1.enumerated() {
+            for (i,v1) in str1.reversed().enumerated() {
                 let num1 = Int(String(v1)) ?? 0
                 
-                for (j,v2) in str2.enumerated() {
+                for (j,v2) in str2.reversed().enumerated() {
                     let num2 = Int(String(v2)) ?? 0
                     let index = i + j
                     
@@ -1174,37 +1171,31 @@ class ViewController: UIViewController {
                 }
             }
 
-            var resultArr = [Int]()
+            var result = ""
             for i in 0..<sumArr.count {
                 
                 if i < sumArr.count - 1 {
                     if sumArr[i] >= 10 {
-                        resultArr.append(sumArr[i] % 10)
+                        result.append(String(sumArr[i] % 10))
                         sumArr[i+1] += sumArr[i] / 10
                     } else {
-                        resultArr.append(sumArr[i])
+                        result.append(String(sumArr[i]))
                     }
                 } else {
                     if sumArr[i] >= 10 {
-                        resultArr.append(sumArr[i] % 10)
-                        resultArr.append(sumArr[i] / 10)
+                        result.append(String(sumArr[i] % 10))
+                        result.append(String(sumArr[i] / 10))
                     } else {
-                        resultArr.append(sumArr[i])
+                        result.append(String(sumArr[i]))
                     }
                 }
 
             }
 
-            var result  = ""
-            for i in resultArr {
-                result.append(String(i))
-            }
-
-            let regex = "0*?$"
             var modified = ""
             do {
-                let RE = try NSRegularExpression(pattern: regex, options: .caseInsensitive)
-                modified = RE.stringByReplacingMatches(in: result, options: .reportProgress, range: NSRange(location: 0, length: resultArr.count), withTemplate: "")
+                let RE = try NSRegularExpression(pattern: "0*?$", options: .caseInsensitive)
+                modified = RE.stringByReplacingMatches(in: result, options: .reportProgress, range: NSRange(location: 0, length: result.count), withTemplate: "")
             } catch  {
                 print("error")
             }
@@ -1212,7 +1203,43 @@ class ViewController: UIViewController {
             return String(modified.reversed())
         }
         
-        print(bigNumMutiply(str1: strArr[0], str2: strArr[1]))
+         print(bigNumMutiply(str1: strArr[0], str2: strArr[1]))
+    }
+    
+    // 输入一个整数，求出1到这个整数的十进制表示中某个数字出现的次数,现假设为1
+    func thirtyTwo() {
+        
+        func numofOne(n: Int) {
+            var count = 0
+            var i = 1
+            var current = 0
+            var after = 0
+            var before = 0
+            
+            while n/i != 0 {
+                current = (n/i)%10
+                before = n/(i*10)
+                after = n-(n/i)*i
+                //如果为0,出现1的次数由高位决定,等于高位数字 * 当前位数
+                if (current == 0) {
+                    count += before*i
+                }
+                //如果为1,出现1的次数由高位和低位决定,高位*当前位+低位+1
+                else if (current == 1) {
+                    count += before * i + after + 1
+                }
+                //如果大于1,出现1的次数由高位决定,//（高位数字+1）* 当前位数
+                else {
+                    count += (before + 1) * i
+                }
+                //前移一位
+                i = i*10
+            }
+            
+            print(count)
+        }
+        
+        numofOne(n: 1000)
     }
 }
 
