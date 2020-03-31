@@ -1,0 +1,103 @@
+1.大数相乘
+（Java）
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args){
+        Scanner in=new Scanner(System.in);
+        String num1=in.nextBigDecimal().toString();
+        String num2=in.nextBigDecimal().toString();
+        int[] ret=new int[num1.length()+num2.length()];
+        for(int i=num1.length()-1;i>=0;i--){
+            int x=num1.charAt(i)-'0';
+            for(int j=num2.length()-1;j>=0;j--){
+                int y=num2.charAt(j)-'0';
+                ret[i+j]+=(ret[i+j+1]+x*y)/10;
+                ret[i+j+1]=(ret[i+j+1]+x*y)%10;
+                 
+            }
+        }
+        String s="";
+        for(int i=0;i<ret.length;i++){
+            if(i==0&&ret[i]==0) continue;
+            s+=ret[i];
+        }
+        System.out.println(s);
+    }
+}
+
+
+(python)
+
+import sys
+s=sys.stdin.readline().strip().split()
+def karatsuba_mul(num1, num2):
+    #karatsuba算法
+    if len(str(num1))==1 or len(str(num2))==1:
+        return num1*num2
+    n=max(len(str(num1)),len(str(num2)))
+    half=n//2
+    
+    a=num1//10**half
+    b=num1%10**half
+    c=num2//10**half
+    d=num2%10**half
+    ac=karatsuba_mul(a,c) #计算a*c
+    bd=karatsuba_mul(b,d) #计算b*d
+    abcd=karatsuba_mul(a+b,c+d) #计算(a+b)*(c+d)
+    adbc=abcd-ac-bd
+    return ac*10**(2*half)+adbc*10**half+bd
+print(str(karatsuba_mul(int(s[0]), int(s[1]))))
+
+
+2.从1到n整数中1出现的次数
+
+ (c++)
+
+class Solution {
+public:
+    int NumberOf1Between1AndN_Solution(int n)
+    {
+        int count=0;
+        long long i=1;
+        for(i=1;i<=n;i*=10)
+        {
+            //i表示当前分析的是哪一个数位
+            int a = n/i,b = n%i;
+            count=count+(a+8)/10*i+(a%10==1)*(b+1);
+        }
+        return count;
+    }
+};
+
+Swift
+
+        func numofOne(n: Int) {
+            var count = 0
+            var i = 1
+            var current = 0
+            var after = 0
+            var before = 0
+            
+            while n/i != 0 {
+                current = (n/i)%10
+                before = n/(i*10)
+                after = n-(n/i)*i
+                //如果为0,出现1的次数由高位决定,等于高位数字 * 当前位数
+                if (current == 0) {
+                    count += before*i
+                }
+                //如果为1,出现1的次数由高位和低位决定,高位*当前位+低位+1
+                else if (current == 1) {
+                    count += before * i + after + 1
+                }
+                //如果大于1,出现1的次数由高位决定,//（高位数字+1）* 当前位数
+                else {
+                    count += (before + 1) * i
+                }
+                //前移一位
+                i = i*10
+            }
+            
+            print(count)
+        }
