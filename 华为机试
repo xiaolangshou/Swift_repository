@@ -1,33 +1,42 @@
 1.大数相乘
-（Java）
 
-import java.util.*;
+(Java case通过率为100%)
+
+import java.util.Scanner;
+
 public class Main {
-    public static void main(String[] args){
-        Scanner in=new Scanner(System.in);
-        String num1=in.nextBigDecimal().toString();
-        String num2=in.nextBigDecimal().toString();
-        int[] ret=new int[num1.length()+num2.length()];
-        for(int i=num1.length()-1;i>=0;i--){
-            int x=num1.charAt(i)-'0';
-            for(int j=num2.length()-1;j>=0;j--){
-                int y=num2.charAt(j)-'0';
-                ret[i+j]+=(ret[i+j+1]+x*y)/10;
-                ret[i+j+1]=(ret[i+j+1]+x*y)%10;
-                 
-            }
-        }
-        String s="";
-        for(int i=0;i<ret.length;i++){
-            if(i==0&&ret[i]==0) continue;
-            s+=ret[i];
-        }
-        System.out.println(s);
+      public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String s1 = scanner.next();
+        String s2 = scanner.next();
+        // 先不做校验。
+          int sumLen = s1.length() + s2.length();
+          int[] res = new int[sumLen];
+          for(int i = 0; i< s1.length(); i++) {
+               int num1 = s1.charAt(s1.length() -1 - i ) - '0';
+              for(int j  = 0; j< s2.length(); j++) {
+                  int num2 = s2.charAt(s2.length() -1 - j) - '0';
+                  res[i +j ] += num1 * num2;                         
+              }
+          }
+          for(int i = 0; i< res.length - 1; i++) {
+              if(res[i] >= 10) {
+                  res[i+1] += res[i] / 10;
+                  res[i] %= 10;
+              }
+          }
+          int i = res.length -1;
+          for(; i> 0 && res[i] == 0; i--) {} // 去除结果前面的 0
+          StringBuilder sb = new StringBuilder();
+          for(; i>=0; i--) {
+              sb.append(res[i]);
+          }
+          System.out.println(sb.toString());
+ 
     }
 }
 
-
-(python)
+(python case通过率为66.67%)
 
 import sys
 s=sys.stdin.readline().strip().split()
@@ -72,7 +81,12 @@ public:
 
 Swift
 
-        func numofOne(n: Int) {
+import Foundation
+
+let str = readLine() ?? ""
+let num = Int(str) ?? 0
+
+        func numofOne(_ n: Int) {
             var count = 0
             var i = 1
             var current = 0
@@ -101,3 +115,88 @@ Swift
             
             print(count)
         }
+    
+    numofOne(num)
+
+
+3. 寻找字符串中最长的回文
+（python case通过率为100%）
+
+import sys
+ 
+def longestPalindrome(s):
+    if s == s[::-1]: return s
+    start, maxLen = 0, 1
+    for i in range(len(s)):
+        if i - maxLen >= 1 and s[i - maxLen -1:i + 1] == s[i - maxLen - 1:i + 1][::-1]:
+            start = i - maxLen - 1
+            maxLen += 2
+            continue
+        if i - maxLen >= 0 and s[i - maxLen:i + 1] == s[i - maxLen:i + 1][::-1]:
+            start = i - maxLen
+            maxLen += 1
+    return s[start:start + maxLen]
+ 
+ 
+for i in sys.stdin.readlines():
+    print (longestPalindrome(i.strip()))
+
+(swift case通过率为0)
+
+        let str = readLine()!
+
+        func longestPalindrome(_ s: String) -> String {
+            if s.count <= 1 {
+                return s
+            }
+            
+            // 1.间隔之间先插入#
+            var S = ["#"]
+            for c in s {
+                S.append(String(c))
+                S.append("#")
+            }
+            
+            print(S)
+            // 2.遍历找出以每个节点作为轴最长半径
+            var maxId: Int = 0
+            var max: Int = 0
+            var P: [Int] = [1]
+            var maxLength: Int = 1
+            var maxLengthIndex = 0
+            
+            for i in 1...S.count - 1 {
+                // j是相对于maxId的i的左边的对称点
+                let j: Int = maxId - (i - maxId)
+                
+                if max > i && j >= 0 {
+                    P.append(min(P[j], max - i))
+                } else {
+                    P.append(1)
+                }
+                // 循环判断以i位置为中心的左右两侧是否相同, 相同加1
+                while i + P[i] <= S.count - 1 && i - P[i] >= 0 && S[i + P[i]] == S[i - P[i]] {
+                    P[i] += 1
+                }
+                
+                if i + P[i] - 1 > max {
+                    // 以i为中心的子回文的最后一个元素的位置
+                    max = i + P[i] - 1
+                    // 记录i为回文子串的中心id
+                    maxId = i
+                }
+                
+                // 判断最长回文的长度,并记录
+                if P[i] > maxLength {
+                    maxLength = P[i]
+                    maxLengthIndex = i
+                }
+                print("i:\(i) maxId:\(maxId) max:\(max) maxLength:\(maxLength) maxLengthIndex:\(maxLengthIndex) P:\(P)")
+            }
+            let leftIndex = s.index(s.startIndex, offsetBy: (maxLengthIndex - (maxLength - 1))/2)
+            let rightIndex = s.index(leftIndex, offsetBy: maxLength - 1 - 1)
+            return String(s[leftIndex...rightIndex])
+        }
+
+        print(longestPalindrome(str))
+   

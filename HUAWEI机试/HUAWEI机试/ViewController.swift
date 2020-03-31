@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        thirtyTwo()
+        thirtyOne()
     }
 
     // 计算字符串最后一个单词长度
@@ -1145,11 +1145,11 @@ class ViewController: UIViewController {
     
     func thirtyOne() {
         
-        let str = readLine() ?? ""
-        var strArr = [String]()
-        for v in str.split(separator: " ") {
-            strArr.append(String(v))
-        }
+//        let str = readLine() ?? ""
+//        var strArr = [String]()
+//        for v in str.split(separator: " ") {
+//            strArr.append(String(v))
+//        }
         // 大数相乘
         func bigNumMutiply(str1: String, str2: String) -> String {
 
@@ -1203,7 +1203,8 @@ class ViewController: UIViewController {
             return String(modified.reversed())
         }
         
-         print(bigNumMutiply(str1: strArr[0], str2: strArr[1]))
+        //print(bigNumMutiply(str1: strArr[0], str2: strArr[1]))
+        print(bigNumMutiply(str1: "340282366920938463463374607431768211456", str2: "340282366920938463463374607431768211456"))
     }
     
     // 输入一个整数，求出1到这个整数的十进制表示中某个数字出现的次数,现假设为1
@@ -1240,6 +1241,68 @@ class ViewController: UIViewController {
         }
         
         numofOne(n: 1000)
+    }
+    
+    // 寻找字符串中最长的回文
+    func thirtyThree() {
+        
+        let str = readLine()!
+
+        func longestPalindrome(_ s: String) -> String {
+            if s.count <= 1 {
+                return s
+            }
+            
+            // 1.间隔之间先插入#
+            var S = ["#"]
+            for c in s {
+                S.append(String(c))
+                S.append("#")
+            }
+            
+            print(S)
+            // 2.遍历找出以每个节点作为轴最长半径
+            var maxId: Int = 0
+            var max: Int = 0
+            var P: [Int] = [1]
+            var maxLength: Int = 1
+            var maxLengthIndex = 0
+            
+            for i in 1...S.count - 1 {
+                // j是相对于maxId的i的左边的对称点
+                let j: Int = maxId - (i - maxId)
+                
+                if max > i && j >= 0 {
+                    // 优化部分
+                    P.append(min(P[j], max - i))
+                } else {
+                    P.append(1)
+                }
+                // 循环判断以i位置为中心的左右两侧是否相同, 相同加1
+                while i + P[i] <= S.count - 1 && i - P[i] >= 0 && S[i + P[i]] == S[i - P[i]] {
+                    P[i] += 1
+                }
+                
+                if i + P[i] - 1 > max {
+                    // 以i为中心的子回文的最后一个元素的位置
+                    max = i + P[i] - 1
+                    // 记录i为回文子串的中心id
+                    maxId = i
+                }
+                
+                // 判断最长回文的长度,并记录
+                if P[i] > maxLength {
+                    maxLength = P[i]
+                    maxLengthIndex = i
+                }
+                // print("i:\(i) maxId:\(maxId) max:\(max) maxLength:\(maxLength) maxLengthIndex:\(maxLengthIndex) P:\(P)")
+            }
+            let leftIndex = s.index(s.startIndex, offsetBy: (maxLengthIndex - (maxLength - 1))/2)
+            let rightIndex = s.index(leftIndex, offsetBy: maxLength - 1 - 1)
+            return String(s[leftIndex...rightIndex])
+        }
+
+        print(longestPalindrome(str))
     }
 }
 
