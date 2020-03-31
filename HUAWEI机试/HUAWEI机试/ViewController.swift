@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        thirtyOne()
+        thirtyThree()
     }
 
     // 计算字符串最后一个单词长度
@@ -1155,6 +1155,7 @@ class ViewController: UIViewController {
 
             var sumArr: [Int] = []
 
+            // 各位数字相乘
             for (i,v1) in str1.reversed().enumerated() {
                 let num1 = Int(String(v1)) ?? 0
                 
@@ -1171,6 +1172,7 @@ class ViewController: UIViewController {
                 }
             }
 
+            // 处理进位
             var result = ""
             for i in 0..<sumArr.count {
                 
@@ -1192,15 +1194,17 @@ class ViewController: UIViewController {
 
             }
 
-            var modified = ""
-            do {
-                let RE = try NSRegularExpression(pattern: "0*?$", options: .caseInsensitive)
-                modified = RE.stringByReplacingMatches(in: result, options: .reportProgress, range: NSRange(location: 0, length: result.count), withTemplate: "")
-            } catch  {
-                print("error")
-            }
-            
-            return String(modified.reversed())
+            // 删除前面为零的数字
+//            var modified = ""
+//            do {
+//                let RE = try NSRegularExpression(pattern: "0*?$", options: .caseInsensitive)
+//                modified = RE.stringByReplacingMatches(in: result, options: .reportProgress, range: NSRange(location: 0, length: result.count), withTemplate: "")
+//            } catch  {
+//                print("error")
+//            }
+//
+//            return String(modified.reversed())
+            return String(result.reversed())
         }
         
         //print(bigNumMutiply(str1: strArr[0], str2: strArr[1]))
@@ -1245,63 +1249,45 @@ class ViewController: UIViewController {
     
     // 寻找字符串中最长的回文
     func thirtyThree() {
-        
-        let str = readLine()!
 
-        func longestPalindrome(_ s: String) -> String {
-            if s.count <= 1 {
-                return s
-            }
+        // import Foundation
+
+        let str = "djfalkdjaldjfaoaajioefaeijafeoajfoa" //readLine() ?? ""
+
+          func longestPalindrome(_ s: String) -> String {
+            if s == "" { return "" }
             
-            // 1.间隔之间先插入#
-            var S = ["#"]
-            for c in s {
-                S.append(String(c))
-                S.append("#")
-            }
+            var start = 0, end = 0
+            let length = s.count
+            let chars: [Character] = [Character](s)
             
-            print(S)
-            // 2.遍历找出以每个节点作为轴最长半径
-            var maxId: Int = 0
-            var max: Int = 0
-            var P: [Int] = [1]
-            var maxLength: Int = 1
-            var maxLengthIndex = 0
-            
-            for i in 1...S.count - 1 {
-                // j是相对于maxId的i的左边的对称点
-                let j: Int = maxId - (i - maxId)
-                
-                if max > i && j >= 0 {
-                    // 优化部分
-                    P.append(min(P[j], max - i))
-                } else {
-                    P.append(1)
+            for i in 0..<length {
+                let length1 = testPalindrome(chars, i, i)
+                let length2 = testPalindrome(chars, i, i+1)
+                let length = max(length1, length2)
+                if (length > end - start) {
+                    start = i - (length - 1) / 2
+                    end = i + length/2
                 }
-                // 循环判断以i位置为中心的左右两侧是否相同, 相同加1
-                while i + P[i] <= S.count - 1 && i - P[i] >= 0 && S[i + P[i]] == S[i - P[i]] {
-                    P[i] += 1
-                }
-                
-                if i + P[i] - 1 > max {
-                    // 以i为中心的子回文的最后一个元素的位置
-                    max = i + P[i] - 1
-                    // 记录i为回文子串的中心id
-                    maxId = i
-                }
-                
-                // 判断最长回文的长度,并记录
-                if P[i] > maxLength {
-                    maxLength = P[i]
-                    maxLengthIndex = i
-                }
-                // print("i:\(i) maxId:\(maxId) max:\(max) maxLength:\(maxLength) maxLengthIndex:\(maxLengthIndex) P:\(P)")
             }
-            let leftIndex = s.index(s.startIndex, offsetBy: (maxLengthIndex - (maxLength - 1))/2)
-            let rightIndex = s.index(leftIndex, offsetBy: maxLength - 1 - 1)
-            return String(s[leftIndex...rightIndex])
+             
+            return String(chars[start...end])
         }
 
+        func testPalindrome(_ s: [Character], _ left: Int, _ right: Int) -> Int {
+            
+            let count = s.count
+            
+            var L = left
+            var R = right
+            
+            while (L>=0 && R < count && s[L] == s[R]) {
+                L -= 1
+                R += 1
+            }
+            return R-L-1
+        }
+    
         print(longestPalindrome(str))
     }
 }
