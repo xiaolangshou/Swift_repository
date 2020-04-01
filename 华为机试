@@ -255,4 +255,168 @@ import Foundation
         }
     
         print(longestPalindrome(str))
+
+
+
+
+4. 三天打鱼、两天晒网
+（swift）
+
+        let y = "1991"
+        let m = "1"
+        let d = "4"
+        
+        // 1
+        guard y.count == 4 && (m.count == 1 || m.count == 2) && (d.count == 1 || d.count == 2) else { return }
+	if Int(y) ?? 0 < 1990 { return }
+        
+        // 3
+        func isLeapYear(y: Int) -> Bool {
+            if (y % 4 == 0 && y % 100 != 0) || (y / 400 == 0) {
+                return true
+            } else {
+                return false
+            }
+        }
+        
+        // 2
+        let j = Int(y) ?? 0
+        var num1 = 0
+        for i in 1990...j {
+            if isLeapYear(y: i) {
+                num1 += 1
+            }
+        }
+        
+        // 4
+        func numOfDays(m: Int, y: Int) -> Int {
+            
+            var sum = 0
+            
+            for i in 1...m {
+                switch i {
+                case 1:
+                    break
+                case 2:
+                    sum += 31
+                case 3:
+                    if isLeapYear(y: y) {
+                        sum += 29
+                    } else {
+                        sum += 28
+                    }
+                case 4:
+                    sum += 31
+                case 5:
+                    sum += 30
+                case 6:
+                    sum += 31
+                case 7:
+                    sum += 30
+                case 8:
+                    sum += 31
+                case 9:
+                    sum += 31
+                case 10:
+                    sum += 30
+                case 11:
+                    sum += 31
+                case 12:
+                    sum += 30
+                default:
+                    break
+                }
+            }
+
+            return sum
+        }
+        let num2 = numOfDays(m: Int(m) ?? 0, y: Int(d) ?? 0) + (Int(d) ?? 0)
+        print(num1, num2)
+        // 5
+        let final = num1 + num2
+
+        if final % 5 == 1 || final % 5 == 2 || final % 5 == 3 {
+            print("打鱼")
+        } else {
+            print("晒网")
+        }
+
+
+
+
+///////
+
+import Foundation
+
+let str = readLine() ?? ""
+var strArr = [String]()
+
+for v in str.split(separator: " ") {
+    strArr.append(String(v))
+}
+
+
+        func numofX(_ n: Int) {
+            var count = 0
+            var i = 1
+            var current = 0
+            var after = 0
+            var before = 0
+            
+            while n/i != 0 {
+                current = (n/i)%10
+                before = n/(i*10)
+                after = n-(n/i)*i
+                //如果为0,出现1的次数由高位决定,等于高位数字 * 当前位数
+                if (current == 0) {
+                    count += before*i
+                }
+                //如果为1,出现1的次数由高位和低位决定,高位*当前位+低位+1
+                else if (current == 1) {
+                    count += before * i + after + 1
+                }
+                //如果大于1,出现1的次数由高位决定,//（高位数字+1）* 当前位数
+                else {
+                    count += (before + 1) * i
+                }
+                //前移一位
+                i = i*10
+            }
+            
+            print(count)
+        }
+    
+    numofX(Int(strArr[0]) ?? 0)
+        
+
+
+/////
+
+#include <iostream>
+#include <cstdio>
+
+using namespace std;
+
+void NumberOf1Between1AndN_Solution(int n);
+
+int main() {
+    int n,x;
+    while(cin >> n >> x)// 注意，如果输入是多个测试用例，请通过while循环处理多个测试用例
+       
+    NumberOf1Between1AndN_Solution(n);
+    return 0;
+}
+
+void NumberOf1Between1AndN_Solution(int n)
+{
+    int count=0;
+    long long i=1;
+    for(i=1;i<=n;i*=10)
+    {
+        //i表示当前分析的是哪一个数位
+        int a = n/i,b = n%i;
+        count=count+(a+8)/10*i+(a%10==1)*(b+1);
+    }
+    cout << count;
+}
    

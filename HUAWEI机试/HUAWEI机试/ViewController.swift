@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        thirtyFour()
+        thirtyTwo()
     }
 
     // 计算字符串最后一个单词长度
@@ -1211,40 +1211,33 @@ class ViewController: UIViewController {
         print(bigNumMutiply(str1: "340282366920938463463374607431768211456", str2: "340282366920938463463374607431768211456"))
     }
     
-    // 输入一个整数，求出1到这个整数的十进制表示中某个数字出现的次数,现假设为1
+    // 输入一个整数，求出1到这个整数的十进制表示中某个数字出现的次数,现假设为x
     func thirtyTwo() {
         
-        func numofOne(n: Int) {
+        func numofOne(n: NSNumber, x: Int) {
             var count = 0
-            var i = 1
-            var current = 0
-            var after = 0
-            var before = 0
             
-            while n/i != 0 {
-                current = (n/i)%10
-                before = n/(i*10)
-                after = n-(n/i)*i
-                //如果为0,出现1的次数由高位决定,等于高位数字 * 当前位数
-                if (current == 0) {
-                    count += before*i
+            if x < 0 || x > 9 { print(-1)}
+
+            var strArr = [String]()
+            
+            for i in 1...n {
+                strArr.append(String(i))
+            }
+            
+            for s in strArr {
+                for c in s {
+                    if String(c) == String(x) {
+                        count += 1
+                    }
                 }
-                //如果为1,出现1的次数由高位和低位决定,高位*当前位+低位+1
-                else if (current == 1) {
-                    count += before * i + after + 1
-                }
-                //如果大于1,出现1的次数由高位决定,//（高位数字+1）* 当前位数
-                else {
-                    count += (before + 1) * i
-                }
-                //前移一位
-                i = i*10
             }
             
             print(count)
         }
         
-        numofOne(n: 1000)
+        let groupIds = 104563456435634563456354564563456345600 as Int64 as NSNumber]
+        numofOne(n: groupIds, x: 1)
     }
     
     // 寻找字符串中最长的回文
@@ -1299,12 +1292,19 @@ class ViewController: UIViewController {
     // 5. (num1 + num2) % 5      1,2,3:打鱼     4,5：晒网
     func thirtyFour() {
         
+        //        let str = readLine() ?? ""
+        //        var strArr = [String]()
+        //        for v in str.split(separator: " ") {
+        //            strArr.append(String(v))
+        //        }
+        
         let y = "1991"
         let m = "1"
         let d = "4"
         
         // 1
         guard y.count == 4 && (m.count == 1 || m.count == 2) && (d.count == 1 || d.count == 2) else { return }
+        if Int(y) ?? 0 < 1990 { return }
         
         // 3
         func isLeapYear(y: Int) -> Bool {
