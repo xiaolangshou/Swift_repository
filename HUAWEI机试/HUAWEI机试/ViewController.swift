@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        thirtyThree()
+        thirtyFour()
     }
 
     // 计算字符串最后一个单词长度
@@ -1289,6 +1289,94 @@ class ViewController: UIViewController {
         }
     
         print(longestPalindrome(str))
+    }
+    
+    // 三天打鱼，两天晒网   1990/1/1 开始    四年一闰；百年不闰，四百年再闰
+    // 1.判断输入年月的正确性
+    // 2.计算输入的年份与1990年间有几个闰年 num1
+    // 3.是否闰年
+    // 4.计算一年中某天到该年1月1号的天数num2
+    // 5. (num1 + num2) % 5      1,2,3:打鱼     4,5：晒网
+    func thirtyFour() {
+        
+        let y = "1991"
+        let m = "1"
+        let d = "4"
+        
+        // 1
+        guard y.count == 4 && (m.count == 1 || m.count == 2) && (d.count == 1 || d.count == 2) else { return }
+        
+        // 3
+        func isLeapYear(y: Int) -> Bool {
+            if (y % 4 == 0 && y % 100 != 0) || (y / 400 == 0) {
+                return true
+            } else {
+                return false
+            }
+        }
+        
+        // 2
+        let j = Int(y) ?? 0
+        var num1 = 0
+        for i in 1990...j {
+            if isLeapYear(y: i) {
+                num1 += 1
+            }
+        }
+        
+        // 4
+        func numOfDays(m: Int, y: Int) -> Int {
+            
+            var sum = 0
+            
+            for i in 1...m {
+                switch i {
+                case 1:
+                    break
+                case 2:
+                    sum += 31
+                case 3:
+                    if isLeapYear(y: y) {
+                        sum += 29
+                    } else {
+                        sum += 28
+                    }
+                case 4:
+                    sum += 31
+                case 5:
+                    sum += 30
+                case 6:
+                    sum += 31
+                case 7:
+                    sum += 30
+                case 8:
+                    sum += 31
+                case 9:
+                    sum += 31
+                case 10:
+                    sum += 30
+                case 11:
+                    sum += 31
+                case 12:
+                    sum += 30
+                default:
+                    break
+                }
+            }
+
+            return sum
+        }
+        let num2 = numOfDays(m: Int(m) ?? 0, y: Int(d) ?? 0) + (Int(d) ?? 0)
+        print(num1, num2)
+        // 5
+        let final = num1 + num2
+
+        if final % 5 == 1 || final % 5 == 2 || final % 5 == 3 {
+            print("打鱼")
+        } else {
+            print("晒网")
+        }
+        
     }
 }
 
