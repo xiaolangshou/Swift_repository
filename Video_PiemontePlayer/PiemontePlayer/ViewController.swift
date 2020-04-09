@@ -49,7 +49,7 @@ class ViewController: UIViewController {
 //        let localUrl = Bundle.main.url(forResource: "IMG_3267", withExtension: "MOV")
 //        self.player.url = localUrl
         URLSessionConfiguration.default.multipathServiceType = .handover
-        self.player.url = videoUrl
+        self.player.url = videoUrl2
         
         self.player.playbackLoops = true
         
