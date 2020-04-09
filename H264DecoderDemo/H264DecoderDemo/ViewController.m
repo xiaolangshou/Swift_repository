@@ -37,7 +37,7 @@ static void didDecompress( void *decompressionOutputRefCon,
     H264Decoder *decoder = (__bridge H264Decoder *)decompressionOutputRefCon;
     
     if ([decoder.delegate respondsToSelector:@selector(decoder:didDecodingFrame:)]) {
-        [decoder.delegate decoder: decoder didDecodingFrame: pixelBuffer];
+        [decoder.delegate decoder: decoder didDecodingFrame: CFBridgingRelease(pixelBuffer)];
     }
 }
 
