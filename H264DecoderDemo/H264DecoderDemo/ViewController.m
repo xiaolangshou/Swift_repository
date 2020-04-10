@@ -23,8 +23,6 @@
     self.h264Decoder = [[H264Decoder alloc] init];
 }
 
-<<<<<<< HEAD
-=======
 static void didDecompress( void *decompressionOutputRefCon,
                           void *sourceFrameRefCon,
                           OSStatus status,
@@ -42,8 +40,6 @@ static void didDecompress( void *decompressionOutputRefCon,
     }
 }
 
-
->>>>>>> 174991bc8f0038df6058fadd6d8c4b4287e47d33
 // 获取数据进行解码
 - (void)didReadData: (NSData *)data {
     [self.h264Decoder decodeNalu:(uint8_t *)[data bytes] size:(uint32_t)data.length];
