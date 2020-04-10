@@ -23,6 +23,27 @@
     self.h264Decoder = [[H264Decoder alloc] init];
 }
 
+<<<<<<< HEAD
+=======
+static void didDecompress( void *decompressionOutputRefCon,
+                          void *sourceFrameRefCon,
+                          OSStatus status,
+                          VTDecodeInfoFlags infoFlags,
+                          CVImageBufferRef pixelBuffer,
+                          CMTime presentationTimeStamp,
+                          CMTime presentationDuration)
+{
+    CVPixelBufferRef *outputPixelBuffer = (CVPixelBufferRef *)sourceFrameRefCon;
+    *outputPixelBuffer = CVPixelBufferRetain(pixelBuffer);
+    H264Decoder *decoder = (__bridge H264Decoder *)decompressionOutputRefCon;
+    
+    if ([decoder.delegate respondsToSelector:@selector(decoder:didDecodingFrame:)]) {
+        [decoder.delegate decoder: decoder didDecodingFrame: CFBridgingRelease(pixelBuffer)];
+    }
+}
+
+
+>>>>>>> 174991bc8f0038df6058fadd6d8c4b4287e47d33
 // 获取数据进行解码
 - (void)didReadData: (NSData *)data {
     [self.h264Decoder decodeNalu:(uint8_t *)[data bytes] size:(uint32_t)data.length];
