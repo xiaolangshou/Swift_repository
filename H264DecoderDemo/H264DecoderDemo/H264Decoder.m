@@ -59,6 +59,7 @@
 
 // 初始化解码器
 - (BOOL)initH264Decoder {
+    
     if(_deocderSession) {
         return YES;
     }
@@ -116,6 +117,24 @@
     
     return YES;
 }
+
+static void didDecompress( void *decompressionOutputRefCon,
+                          void *sourceFrameRefCon,
+                          OSStatus status,
+                          VTDecodeInfoFlags infoFlags,
+                          CVImageBufferRef pixelBuffer,
+                          CMTime presentationTimeStamp,
+                          CMTime presentationDuration)
+{
+    CVPixelBufferRef *outputPixelBuffer = (CVPixelBufferRef *)sourceFrameRefCon;
+    *outputPixelBuffer = CVPixelBufferRetain(pixelBuffer);
+    H264Decoder *decoder = (__bridge H264Decoder *)decompressionOutputRefCon;
+    
+    if ([decoder.delegate respondsToSelector:@selector(decoder:didDecodingFrame:)]) {
+        [decoder.delegate decoder: decoder didDecodingFrame: CFBridgingRelease(pixelBuffer)];
+    }
+}
+
 
 // 开始解码
 - (CVPixelBufferRef)decode:(uint8_t *)frame withSize:(uint32_t)frameSize {
