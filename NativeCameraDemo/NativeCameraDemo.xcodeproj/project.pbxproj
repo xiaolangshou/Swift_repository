@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0480CE7F24469BBD00E66F02 /* TCPServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480CE7E24469BBD00E66F02 /* TCPServer.swift */; };
+		0480CE872446FEB100E66F02 /* H264Encoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0480CE862446FEB100E66F02 /* H264Encoder.m */; };
+		0480CE89244724CA00E66F02 /* CaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480CE88244724CA00E66F02 /* CaptureViewController.swift */; };
+		2859D319505F4A639D4E1D39 /* Pods_NativeCameraDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CFCD84298F154F969EB4584 /* Pods_NativeCameraDemo.framework */; };
 		CFE46D8824381E1100FFA0D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE46D8724381E1100FFA0D1 /* AppDelegate.swift */; };
 		CFE46D8A24381E1100FFA0D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE46D8924381E1100FFA0D1 /* SceneDelegate.swift */; };
 		CFE46D8C24381E1100FFA0D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE46D8B24381E1100FFA0D1 /* ViewController.swift */; };
@@ -36,6 +40,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0480CE7D24469A9E00E66F02 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		0480CE7E24469BBD00E66F02 /* TCPServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCPServer.swift; sourceTree = "<group>"; };
+		0480CE852446FEB100E66F02 /* H264Encoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = H264Encoder.h; sourceTree = "<group>"; };
+		0480CE862446FEB100E66F02 /* H264Encoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = H264Encoder.m; sourceTree = "<group>"; };
+		0480CE88244724CA00E66F02 /* CaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureViewController.swift; sourceTree = "<group>"; };
+		75E38796A4EECDEFB266FE03 /* Pods-NativeCameraDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeCameraDemo.release.xcconfig"; path = "Target Support Files/Pods-NativeCameraDemo/Pods-NativeCameraDemo.release.xcconfig"; sourceTree = "<group>"; };
+		941E95B16270F38946DDB590 /* Pods-NativeCameraDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeCameraDemo.debug.xcconfig"; path = "Target Support Files/Pods-NativeCameraDemo/Pods-NativeCameraDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		9CFCD84298F154F969EB4584 /* Pods_NativeCameraDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NativeCameraDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFE46D8424381E1100FFA0D1 /* NativeCameraDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NativeCameraDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFE46D8724381E1100FFA0D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFE46D8924381E1100FFA0D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +71,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFE46DB92438243900FFA0D1 /* AVFoundation.framework in Frameworks */,
+				2859D319505F4A639D4E1D39 /* Pods_NativeCameraDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +92,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0480CE7924469A1D00E66F02 /* Sockets */ = {
+			isa = PBXGroup;
+			children = (
+				0480CE7E24469BBD00E66F02 /* TCPServer.swift */,
+			);
+			path = Sockets;
+			sourceTree = "<group>";
+		};
+		0480CE7A24469A2500E66F02 /* H264Encode */ = {
+			isa = PBXGroup;
+			children = (
+				0480CE852446FEB100E66F02 /* H264Encoder.h */,
+				0480CE862446FEB100E66F02 /* H264Encoder.m */,
+			);
+			path = H264Encode;
+			sourceTree = "<group>";
+		};
+		5B21200BBCAB2D7DC8EE2F8A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				941E95B16270F38946DDB590 /* Pods-NativeCameraDemo.debug.xcconfig */,
+				75E38796A4EECDEFB266FE03 /* Pods-NativeCameraDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CFE46D7B24381E1100FFA0D1 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +126,7 @@
 				CFE46DA824381E1300FFA0D1 /* NativeCameraDemoUITests */,
 				CFE46D8524381E1100FFA0D1 /* Products */,
 				CFE46DB72438243800FFA0D1 /* Frameworks */,
+				5B21200BBCAB2D7DC8EE2F8A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,9 +143,13 @@
 		CFE46D8624381E1100FFA0D1 /* NativeCameraDemo */ = {
 			isa = PBXGroup;
 			children = (
+				0480CE7A24469A2500E66F02 /* H264Encode */,
+				0480CE7924469A1D00E66F02 /* Sockets */,
 				CFE46D8724381E1100FFA0D1 /* AppDelegate.swift */,
 				CFE46D8924381E1100FFA0D1 /* SceneDelegate.swift */,
 				CFE46D8B24381E1100FFA0D1 /* ViewController.swift */,
+				0480CE88244724CA00E66F02 /* CaptureViewController.swift */,
+				0480CE7D24469A9E00E66F02 /* Header.h */,
 				CFE46D8D24381E1100FFA0D1 /* Main.storyboard */,
 				CFE46D9024381E1200FFA0D1 /* Assets.xcassets */,
 				CFE46D9224381E1200FFA0D1 /* LaunchScreen.storyboard */,
@@ -136,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				CFE46DB82438243900FFA0D1 /* AVFoundation.framework */,
+				9CFCD84298F154F969EB4584 /* Pods_NativeCameraDemo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -147,9 +192,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CFE46DAE24381E1300FFA0D1 /* Build configuration list for PBXNativeTarget "NativeCameraDemo" */;
 			buildPhases = (
+				7D0F8CB40EA3D673ABAAC224 /* [CP] Check Pods Manifest.lock */,
 				CFE46D8024381E1100FFA0D1 /* Sources */,
 				CFE46D8124381E1100FFA0D1 /* Frameworks */,
 				CFE46D8224381E1100FFA0D1 /* Resources */,
+				4BBE5AFCACCA7C5BE1DEFA73 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -266,14 +313,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4BBE5AFCACCA7C5BE1DEFA73 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NativeCameraDemo/Pods-NativeCameraDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NativeCameraDemo/Pods-NativeCameraDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NativeCameraDemo/Pods-NativeCameraDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D0F8CB40EA3D673ABAAC224 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NativeCameraDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CFE46D8024381E1100FFA0D1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0480CE7F24469BBD00E66F02 /* TCPServer.swift in Sources */,
+				0480CE89244724CA00E66F02 /* CaptureViewController.swift in Sources */,
 				CFE46D8C24381E1100FFA0D1 /* ViewController.swift in Sources */,
 				CFE46D8824381E1100FFA0D1 /* AppDelegate.swift in Sources */,
 				CFE46D8A24381E1100FFA0D1 /* SceneDelegate.swift in Sources */,
+				0480CE872446FEB100E66F02 /* H264Encoder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +536,7 @@
 		};
 		CFE46DAF24381E1300FFA0D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 941E95B16270F38946DDB590 /* Pods-NativeCameraDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -455,6 +548,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ThomasLTD.NativeCameraDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/mac/Swift_repository/NativeCameraDemo/NativeCameraDemo/Header.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -462,6 +556,7 @@
 		};
 		CFE46DB024381E1300FFA0D1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75E38796A4EECDEFB266FE03 /* Pods-NativeCameraDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -473,6 +568,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ThomasLTD.NativeCameraDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/mac/Swift_repository/NativeCameraDemo/NativeCameraDemo/Header.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     var captureOutput: AVCaptureVideoDataOutput!
     var count = 0
     var imageView = UIImageView(frame: CGRect(x: 10, y: 350, width: 320, height: 240))
+    var btn = UIButton.init(frame: CGRect.init(x: 10, y: 595, width: 60, height: 30))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,10 +45,21 @@ class ViewController: UIViewController {
     }
     
     func setupView() {
+        
+        title = "本地视频采集和重新显示"
         view.backgroundColor = UIColor.white
         
         view.addSubview(imageView)
         imageView.backgroundColor = UIColor.cyan
+        
+        view.addSubview(btn)
+        btn.setTitle("远程采集", for: UIControl.State.normal)
+        btn.addTarget(self, action: #selector(btnTapped), for: UIControl.Event.touchUpInside)
+    }
+    
+    @objc func btnTapped() {
+        let vc = CaptureViewController.init()
+        self.present(vc, animated: true, completion: nil)
     }
     
     // 摄像头设置
