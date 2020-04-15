@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     /// 数据Output
     var captureOutput: AVCaptureVideoDataOutput!
     var count = 0
-    var imageView = UIImageView.init(frame: CGRect.init(x: 10, y: 350, width: 320, height: 240))
+    var imageView = UIImageView(frame: CGRect(x: 10, y: 350, width: 320, height: 240))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -160,6 +160,6 @@ extension ViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
         let quartImage: CGImage = context.makeImage()!
         CVPixelBufferUnlockBaseAddress(imageBuffer, [])
         
-        return UIImage(cgImage: quartImage, scale: 1, orientation: UIImage.Orientation.right)
+        return UIImage(cgImage: quartImage, scale: 1, orientation: .right)
     }
 }
