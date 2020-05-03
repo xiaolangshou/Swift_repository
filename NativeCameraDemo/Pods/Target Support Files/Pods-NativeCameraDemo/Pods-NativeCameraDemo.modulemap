@@ -1,6 +1,0 @@
-framework module Pods_NativeCameraDemo {
-  umbrella header "Pods-NativeCameraDemo-umbrella.h"
-
-  export *
-  module * { export * }
-}
