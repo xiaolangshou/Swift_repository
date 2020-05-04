@@ -225,13 +225,16 @@
 				TargetAttributes = {
 					CFAD018221AE3D0300BC3FAD = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1130;
 					};
 					CFAD019621AE3D0500BC3FAD = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1130;
 						TestTargetID = CFAD018221AE3D0300BC3FAD;
 					};
 					CFAD01A121AE3D0500BC3FAD = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1130;
 						TestTargetID = CFAD018221AE3D0300BC3FAD;
 					};
 				};
@@ -525,7 +528,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ThomasLTD.SQliteDemo3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -544,7 +547,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ThomasLTD.SQliteDemo3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -564,7 +567,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ThomasLTD.SQliteDemo3Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SQliteDemo3.app/SQliteDemo3";
 			};
@@ -585,7 +588,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ThomasLTD.SQliteDemo3Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SQliteDemo3.app/SQliteDemo3";
 			};
@@ -605,7 +608,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ThomasLTD.SQliteDemo3UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = SQliteDemo3;
 			};
@@ -625,7 +628,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ThomasLTD.SQliteDemo3UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = SQliteDemo3;
 			};

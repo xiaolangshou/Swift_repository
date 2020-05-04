@@ -45,18 +45,18 @@ class ViewController: UIViewController {
         lab?.text = LanguageHelper.getString(key: "GOOD_MORNING")
     }
     
-    func changeLanguage() -> Void {
+    @objc func changeLanguage() -> Void {
         
         lab?.text = LanguageHelper.getString(key: "GOOD_MORNING")
     }
     
-    func changelangage2() -> Void {
+    @objc func changelangage2() -> Void {
         
         LanguageHelper.shareInstance.setLanguage(langeuage: "en")
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "LanguageChanged"), object: nil)
     }
     
-    func changelangage1() -> Void {
+    @objc func changelangage1() -> Void {
         
         LanguageHelper.shareInstance.setLanguage(langeuage: "zh-Hans")
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "LanguageChanged"), object: nil)

@@ -11,10 +11,16 @@ import UIKit
 class ViewController: UIViewController {
     
     static let shared = ViewController()
+<<<<<<< HEAD
+=======
+
+    let btn = UIButton()
+>>>>>>> 3cf5e2e190bdb6bb09f64a63af641e0d4373ef9b
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+<<<<<<< HEAD
         let btn1 = UIButton()
         btn1.setTitle("vc2", for: UIControlState.normal)
         btn1.backgroundColor = UIColor.green
@@ -52,6 +58,29 @@ class ViewController: UIViewController {
     }
     
     @objc func btn1Tapped() {
+=======
+        setupView()
+        addObserver()
+    }
+    
+    func setupView() {
+        
+        btn.backgroundColor = UIColor.blue
+        btn.frame = CGRect.init(x: 50, y: 300, width: 40, height: 25)
+        btn.addTarget(self, action: #selector(btnTapped), for: .touchUpInside)
+        view.addSubview(btn)
+    }
+    
+    func addObserver() {
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(changeBackColor(notify:)),
+                                               name: NSNotification.Name.init("111"),
+                                               object: nil)
+    }
+    
+    @objc func btnTapped() {
+>>>>>>> 3cf5e2e190bdb6bb09f64a63af641e0d4373ef9b
 
         let vc2 = ViewController2()
         navigationController?.pushViewController(vc2, animated: true)
@@ -77,5 +106,12 @@ class ViewController: UIViewController {
 //        }
 //    }
 
+    @objc func changeBackColor(notify: Notification) {
+        print("recieved obj: \(notify.object ?? "nil")")
+        
+        if notify.object as! String == "red" {
+            self.view.backgroundColor = UIColor.red
+        }
+    }
 }
 

@@ -47,7 +47,7 @@ class DB {
         let sql="INSERT INTO FEEDLOGS (ID, COUNT,TYPE,LOGTIME,LOGDAY,REMARK) "+"VALUES (?,?,?,?,?,?)"
         let db = DB.getDb()
         db.open()
-        db.executeUpdate(sql, withArgumentsIn: [log.id, log.count,log.type,log.logTime,log.logDay,log.remark])
+        db.executeUpdate(sql, withArgumentsIn: [log.id, log.count, log.type, log.logTime, log.logDay, log.remark])
         db.close()
     }
     
@@ -66,7 +66,7 @@ class DB {
         let sql = "UPDATE FEEDLOGS SET COUNT=?,TYPE=?,LOGTIME=?,LOGDAY=?,REMARK=? WHERE ID=?"
         let db = DB.getDb()
         db.open()
-        db.executeUpdate(sql, withArgumentsIn: [log.count,log.type,log.logTime,log.logDay,log.remark,log.id])
+        db.executeUpdate(sql, withArgumentsIn: [log.count, log.type, log.logTime, log.logDay, log.remark, log.id])
         db.close()
     }
     

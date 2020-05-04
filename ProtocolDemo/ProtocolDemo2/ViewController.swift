@@ -8,13 +8,14 @@
 
 import UIKit
 
+/// 协议扩展(protocol + extension), extension为Protocol提供默认实现，变相将Protocol的方法设定为optional
 protocol VC1Protcol {
     
     var h: Int { get set }
     var w: Int { get set }
     
     func func1()
-    mutating func func2()
+    mutating func func2()// protocol的方法被mutating修饰，才能保证struct和enum实现时可以改变属性的值
 }
 
 extension VC1Protcol {
@@ -72,11 +73,21 @@ class ViewController: UIViewController {
         
         vc2.h = 2000
         vc2.w = 4000
-        
+
         vc2.func1()
         vc2.func2()
-        
+
         vc3.func2()
+        
+        let btn = UIButton.init(frame: CGRect.init(x: 20, y: 400, width: 80, height: 30))
+        btn.backgroundColor = UIColor.red
+        btn.addTarget(self, action: #selector(btnTapped), for: UIControlEvents.touchUpInside)
+        view.addSubview(btn)
+    }
+    
+    @objc func btnTapped() {
+        let vc2 = ViewController2()
+        self.present(vc2, animated: true, completion: nil)
     }
 }
 

@@ -33,7 +33,7 @@ class ViewController: UIViewController, pro1 {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(min(10, 5))
-        updateCell(Model.init(age: 29))
+        print(min(10, 5))// 5
+        updateCell(Model.init(age: 29))//
     }
 }

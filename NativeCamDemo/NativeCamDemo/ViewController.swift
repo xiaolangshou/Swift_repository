@@ -48,7 +48,13 @@ class ViewController: UIViewController {
     
     func setupView() {
         
-        title = "本地视频采集和重新显示"
+        let titleV = UILabel.init(frame: CGRect.init(x: 0,
+                                                    y: 20,
+                                                    width: UIScreen.main.bounds.width,
+                                                    height: 20))
+        view.addSubview(titleV)
+        titleV.text = "本地视频采集预览(上)和重新显示(下)"
+        
         view.backgroundColor = UIColor.white
         
         view.addSubview(imageView)

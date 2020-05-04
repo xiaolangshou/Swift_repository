@@ -68,7 +68,6 @@ class ViewController: UIViewController {
     }
     
     
-    
     /// 并发队列，同步任务：主线程依次执行
     func conQsyn() {
         for i in 0..<10 {
@@ -89,52 +88,67 @@ class ViewController: UIViewController {
         }
     }
     
-    /// 栅栏使用场景
+    /// 栅栏使用场景：用于读写隔离，以保证写入的时候，不被读取
     func dispatchBarrier() {
         
-        for i in 0...10 {
-            globalQueue.async {
-                print(i)
-            }
+        struct File {
+            var content = ""
         }
         
-        globalQueue.async(flags: .barrier) {
-            print("this is barrier")
+        var file = File()
+        file.content = "This is a file"
+        
+        // let writeFileToWorkItem = DispatchWorkItem {
+        let writeFileToWorkItem = DispatchWorkItem(flags: DispatchWorkItemFlags.barrier) {
+            file.content = "This file has been modified."
+            Thread.sleep(forTimeInterval: 1)
+            print("write file")
         }
         
-        for i in 11...20 {
-            globalQueue.async {
-                print(i)
-            }
+        let readFileWorkItem = DispatchWorkItem {
+            Thread.sleep(forTimeInterval: 1)
+            print("file.content=\(file.content)")
+        }
+        
+        for _ in 0..<3 {
+            concurrentQueue.async(execute: readFileWorkItem)
+        }
+        
+        concurrentQueue.async(execute: writeFileToWorkItem)
+        
+        for _ in 0..<3 {
+            concurrentQueue.async(execute: readFileWorkItem)
         }
     }
     
+    // 等到所有的队列任务执行完毕之后再进行后续操作
     func groupDemo() {
+        let group = DispatchGroup()
+        print("group 任务开始执行")
+        for i in 0..<10 {
+            DispatchQueue.global().async(group: group) {
+                sleep(arc4random()%3)
+                print("任务\(i + 1)下载完成")
+            }
+        }
+
+        group.notify(queue: DispatchQueue.main) {
+            print("group 任务执行结束, 去更新UI")
+        }
+        
 //        let group = DispatchGroup()
-//        for i in 0..<10 {
+//        for i in 0...10 {
 //            DispatchQueue.global().async(group: group) {
-//                sleep(arc4random()%3)
+//                sleep(arc4random()%10)//休眠时间随机
 //                print(i)
 //            }
 //        }
-//
-//        group.notify(queue: DispatchQueue.main) {
+//        switch group.wait(timeout: DispatchTime.now()+10) {
+//        case .success:
 //            print("group 任务执行结束")
+//        case .timedOut:
+//            print("group 任务执行超时")
 //        }
-        
-        let group = DispatchGroup()
-        for i in 0...10 {
-            DispatchQueue.global().async(group: group) {
-                sleep(arc4random()%10)//休眠时间随机
-                print(i)
-            }
-        }
-        switch group.wait(timeout: DispatchTime.now()+10) {
-        case .success:
-            print("group 任务执行结束")
-        case .timedOut:
-            print("group 任务执行超时")
-        }
     }
 
 }
