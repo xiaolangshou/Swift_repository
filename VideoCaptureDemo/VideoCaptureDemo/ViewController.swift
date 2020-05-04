@@ -47,7 +47,6 @@ class ViewController: UIViewController {
         
         let session = AVCaptureSession.init()
         
-        
         /// video settings
         var videoInput: AVCaptureDeviceInput?
         session.beginConfiguration()

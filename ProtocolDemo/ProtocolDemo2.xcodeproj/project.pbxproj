@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04E2CE9C245FF1BE00073D4A /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E2CE9B245FF1BE00073D4A /* ViewController2.swift */; };
 		3F3C049A211C75300084ABDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3C0499211C75300084ABDF /* AppDelegate.swift */; };
 		3F3C049C211C75300084ABDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3C049B211C75300084ABDF /* ViewController.swift */; };
 		3F3C049F211C75300084ABDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F3C049D211C75300084ABDF /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04E2CE9B245FF1BE00073D4A /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		3F3C0496211C75300084ABDF /* ProtocolDemo2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProtocolDemo2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F3C0499211C75300084ABDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F3C049B211C75300084ABDF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				3F3C0499211C75300084ABDF /* AppDelegate.swift */,
 				3F3C049B211C75300084ABDF /* ViewController.swift */,
+				04E2CE9B245FF1BE00073D4A /* ViewController2.swift */,
 				3F3C049D211C75300084ABDF /* Main.storyboard */,
 				3F3C04A0211C75320084ABDF /* Assets.xcassets */,
 				3F3C04A2211C75320084ABDF /* LaunchScreen.storyboard */,
@@ -258,6 +261,7 @@
 			files = (
 				3F3C049C211C75300084ABDF /* ViewController.swift in Sources */,
 				3F3C049A211C75300084ABDF /* AppDelegate.swift in Sources */,
+				04E2CE9C245FF1BE00073D4A /* ViewController2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
