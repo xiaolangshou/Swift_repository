@@ -15,6 +15,7 @@
 		3F5F046320B6B889001D195B /* NotificationDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5F046220B6B889001D195B /* NotificationDemoTests.swift */; };
 		3F5F046E20B6B889001D195B /* NotificationDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5F046D20B6B889001D195B /* NotificationDemoUITests.swift */; };
 		3F5F047C20B6B8F2001D195B /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5F047B20B6B8F2001D195B /* ViewController2.swift */; };
+		CF1F380A245F0E5900F8C7DE /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1F3809245F0E5900F8C7DE /* ViewController3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		3F5F046D20B6B889001D195B /* NotificationDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDemoUITests.swift; sourceTree = "<group>"; };
 		3F5F046F20B6B889001D195B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F5F047B20B6B8F2001D195B /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		CF1F3809245F0E5900F8C7DE /* ViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				3F5F044D20B6B887001D195B /* AppDelegate.swift */,
 				3F5F044F20B6B887001D195B /* ViewController.swift */,
 				3F5F047B20B6B8F2001D195B /* ViewController2.swift */,
+				CF1F3809245F0E5900F8C7DE /* ViewController3.swift */,
 				3F5F045120B6B887001D195B /* Main.storyboard */,
 				3F5F045420B6B888001D195B /* Assets.xcassets */,
 				3F5F045620B6B888001D195B /* LaunchScreen.storyboard */,
@@ -261,6 +264,7 @@
 			files = (
 				3F5F045020B6B887001D195B /* ViewController.swift in Sources */,
 				3F5F044E20B6B887001D195B /* AppDelegate.swift in Sources */,
+				CF1F380A245F0E5900F8C7DE /* ViewController3.swift in Sources */,
 				3F5F047C20B6B8F2001D195B /* ViewController2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

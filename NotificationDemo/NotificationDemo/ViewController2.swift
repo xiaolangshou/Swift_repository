@@ -9,26 +9,13 @@
 import UIKit
 
 class ViewController2: UIViewController {
-
-    let vc1 = ViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = UIColor.cyan
         
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(updateData(notify:)),
-                                               name: NSNotification.Name(rawValue: "111"),
-                                               object: nil)
-        
-        vc1.callBack = {
-            NotificationCenter.default.post(name: NSNotification.Name("111"), object: "hello!")
-        }
-    }
-    
-    @objc func updateData(notify: Notification) {
-        print(notify.object ?? "nil")
+        NotificationCenter.default.post(name: NSNotification.Name("111"), object: "gray")
     }
 
 }
