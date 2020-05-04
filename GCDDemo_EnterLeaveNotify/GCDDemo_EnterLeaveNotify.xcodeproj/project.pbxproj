@@ -1,0 +1,750 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0482F487245D64E2005351B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482F486245D64E2005351B6 /* AppDelegate.swift */; };
+		0482F489245D64E2005351B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482F488245D64E2005351B6 /* SceneDelegate.swift */; };
+		0482F48B245D64E2005351B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482F48A245D64E2005351B6 /* ViewController.swift */; };
+		0482F48E245D64E2005351B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0482F48C245D64E2005351B6 /* Main.storyboard */; };
+		0482F490245D64E3005351B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0482F48F245D64E3005351B6 /* Assets.xcassets */; };
+		0482F493245D64E3005351B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0482F491245D64E3005351B6 /* LaunchScreen.storyboard */; };
+		0482F49E245D64E3005351B6 /* GCDDemo_EnterLeaveNotifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482F49D245D64E3005351B6 /* GCDDemo_EnterLeaveNotifyTests.swift */; };
+		0482F4A9245D64E3005351B6 /* GCDDemo_EnterLeaveNotifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482F4A8245D64E3005351B6 /* GCDDemo_EnterLeaveNotifyUITests.swift */; };
+		97FB51A5BC5F83E5C6608796 /* Pods_GCDDemo_EnterLeaveNotify_GCDDemo_EnterLeaveNotifyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB1A5D802E67C9F12052C58 /* Pods_GCDDemo_EnterLeaveNotify_GCDDemo_EnterLeaveNotifyUITests.framework */; };
+		CB79A2E6ECABD6C3ED5D0A97 /* Pods_GCDDemo_EnterLeaveNotify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80028EFBFB52E79FA2A2AF17 /* Pods_GCDDemo_EnterLeaveNotify.framework */; };
+		E55D3B0C3F54D87A66230990 /* Pods_GCDDemo_EnterLeaveNotifyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B857162758ED8BDEC77CB86 /* Pods_GCDDemo_EnterLeaveNotifyTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0482F49A245D64E3005351B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0482F47B245D64E2005351B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0482F482245D64E2005351B6;
+			remoteInfo = GCDDemo_EnterLeaveNotify;
+		};
+		0482F4A5245D64E3005351B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0482F47B245D64E2005351B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0482F482245D64E2005351B6;
+			remoteInfo = GCDDemo_EnterLeaveNotify;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0482F483245D64E2005351B6 /* GCDDemo_EnterLeaveNotify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GCDDemo_EnterLeaveNotify.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0482F486245D64E2005351B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0482F488245D64E2005351B6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		0482F48A245D64E2005351B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0482F48D245D64E2005351B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0482F48F245D64E3005351B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0482F492245D64E3005351B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0482F494245D64E3005351B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0482F499245D64E3005351B6 /* GCDDemo_EnterLeaveNotifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GCDDemo_EnterLeaveNotifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0482F49D245D64E3005351B6 /* GCDDemo_EnterLeaveNotifyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDDemo_EnterLeaveNotifyTests.swift; sourceTree = "<group>"; };
+		0482F49F245D64E3005351B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0482F4A4245D64E3005351B6 /* GCDDemo_EnterLeaveNotifyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GCDDemo_EnterLeaveNotifyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0482F4A8245D64E3005351B6 /* GCDDemo_EnterLeaveNotifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDDemo_EnterLeaveNotifyUITests.swift; sourceTree = "<group>"; };
+		0482F4AA245D64E3005351B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47CE541EF45B2F84E3F603E3 /* Pods-GCDDemo_EnterLeaveNotify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCDDemo_EnterLeaveNotify.debug.xcconfig"; path = "Target Support Files/Pods-GCDDemo_EnterLeaveNotify/Pods-GCDDemo_EnterLeaveNotify.debug.xcconfig"; sourceTree = "<group>"; };
+		51603CA2292A31835528FAA7 /* Pods-GCDDemo_EnterLeaveNotify-GCDDemo_EnterLeaveNotifyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCDDemo_EnterLeaveNotify-GCDDemo_EnterLeaveNotifyUITests.release.xcconfig"; path = "Target Support Files/Pods-GCDDemo_EnterLeaveNotify-GCDDemo_EnterLeaveNotifyUITests/Pods-GCDDemo_EnterLeaveNotify-GCDDemo_EnterLeaveNotifyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		74493BBF566579DE4D1B5217 /* Pods-GCDDemo_EnterLeaveNotify-GCDDemo_EnterLeaveNotifyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCDDemo_EnterLeaveNotify-GCDDemo_EnterLeaveNotifyUITests.debug.xcconfig"; path = "Target Support Files/Pods-GCDDemo_EnterLeaveNotify-GCDDemo_EnterLeaveNotifyUITests/Pods-GCDDemo_EnterLeaveNotify-GCDDemo_EnterLeaveNotifyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		80028EFBFB52E79FA2A2AF17 /* Pods_GCDDemo_EnterLeaveNotify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GCDDemo_EnterLeaveNotify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80995A77FC6309653E8CA6AA /* Pods-GCDDemo_EnterLeaveNotify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCDDemo_EnterLeaveNotify.release.xcconfig"; path = "Target Support Files/Pods-GCDDemo_EnterLeaveNotify/Pods-GCDDemo_EnterLeaveNotify.release.xcconfig"; sourceTree = "<group>"; };
+		8DB1A5D802E67C9F12052C58 /* Pods_GCDDemo_EnterLeaveNotify_GCDDemo_EnterLeaveNotifyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GCDDemo_EnterLeaveNotify_GCDDemo_EnterLeaveNotifyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B857162758ED8BDEC77CB86 /* Pods_GCDDemo_EnterLeaveNotifyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GCDDemo_EnterLeaveNotifyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1ED3E6AAAA50DB1DC999E90 /* Pods-GCDDemo_EnterLeaveNotifyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCDDemo_EnterLeaveNotifyTests.release.xcconfig"; path = "Target Support Files/Pods-GCDDemo_EnterLeaveNotifyTests/Pods-GCDDemo_EnterLeaveNotifyTests.release.xcconfig"; sourceTree = "<group>"; };
+		B496198D729B28BC782289B5 /* Pods-GCDDemo_EnterLeaveNotifyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCDDemo_EnterLeaveNotifyTests.debug.xcconfig"; path = "Target Support Files/Pods-GCDDemo_EnterLeaveNotifyTests/Pods-GCDDemo_EnterLeaveNotifyTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0482F480245D64E2005351B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB79A2E6ECABD6C3ED5D0A97 /* Pods_GCDDemo_EnterLeaveNotify.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0482F496245D64E3005351B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E55D3B0C3F54D87A66230990 /* Pods_GCDDemo_EnterLeaveNotifyTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0482F4A1245D64E3005351B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97FB51A5BC5F83E5C6608796 /* Pods_GCDDemo_EnterLeaveNotify_GCDDemo_EnterLeaveNotifyUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0482F47A245D64E2005351B6 = {
+			isa = PBXGroup;
+			children = (
+				0482F485245D64E2005351B6 /* GCDDemo_EnterLeaveNotify */,
+				0482F49C245D64E3005351B6 /* GCDDemo_EnterLeaveNotifyTests */,
+				0482F4A7245D64E3005351B6 /* GCDDemo_EnterLeaveNotifyUITests */,
+				0482F484245D64E2005351B6 /* Products */,
+				362E49163D5A75C6EC531EFA /* Pods */,
+				E64B355AC1E7F6625B4E256A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0482F484245D64E2005351B6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0482F483245D64E2005351B6 /* GCDDemo_EnterLeaveNotify.app */,
+				0482F499245D64E3005351B6 /* GCDDemo_EnterLeaveNotifyTests.xctest */,
+				0482F4A4245D64E3005351B6 /* GCDDemo_EnterLeaveNotifyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0482F485245D64E2005351B6 /* GCDDemo_EnterLeaveNotify */ = {
+			isa = PBXGroup;
+			children = (
+				0482F486245D64E2005351B6 /* AppDelegate.swift */,
+				0482F488245D64E2005351B6 /* SceneDelegate.swift */,
+				0482F48A245D64E2005351B6 /* ViewController.swift */,
+				0482F48C245D64E2005351B6 /* Main.storyboard */,
+				0482F48F245D64E3005351B6 /* Assets.xcassets */,
+				0482F491245D64E3005351B6 /* LaunchScreen.storyboard */,
+				0482F494245D64E3005351B6 /* Info.plist */,
+			);
+			path = GCDDemo_EnterLeaveNotify;
+			sourceTree = "<group>";
+		};
+		0482F49C245D64E3005351B6 /* GCDDemo_EnterLeaveNotifyTests */ = {
+			isa = PBXGroup;
+			children = (
+				0482F49D245D64E3005351B6 /* GCDDemo_EnterLeaveNotifyTests.swift */,
+				0482F49F245D64E3005351B6 /* Info.plist */,
+			);
+			path = GCDDemo_EnterLeaveNotifyTests;
+			sourceTree = "<group>";
+		};
+		0482F4A7245D64E3005351B6 /* GCDDemo_EnterLeaveNotifyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0482F4A8245D64E3005351B6 /* GCDDemo_EnterLeaveNotifyUITests.swift */,
+				0482F4AA245D64E3005351B6 /* Info.plist */,
+			);
+			path = GCDDemo_EnterLeaveNotifyUITests;
+			sourceTree = "<group>";
+		};
+		362E49163D5A75C6EC531EFA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				47CE541EF45B2F84E3F603E3 /* Pods-GCDDemo_EnterLeaveNotify.debug.xcconfig */,
+				80995A77FC6309653E8CA6AA /* Pods-GCDDemo_EnterLeaveNotify.release.xcconfig */,
+				74493BBF566579DE4D1B5217 /* Pods-GCDDemo_EnterLeaveNotify-GCDDemo_EnterLeaveNotifyUITests.debug.xcconfig */,
+				51603CA2292A31835528FAA7 /* Pods-GCDDemo_EnterLeaveNotify-GCDDemo_EnterLeaveNotifyUITests.release.xcconfig */,
+				B496198D729B28BC782289B5 /* Pods-GCDDemo_EnterLeaveNotifyTests.debug.xcconfig */,
+				A1ED3E6AAAA50DB1DC999E90 /* Pods-GCDDemo_EnterLeaveNotifyTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E64B355AC1E7F6625B4E256A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				80028EFBFB52E79FA2A2AF17 /* Pods_GCDDemo_EnterLeaveNotify.framework */,
+				8DB1A5D802E67C9F12052C58 /* Pods_GCDDemo_EnterLeaveNotify_GCDDemo_EnterLeaveNotifyUITests.framework */,
+				9B857162758ED8BDEC77CB86 /* Pods_GCDDemo_EnterLeaveNotifyTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0482F482245D64E2005351B6 /* GCDDemo_EnterLeaveNotify */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0482F4AD245D64E3005351B6 /* Build configuration list for PBXNativeTarget "GCDDemo_EnterLeaveNotify" */;
+			buildPhases = (
+				D25AAA6D40B1047DF90629F2 /* [CP] Check Pods Manifest.lock */,
+				0482F47F245D64E2005351B6 /* Sources */,
+				0482F480245D64E2005351B6 /* Frameworks */,
+				0482F481245D64E2005351B6 /* Resources */,
+				9089A1941BF29504877B46BC /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GCDDemo_EnterLeaveNotify;
+			productName = GCDDemo_EnterLeaveNotify;
+			productReference = 0482F483245D64E2005351B6 /* GCDDemo_EnterLeaveNotify.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0482F498245D64E3005351B6 /* GCDDemo_EnterLeaveNotifyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0482F4B0245D64E3005351B6 /* Build configuration list for PBXNativeTarget "GCDDemo_EnterLeaveNotifyTests" */;
+			buildPhases = (
+				FA83CAB260F6A7AEDAF390B7 /* [CP] Check Pods Manifest.lock */,
+				0482F495245D64E3005351B6 /* Sources */,
+				0482F496245D64E3005351B6 /* Frameworks */,
+				0482F497245D64E3005351B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0482F49B245D64E3005351B6 /* PBXTargetDependency */,
+			);
+			name = GCDDemo_EnterLeaveNotifyTests;
+			productName = GCDDemo_EnterLeaveNotifyTests;
+			productReference = 0482F499245D64E3005351B6 /* GCDDemo_EnterLeaveNotifyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0482F4A3245D64E3005351B6 /* GCDDemo_EnterLeaveNotifyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0482F4B3245D64E3005351B6 /* Build configuration list for PBXNativeTarget "GCDDemo_EnterLeaveNotifyUITests" */;
+			buildPhases = (
+				A644918504C08F2088658F9E /* [CP] Check Pods Manifest.lock */,
+				0482F4A0245D64E3005351B6 /* Sources */,
+				0482F4A1245D64E3005351B6 /* Frameworks */,
+				0482F4A2245D64E3005351B6 /* Resources */,
+				FFE778545862F7D37C2B9BE7 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0482F4A6245D64E3005351B6 /* PBXTargetDependency */,
+			);
+			name = GCDDemo_EnterLeaveNotifyUITests;
+			productName = GCDDemo_EnterLeaveNotifyUITests;
+			productReference = 0482F4A4245D64E3005351B6 /* GCDDemo_EnterLeaveNotifyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0482F47B245D64E2005351B6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = TLLTD;
+				TargetAttributes = {
+					0482F482245D64E2005351B6 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					0482F498245D64E3005351B6 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 0482F482245D64E2005351B6;
+					};
+					0482F4A3245D64E3005351B6 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 0482F482245D64E2005351B6;
+					};
+				};
+			};
+			buildConfigurationList = 0482F47E245D64E2005351B6 /* Build configuration list for PBXProject "GCDDemo_EnterLeaveNotify" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0482F47A245D64E2005351B6;
+			productRefGroup = 0482F484245D64E2005351B6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0482F482245D64E2005351B6 /* GCDDemo_EnterLeaveNotify */,
+				0482F498245D64E3005351B6 /* GCDDemo_EnterLeaveNotifyTests */,
+				0482F4A3245D64E3005351B6 /* GCDDemo_EnterLeaveNotifyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0482F481245D64E2005351B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0482F493245D64E3005351B6 /* LaunchScreen.storyboard in Resources */,
+				0482F490245D64E3005351B6 /* Assets.xcassets in Resources */,
+				0482F48E245D64E2005351B6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0482F497245D64E3005351B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0482F4A2245D64E3005351B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9089A1941BF29504877B46BC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GCDDemo_EnterLeaveNotify/Pods-GCDDemo_EnterLeaveNotify-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GCDDemo_EnterLeaveNotify/Pods-GCDDemo_EnterLeaveNotify-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GCDDemo_EnterLeaveNotify/Pods-GCDDemo_EnterLeaveNotify-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A644918504C08F2088658F9E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GCDDemo_EnterLeaveNotify-GCDDemo_EnterLeaveNotifyUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D25AAA6D40B1047DF90629F2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GCDDemo_EnterLeaveNotify-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA83CAB260F6A7AEDAF390B7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GCDDemo_EnterLeaveNotifyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFE778545862F7D37C2B9BE7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GCDDemo_EnterLeaveNotify-GCDDemo_EnterLeaveNotifyUITests/Pods-GCDDemo_EnterLeaveNotify-GCDDemo_EnterLeaveNotifyUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GCDDemo_EnterLeaveNotify-GCDDemo_EnterLeaveNotifyUITests/Pods-GCDDemo_EnterLeaveNotify-GCDDemo_EnterLeaveNotifyUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GCDDemo_EnterLeaveNotify-GCDDemo_EnterLeaveNotifyUITests/Pods-GCDDemo_EnterLeaveNotify-GCDDemo_EnterLeaveNotifyUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0482F47F245D64E2005351B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0482F48B245D64E2005351B6 /* ViewController.swift in Sources */,
+				0482F487245D64E2005351B6 /* AppDelegate.swift in Sources */,
+				0482F489245D64E2005351B6 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0482F495245D64E3005351B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0482F49E245D64E3005351B6 /* GCDDemo_EnterLeaveNotifyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0482F4A0245D64E3005351B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0482F4A9245D64E3005351B6 /* GCDDemo_EnterLeaveNotifyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0482F49B245D64E3005351B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0482F482245D64E2005351B6 /* GCDDemo_EnterLeaveNotify */;
+			targetProxy = 0482F49A245D64E3005351B6 /* PBXContainerItemProxy */;
+		};
+		0482F4A6245D64E3005351B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0482F482245D64E2005351B6 /* GCDDemo_EnterLeaveNotify */;
+			targetProxy = 0482F4A5245D64E3005351B6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0482F48C245D64E2005351B6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0482F48D245D64E2005351B6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0482F491245D64E3005351B6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0482F492245D64E3005351B6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0482F4AB245D64E3005351B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0482F4AC245D64E3005351B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0482F4AE245D64E3005351B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47CE541EF45B2F84E3F603E3 /* Pods-GCDDemo_EnterLeaveNotify.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LPF3349M6Q;
+				INFOPLIST_FILE = GCDDemo_EnterLeaveNotify/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "TLTech.GCDDemo-EnterLeaveNotify";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0482F4AF245D64E3005351B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80995A77FC6309653E8CA6AA /* Pods-GCDDemo_EnterLeaveNotify.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LPF3349M6Q;
+				INFOPLIST_FILE = GCDDemo_EnterLeaveNotify/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "TLTech.GCDDemo-EnterLeaveNotify";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0482F4B1245D64E3005351B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B496198D729B28BC782289B5 /* Pods-GCDDemo_EnterLeaveNotifyTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LPF3349M6Q;
+				INFOPLIST_FILE = GCDDemo_EnterLeaveNotifyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "TLTech.GCDDemo-EnterLeaveNotifyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GCDDemo_EnterLeaveNotify.app/GCDDemo_EnterLeaveNotify";
+			};
+			name = Debug;
+		};
+		0482F4B2245D64E3005351B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1ED3E6AAAA50DB1DC999E90 /* Pods-GCDDemo_EnterLeaveNotifyTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LPF3349M6Q;
+				INFOPLIST_FILE = GCDDemo_EnterLeaveNotifyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "TLTech.GCDDemo-EnterLeaveNotifyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GCDDemo_EnterLeaveNotify.app/GCDDemo_EnterLeaveNotify";
+			};
+			name = Release;
+		};
+		0482F4B4245D64E3005351B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74493BBF566579DE4D1B5217 /* Pods-GCDDemo_EnterLeaveNotify-GCDDemo_EnterLeaveNotifyUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LPF3349M6Q;
+				INFOPLIST_FILE = GCDDemo_EnterLeaveNotifyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "TLTech.GCDDemo-EnterLeaveNotifyUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GCDDemo_EnterLeaveNotify;
+			};
+			name = Debug;
+		};
+		0482F4B5245D64E3005351B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51603CA2292A31835528FAA7 /* Pods-GCDDemo_EnterLeaveNotify-GCDDemo_EnterLeaveNotifyUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LPF3349M6Q;
+				INFOPLIST_FILE = GCDDemo_EnterLeaveNotifyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "TLTech.GCDDemo-EnterLeaveNotifyUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GCDDemo_EnterLeaveNotify;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0482F47E245D64E2005351B6 /* Build configuration list for PBXProject "GCDDemo_EnterLeaveNotify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0482F4AB245D64E3005351B6 /* Debug */,
+				0482F4AC245D64E3005351B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0482F4AD245D64E3005351B6 /* Build configuration list for PBXNativeTarget "GCDDemo_EnterLeaveNotify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0482F4AE245D64E3005351B6 /* Debug */,
+				0482F4AF245D64E3005351B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0482F4B0245D64E3005351B6 /* Build configuration list for PBXNativeTarget "GCDDemo_EnterLeaveNotifyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0482F4B1245D64E3005351B6 /* Debug */,
+				0482F4B2245D64E3005351B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0482F4B3245D64E3005351B6 /* Build configuration list for PBXNativeTarget "GCDDemo_EnterLeaveNotifyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0482F4B4245D64E3005351B6 /* Debug */,
+				0482F4B5245D64E3005351B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0482F47B245D64E2005351B6 /* Project object */;
+}

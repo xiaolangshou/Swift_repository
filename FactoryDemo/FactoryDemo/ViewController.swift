@@ -12,14 +12,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-<<<<<<< HEAD
+
         let hp = HPMouseFac.createMouse()
         hp.logo()
-=======
-        let dell = DellMouseFac.createMouse()
-        dell.logo()
->>>>>>> ba9f9109965b4760819b84ac3ff1ddf87dd3818a
         
     }
 

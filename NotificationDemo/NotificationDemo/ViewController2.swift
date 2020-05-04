@@ -17,18 +17,9 @@ class ViewController2: UIViewController {
 
         view.backgroundColor = UIColor.cyan
         
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(updateData(notify:)),
-                                               name: NSNotification.Name(rawValue: "111"),
-                                               object: nil)
-        
-        vc1.callBack = {
-            NotificationCenter.default.post(name: NSNotification.Name("111"), object: "hello!")
-        }
+        NotificationCenter.default.post(name: NSNotification.Name("111"), object: "red")
     }
     
-    @objc func updateData(notify: Notification) {
-        print(notify.object ?? "nil")
-    }
+
 
 }

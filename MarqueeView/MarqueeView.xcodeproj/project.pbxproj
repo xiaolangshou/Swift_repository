@@ -226,13 +226,16 @@
 				TargetAttributes = {
 					3F6ADD2920C0EEF1005EDAB1 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1130;
 					};
 					3F6ADD3D20C0EEF2005EDAB1 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1130;
 						TestTargetID = 3F6ADD2920C0EEF1005EDAB1;
 					};
 					3F6ADD4820C0EEF2005EDAB1 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1130;
 						TestTargetID = 3F6ADD2920C0EEF1005EDAB1;
 					};
 				};
@@ -529,7 +532,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = FZYS.MarqueeView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -548,7 +551,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = FZYS.MarqueeView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -568,7 +571,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = FZYS.MarqueeViewTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MarqueeView.app/MarqueeView";
 			};
@@ -589,7 +592,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = FZYS.MarqueeViewTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MarqueeView.app/MarqueeView";
 			};
@@ -609,7 +612,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = FZYS.MarqueeViewUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = MarqueeView;
 			};
@@ -629,7 +632,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = FZYS.MarqueeViewUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = MarqueeView;
 			};

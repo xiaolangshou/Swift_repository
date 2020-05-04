@@ -22,6 +22,10 @@ class ViewController: UIViewController {
         let config = URLSessionConfiguration.default
         config.timeoutIntervalForRequest = 15
         sessionManager = SessionManager.init(configuration: config)
+        
+        sendRequest(urlStr: urlStr) { (data) in
+            print(String.init(data: data.data ?? Data(), encoding: String.Encoding.utf8) ?? "")
+        }
     }
     
     func sendRequest(urlStr: String,

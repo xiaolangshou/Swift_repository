@@ -18,8 +18,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         btn.backgroundColor = UIColor.cyan
-        btn.setTitle("check", for: UIControl.State.normal)
-        btn.addTarget(self, action: #selector(btnTapped), for: UIControl.Event.touchUpInside)
+        btn.setTitle("check", for: .normal)
+        btn.addTarget(self, action: #selector(btnTapped), for: .touchUpInside)
         view.addSubview(btn)
         btn.snp.makeConstraints { (make) in
             make.center.equalToSuperview()
@@ -42,12 +42,12 @@ class ViewController: UIViewController {
                                logDay: "11/16"))
         
         // update
-        DB.update(log: FeedLog(id: "Thomas",
-                               count: 11,
-                               type: 222,
-                               remark: "000",
-                               logTime: Date.init(timeIntervalSinceNow: TimeInterval.init()),
-                               logDay: "222"))
+//        DB.update(log: FeedLog(id: "Thomas",
+//                               count: 11,
+//                               type: 222,
+//                               remark: "000",
+//                               logTime: Date.init(timeIntervalSinceNow: TimeInterval.init()),
+//                               logDay: "222"))
         
         // delete
         //DB.remove(id: "Candice")
@@ -55,7 +55,7 @@ class ViewController: UIViewController {
 
     @objc func btnTapped() {
         
-        let feedLog = DB.select(id: "ll")
+        let feedLog = DB.select(id: "Thomas")
         
         if let feedLog = feedLog {
             print("\(feedLog.id), \(feedLog.logDay), \(feedLog.logTime), \(feedLog.count), \(feedLog.type), \(feedLog.remark)")

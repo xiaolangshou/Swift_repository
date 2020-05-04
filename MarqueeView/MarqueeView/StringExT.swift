@@ -15,7 +15,7 @@ extension String {
         let font = UIFont.systemFont(ofSize: fontSize)
         let rect = NSString(string: self).boundingRect(with: CGSize(width: CGFloat(MAXFLOAT), height: height),
                                                        options: .usesLineFragmentOrigin,
-                                                       attributes: [kCTFontAttributeName as NSAttributedStringKey: font],
+                                                       attributes: [kCTFontAttributeName as NSAttributedString.Key: font],
                                                        context: nil)
         return ceil(rect.width)
     }

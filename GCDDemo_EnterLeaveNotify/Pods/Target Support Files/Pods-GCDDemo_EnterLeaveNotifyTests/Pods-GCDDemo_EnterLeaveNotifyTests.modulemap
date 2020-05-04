@@ -1,0 +1,6 @@
+framework module Pods_GCDDemo_EnterLeaveNotifyTests {
+  umbrella header "Pods-GCDDemo_EnterLeaveNotifyTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

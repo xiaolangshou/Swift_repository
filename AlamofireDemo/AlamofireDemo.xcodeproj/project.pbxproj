@@ -219,13 +219,16 @@
 				TargetAttributes = {
 					CF0E999821B0E3DC00E62DE7 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1130;
 					};
 					CF0E99AC21B0E3DF00E62DE7 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1130;
 						TestTargetID = CF0E999821B0E3DC00E62DE7;
 					};
 					CF0E99B721B0E3DF00E62DE7 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1130;
 						TestTargetID = CF0E999821B0E3DC00E62DE7;
 					};
 				};
@@ -535,7 +538,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ThomasLTD.AlamofireDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -554,7 +557,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ThomasLTD.AlamofireDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -574,7 +577,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ThomasLTD.AlamofireDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AlamofireDemo.app/AlamofireDemo";
 			};
@@ -595,7 +598,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ThomasLTD.AlamofireDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AlamofireDemo.app/AlamofireDemo";
 			};
@@ -615,7 +618,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ThomasLTD.AlamofireDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = AlamofireDemo;
 			};
@@ -635,7 +638,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ThomasLTD.AlamofireDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = AlamofireDemo;
 			};
