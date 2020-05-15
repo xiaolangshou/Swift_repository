@@ -1,25 +1,27 @@
 //
-//  vvv.swift
-//  ScrollViewDemo
+//  Banner.swift
+//  WeeLinkPro1
 //
-//  Created by Thomas Lau on 2018/8/13.
-//  Copyright © 2018年 Liu Tao. All rights reserved.
+//  Created by Thomas Lau on 2020/5/15.
+//  Copyright © 2020 Liu Tao. All rights reserved.
 //
 
 import UIKit
 
-class vvv: UIView {
-
+class Banner: UIView {
+    
+    var onClickBanner: ((Int) -> Void)?
+    
     var count: Int? {
         didSet {
             reload(count: count ?? 0)
         }
     }
     
-    var imageVArray: [UIImageView]?
-    
+    var imageArray = [UIImage]()
     private var _scrollView = UIScrollView()
-    private var _pageControl = UIPageControl()
+    
+    private let _pageControl = UIPageControl()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -39,12 +41,13 @@ class vvv: UIView {
         _scrollView.delegate = self
         _scrollView.alwaysBounceHorizontal = true
         _scrollView.isPagingEnabled = true
-        _scrollView.backgroundColor = UIColor.cyan
         
         self.addSubview(_pageControl)
         _pageControl.currentPage = 0
         _pageControl.pageIndicatorTintColor = UIColor.blue
         _pageControl.currentPageIndicatorTintColor = UIColor.red
+        _pageControl.setValue(UIImage(named: "banner_unselected"), forKey: "_pageImage")
+        _pageControl.setValue(UIImage(named: "banner_selected"), forKey: "_currentPageImage")
     }
     
     func reload(count: Int) {
@@ -55,10 +58,15 @@ class vvv: UIView {
         _scrollView.delegate = self
         _scrollView.contentSize = CGSize(width: self.frame.size.width * CGFloat(count), height: self.frame.size.height)
         
+        guard imageArray.count != 0 else { return }
         for i in 0..<count {
-            let imgV = UIImageView(frame: CGRect(x: CGFloat(i) * CGFloat(self.frame.size.width), y: 0, width: self.frame.size.width * CGFloat(count), height: self.frame.size.height))
-            imageVArray?.append(imgV)
+            let imgV = UIImageView(frame: CGRect(x: CGFloat(i) * CGFloat(UIScreen.main.bounds.size.width), y: 0, width: self.frame.size.width, height: self.frame.size.height))
+            imgV.image = imageArray[i]
             _scrollView.addSubview(imgV)
+            imgV.tag = i
+            let tap = UITapGestureRecognizer.init(target: self, action: #selector(onTapImage(_:)))
+            imgV.addGestureRecognizer(tap)
+            imgV.isUserInteractionEnabled = true
         }
         
         _pageControl.center.x = self.frame.size.width / 2
@@ -66,10 +74,15 @@ class vvv: UIView {
         _pageControl.numberOfPages = count
     }
     
-    
+    @objc func onTapImage(_ tap: UITapGestureRecognizer) {
+        if let tag = tap.view?.tag {
+            self.onClickBanner?(tag)
+            print(tag)
+        }
+    }
 }
 
-extension vvv: UIScrollViewDelegate {
+extension Banner: UIScrollViewDelegate {
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04AA6938246E77E500F93605 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AA6937246E77E500F93605 /* Banner.swift */; };
+		04AA6941246E924D00F93605 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AA6940246E924D00F93605 /* UIColor+Extension.swift */; };
 		A4E0672049FA5A94FFD7D6E9 /* Pods_WeeLinkPro1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17245B7C540FC608721D29B1 /* Pods_WeeLinkPro1.framework */; };
 		CF63364C246D79C000FAC724 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF63364B246D79C000FAC724 /* AppDelegate.swift */; };
 		CF63364E246D79C000FAC724 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF63364D246D79C000FAC724 /* SceneDelegate.swift */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04AA6937246E77E500F93605 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		04AA6940246E924D00F93605 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		17245B7C540FC608721D29B1 /* Pods_WeeLinkPro1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeeLinkPro1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		545C467D5C95E0B933581B49 /* Pods-WeeLinkPro1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeeLinkPro1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeeLinkPro1/Pods-WeeLinkPro1.debug.xcconfig"; sourceTree = "<group>"; };
 		CB746CF6A0A304DB97EAFD71 /* Pods-WeeLinkPro1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeeLinkPro1.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeeLinkPro1/Pods-WeeLinkPro1.release.xcconfig"; sourceTree = "<group>"; };
@@ -89,6 +93,192 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04AA6922246E496C00F93605 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		04AA6923246E49DD00F93605 /* MainPage */ = {
+			isa = PBXGroup;
+			children = (
+				04AA6936246E775A00F93605 /* ViewController */,
+				04AA6935246E775400F93605 /* ViewModel */,
+				04AA6934246E775000F93605 /* View */,
+				04AA6933246E774C00F93605 /* Model */,
+			);
+			path = MainPage;
+			sourceTree = "<group>";
+		};
+		04AA6924246E49E400F93605 /* Cargo */ = {
+			isa = PBXGroup;
+			children = (
+				04AA6932246E774100F93605 /* ViewController */,
+				04AA6931246E773B00F93605 /* ViewModel */,
+				04AA6930246E773800F93605 /* View */,
+				04AA692F246E773300F93605 /* Model */,
+			);
+			path = Cargo;
+			sourceTree = "<group>";
+		};
+		04AA6925246E49F100F93605 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				04AA692E246E772A00F93605 /* ViewController */,
+				04AA692D246E772500F93605 /* ViewModel */,
+				04AA692C246E772000F93605 /* View */,
+				04AA692B246E771A00F93605 /* Model */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		04AA6926246E49FA00F93605 /* OrderForm */ = {
+			isa = PBXGroup;
+			children = (
+				04AA692A246E770600F93605 /* ViewController */,
+				04AA6929246E76FE00F93605 /* ViewModel */,
+				04AA6928246E4A0F00F93605 /* View */,
+				04AA6927246E4A0800F93605 /* Model */,
+			);
+			path = OrderForm;
+			sourceTree = "<group>";
+		};
+		04AA6927246E4A0800F93605 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04AA6928246E4A0F00F93605 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04AA6929246E76FE00F93605 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		04AA692A246E770600F93605 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CF633681246D7D8E00FAC724 /* OrderFormVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		04AA692B246E771A00F93605 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04AA692C246E772000F93605 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04AA692D246E772500F93605 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		04AA692E246E772A00F93605 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CF63367D246D7CBC00FAC724 /* CategoryVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		04AA692F246E773300F93605 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04AA6930246E773800F93605 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04AA6931246E773B00F93605 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		04AA6932246E774100F93605 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CF63367F246D7CD100FAC724 /* CargoVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		04AA6933246E774C00F93605 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04AA6934246E775000F93605 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04AA6937246E77E500F93605 /* Banner.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04AA6935246E775400F93605 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		04AA6936246E775A00F93605 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CF63367B246D7CA500FAC724 /* MainPageVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		04AA693E246E916000F93605 /* AppMain */ = {
+			isa = PBXGroup;
+			children = (
+				CF63364B246D79C000FAC724 /* AppDelegate.swift */,
+				CF63364D246D79C000FAC724 /* SceneDelegate.swift */,
+				CF63364F246D79C000FAC724 /* HomeVC.swift */,
+			);
+			path = AppMain;
+			sourceTree = "<group>";
+		};
+		04AA693F246E917900F93605 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				04AA6940246E924D00F93605 /* UIColor+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		5A9D4293419410990DA171E0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,9 +321,9 @@
 		CF63364A246D79C000FAC724 /* WeeLinkPro1 */ = {
 			isa = PBXGroup;
 			children = (
-				CF63364B246D79C000FAC724 /* AppDelegate.swift */,
-				CF63364D246D79C000FAC724 /* SceneDelegate.swift */,
-				CF63364F246D79C000FAC724 /* HomeVC.swift */,
+				04AA693F246E917900F93605 /* Extensions */,
+				04AA693E246E916000F93605 /* AppMain */,
+				04AA6922246E496C00F93605 /* Utils */,
 				CF633683246D7D9300FAC724 /* Business */,
 				CF633651246D79C000FAC724 /* Main.storyboard */,
 				CF633654246D79C500FAC724 /* Assets.xcassets */,
@@ -164,10 +354,10 @@
 		CF633683246D7D9300FAC724 /* Business */ = {
 			isa = PBXGroup;
 			children = (
-				CF63367B246D7CA500FAC724 /* MainPageVC.swift */,
-				CF63367F246D7CD100FAC724 /* CargoVC.swift */,
-				CF63367D246D7CBC00FAC724 /* CategoryVC.swift */,
-				CF633681246D7D8E00FAC724 /* OrderFormVC.swift */,
+				04AA6926246E49FA00F93605 /* OrderForm */,
+				04AA6925246E49F100F93605 /* Category */,
+				04AA6924246E49E400F93605 /* Cargo */,
+				04AA6923246E49DD00F93605 /* MainPage */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -355,8 +545,10 @@
 				CF633682246D7D8E00FAC724 /* OrderFormVC.swift in Sources */,
 				CF633650246D79C000FAC724 /* HomeVC.swift in Sources */,
 				CF633680246D7CD100FAC724 /* CargoVC.swift in Sources */,
+				04AA6941246E924D00F93605 /* UIColor+Extension.swift in Sources */,
 				CF63364C246D79C000FAC724 /* AppDelegate.swift in Sources */,
 				CF63367C246D7CA500FAC724 /* MainPageVC.swift in Sources */,
+				04AA6938246E77E500F93605 /* Banner.swift in Sources */,
 				CF63367E246D7CBC00FAC724 /* CategoryVC.swift in Sources */,
 				CF63364E246D79C000FAC724 /* SceneDelegate.swift in Sources */,
 			);
