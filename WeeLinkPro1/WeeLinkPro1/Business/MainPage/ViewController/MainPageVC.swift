@@ -19,7 +19,9 @@ class MainPageVC: UIViewController {
     let containerView = UIView()
     let searchBar = UISearchBar()
     let banner = Banner()
-    let collectionView = UICollectionView()
+    let collectionView1 = UIView()
+    let collectionView2 = UIView()
+    let collectionView3 = UIView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +30,8 @@ class MainPageVC: UIViewController {
         setupSearchBar()
         setupBanner()
         setupMiniCategory()
+        setupCategory2()
+        setupCategory3()
     }
 
     func setupView() {
@@ -77,13 +81,37 @@ class MainPageVC: UIViewController {
     
     func setupMiniCategory() {
         
-        containerView.addSubview(collectionView)
-        collectionView.snp.makeConstraints { (make) in
+        containerView.addSubview(collectionView1)
+        collectionView1.snp.makeConstraints { (make) in
             make.top.equalTo(banner.snp.bottom).offset(10)
             make.height.equalTo(200)
             make.left.right.equalToSuperview()
         }
-        collectionView.supplementaryView(forElementKind: <#T##String#>, at: <#T##IndexPath#>)
+        collectionView1.backgroundColor = UIColor.green
+//        collectionView.supplementaryView(forElementKind: <#T##String#>, at: <#T##IndexPath#>)
         
+    }
+    
+    func setupCategory2() {
+        
+        containerView.addSubview(collectionView2)
+        collectionView2.snp.makeConstraints { (make) in
+            make.top.equalTo(collectionView1.snp.bottom)
+            make.height.equalTo(200)
+            make.left.right.equalToSuperview()
+        }
+        collectionView2.backgroundColor = UIColor.cyan
+    }
+    
+    func setupCategory3() {
+        
+        containerView.addSubview(collectionView3)
+        collectionView3.snp.makeConstraints { (make) in
+            make.top.equalTo(collectionView2.snp.bottom)
+            make.height.equalTo(200)
+            make.left.right.equalToSuperview()
+            make.bottom.equalToSuperview()
+        }
+        collectionView3.backgroundColor = UIColor.blue
     }
 }
