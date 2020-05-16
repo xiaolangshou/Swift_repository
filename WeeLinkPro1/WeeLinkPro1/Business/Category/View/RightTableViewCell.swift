@@ -33,8 +33,8 @@ class RightTableViewCell: UITableViewCell {
         self.addSubview(imageV)
         imageV.backgroundColor = UIColor.red
         imageV.snp.makeConstraints { (make) in
-            make.left.top.equalToSuperview()
-            make.width.height.equalTo(80)
+            make.left.top.bottom.equalToSuperview()
+            make.width.equalTo(80)
         }
         
         self.addSubview(titleLbl)
@@ -55,9 +55,10 @@ class RightTableViewCell: UITableViewCell {
         
         self.addSubview(addBtn)
         addBtn.setTitle("+", for: UIControl.State.normal)
+        addBtn.setTitleColor(UIColor.red, for: UIControl.State.normal)
         addBtn.snp.makeConstraints { (make) in
             make.width.height.equalTo(12)
-            make.right.bottom.equalToSuperview()
+            make.right.bottom.equalToSuperview().offset(-10)
         }
         
         self.addSubview(priceLbl)
