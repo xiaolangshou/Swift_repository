@@ -27,6 +27,7 @@
 		04B1FD8824727159008A6C4D /* PingFang_Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04B1FD8224727159008A6C4D /* PingFang_Light.ttf */; };
 		04B1FD8924727159008A6C4D /* PingFang_Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04B1FD8324727159008A6C4D /* PingFang_Medium.ttf */; };
 		04B1FD8B2472789F008A6C4D /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1FD8A2472789F008A6C4D /* BottomView.swift */; };
+		04B991732473C89F00E820CB /* MainPageDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B991722473C89F00E820CB /* MainPageDetailVC.swift */; };
 		A4E0672049FA5A94FFD7D6E9 /* Pods_WeeLinkPro1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17245B7C540FC608721D29B1 /* Pods_WeeLinkPro1.framework */; };
 		CF63364C246D79C000FAC724 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF63364B246D79C000FAC724 /* AppDelegate.swift */; };
 		CF63364E246D79C000FAC724 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF63364D246D79C000FAC724 /* SceneDelegate.swift */; };
@@ -80,6 +81,7 @@
 		04B1FD8224727159008A6C4D /* PingFang_Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PingFang_Light.ttf; sourceTree = "<group>"; };
 		04B1FD8324727159008A6C4D /* PingFang_Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PingFang_Medium.ttf; sourceTree = "<group>"; };
 		04B1FD8A2472789F008A6C4D /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
+		04B991722473C89F00E820CB /* MainPageDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageDetailVC.swift; sourceTree = "<group>"; };
 		17245B7C540FC608721D29B1 /* Pods_WeeLinkPro1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeeLinkPro1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		545C467D5C95E0B933581B49 /* Pods-WeeLinkPro1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeeLinkPro1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeeLinkPro1/Pods-WeeLinkPro1.debug.xcconfig"; sourceTree = "<group>"; };
 		CB746CF6A0A304DB97EAFD71 /* Pods-WeeLinkPro1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeeLinkPro1.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeeLinkPro1/Pods-WeeLinkPro1.release.xcconfig"; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 			isa = PBXGroup;
 			children = (
 				CF63367B246D7CA500FAC724 /* MainPageVC.swift */,
+				04B991722473C89F00E820CB /* MainPageDetailVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -623,6 +626,7 @@
 				04B1FD772472709E008A6C4D /* UIFont+Extension.swift in Sources */,
 				04B1FD7124721701008A6C4D /* CargoCell.swift in Sources */,
 				CF63364C246D79C000FAC724 /* AppDelegate.swift in Sources */,
+				04B991732473C89F00E820CB /* MainPageDetailVC.swift in Sources */,
 				04729218246F8E31007D0498 /* SearchBar.swift in Sources */,
 				CF63367C246D7CA500FAC724 /* MainPageVC.swift in Sources */,
 				04B1FD79247270C8008A6C4D /* UIScreen+Extension.swift in Sources */,

@@ -39,7 +39,7 @@ class MainPageVC: UIViewController {
         view.backgroundColor = UIColor.hex(0xF2F2F2)
         view.addSubview(scrollView)
         scrollView.snp.makeConstraints { (make) in
-            make.top.equalTo(90)
+            make.top.equalTo(UIScreen.navBarHeight)
             make.left.right.bottom.equalToSuperview()
         }
         scrollView.addSubview(containerView)
@@ -215,8 +215,16 @@ extension MainPageVC: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //let cell = collectionView.cellForItem(at: indexPath) as! MiniCollectionViewCell
         
+        switch collectionView.tag {
+        case 1:
+            let vc = MainPageDetailVC()
+            navigationController?.pushViewController(vc, animated: true)
+        case 2: break
+        case 3: break
+        default: break
+        }
+//        cell = collectionView.cellForItem(at: indexPath) as! MiniCollectionViewCell
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
