@@ -86,12 +86,12 @@ class MainPageVC: UIViewController {
     func setupMiniCategory() {
         
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: (UIScreen.main.bounds.size.width - 40) / 6,
+        layout.itemSize = CGSize(width: (UIScreen.width - 40) / 6,
                                  height: 80)
         layout.minimumInteritemSpacing = 8
         layout.minimumLineSpacing = 10
         layout.sectionInset = UIEdgeInsets(top: 16, left: 14, bottom: 0, right: 18)
-        layout.headerReferenceSize = CGSize(width: UIScreen.main.bounds.size.width, height: 40)
+        layout.headerReferenceSize = CGSize(width: UIScreen.width, height: 40)
         
         collectionView1 = UICollectionView(frame: UIScreen.main.bounds, collectionViewLayout: layout)
         collectionView1?.isScrollEnabled = false
@@ -121,7 +121,7 @@ class MainPageVC: UIViewController {
         layout.minimumInteritemSpacing = 8
         layout.minimumLineSpacing = 10
         layout.sectionInset = UIEdgeInsets(top: 16, left: 14, bottom: 0, right: 18)
-        layout.headerReferenceSize = CGSize(width: UIScreen.main.bounds.size.width, height: 40)
+        layout.headerReferenceSize = CGSize(width: UIScreen.width, height: 40)
         
         collectionView2 = UICollectionView(frame: UIScreen.main.bounds, collectionViewLayout: layout)
         collectionView2?.isScrollEnabled = false
@@ -151,7 +151,7 @@ class MainPageVC: UIViewController {
         layout.minimumInteritemSpacing = 8
         layout.minimumLineSpacing = 10
         layout.sectionInset = UIEdgeInsets(top: 16, left: 14, bottom: 0, right: 18)
-        layout.headerReferenceSize = CGSize(width: UIScreen.main.bounds.size.width, height: 40)
+        layout.headerReferenceSize = CGSize(width: UIScreen.width, height: 40)
         
         collectionView3 = UICollectionView(frame: UIScreen.main.bounds, collectionViewLayout: layout)
         collectionView3?.isScrollEnabled = false

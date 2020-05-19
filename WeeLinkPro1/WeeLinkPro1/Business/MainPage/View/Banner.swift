@@ -60,7 +60,7 @@ class Banner: UIView {
         
         guard imageArray.count != 0 else { return }
         for i in 0..<count {
-            let imgV = UIImageView(frame: CGRect(x: CGFloat(i) * CGFloat(UIScreen.main.bounds.size.width), y: 0, width: self.frame.size.width, height: self.frame.size.height))
+            let imgV = UIImageView(frame: CGRect(x: CGFloat(i) * CGFloat(UIScreen.width), y: 0, width: self.frame.size.width, height: self.frame.size.height))
             imgV.image = imageArray[i]
             _scrollView.addSubview(imgV)
             imgV.tag = i
