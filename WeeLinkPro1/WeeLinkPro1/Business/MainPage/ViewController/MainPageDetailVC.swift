@@ -20,6 +20,11 @@ class MainPageDetailVC: UIViewController {
     var sortBtn3: UIButton?
     var sortBtn4: UIButton?
     
+    var sortTable1: UITableView?
+    var sortTable2: UITableView?
+    var sortTable3: UITableView?
+    var sortTable4: UITableView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -81,6 +86,7 @@ class MainPageDetailVC: UIViewController {
         })
         sortBtn1?.setTitle("排序标签", for: .normal)
         sortBtn1?.setTitleColor(UIColor.gray, for: .normal)
+        sortBtn1?.addTarget(self, action: #selector(sortBtnTapped1), for: .touchUpInside)
         
         sortBtn2 = UIButton.init()
         backView?.addSubview(sortBtn2 ?? UIView())
@@ -92,6 +98,7 @@ class MainPageDetailVC: UIViewController {
         })
         sortBtn2?.setTitle("排序标签", for: .normal)
         sortBtn2?.setTitleColor(UIColor.gray, for: .normal)
+        sortBtn2?.addTarget(self, action: #selector(sortBtnTapped2), for: .touchUpInside)
         
         sortBtn3 = UIButton.init()
         backView?.addSubview(sortBtn3 ?? UIView())
@@ -103,6 +110,7 @@ class MainPageDetailVC: UIViewController {
         })
         sortBtn3?.setTitle("排序标签", for: .normal)
         sortBtn3?.setTitleColor(UIColor.gray, for: .normal)
+        sortBtn3?.addTarget(self, action: #selector(sortBtnTapped3), for: .touchUpInside)
         
         sortBtn4 = UIButton.init()
         backView?.addSubview(sortBtn4 ?? UIView())
@@ -115,6 +123,67 @@ class MainPageDetailVC: UIViewController {
         })
         sortBtn4?.setTitle("排序标签", for: .normal)
         sortBtn4?.setTitleColor(UIColor.gray, for: .normal)
+        sortBtn4?.addTarget(self, action: #selector(sortBtnTapped4), for: .touchUpInside)
+        
+        sortTable1 = UITableView.init()
+        view.addSubview(sortTable1!)
+        sortTable1?.snp.makeConstraints({ (make) in
+            make.width.equalTo((sortBtn1?.snp.width)!)
+            make.top.equalTo((backView?.snp.bottom)!)
+            make.height.equalTo(60)
+            make.centerX.equalTo((sortBtn1?.snp.centerX)!)
+        })
+        sortTable1?.backgroundColor = UIColor.green
+        sortTable1?.isHidden = true
+        
+        sortTable2 = UITableView.init()
+        view.addSubview(sortTable2!)
+        sortTable2?.snp.makeConstraints({ (make) in
+            make.width.equalTo((sortBtn2?.snp.width)!)
+            make.top.equalTo((backView?.snp.bottom)!)
+            make.height.equalTo(60)
+            make.centerX.equalTo((sortBtn2?.snp.centerX)!)
+        })
+        sortTable2?.backgroundColor = UIColor.green
+        sortTable2?.isHidden = true
+        
+        sortTable3 = UITableView.init()
+        view.addSubview(sortTable3!)
+        sortTable3?.snp.makeConstraints({ (make) in
+            make.width.equalTo((sortBtn3?.snp.width)!)
+            make.top.equalTo((backView?.snp.bottom)!)
+            make.height.equalTo(60)
+            make.centerX.equalTo((sortBtn3?.snp.centerX)!)
+        })
+        sortTable3?.backgroundColor = UIColor.green
+        sortTable3?.isHidden = true
+        
+        sortTable4 = UITableView.init()
+        view.addSubview(sortTable4!)
+        sortTable4?.snp.makeConstraints({ (make) in
+            make.width.equalTo((sortBtn4?.snp.width)!)
+            make.top.equalTo((backView?.snp.bottom)!)
+            make.height.equalTo(60)
+            make.centerX.equalTo((sortBtn4?.snp.centerX)!)
+        })
+        sortTable4?.backgroundColor = UIColor.green
+        sortTable4?.isHidden = true
+    }
+    
+    @objc func sortBtnTapped1() {
+        sortTable1!.isHidden = !sortTable1!.isHidden
+    }
+    
+    @objc func sortBtnTapped2() {
+        sortTable2!.isHidden = !sortTable2!.isHidden
+    }
+    
+    @objc func sortBtnTapped3() {
+        sortTable3!.isHidden = !sortTable3!.isHidden
+    }
+    
+    @objc func sortBtnTapped4() {
+        sortTable4!.isHidden = !sortTable4!.isHidden
     }
     
     func setupListView() {
@@ -129,7 +198,7 @@ class MainPageDetailVC: UIViewController {
                 cell.snp.makeConstraints { (make) in
                     make.width.equalToSuperview()
                     make.centerX.equalToSuperview()
-                    make.height.equalTo(90)
+                    make.height.equalTo(120)
                     make.top.equalTo(prevCell.snp.bottom).offset(5)
                     if index == dataArr.count - 1 {
                         make.bottom.equalToSuperview()
@@ -140,11 +209,16 @@ class MainPageDetailVC: UIViewController {
                     make.width.equalToSuperview()
                     make.centerX.equalToSuperview()
                     make.top.equalTo(backView?.snp.bottom ?? UIView()).offset(5)
-                    make.height.equalTo(90)
+                    make.height.equalTo(120)
                 }
             }
             
             prevCell = cell
+            
+            cell.cellTap = { [weak self] in
+                let vc = ProductDetailVC()
+                self?.navigationController?.pushViewController(vc, animated: true)
+            }
         }
     }
 }
@@ -165,6 +239,8 @@ extension MainPageDetailVC: UISearchBarDelegate {
 }
 
 class MainPageDetailCell: UIView {
+    
+    var cellTap: (() -> (Void))?
     
     let imgV = UIImageView.init()
     let pName = UILabel.init()
@@ -188,7 +264,7 @@ class MainPageDetailCell: UIView {
         
         self.addSubview(imgV)
         imgV.snp.makeConstraints { (make) in
-            make.width.height.equalTo(80)
+            make.width.height.equalTo(100)
             make.centerY.equalToSuperview()
             make.left.equalTo(6)
         }
@@ -232,6 +308,15 @@ class MainPageDetailCell: UIView {
         addBtn.backgroundColor = UIColor.lightGray
         addBtn.setTitle("+", for: .normal)
         addBtn.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        
+        let gesture = UITapGestureRecognizer.init(target: self, action: #selector(cellTapped))
+        self.addGestureRecognizer(gesture)
+        
+    }
+    
+    @objc func cellTapped() {
+        
+        self.cellTap!()
     }
     
 }

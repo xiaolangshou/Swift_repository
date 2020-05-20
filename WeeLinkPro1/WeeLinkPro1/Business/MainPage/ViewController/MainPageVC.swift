@@ -65,6 +65,7 @@ class MainPageVC: UIViewController {
     
     func setupBanner() {
         
+        banner.type = .pageCon
         containerView.addSubview(banner)
         banner.snp.makeConstraints { (make) in
             make.top.equalTo(searchBar.snp.bottom)
@@ -116,8 +117,8 @@ class MainPageVC: UIViewController {
     func setupCategory2() {
         
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: 180,
-                                 height: 240)
+        layout.itemSize = CGSize(width: 160,
+                                 height: 220)
         layout.minimumInteritemSpacing = 8
         layout.minimumLineSpacing = 10
         layout.sectionInset = UIEdgeInsets(top: 16, left: 14, bottom: 0, right: 18)
@@ -146,8 +147,8 @@ class MainPageVC: UIViewController {
     func setupCategory3() {
         
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: 180,
-                                 height: 240)
+        layout.itemSize = CGSize(width: 160,
+                                 height: 220)
         layout.minimumInteritemSpacing = 8
         layout.minimumLineSpacing = 10
         layout.sectionInset = UIEdgeInsets(top: 16, left: 14, bottom: 0, right: 18)

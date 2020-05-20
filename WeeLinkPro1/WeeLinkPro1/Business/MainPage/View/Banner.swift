@@ -10,6 +10,11 @@ import UIKit
 
 class Banner: UIView {
     
+    enum BannerType {
+        case pageCon
+        case rightCorn
+    }
+    
     var onClickBanner: ((Int) -> Void)?
     
     var count: Int? {
@@ -18,10 +23,16 @@ class Banner: UIView {
         }
     }
     
+    var type: BannerType? {
+        didSet {
+            typeSelect()
+        }
+    }
+    
     var imageArray = [UIImage]()
     private var _scrollView = UIScrollView()
-    
     private let _pageControl = UIPageControl()
+    private let _pageIcon = UIButton()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -48,6 +59,19 @@ class Banner: UIView {
         _pageControl.currentPageIndicatorTintColor = UIColor.red
         _pageControl.setValue(UIImage(named: "banner_unselected"), forKey: "_pageImage")
         _pageControl.setValue(UIImage(named: "banner_selected"), forKey: "_currentPageImage")
+        
+        self.addSubview(_pageIcon)
+        _pageIcon.backgroundColor = UIColor.hex(0x5F6062)
+        _pageIcon.layer.cornerRadius = 8.0
+        _pageIcon.snp.makeConstraints { (make) in
+            make.width.equalTo(30)
+            make.height.equalTo(20)
+            make.right.equalTo(-10)
+            make.bottom.equalTo(-10)
+        }
+        _pageIcon.setTitle("1/7", for: .normal)
+        _pageIcon.setTitleColor(UIColor.white, for: .normal)
+        _pageIcon.titleLabel?.font = UIFont.PFExtraLight(11)
     }
     
     func reload(count: Int) {
@@ -67,6 +91,7 @@ class Banner: UIView {
             let tap = UITapGestureRecognizer.init(target: self, action: #selector(onTapImage(_:)))
             imgV.addGestureRecognizer(tap)
             imgV.isUserInteractionEnabled = true
+            imgV.contentMode = .scaleToFill
         }
         
         _pageControl.center.x = self.frame.size.width / 2
@@ -78,6 +103,16 @@ class Banner: UIView {
         if let tag = tap.view?.tag {
             self.onClickBanner?(tag)
             print(tag)
+        }
+    }
+    
+    func typeSelect() {
+        if type == .pageCon {
+            _pageControl.isHidden = false
+            _pageIcon.isHidden = true
+        } else {
+            _pageControl.isHidden = true
+            _pageIcon.isHidden = false
         }
     }
 }
