@@ -221,8 +221,12 @@ extension MainPageVC: UICollectionViewDelegate, UICollectionViewDataSource {
         case 1:
             let vc = MainPageDetailVC()
             navigationController?.pushViewController(vc, animated: true)
-        case 2: break
-        case 3: break
+        case 2:
+            let vc = ProductDetailVC()
+            navigationController?.pushViewController(vc, animated: true)
+        case 3:
+            let vc = ProductDetailVC()
+            navigationController?.pushViewController(vc, animated: true)
         default: break
         }
 //        cell = collectionView.cellForItem(at: indexPath) as! MiniCollectionViewCell

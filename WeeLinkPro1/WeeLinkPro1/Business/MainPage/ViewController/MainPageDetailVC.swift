@@ -217,6 +217,7 @@ class MainPageDetailVC: UIViewController {
             
             cell.cellTap = { [weak self] in
                 let vc = ProductDetailVC()
+                vc.hidesBottomBarWhenPushed = true
                 self?.navigationController?.pushViewController(vc, animated: true)
             }
         }
