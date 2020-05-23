@@ -12,8 +12,11 @@ class CategoryVC: UIViewController {
 
     static let shared = CategoryVC()
     
-    var leftData = [1,1,1,1]
-    var rightData = [2,2,2,2,2,2]
+    let leftData = ["类别","类别","类别","类别"]
+    let rightData = [["名称","商品个数","193","5"],
+                        ["名称","商品个数","493","4"],
+                        ["名称","商品个数","493","4"],
+                        ["名称","商品个数","493","4"]]
     
     let searchBar = SearchBar()
     let leftView = UITableView()
@@ -43,7 +46,7 @@ class CategoryVC: UIViewController {
     
     func setupSideView() {
         
-        leftView.backgroundColor = UIColor.cyan
+        leftView.backgroundColor = UIColor.systemBackColor
         leftView.delegate = self
         leftView.dataSource = self
         view.addSubview(leftView)
@@ -55,6 +58,8 @@ class CategoryVC: UIViewController {
         }
         leftView.tag = 0
         leftView.register(LeftTableViewCell.self, forCellReuseIdentifier: "CELL")
+        leftView.rowHeight = 70
+        leftView.separatorStyle = .none
         
         rightView.backgroundColor = UIColor.green
         rightView.delegate = self
@@ -108,7 +113,9 @@ extension CategoryVC: UITableViewDelegate, UITableViewDataSource {
             return cell
         } else if tableView.tag == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CELL2", for: indexPath) as! RightTableViewCell
-            cell.numLbl.text = "\(rightData[indexPath.row])"
+            cell.titleLbl.text = "\(rightData[indexPath.row][0])"
+            cell.numLbl.text = "\(rightData[indexPath.row][1])"
+            cell.priceLbl.text = "\(rightData[indexPath.row][2])"
             
             return cell
         } else {
@@ -116,4 +123,20 @@ extension CategoryVC: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        if tableView.tag == 0 {
+            let cell = tableView.cellForRow(at: indexPath) as! LeftTableViewCell
+            print("deselect")
+            cell.contentView.backgroundColor = UIColor.systemBackColor
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if tableView.tag == 0 {
+            let cell = tableView.cellForRow(at: indexPath) as! LeftTableViewCell
+            print("select")
+            cell.contentView.backgroundColor = UIColor.white
+        }
+    }
 }

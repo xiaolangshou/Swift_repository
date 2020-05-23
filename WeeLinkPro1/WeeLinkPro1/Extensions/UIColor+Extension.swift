@@ -27,4 +27,8 @@ extension UIColor {
         
         return UIColor(red: red, green: green, blue: blue, alpha: 1.0)
     }
+    
+    static var systemBackColor: UIColor {
+        return UIColor.hex(0xF2F2F2)
+    }
 }

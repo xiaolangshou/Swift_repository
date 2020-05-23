@@ -26,10 +26,12 @@ class LeftTableViewCell: UITableViewCell {
     
     func setupView() {
         
+        
         titleLbl.text = "类别"
-        self.addSubview(titleLbl)
+        contentView.addSubview(titleLbl)
         titleLbl.snp.makeConstraints { (make) in
-            make.edges.equalToSuperview()
+            make.top.right.bottom.equalToSuperview()
+            make.left.equalTo(10)
         }
     }
 }
