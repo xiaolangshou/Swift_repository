@@ -12,8 +12,7 @@ import Then
 class CargoVC: UIViewController {
 
     static let shared = CargoVC()
-    
-    var dataArr = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+    var productArr: [Int] = [1, 1, 1]
     
     let scrollView = UIScrollView()
     let containerView = UIView()
@@ -36,12 +35,13 @@ class CargoVC: UIViewController {
             make.edges.equalToSuperview()
             make.width.equalToSuperview()
         }
-        containerView.backgroundColor = UIColor.systemGroupedBackground
         
         setupView()
     }
 
     func setupView() {
+        
+        view.backgroundColor = UIColor.systemGroupedBackground
         
         view.addSubview(bottomView)
         bottomView.snp.makeConstraints { (make) in
@@ -52,32 +52,34 @@ class CargoVC: UIViewController {
         bottomView.backgroundColor = UIColor.green
         
         var prevCell: CargoCell?
-        for (index, _) in dataArr.enumerated() {
+        for (index, _) in productArr.enumerated() {
             let cell = CargoCell()
             containerView.addSubview(cell)
             
             if let prevCell = prevCell {
                 cell.snp.makeConstraints { (make) in
-                    make.left.equalTo(10)
-                    make.right.equalTo(-10)
+                    make.left.equalTo(12)
+                    make.right.equalTo(-12)
                     make.height.equalTo(120)
-                    make.top.equalTo(prevCell.snp.bottom).offset(10)
-                    if index == dataArr.count - 1 {
+                    make.top.equalTo(prevCell.snp.bottom).offset(12)
+                    if index == productArr.count - 1 {
                         make.bottom.equalToSuperview()
                     }
                 }
             } else {
                 cell.snp.makeConstraints { (make) in
-                    make.left.equalTo(10)
-                    make.right.equalTo(-10)
-                    make.top.equalTo(10)
+                    make.left.equalTo(12)
+                    make.right.equalTo(-12)
+                    make.top.equalTo(12)
                     make.height.equalTo(120)
                 }
             }
             
             prevCell = cell
             
-            cell.btnTap = { [weak self] in
+            cell.tag = index
+            
+            cell.selectBtnTap = { [weak self] in
                 if (cell.viewWithTag(100) == nil) {
                     cell.addSubview(self?.popOverView ?? UIView())
                     self?.popOverView.snp.makeConstraints({ (make) in
@@ -89,6 +91,29 @@ class CargoVC: UIViewController {
                 } else {
                     self?.popOverView.removeFromSuperview()
                 }
+            }
+            cell.checkBtnTap = { [weak self] in
+                
+            }
+            cell.minusBtnTap = { [weak self] num in
+                self?.productArr[index] = num
+                var sum = 0
+                if cell.checkBtn.isSelected {
+                    for (i,v) in self!.productArr.enumerated() {
+                        if i == index { sum += v }
+                    }
+                }
+                self?.bottomView.sumBtn.setTitle("结算(\(sum))", for: .normal)
+            }
+            cell.plusBtnTap = { [weak self] num in
+                self?.productArr[index] = num
+                var sum = 0
+                if cell.checkBtn.isSelected {
+                    for (i,v) in self!.productArr.enumerated() {
+                        if i == index { sum += v }
+                    }
+                }
+                self?.bottomView.sumBtn.setTitle("结算(\(sum))", for: .normal)
             }
         }
     }
