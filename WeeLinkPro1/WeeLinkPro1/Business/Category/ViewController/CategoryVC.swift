@@ -138,6 +138,9 @@ extension CategoryVC: UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.cellForRow(at: indexPath) as! LeftTableViewCell
             print("select")
             cell.contentView.backgroundColor = UIColor.white
+        } else if tableView.tag == 1 {
+            let vc = ProductDetailVC()
+            navigationController?.pushViewController(vc, animated: true)
         }
     }
 }

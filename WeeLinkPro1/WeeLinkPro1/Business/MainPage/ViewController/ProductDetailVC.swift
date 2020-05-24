@@ -133,6 +133,7 @@ class ProductDetailVC: UIViewController {
     
     func setupView() {
         
+        view.backgroundColor = UIColor.systemBackColor
         view.addSubview(scrollView)
         scrollView.snp.makeConstraints { (make) in
             make.top.equalTo(UIScreen.navBarHeight)
@@ -186,7 +187,7 @@ class ProductDetailVC: UIViewController {
                 make.top.equalTo((banner?.snp.bottom)!)
                 make.height.equalTo(110)
             }
-            s.backgroundColor = UIColor.cyan
+            s.backgroundColor = UIColor.white
             
             s.addSubview(nameLbl)
             nameLbl.text = "商品名称"
@@ -240,7 +241,7 @@ class ProductDetailVC: UIViewController {
                 make.top.equalTo(subView.snp.bottom).offset(6)
                 make.height.equalTo(40)
             }
-            v.backgroundColor = UIColor.cyan
+            v.backgroundColor = UIColor.white
             
             let specsLbl = UILabel().then { (s) in
                 v.addSubview(s)
@@ -270,6 +271,8 @@ class ProductDetailVC: UIViewController {
                 make.left.right.equalToSuperview()
                 make.height.equalTo(20)
             }
+            v.backgroundColor = UIColor.white
+            
             let lbl = UILabel.init()
             v.addSubview(lbl)
             lbl.snp.makeConstraints { (make) in
@@ -300,7 +303,7 @@ class ProductDetailVC: UIViewController {
                 cell.snp.makeConstraints { (make) in
                     make.width.equalToSuperview()
                     make.centerX.equalToSuperview()
-                    make.height.equalTo(250)
+                    make.height.equalTo(200)
                     make.top.equalTo(prevCell.snp.bottom).offset(5)
                     if index == dataArr.count - 1 {
                         make.bottom.equalToSuperview()
@@ -311,21 +314,26 @@ class ProductDetailVC: UIViewController {
                     make.width.equalToSuperview()
                     make.centerX.equalToSuperview()
                     make.top.equalTo(detailView.snp.bottom)
-                    make.height.equalTo(250)
+                    make.height.equalTo(200)
                 }
             }
 
             prevCell = cell
+            cell.imgVTap = { [weak self] in
+                let vc = PictureVC()
+                self?.navigationController?.pushViewController(vc, animated: true)
+            }
         }
     }
 }
 
 class DetailCell: UIView {
     
+    var imgVTap: (() -> Void)?
+    
     let avatar = UIImageView()
     let name = UILabel()
     let comment = UILabel()
-    let imgStack = UIStackView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -341,6 +349,8 @@ class DetailCell: UIView {
     
     func setupView() {
         
+        self.backgroundColor = UIColor.white
+        
         let line = UIView()
         self.addSubview(line)
         line.snp.makeConstraints { (make) in
@@ -352,17 +362,18 @@ class DetailCell: UIView {
         
         self.addSubview(avatar)
         avatar.snp.makeConstraints { (make) in
-            make.width.height.equalTo(50)
+            make.width.height.equalTo(25)
             make.left.equalTo(12)
             make.top.equalTo(18)
         }
-        avatar.backgroundColor = UIColor.green
+        avatar.backgroundColor = UIColor.cyan
+        avatar.layer.cornerRadius = 3.0
         
         self.addSubview(name)
         name.snp.makeConstraints { (make) in
             make.width.equalTo(100)
             make.centerY.equalTo(avatar.snp.centerY)
-            make.left.equalTo(avatar.snp.right).offset(3)
+            make.left.equalTo(avatar.snp.right).offset(5)
             make.height.equalTo(20)
         }
         name.text = "thomas"
@@ -376,23 +387,41 @@ class DetailCell: UIView {
         }
         comment.text = "评价: ......"
         
-        let imgV = UIImageView(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
-        imgV.backgroundColor = UIColor.cyan
+        let imgStack = UIStackView()
+        imgStack.axis = .horizontal
+        imgStack.distribution = .fillEqually
+        imgStack.spacing = 10.0
         self.addSubview(imgStack)
         imgStack.snp.makeConstraints { (make) in
             make.left.equalTo(10)
             make.right.equalTo(-10)
             make.top.equalTo(comment.snp.bottom).offset(5)
-            make.height.equalTo(90)
             make.bottom.equalToSuperview()
         }
-        imgStack.axis = .horizontal
-        imgStack.alignment = .fill
-        imgStack.distribution = .equalSpacing
-        imgStack.spacing = 5
-        imgStack.addArrangedSubview(imgV)
-        imgStack.addArrangedSubview(imgV)
-        imgStack.addArrangedSubview(imgV)
         
+        let imgV1 = UIImageView()
+        let imgV2 = UIImageView()
+        let imgV3 = UIImageView()
+        let imgV4 = UIImageView()
+        imgV1.layer.cornerRadius = 4.0
+        imgV2.layer.cornerRadius = 4.0
+        imgV3.layer.cornerRadius = 4.0
+        imgV4.layer.cornerRadius = 4.0
+        imgV1.image = UIImage.init(named: "11")
+        imgV2.image = UIImage.init(named: "22")
+        imgV3.image = UIImage.init(named: "11")
+        imgV4.image = UIImage.init(named: "22")
+        imgStack.addArrangedSubview(imgV1)
+        imgStack.addArrangedSubview(imgV2)
+        imgStack.addArrangedSubview(imgV3)
+        imgStack.addArrangedSubview(imgV4)
+        let tap = UITapGestureRecognizer.init(target: self, action: #selector(imgVTapped))
+        imgStack.addGestureRecognizer(tap)
     }
+    
+    @objc func imgVTapped() {
+        imgVTap!()
+    }
+    
+    
 }
