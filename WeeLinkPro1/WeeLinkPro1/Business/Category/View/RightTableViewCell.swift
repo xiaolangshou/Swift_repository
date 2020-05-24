@@ -34,37 +34,46 @@ class RightTableViewCell: UITableViewCell {
         imageV.backgroundColor = UIColor.red
         imageV.snp.makeConstraints { (make) in
             make.left.top.bottom.equalToSuperview()
-            make.width.equalTo(80)
+            make.width.equalTo(90)
         }
         
         self.addSubview(titleLbl)
         titleLbl.text = "名称"
+        titleLbl.font = UIFont.PFRegular(14)
         titleLbl.snp.makeConstraints { (make) in
-            make.left.equalTo(imageV.snp.right)
+            make.left.equalTo(imageV.snp.right).offset(10)
             make.right.equalToSuperview()
-            make.top.equalToSuperview()
+            make.top.equalToSuperview().offset(5)
+            make.height.equalTo(30)
         }
         
         self.addSubview(numLbl)
         numLbl.text = "商品个数"
+        numLbl.font = UIFont.PFRegular(12)
+        numLbl.textColor = UIColor.gray
         numLbl.snp.makeConstraints { (make) in
-            make.left.equalTo(imageV.snp.right)
+            make.left.equalTo(imageV.snp.right).offset(10)
             make.right.equalToSuperview()
             make.top.equalTo(titleLbl.snp.bottom)
         }
         
         self.addSubview(addBtn)
         addBtn.setTitle("+", for: UIControl.State.normal)
-        addBtn.setTitleColor(UIColor.red, for: UIControl.State.normal)
+        addBtn.setTitleColor(UIColor.gray, for: UIControl.State.normal)
+        addBtn.titleLabel?.font = UIFont.PFMedium(23)
         addBtn.snp.makeConstraints { (make) in
-            make.width.height.equalTo(12)
-            make.right.bottom.equalToSuperview().offset(-10)
+            make.width.height.equalTo(20)
+            make.right.bottom.equalToSuperview().offset(-16)
         }
+        addBtn.layer.cornerRadius = 3.0
+        addBtn.backgroundColor = UIColor.systemBackColor
         
         self.addSubview(priceLbl)
         priceLbl.text = "￥22"
+        priceLbl.textColor = UIColor.black
+        priceLbl.font = UIFont.PFRegular(16)
         priceLbl.snp.makeConstraints { (make) in
-            make.left.equalTo(imageV.snp.right)
+            make.left.equalTo(imageV.snp.right).offset(10)
             make.bottom.equalToSuperview()
             make.top.equalTo(numLbl.snp.bottom)
             make.right.equalTo(addBtn.snp.left)

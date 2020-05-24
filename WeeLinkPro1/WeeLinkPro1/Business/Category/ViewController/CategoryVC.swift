@@ -13,10 +13,10 @@ class CategoryVC: UIViewController {
     static let shared = CategoryVC()
     
     let leftData = ["类别","类别","类别","类别"]
-    let rightData = [["名称","商品个数","193","5"],
-                        ["名称","商品个数","493","4"],
-                        ["名称","商品个数","493","4"],
-                        ["名称","商品个数","493","4"]]
+    let rightData = [["11","名称","商品个数","193","5"],
+                        ["22","名称","商品个数","493","4"],
+                        ["11","名称","商品个数","493","4"],
+                        ["22","名称","商品个数","493","4"]]
     
     let searchBar = SearchBar()
     let leftView = UITableView()
@@ -61,7 +61,6 @@ class CategoryVC: UIViewController {
         leftView.rowHeight = 70
         leftView.separatorStyle = .none
         
-        rightView.backgroundColor = UIColor.green
         rightView.delegate = self
         rightView.dataSource = self
         view.addSubview(rightView)
@@ -73,6 +72,7 @@ class CategoryVC: UIViewController {
         }
         rightView.tag = 1
         rightView.register(RightTableViewCell.self, forCellReuseIdentifier: "CELL2")
+        rightView.rowHeight = 90
     }
 }
 
@@ -113,9 +113,10 @@ extension CategoryVC: UITableViewDelegate, UITableViewDataSource {
             return cell
         } else if tableView.tag == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CELL2", for: indexPath) as! RightTableViewCell
-            cell.titleLbl.text = "\(rightData[indexPath.row][0])"
-            cell.numLbl.text = "\(rightData[indexPath.row][1])"
-            cell.priceLbl.text = "\(rightData[indexPath.row][2])"
+            cell.imageV.image = UIImage.init(named: rightData[indexPath.row][0])
+            cell.titleLbl.text = "\(rightData[indexPath.row][1])"
+            cell.numLbl.text = "\(rightData[indexPath.row][2])"
+            cell.priceLbl.text = "￥ \(rightData[indexPath.row][3])"
             
             return cell
         } else {

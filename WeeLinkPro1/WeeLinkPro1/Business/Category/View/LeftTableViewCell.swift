@@ -26,6 +26,7 @@ class LeftTableViewCell: UITableViewCell {
     
     func setupView() {
         
+        contentView.backgroundColor = UIColor.systemBackColor
         
         titleLbl.text = "类别"
         contentView.addSubview(titleLbl)
