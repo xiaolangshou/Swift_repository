@@ -321,6 +321,7 @@ class ProductDetailVC: UIViewController {
             prevCell = cell
             cell.imgVTap = { [weak self] in
                 let vc = PictureVC()
+                vc.hidesBottomBarWhenPushed = true
                 self?.navigationController?.pushViewController(vc, animated: true)
             }
         }
