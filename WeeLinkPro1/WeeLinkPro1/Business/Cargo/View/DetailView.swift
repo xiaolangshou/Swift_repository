@@ -1,32 +1,39 @@
 //
-//  CargoCell.swift
+//  DetailView.swift
 //  WeeLinkPro1
 //
-//  Created by Thomas Lau on 2020/5/18.
+//  Created by Thomas Lau on 2020/5/25.
 //  Copyright © 2020 Liu Tao. All rights reserved.
 //
 
 import UIKit
-import Then
 
-class CargoCell: UIView {
+class DetailView: UIView {
     
-    var selectBtnTap: (() -> Void)?
-    var checkBtnTap: (() -> Void)?
-    var minusBtnTap: ((Int) -> Void)?
-    var plusBtnTap: ((Int) -> Void)?
-    
-    var num = 1
-    
-    let checkBtn = UIButton()
     let imgV = UIImageView()
-    let proudctName = UILabel()
-    let selectBtn = UIButton()
+    let productLbl = UILabel()
     let priceLbl = UILabel()
-    let minusBtn = UIButton()
+    let typeLbl = UILabel()
+    let theNumLbl = UILabel()
+    
+    let purchaseNumLbl = UILabel()
     let plusBtn = UIButton()
     let numLbl = UILabel()
-
+    let minusBtn = UIButton()
+    
+    let cupponLbl = UILabel()
+    let cupponPriceLbl = UILabel()
+    
+    let feeLbl = UILabel()
+    let feePriceLbl = UILabel()
+    
+    let descriprionTitleLbl = UILabel()
+    let descriptionLbl = UILabel()
+    
+    let sumLbl = UILabel()
+    
+    var num = 0
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -41,48 +48,18 @@ class CargoCell: UIView {
     
     func setupView() {
         
+        self.layer.cornerRadius = 5.0
         self.backgroundColor = UIColor.white
-        self.layer.cornerRadius = 6.0
-        
-        self.addSubview(checkBtn)
-        checkBtn.snp.makeConstraints { (make) in
-            make.left.equalTo(8)
-            make.centerY.equalToSuperview()
-            make.width.height.equalTo(20)
-        }
-        checkBtn.layer.borderWidth = 1
-        checkBtn.layer.borderColor = UIColor.cyan.cgColor
-        checkBtn.addTarget(self, action: #selector(checkBtnTapped(btn:)), for: .touchUpInside)
         
         self.addSubview(imgV)
         imgV.snp.makeConstraints { (make) in
-            make.left.equalTo(checkBtn.snp.right).offset(9)
-            make.centerY.equalToSuperview()
-            make.width.height.equalTo(100)
+            make.width.height.equalTo(90)
+            make.left.top.equalTo(10)
         }
-        imgV.backgroundColor = UIColor.cyan
-        imgV.layer.cornerRadius = 6.0
+        imgV.image = UIImage.init(color: UIColor.cyan)
         
-        self.addSubview(proudctName)
-        proudctName.snp.makeConstraints { (make) in
-            make.left.equalTo(imgV.snp.right).offset(9)
-            make.top.equalTo(imgV.snp.top)
-            make.right.equalTo(-9)
-        }
-        proudctName.text = "商品名称"
-        
-        self.addSubview(selectBtn)
-        selectBtn.snp.makeConstraints { (make) in
-            make.left.equalTo(imgV.snp.right).offset(9)
-            make.top.equalTo(proudctName.snp.bottom).offset(4)
-            make.width.equalTo(150)
-            make.height.equalTo(20)
-        }
-        selectBtn.backgroundColor = UIColor.cyan
-        selectBtn.setTitle("选择类型", for: .normal)
-        selectBtn.addTarget(self, action: #selector(selectBtnTapped), for: .touchUpInside)
-        selectBtn.layer.cornerRadius = 3.0
-        
+        self.addSubview(productLbl)
+        productLbl.text = ""
         
         _ = UIView().then { (back) in
             self.addSubview(back)
@@ -95,7 +72,7 @@ class CargoCell: UIView {
             back.layer.borderColor = UIColor.lightGray.cgColor
             back.layer.borderWidth = 0.5
             back.layer.cornerRadius = 4.0
-            
+
             back.addSubview(plusBtn)
             plusBtn.snp.makeConstraints { (make) in
                 make.right.equalTo(0)
@@ -106,7 +83,7 @@ class CargoCell: UIView {
             plusBtn.setTitleColor(UIColor.gray, for: .normal)
             plusBtn.titleLabel?.font = UIFont.PFExtraLight(18)
             plusBtn.addTarget(self, action: #selector(plusBtnTapped), for: .touchUpInside)
-            
+
             back.addSubview(numLbl)
             numLbl.snp.makeConstraints { (make) in
                 make.right.equalTo(plusBtn.snp.left).offset(0.5)
@@ -120,7 +97,7 @@ class CargoCell: UIView {
             numLbl.font = UIFont.PFExtraLight(14)
             numLbl.layer.borderColor = UIColor.lightGray.cgColor
             numLbl.layer.borderWidth = 0.5
-            
+
             back.addSubview(minusBtn)
             minusBtn.snp.makeConstraints { (make) in
                 make.right.equalTo(numLbl.snp.left).offset(0.5)
@@ -132,46 +109,20 @@ class CargoCell: UIView {
             minusBtn.titleLabel?.font = UIFont.PFExtraLight(18)
             minusBtn.addTarget(self, action: #selector(minusBtnTapped), for: .touchUpInside)
         }
-        
-        self.addSubview(priceLbl)
-        priceLbl.snp.makeConstraints { (make) in
-            make.left.equalTo(imgV.snp.right).offset(9)
-            make.bottom.equalTo(imgV.snp.bottom)
-            make.right.equalTo(minusBtn.snp.left).offset(4)
-        }
-        priceLbl.text = "$12.00"
     }
     
     @objc func plusBtnTapped() {
         print(#function)
-        
         num += 1
         numLbl.text = "\(num)"
-        plusBtnTap?(num)
+        theNumLbl.text = "\(num)"
     }
     
     @objc func minusBtnTapped() {
         print(#function)
-        guard num >= 1 else { return }
         num -= 1
         numLbl.text = "\(num)"
-        minusBtnTap?(num)
-    }
-    
-    @objc func checkBtnTapped(btn: UIButton) {
-        print(#function)
-        btn.isSelected = !btn.isSelected
-        if btn.isSelected {
-            btn.setBackgroundImage(UIImage.init(color: UIColor.cyan), for: .normal)
-        } else {
-            btn.setBackgroundImage(UIImage.init(color: UIColor.white), for: .normal)
-        }
-        checkBtnTap?()
-    }
-    
-    @objc func selectBtnTapped() {
-        print(#function)
-        selectBtnTap?()
+        theNumLbl.text = "\(num)"
     }
 
 }

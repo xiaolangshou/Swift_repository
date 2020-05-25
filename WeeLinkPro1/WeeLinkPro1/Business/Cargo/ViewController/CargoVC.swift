@@ -12,7 +12,8 @@ import Then
 class CargoVC: UIViewController {
 
     static let shared = CargoVC()
-    var productArr: [Int] = [1, 1, 1]
+    typealias dataType = (Bool, Int)
+    var productArr: [dataType] = [(false, 1), (false, 1), (false, 1)]
     
     let scrollView = UIScrollView()
     let containerView = UIView()
@@ -49,7 +50,21 @@ class CargoVC: UIViewController {
             make.height.equalTo(70)
             make.bottom.equalTo(-UIScreen.tabBarHeight)
         }
-        bottomView.backgroundColor = UIColor.green
+        bottomView.backgroundColor = UIColor.white
+        bottomView.editBtnTap = { }
+        bottomView.sumBtnTap = { [weak self] in
+            let vc = BalanceVC()
+            vc.hidesBottomBarWhenPushed = true
+            self?.navigationController?.pushViewController(vc, animated: true)
+        }
+        bottomView.selectAllBtnTap = { [weak self] in
+            for v in (self?.containerView.subviews)! {
+                if v.isMember(of: CargoCell.self) {
+                    let cell = v as! CargoCell
+                    cell.checkBtnTapped(btn: cell.checkBtn)
+                }
+            }
+        }
         
         var prevCell: CargoCell?
         for (index, _) in productArr.enumerated() {
@@ -94,25 +109,41 @@ class CargoVC: UIViewController {
             }
             cell.checkBtnTap = { [weak self] in
                 
-            }
-            cell.minusBtnTap = { [weak self] num in
-                self?.productArr[index] = num
+                self?.productArr[index].0 = cell.checkBtn.isSelected
                 var sum = 0
-                if cell.checkBtn.isSelected {
-                    for (i,v) in self!.productArr.enumerated() {
-                        if i == index { sum += v }
+                
+                for i in self!.productArr {
+                    if i.0 {
+                        sum += i.1
                     }
                 }
+                
+                self?.bottomView.sumBtn.setTitle("结算(\(sum))", for: .normal)
+            }
+            cell.minusBtnTap = { [weak self] num in
+            
+                self?.productArr[index] = (cell.checkBtn.isSelected, num)
+                var sum = 0
+                
+                for i in self!.productArr {
+                    if i.0 {
+                        sum += i.1
+                    }
+                }
+                
                 self?.bottomView.sumBtn.setTitle("结算(\(sum))", for: .normal)
             }
             cell.plusBtnTap = { [weak self] num in
-                self?.productArr[index] = num
+                
+                self?.productArr[index] = (cell.checkBtn.isSelected, num)
                 var sum = 0
-                if cell.checkBtn.isSelected {
-                    for (i,v) in self!.productArr.enumerated() {
-                        if i == index { sum += v }
+                
+                for i in self!.productArr {
+                    if i.0 {
+                        sum += i.1
                     }
                 }
+
                 self?.bottomView.sumBtn.setTitle("结算(\(sum))", for: .normal)
             }
         }

@@ -22,6 +22,10 @@
 		04B1FD7B247270EE008A6C4D /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1FD7A247270EE008A6C4D /* UIDevice+Extension.swift */; };
 		04B1FD8B2472789F008A6C4D /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1FD8A2472789F008A6C4D /* BottomView.swift */; };
 		04B991732473C89F00E820CB /* MainPageDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B991722473C89F00E820CB /* MainPageDetailVC.swift */; };
+		04C1908D247B515C0024CF66 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C1908C247B515C0024CF66 /* UIImage+Extension.swift */; };
+		04C1908F247B997D0024CF66 /* BalanceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C1908E247B997D0024CF66 /* BalanceVC.swift */; };
+		04C19091247B9DBC0024CF66 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C19090247B9DBC0024CF66 /* LocationView.swift */; };
+		04C19093247BA8060024CF66 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C19092247BA8060024CF66 /* DetailView.swift */; };
 		04CA72832474BD5100CC90AB /* ProductDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA72822474BD5100CC90AB /* ProductDetailVC.swift */; };
 		A4E0672049FA5A94FFD7D6E9 /* Pods_WeeLinkPro1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17245B7C540FC608721D29B1 /* Pods_WeeLinkPro1.framework */; };
 		CF63364C246D79C000FAC724 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF63364B246D79C000FAC724 /* AppDelegate.swift */; };
@@ -72,6 +76,10 @@
 		04B1FD7A247270EE008A6C4D /* UIDevice+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
 		04B1FD8A2472789F008A6C4D /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
 		04B991722473C89F00E820CB /* MainPageDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageDetailVC.swift; sourceTree = "<group>"; };
+		04C1908C247B515C0024CF66 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		04C1908E247B997D0024CF66 /* BalanceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceVC.swift; sourceTree = "<group>"; };
+		04C19090247B9DBC0024CF66 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
+		04C19092247BA8060024CF66 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		04CA72822474BD5100CC90AB /* ProductDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailVC.swift; sourceTree = "<group>"; };
 		17245B7C540FC608721D29B1 /* Pods_WeeLinkPro1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeeLinkPro1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		545C467D5C95E0B933581B49 /* Pods-WeeLinkPro1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeeLinkPro1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeeLinkPro1/Pods-WeeLinkPro1.debug.xcconfig"; sourceTree = "<group>"; };
@@ -246,6 +254,8 @@
 			children = (
 				04B1FD7024721701008A6C4D /* CargoCell.swift */,
 				04B1FD8A2472789F008A6C4D /* BottomView.swift */,
+				04C19090247B9DBC0024CF66 /* LocationView.swift */,
+				04C19092247BA8060024CF66 /* DetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -261,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				CF63367F246D7CD100FAC724 /* CargoVC.swift */,
+				04C1908E247B997D0024CF66 /* BalanceVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -322,6 +333,7 @@
 				04B1FD7A247270EE008A6C4D /* UIDevice+Extension.swift */,
 				04B1FD7424726CF8008A6C4D /* Foundation+Extension.swift */,
 				04B1FD762472709E008A6C4D /* UIFont+Extension.swift */,
+				04C1908C247B515C0024CF66 /* UIImage+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -612,16 +624,20 @@
 				04729218246F8E31007D0498 /* SearchBar.swift in Sources */,
 				CF63367C246D7CA500FAC724 /* MainPageVC.swift in Sources */,
 				04B1FD79247270C8008A6C4D /* UIScreen+Extension.swift in Sources */,
+				04C1908F247B997D0024CF66 /* BalanceVC.swift in Sources */,
 				04AA6938246E77E500F93605 /* Banner.swift in Sources */,
 				04B1FD7B247270EE008A6C4D /* UIDevice+Extension.swift in Sources */,
 				CF63367E246D7CBC00FAC724 /* CategoryVC.swift in Sources */,
+				04C19093247BA8060024CF66 /* DetailView.swift in Sources */,
 				CF63364E246D79C000FAC724 /* SceneDelegate.swift in Sources */,
+				04C1908D247B515C0024CF66 /* UIImage+Extension.swift in Sources */,
 				04B1FD7524726CF8008A6C4D /* Foundation+Extension.swift in Sources */,
 				04CA72832474BD5100CC90AB /* ProductDetailVC.swift in Sources */,
 				04277CF7246F771100FECA7D /* MiniCollectionViewCell.swift in Sources */,
 				04B1FD8B2472789F008A6C4D /* BottomView.swift in Sources */,
 				0472921C246FD6F7007D0498 /* LeftTableViewCell.swift in Sources */,
 				04277CF9246F7D4600FECA7D /* CollectionViewCell.swift in Sources */,
+				04C19091247B9DBC0024CF66 /* LocationView.swift in Sources */,
 				CF9302D9247A2ECD003468F8 /* PictureVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,6 +10,7 @@ import UIKit
 
 class BottomView: UIView {
     
+    var selectAllBtnTap: (() -> Void)?
     var editBtnTap: (() -> Void)?
     var sumBtnTap: (() -> Void)?
     
@@ -18,6 +19,9 @@ class BottomView: UIView {
     let editBtn = UIButton()
     let sumLbl = UILabel()
     let sumBtn = UIButton()
+    
+    let cancelBtn = UIButton()
+    let deleteBtn = UIButton()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -40,6 +44,7 @@ class BottomView: UIView {
             make.left.equalToSuperview()
         }
         checkBtn.backgroundColor = UIColor.yellow
+        checkBtn.addTarget(self, action: #selector(selectAllBtnTapped), for: .touchUpInside)
         
         self.addSubview(checkLbl)
         checkLbl.text = "全选"
@@ -65,10 +70,11 @@ class BottomView: UIView {
         editBtn.addTarget(self, action: #selector(editBtnTapped), for: .touchUpInside)
         
         self.addSubview(sumBtn)
-        sumBtn.setTitle("结算", for: UIControl.State.normal)
+        sumBtn.setTitle("结算", for: .normal)
+        sumBtn.titleLabel?.font = UIFont.PFRegular(14.0)
         sumBtn.layer.cornerRadius = 4.0
         sumBtn.snp.makeConstraints { (make) in
-            make.width.equalTo(100)
+            make.width.equalTo(80)
             make.height.equalTo(40)
             make.centerY.equalToSuperview()
             make.right.equalTo(-10)
@@ -78,11 +84,44 @@ class BottomView: UIView {
         
         self.addSubview(sumLbl)
         sumLbl.snp.makeConstraints { (make) in
-            make.left.equalTo(editBtn.snp.right).offset(20)
+            make.left.equalTo(editBtn.snp.right).offset(12)
             make.right.equalTo(sumBtn.snp.left)
             make.centerY.equalToSuperview()
         }
         sumLbl.text = "合计: $193.00"
+        
+        self.addSubview(deleteBtn)
+        deleteBtn.setTitle("删除", for: .normal)
+        deleteBtn.titleLabel?.font = UIFont.PFRegular(14.0)
+        deleteBtn.layer.cornerRadius = 4.0
+        deleteBtn.snp.makeConstraints { (make) in
+            make.width.equalTo(80)
+            make.height.equalTo(40)
+            make.centerY.equalToSuperview()
+            make.right.equalTo(-10)
+        }
+        deleteBtn.backgroundColor = UIColor.lightGray
+        deleteBtn.addTarget(self, action: #selector(deleteBtnTapped), for: .touchUpInside)
+        deleteBtn.isHidden = true
+        
+        self.addSubview(cancelBtn)
+        cancelBtn.setTitle("取消", for: .normal)
+        cancelBtn.titleLabel?.font = UIFont.PFRegular(14.0)
+        cancelBtn.layer.cornerRadius = 4.0
+        cancelBtn.snp.makeConstraints { (make) in
+            make.width.equalTo(80)
+            make.height.equalTo(40)
+            make.centerY.equalToSuperview()
+            make.right.equalTo(deleteBtn.snp.left).offset(-5)
+        }
+        cancelBtn.backgroundColor = UIColor.lightGray
+        cancelBtn.addTarget(self, action: #selector(cancelBtnTapped), for: .touchUpInside)
+        cancelBtn.isHidden = true
+    }
+    
+    @objc func selectAllBtnTapped() {
+        print(#function)
+        selectAllBtnTap!()
     }
     
     @objc func sumBtnTapped() {
@@ -92,7 +131,21 @@ class BottomView: UIView {
     
     @objc func editBtnTapped() {
         print(#function)
+        
+        cancelBtn.isHidden = !cancelBtn.isHidden
+        deleteBtn.isHidden = !deleteBtn.isHidden
+        
+        sumBtn.isHidden = !sumBtn.isHidden
+        
         editBtnTap!()
     }
 
+    @objc func deleteBtnTapped() {
+        print(#function)
+    
+    }
+    
+    @objc func cancelBtnTapped() {
+        print(#function)
+    }
 }
