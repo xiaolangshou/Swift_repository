@@ -56,7 +56,8 @@ class DetailView: UIView {
             make.width.height.equalTo(90)
             make.left.top.equalTo(10)
         }
-        imgV.image = UIImage.init(color: UIColor.cyan)
+        imgV.backgroundColor = UIColor.cyan
+        imgV.layer.cornerRadius = 4.0
         
         self.addSubview(productLbl)
         productLbl.snp.makeConstraints { (make) in
@@ -86,6 +87,16 @@ class DetailView: UIView {
         typeLbl.font = UIFont.PFRegular(12.0)
         typeLbl.text = "138412834723alsdjfls"
         typeLbl.textColor = UIColor.gray
+        
+        
+        self.addSubview(theNumLbl)
+        theNumLbl.snp.makeConstraints { (make) in
+            make.right.equalTo(-10)
+            make.centerY.equalTo(typeLbl.snp.centerY)
+        }
+        theNumLbl.text = "\(num)"
+        theNumLbl.font = UIFont.PFRegular(14.0)
+        theNumLbl.textAlignment = .right
         
         purchaseNumLbl.text = "购买数量"
         self.addSubview(purchaseNumLbl)

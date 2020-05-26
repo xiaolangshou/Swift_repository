@@ -76,8 +76,37 @@ class BalanceVC: UIViewController {
         submitBtn.layer.cornerRadius = 4.0
         submitBtn.backgroundColor = UIColor.gray
         submitBtn.setTitle("提交订单", for: .normal)
-        submitBtn.setTitleColor(UIColor.white, for: UIControl.State.normal)
+        submitBtn.setTitleColor(UIColor.white, for: .normal)
         submitBtn.titleLabel?.font = UIFont.PFRegular(15.0)
+        submitBtn.addTarget(self, action: #selector(submitBtnTapped), for: .touchUpInside)
+        
+        let sumLbl = UILabel()
+        bottomView.addSubview(sumLbl)
+        sumLbl.snp.makeConstraints { (make) in
+            make.right.equalTo(submitBtn.snp.left).offset(-10)
+            make.top.equalTo(10)
+            make.left.equalToSuperview()
+            make.height.equalTo(30)
+        }
+        sumLbl.textAlignment = .right
+        sumLbl.text = "合计：￥ 193.00"
+        sumLbl.font = UIFont.PFRegular(14.0)
+        
+        let shipFeeLbl = UILabel()
+        bottomView.addSubview(shipFeeLbl)
+        shipFeeLbl.snp.makeConstraints { (make) in
+            make.right.equalTo(submitBtn.snp.left).offset(-10)
+            make.top.equalTo(sumLbl.snp.bottom)
+            make.height.equalTo(30)
+            make.left.equalToSuperview()
+        }
+        shipFeeLbl.textAlignment = .right
+        shipFeeLbl.text = "运费：￥ 12.00"
+        shipFeeLbl.font = UIFont.PFRegular(14.0)
+    }
+    
+    @objc func submitBtnTapped() {
+        print(#function)
     }
 
 }
