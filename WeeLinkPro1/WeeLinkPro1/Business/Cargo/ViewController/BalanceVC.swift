@@ -10,6 +10,10 @@ import UIKit
 
 class BalanceVC: UIViewController {
     
+    let scrollView = UIScrollView()
+    let containerView = UIView()
+    let bottomView = UIView()
+    
     let locationView = LocationView()
     let detailView = DetailView()
 
@@ -23,13 +27,57 @@ class BalanceVC: UIViewController {
         
         view.backgroundColor = UIColor.systemBackColor
         
-        view.addSubview(locationView)
+        view.addSubview(scrollView)
+        scrollView.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
+        }
+        scrollView.alwaysBounceVertical = true
+
+        scrollView.addSubview(containerView)
+        containerView.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
+            make.width.equalToSuperview()
+        }
+        
+        containerView.addSubview(locationView)
         locationView.snp.makeConstraints { (make) in
             make.left.equalTo(10)
             make.right.equalTo(-10)
-            make.top.equalTo(UIScreen.navBarHeight + 10)
+            make.top.equalTo(10)
             make.height.equalTo(90)
         }
+
+        containerView.addSubview(detailView)
+        detailView.snp.makeConstraints { (make) in
+            make.left.equalTo(locationView.snp.left)
+            make.right.equalTo(locationView.snp.right)
+            make.top.equalTo(locationView.snp.bottom).offset(10)
+            make.height.equalTo(UIScreen.width - 50)
+            
+        }
+        
+        view.addSubview(bottomView)
+        bottomView.snp.makeConstraints { (make) in
+            make.width.equalToSuperview()
+            make.height.equalTo(80)
+            make.bottom.equalToSuperview()
+            make.centerX.equalToSuperview()
+        }
+        bottomView.backgroundColor = UIColor.white
+        
+        let submitBtn = UIButton()
+        bottomView.addSubview(submitBtn)
+        submitBtn.snp.makeConstraints { (make) in
+            make.width.equalTo(90)
+            make.height.equalTo(40)
+            make.right.equalTo(-10)
+            make.centerY.equalToSuperview()
+        }
+        submitBtn.layer.cornerRadius = 4.0
+        submitBtn.backgroundColor = UIColor.gray
+        submitBtn.setTitle("提交订单", for: .normal)
+        submitBtn.setTitleColor(UIColor.white, for: UIControl.State.normal)
+        submitBtn.titleLabel?.font = UIFont.PFRegular(15.0)
     }
 
 }
