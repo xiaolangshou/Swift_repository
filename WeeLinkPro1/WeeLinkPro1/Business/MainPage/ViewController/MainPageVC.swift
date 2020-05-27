@@ -22,7 +22,7 @@ class MainPageVC: UIViewController {
     var collectionView1: UICollectionView?
     var collectionView2: UICollectionView?
     var collectionView3: UICollectionView?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -58,9 +58,6 @@ class MainPageVC: UIViewController {
         }
         searchBar.placeholder = "搜索内容"
         searchBar.delegate = self
-        searchBar.cancelBtnTap = { [weak self] in
-            self?.searchBar.delegate?.searchBarCancelButtonClicked?(self!.searchBar)
-        }
     }
     
     func setupBanner() {
@@ -247,15 +244,23 @@ extension MainPageVC: UICollectionViewDelegate, UICollectionViewDataSource {
 
 extension MainPageVC: UISearchBarDelegate {
     
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.resignFirstResponder()
-    }
-    
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        self.searchBar.cancelBtn.isHidden = false
+        print(#function)
+        let vc = HistoryVC.shared
+        if vc.isBack {
+            vc.hidesBottomBarWhenPushed = true
+            navigationController?.pushViewController(vc, animated: true)
+            
+            vc.isBack = true
+        }
     }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        self.searchBar.cancelBtn.isHidden = true
+        print(#function)
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        print(#function)
+        searchBar.resignFirstResponder()
     }
 }

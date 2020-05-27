@@ -58,9 +58,6 @@ class MainPageDetailVC: UIViewController {
         }
         searchBar.placeholder = "搜索内容"
         searchBar.delegate = self
-        searchBar.cancelBtnTap = { [weak self] in
-            self?.searchBar.delegate?.searchBarCancelButtonClicked?(self!.searchBar)
-        }
     }
     
     func setupSortView() {
@@ -226,16 +223,12 @@ class MainPageDetailVC: UIViewController {
 
 extension MainPageDetailVC: UISearchBarDelegate {
     
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.resignFirstResponder()
-    }
-    
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        self.searchBar.cancelBtn.isHidden = false
+//        self.searchBar.cancelBtn.isHidden = false
     }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        self.searchBar.cancelBtn.isHidden = true
+//        self.searchBar.cancelBtn.isHidden = true
     }
 }
 

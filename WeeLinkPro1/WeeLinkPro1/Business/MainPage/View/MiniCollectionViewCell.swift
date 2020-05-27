@@ -37,8 +37,9 @@ class MiniCollectionViewCell: UICollectionViewCell {
             make.bottom.equalTo(-34)
         }
         
-        subscriptLbl.text = "类别四字"
+        subscriptLbl.text = "功能类别"
         subscriptLbl.textAlignment = .center
+        subscriptLbl.font = UIFont.PFRegular(13.0)
         self.addSubview(subscriptLbl)
         subscriptLbl.snp.makeConstraints { make in
             make.width.equalTo(imgView.snp.width)
