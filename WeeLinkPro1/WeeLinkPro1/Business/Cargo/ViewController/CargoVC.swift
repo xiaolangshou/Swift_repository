@@ -37,6 +37,7 @@ class CargoVC: UIViewController {
             make.width.equalToSuperview()
         }
         
+        scrollView.alwaysBounceVertical = true
         setupView()
     }
 

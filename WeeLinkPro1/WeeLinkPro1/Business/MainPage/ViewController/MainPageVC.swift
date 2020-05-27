@@ -246,13 +246,13 @@ extension MainPageVC: UISearchBarDelegate {
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         print(#function)
+        
+        searchBar.resignFirstResponder()
+        
         let vc = HistoryVC.shared
-        if vc.isBack {
-            vc.hidesBottomBarWhenPushed = true
-            navigationController?.pushViewController(vc, animated: true)
-            
-            vc.isBack = true
-        }
+        
+        vc.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {

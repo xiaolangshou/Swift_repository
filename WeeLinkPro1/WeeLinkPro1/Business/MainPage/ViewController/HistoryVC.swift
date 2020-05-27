@@ -11,8 +11,6 @@ import UIKit
 class HistoryVC: UIViewController {
     
     static let shared = HistoryVC()
-
-    var isBack = true
     
     let history = HistoryView()
     let scrollView = UIScrollView()
@@ -25,13 +23,6 @@ class HistoryVC: UIViewController {
         setupView()
         setupSearchBar()
         setupHistoryView()
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        isBack = false
-        searchBar.resignFirstResponder()
     }
     
     func setupView() {

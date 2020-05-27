@@ -224,11 +224,16 @@ class MainPageDetailVC: UIViewController {
 extension MainPageDetailVC: UISearchBarDelegate {
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-//        self.searchBar.cancelBtn.isHidden = false
+
     }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-//        self.searchBar.cancelBtn.isHidden = true
+
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        print(#function)
+        searchBar.resignFirstResponder()
     }
 }
 

@@ -76,13 +76,26 @@ class CategoryVC: UIViewController {
 extension CategoryVC: UISearchBarDelegate {
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-//        self.searchBar.cancelBtn.isHidden = false
+        print(#function)
+        
+        searchBar.resignFirstResponder()
+        
+        let vc = HistoryVC.shared
+        
+        vc.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-//        self.searchBar.cancelBtn.isHidden = true
+        print(#function)
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        print(#function)
+        searchBar.resignFirstResponder()
     }
 }
+
 
 extension CategoryVC: UITableViewDelegate, UITableViewDataSource {
     

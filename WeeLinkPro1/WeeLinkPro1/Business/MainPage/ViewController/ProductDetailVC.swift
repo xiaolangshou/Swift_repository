@@ -423,6 +423,4 @@ class DetailCell: UIView {
     @objc func imgVTapped() {
         imgVTap!()
     }
-    
-    
 }
