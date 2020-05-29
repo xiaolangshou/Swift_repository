@@ -70,8 +70,8 @@ class MainPageDetailVC: UIViewController {
                 make.top.equalTo(searchBar.snp.bottom)
                 make.height.equalTo(40)
             }
-            b.backgroundColor = UIColor.cyan
         }
+        backView?.backgroundColor = UIColor.white
         
         sortBtn1 = UIButton.init()
         backView?.addSubview(sortBtn1 ?? UIView())
@@ -83,6 +83,7 @@ class MainPageDetailVC: UIViewController {
         })
         sortBtn1?.setTitle("排序标签", for: .normal)
         sortBtn1?.setTitleColor(UIColor.gray, for: .normal)
+        sortBtn1?.titleLabel?.font = UIFont.PFMedium(13.0)
         sortBtn1?.addTarget(self, action: #selector(sortBtnTapped1), for: .touchUpInside)
         
         sortBtn2 = UIButton.init()
@@ -95,6 +96,7 @@ class MainPageDetailVC: UIViewController {
         })
         sortBtn2?.setTitle("排序标签", for: .normal)
         sortBtn2?.setTitleColor(UIColor.gray, for: .normal)
+        sortBtn2?.titleLabel?.font = UIFont.PFMedium(13.0)
         sortBtn2?.addTarget(self, action: #selector(sortBtnTapped2), for: .touchUpInside)
         
         sortBtn3 = UIButton.init()
@@ -107,6 +109,7 @@ class MainPageDetailVC: UIViewController {
         })
         sortBtn3?.setTitle("排序标签", for: .normal)
         sortBtn3?.setTitleColor(UIColor.gray, for: .normal)
+        sortBtn3?.titleLabel?.font = UIFont.PFMedium(13.0)
         sortBtn3?.addTarget(self, action: #selector(sortBtnTapped3), for: .touchUpInside)
         
         sortBtn4 = UIButton.init()
@@ -120,13 +123,14 @@ class MainPageDetailVC: UIViewController {
         })
         sortBtn4?.setTitle("排序标签", for: .normal)
         sortBtn4?.setTitleColor(UIColor.gray, for: .normal)
+        sortBtn4?.titleLabel?.font = UIFont.PFMedium(13.0)
         sortBtn4?.addTarget(self, action: #selector(sortBtnTapped4), for: .touchUpInside)
         
-        sortTable1 = UITableView.init()
+        sortTable1 = UITableView()
         view.addSubview(sortTable1!)
         sortTable1?.snp.makeConstraints({ (make) in
             make.width.equalTo((sortBtn1?.snp.width)!)
-            make.top.equalTo((backView?.snp.bottom)!)
+            make.top.equalTo((backView?.snp.bottom)!).offset(0.5)
             make.height.equalTo(60)
             make.centerX.equalTo((sortBtn1?.snp.centerX)!)
         })
@@ -137,7 +141,7 @@ class MainPageDetailVC: UIViewController {
         view.addSubview(sortTable2!)
         sortTable2?.snp.makeConstraints({ (make) in
             make.width.equalTo((sortBtn2?.snp.width)!)
-            make.top.equalTo((backView?.snp.bottom)!)
+            make.top.equalTo((backView?.snp.bottom)!).offset(0.5)
             make.height.equalTo(60)
             make.centerX.equalTo((sortBtn2?.snp.centerX)!)
         })
@@ -148,7 +152,7 @@ class MainPageDetailVC: UIViewController {
         view.addSubview(sortTable3!)
         sortTable3?.snp.makeConstraints({ (make) in
             make.width.equalTo((sortBtn3?.snp.width)!)
-            make.top.equalTo((backView?.snp.bottom)!)
+            make.top.equalTo((backView?.snp.bottom)!).offset(0.5)
             make.height.equalTo(60)
             make.centerX.equalTo((sortBtn3?.snp.centerX)!)
         })
@@ -159,7 +163,7 @@ class MainPageDetailVC: UIViewController {
         view.addSubview(sortTable4!)
         sortTable4?.snp.makeConstraints({ (make) in
             make.width.equalTo((sortBtn4?.snp.width)!)
-            make.top.equalTo((backView?.snp.bottom)!)
+            make.top.equalTo((backView?.snp.bottom)!).offset(0.5)
             make.height.equalTo(60)
             make.centerX.equalTo((sortBtn4?.snp.centerX)!)
         })
@@ -196,7 +200,7 @@ class MainPageDetailVC: UIViewController {
                     make.width.equalToSuperview()
                     make.centerX.equalToSuperview()
                     make.height.equalTo(120)
-                    make.top.equalTo(prevCell.snp.bottom).offset(5)
+                    make.top.equalTo(prevCell.snp.bottom).offset(1)
                     if index == dataArr.count - 1 {
                         make.bottom.equalToSuperview()
                     }
@@ -205,7 +209,7 @@ class MainPageDetailVC: UIViewController {
                 cell.snp.makeConstraints { (make) in
                     make.width.equalToSuperview()
                     make.centerX.equalToSuperview()
-                    make.top.equalTo(backView?.snp.bottom ?? UIView()).offset(5)
+                    make.top.equalTo(backView?.snp.bottom ?? UIView()).offset(1)
                     make.height.equalTo(120)
                 }
             }
@@ -261,6 +265,8 @@ class MainPageDetailCell: UIView {
     
     func setupView() {
         
+        self.backgroundColor = UIColor.white
+        
         self.addSubview(imgV)
         imgV.snp.makeConstraints { (make) in
             make.width.height.equalTo(100)
@@ -268,7 +274,7 @@ class MainPageDetailCell: UIView {
             make.left.equalTo(6)
         }
         imgV.backgroundColor = UIColor.cyan
-        imgV.layer.cornerRadius = 4.0
+        imgV.layer.cornerRadius = 5.0
         
         self.addSubview(pName)
         pName.snp.makeConstraints { (make) in
@@ -278,6 +284,8 @@ class MainPageDetailCell: UIView {
             make.width.equalTo(80)
         }
         pName.text = "商品名称"
+        pName.font = UIFont.PFMedium(17.0)
+        pName.textColor = UIColor.hex(0x787878)
         
         self.addSubview(numLbl)
         numLbl.snp.makeConstraints { (make) in
@@ -287,6 +295,8 @@ class MainPageDetailCell: UIView {
             make.width.equalTo(80)
         }
         numLbl.text = "16（只）"
+        numLbl.font = UIFont.PFMedium(15.0)
+        numLbl.textColor = UIColor.hex(0x787878)
         
         self.addSubview(priceLbl)
         priceLbl.snp.makeConstraints { (make) in
@@ -295,7 +305,9 @@ class MainPageDetailCell: UIView {
             make.height.equalTo(20)
             make.bottom.equalTo(-10)
         }
-        priceLbl.text = "$20.5"
+        priceLbl.text = "￥20.5"
+        priceLbl.font = UIFont.PFMedium(17.0)
+        priceLbl.textColor = UIColor.hex(0x787878)
         
         self.addSubview(addBtn)
         addBtn.snp.makeConstraints { (make) in
@@ -304,13 +316,13 @@ class MainPageDetailCell: UIView {
             make.bottom.equalTo(-28)
         }
         addBtn.layer.cornerRadius = 3.0
-        addBtn.backgroundColor = UIColor.lightGray
+        addBtn.backgroundColor = UIColor.hex(0xF2F2F2)
         addBtn.setTitle("+", for: .normal)
-        addBtn.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        addBtn.setTitleColor(UIColor.hex(0x939393), for: .normal)
+        addBtn.titleLabel?.font = UIFont.PFRegular(20)
         
-        let gesture = UITapGestureRecognizer.init(target: self, action: #selector(cellTapped))
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(cellTapped))
         self.addGestureRecognizer(gesture)
-        
     }
     
     @objc func cellTapped() {

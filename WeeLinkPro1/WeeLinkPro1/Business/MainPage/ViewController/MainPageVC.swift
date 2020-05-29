@@ -66,7 +66,7 @@ class MainPageVC: UIViewController {
         containerView.addSubview(banner)
         banner.snp.makeConstraints { (make) in
             make.top.equalTo(searchBar.snp.bottom)
-            make.height.equalTo(200)
+            make.height.equalTo(203)
             make.left.right.equalToSuperview()
         }
         banner.imageArray.append(UIImage.init(named: "11")!)
