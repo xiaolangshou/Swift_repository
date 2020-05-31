@@ -41,7 +41,7 @@ class BottomView: UIView {
         checkBtn.snp.makeConstraints { (make) in
             make.width.height.equalTo(20)
             make.centerY.equalToSuperview()
-            make.left.equalToSuperview()
+            make.left.equalToSuperview().offset(12)
         }
         checkBtn.backgroundColor = UIColor.yellow
         checkBtn.addTarget(self, action: #selector(selectAllBtnTapped), for: .touchUpInside)
@@ -54,41 +54,46 @@ class BottomView: UIView {
             make.width.lessThanOrEqualTo(40)
         }
         checkLbl.textAlignment = .left
+        checkLbl.font = UIFont.PFMedium(13.0)
+        checkLbl.textColor = UIColor.hex(0x939393)
         
         self.addSubview(editBtn)
         editBtn.snp.makeConstraints { (make) in
             make.centerY.equalToSuperview()
             make.left.equalTo(checkLbl.snp.right)
-            make.width.equalTo(34)
-            make.height.equalTo(26)
+            make.width.equalTo(33)
+            make.height.equalTo(20)
         }
         editBtn.layer.cornerRadius = 4.0
         editBtn.setTitle("编辑", for: .normal)
-        editBtn.backgroundColor = UIColor.lightGray
+        editBtn.backgroundColor = UIColor.hex(0x939393)
         editBtn.setTitleColor(UIColor.white, for: .normal)
         editBtn.titleLabel?.font = UIFont.PFMedium(13)
         editBtn.addTarget(self, action: #selector(editBtnTapped), for: .touchUpInside)
         
         self.addSubview(sumBtn)
         sumBtn.setTitle("结算", for: .normal)
-        sumBtn.titleLabel?.font = UIFont.PFRegular(14.0)
-        sumBtn.layer.cornerRadius = 4.0
+        sumBtn.titleLabel?.font = UIFont.PFBold(14.0)
+        sumBtn.layer.cornerRadius = 6.0
         sumBtn.snp.makeConstraints { (make) in
-            make.width.equalTo(80)
+            make.width.equalTo(85)
             make.height.equalTo(40)
             make.centerY.equalToSuperview()
             make.right.equalTo(-10)
         }
-        sumBtn.backgroundColor = UIColor.lightGray
+        sumBtn.backgroundColor = UIColor.hex(0x939393)
         sumBtn.addTarget(self, action: #selector(sumBtnTapped), for: .touchUpInside)
         
         self.addSubview(sumLbl)
         sumLbl.snp.makeConstraints { (make) in
             make.left.equalTo(editBtn.snp.right).offset(12)
-            make.right.equalTo(sumBtn.snp.left)
+            make.right.equalTo(sumBtn.snp.left).offset(-16)
             make.centerY.equalToSuperview()
         }
         sumLbl.text = "合计: $193.00"
+        sumLbl.textColor = UIColor.hex(0x787878)
+        sumLbl.font = UIFont.PFBold(18.0)
+        sumLbl.textAlignment = .right
         
         self.addSubview(deleteBtn)
         deleteBtn.setTitle("删除", for: .normal)
@@ -100,7 +105,7 @@ class BottomView: UIView {
             make.centerY.equalToSuperview()
             make.right.equalTo(-10)
         }
-        deleteBtn.backgroundColor = UIColor.lightGray
+        deleteBtn.backgroundColor = UIColor.hex(0x939393)
         deleteBtn.addTarget(self, action: #selector(deleteBtnTapped), for: .touchUpInside)
         deleteBtn.isHidden = true
         
@@ -114,7 +119,7 @@ class BottomView: UIView {
             make.centerY.equalToSuperview()
             make.right.equalTo(deleteBtn.snp.left).offset(-5)
         }
-        cancelBtn.backgroundColor = UIColor.lightGray
+        cancelBtn.backgroundColor = UIColor.hex(0x939393)
         cancelBtn.addTarget(self, action: #selector(cancelBtnTapped), for: .touchUpInside)
         cancelBtn.isHidden = true
     }
@@ -136,6 +141,7 @@ class BottomView: UIView {
         deleteBtn.isHidden = !deleteBtn.isHidden
         
         sumBtn.isHidden = !sumBtn.isHidden
+        sumLbl.isHidden = !sumLbl.isHidden
         
         editBtnTap!()
     }

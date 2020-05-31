@@ -70,19 +70,22 @@ class CargoCell: UIView {
             make.right.equalTo(-9)
         }
         proudctName.text = "商品名称"
+        proudctName.textColor = UIColor.hex(0x787878)
+        proudctName.font = UIFont.PFBold(15.0)
         
         self.addSubview(selectBtn)
         selectBtn.snp.makeConstraints { (make) in
             make.left.equalTo(imgV.snp.right).offset(9)
-            make.top.equalTo(proudctName.snp.bottom).offset(4)
+            make.top.equalTo(proudctName.snp.bottom).offset(7)
             make.width.equalTo(150)
-            make.height.equalTo(20)
+            make.height.equalTo(25)
         }
-        selectBtn.backgroundColor = UIColor.cyan
+        selectBtn.backgroundColor = UIColor.hex(0xF5F5F5)
         selectBtn.setTitle("选择类型", for: .normal)
+        selectBtn.setTitleColor(UIColor.hex(0x929599), for: UIControl.State.normal)
+        selectBtn.titleLabel?.font = UIFont.PFMedium(13.0)
         selectBtn.addTarget(self, action: #selector(selectBtnTapped), for: .touchUpInside)
-        selectBtn.layer.cornerRadius = 3.0
-        
+        selectBtn.layer.cornerRadius = 4.0
         
         _ = UIView().then { (back) in
             self.addSubview(back)
@@ -139,7 +142,9 @@ class CargoCell: UIView {
             make.bottom.equalTo(imgV.snp.bottom)
             make.right.equalTo(minusBtn.snp.left).offset(4)
         }
-        priceLbl.text = "$12.00"
+        priceLbl.text = "￥193.00"
+        priceLbl.textColor = UIColor.hex(0x939393)
+        priceLbl.font = UIFont.PFBold(15.0)
     }
     
     @objc func plusBtnTapped() {

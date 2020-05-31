@@ -76,7 +76,7 @@ class CargoVC: UIViewController {
                 cell.snp.makeConstraints { (make) in
                     make.left.equalTo(12)
                     make.right.equalTo(-12)
-                    make.height.equalTo(120)
+                    make.height.equalTo(124)
                     make.top.equalTo(prevCell.snp.bottom).offset(12)
                     if index == productArr.count - 1 {
                         make.bottom.equalToSuperview()
@@ -87,7 +87,7 @@ class CargoVC: UIViewController {
                     make.left.equalTo(12)
                     make.right.equalTo(-12)
                     make.top.equalTo(12)
-                    make.height.equalTo(120)
+                    make.height.equalTo(124)
                 }
             }
             

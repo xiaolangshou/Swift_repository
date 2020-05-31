@@ -48,16 +48,16 @@ class DetailView: UIView {
     
     func setupView() {
         
-        self.layer.cornerRadius = 5.0
+        self.layer.cornerRadius = 6.0
         self.backgroundColor = UIColor.white
         
         self.addSubview(imgV)
         imgV.snp.makeConstraints { (make) in
-            make.width.height.equalTo(90)
-            make.left.top.equalTo(10)
+            make.width.height.equalTo(100)
+            make.left.top.equalTo(12)
         }
         imgV.backgroundColor = UIColor.cyan
-        imgV.layer.cornerRadius = 4.0
+        imgV.layer.cornerRadius = 6.0
         
         self.addSubview(productLbl)
         productLbl.snp.makeConstraints { (make) in
@@ -67,6 +67,7 @@ class DetailView: UIView {
             make.height.equalTo(20)
         }
         productLbl.text = "Fii-02"
+        productLbl.font = UIFont.PFBold(15.0)
         
         self.addSubview(priceLbl)
         priceLbl.snp.makeConstraints { (make) in
@@ -75,7 +76,7 @@ class DetailView: UIView {
             make.centerY.equalTo(productLbl.snp.centerY)
         }
         priceLbl.text = "￥193.00"
-        priceLbl.font = UIFont.PFRegular(14.0)
+        priceLbl.font = UIFont.PFBold(15.0)
         priceLbl.textAlignment = .right
         
         self.addSubview(typeLbl)
@@ -84,10 +85,9 @@ class DetailView: UIView {
             make.right.equalTo(-10)
             make.centerY.equalTo(imgV.snp.centerY).offset(15)
         }
-        typeLbl.font = UIFont.PFRegular(12.0)
+        typeLbl.font = UIFont.PFMedium(13.0)
         typeLbl.text = "138412834723alsdjfls"
-        typeLbl.textColor = UIColor.gray
-        
+        typeLbl.textColor = UIColor.hex(0x929599)
         
         self.addSubview(theNumLbl)
         theNumLbl.snp.makeConstraints { (make) in
@@ -106,7 +106,7 @@ class DetailView: UIView {
             make.width.equalTo(100)
             make.height.equalTo(23)
         }
-        purchaseNumLbl.font = UIFont.PFRegular(15.0)
+        purchaseNumLbl.font = UIFont.PFMedium(13.0)
         purchaseNumLbl.textAlignment = .right
         
         _ = UIView().then({ (line) in
@@ -114,8 +114,8 @@ class DetailView: UIView {
             line.snp.makeConstraints { (make) in
                 make.left.equalTo(10)
                 make.right.equalTo(0)
-                make.height.equalTo(0.5)
-                make.top.equalTo(purchaseNumLbl.snp.bottom).offset(10)
+                make.height.equalTo(SINGLE_LINE_WIDTH)
+                make.top.equalTo(purchaseNumLbl.snp.bottom).offset(10+SINGLE_LINE_ADJUST_OFFSET)
             }
             line.backgroundColor = UIColor.gray
         })
@@ -178,7 +178,7 @@ class DetailView: UIView {
         }
         cupponLbl.text = "优惠券"
         cupponLbl.textAlignment = .right
-        cupponLbl.font = UIFont.PFRegular(15.0)
+        cupponLbl.font = UIFont.PFMedium(13.0)
         cupponLbl.textAlignment = .right
         
         self.addSubview(cupponPriceLbl)
@@ -189,7 +189,7 @@ class DetailView: UIView {
             make.centerY.equalTo(cupponLbl.snp.centerY)
         }
         cupponPriceLbl.text = "-￥12:00 >"
-        cupponPriceLbl.font = UIFont.PFRegular(14.0)
+        cupponPriceLbl.font = UIFont.PFBold(13.0)
         cupponPriceLbl.textColor = UIColor.gray
         
         _ = UIView().then({ (line) in
@@ -197,8 +197,8 @@ class DetailView: UIView {
             line.snp.makeConstraints { (make) in
                 make.left.equalTo(10)
                 make.right.equalTo(0)
-                make.height.equalTo(0.5)
-                make.top.equalTo(cupponLbl.snp.bottom).offset(10)
+                make.height.equalTo(SINGLE_LINE_WIDTH)
+                make.top.equalTo(cupponLbl.snp.bottom).offset(10+SINGLE_LINE_ADJUST_OFFSET)
             }
             line.backgroundColor = UIColor.gray
         })
@@ -212,7 +212,7 @@ class DetailView: UIView {
         }
         feeLbl.text = "运费"
         feeLbl.textAlignment = .right
-        feeLbl.font = UIFont.PFRegular(15.0)
+        feeLbl.font = UIFont.PFMedium(13.0)
         
         self.addSubview(feePriceLbl)
         feePriceLbl.snp.makeConstraints { (make) in
@@ -222,7 +222,7 @@ class DetailView: UIView {
             make.centerY.equalTo(feeLbl.snp.centerY)
         }
         feePriceLbl.text = "+￥12:00"
-        feePriceLbl.font = UIFont.PFRegular(14.0)
+        feePriceLbl.font = UIFont.PFBold(13.0)
         feePriceLbl.textColor = UIColor.gray
         
         _ = UIView().then({ (line) in
@@ -230,8 +230,8 @@ class DetailView: UIView {
             line.snp.makeConstraints { (make) in
                 make.left.equalTo(10)
                 make.right.equalTo(0)
-                make.height.equalTo(0.5)
-                make.top.equalTo(feeLbl.snp.bottom).offset(10)
+                make.height.equalTo(SINGLE_LINE_WIDTH)
+                make.top.equalTo(feeLbl.snp.bottom).offset(10 + SINGLE_LINE_ADJUST_OFFSET)
             }
             line.backgroundColor = UIColor.gray
         })
@@ -245,7 +245,7 @@ class DetailView: UIView {
         }
         descriprionTitleLbl.text = "备注"
         descriprionTitleLbl.textAlignment = .right
-        descriprionTitleLbl.font = UIFont.PFRegular(14.0)
+        descriprionTitleLbl.font = UIFont.PFMedium(13.0)
         
         self.addSubview(descriptionLbl)
         descriptionLbl.snp.makeConstraints { (make) in
@@ -255,8 +255,8 @@ class DetailView: UIView {
             make.top.equalTo(descriprionTitleLbl.snp.top)
         }
         descriptionLbl.text = "0.01mm 没有就换0.3的也可以0.1mm没有就换0.3的也可以0"
-        descriptionLbl.font = UIFont.PFRegular(14.0)
-        descriptionLbl.textColor = UIColor.gray
+        descriptionLbl.font = UIFont.PFMedium(13.0)
+        descriptionLbl.textColor = UIColor.hex(0x929599)
         descriptionLbl.textAlignment = .right
         descriptionLbl.numberOfLines = 0
         descriptionLbl.lineBreakMode = .byWordWrapping
@@ -266,8 +266,8 @@ class DetailView: UIView {
             line.snp.makeConstraints { (make) in
                 make.left.equalTo(10)
                 make.right.equalTo(0)
-                make.height.equalTo(0.5)
-                make.top.equalTo(descriptionLbl.snp.bottom).offset(10)
+                make.height.equalTo(SINGLE_LINE_WIDTH)
+                make.top.equalTo(descriptionLbl.snp.bottom).offset(10+SINGLE_LINE_ADJUST_OFFSET)
             }
             line.backgroundColor = UIColor.gray
         })
@@ -280,7 +280,7 @@ class DetailView: UIView {
             make.top.equalTo(descriptionLbl.snp.bottom).offset(15)
         }
         sumLbl.text = "小计：￥193.00"
-        sumLbl.font = UIFont.PFRegular(15.0)
+        sumLbl.font = UIFont.PFMedium(13.0)
         sumLbl.textAlignment = .right
     }
     

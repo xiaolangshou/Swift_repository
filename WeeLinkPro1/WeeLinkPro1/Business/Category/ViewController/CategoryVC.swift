@@ -55,7 +55,7 @@ class CategoryVC: UIViewController {
         }
         leftView.tag = 0
         leftView.register(LeftTableViewCell.self, forCellReuseIdentifier: "CELL")
-        leftView.rowHeight = 70
+        leftView.rowHeight = 50
         leftView.separatorStyle = .none
         
         rightView.delegate = self
@@ -69,7 +69,7 @@ class CategoryVC: UIViewController {
         }
         rightView.tag = 1
         rightView.register(RightTableViewCell.self, forCellReuseIdentifier: "CELL2")
-        rightView.rowHeight = 90
+        rightView.rowHeight = 100
     }
 }
 

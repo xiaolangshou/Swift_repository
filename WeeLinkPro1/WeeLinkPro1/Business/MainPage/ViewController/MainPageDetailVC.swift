@@ -20,6 +20,11 @@ class MainPageDetailVC: UIViewController {
     var sortBtn3: UIButton?
     var sortBtn4: UIButton?
     
+    var sortArrow1: UIImageView?
+    var sortArrow2: UIImageView?
+    var sortArrow3: UIImageView?
+    var sortArrow4: UIImageView?
+    
     var sortTable1: UITableView?
     var sortTable2: UITableView?
     var sortTable3: UITableView?
@@ -76,7 +81,7 @@ class MainPageDetailVC: UIViewController {
         sortBtn1 = UIButton.init()
         backView?.addSubview(sortBtn1 ?? UIView())
         sortBtn1?.snp.makeConstraints({ (make) in
-            make.width.equalTo(UIScreen.width * 0.25)
+            make.width.equalTo(UIScreen.width * 0.25 - 20)
             make.left.equalTo(0)
             make.top.equalTo(0)
             make.height.equalToSuperview()
@@ -86,11 +91,21 @@ class MainPageDetailVC: UIViewController {
         sortBtn1?.titleLabel?.font = UIFont.PFMedium(13.0)
         sortBtn1?.addTarget(self, action: #selector(sortBtnTapped1), for: .touchUpInside)
         
+        sortArrow1 = UIImageView()
+        backView?.addSubview(sortArrow1 ?? UIView())
+        sortArrow1?.snp.makeConstraints({ (make) in
+            make.left.equalTo(sortBtn1?.snp.right ?? 0)
+            make.width.equalTo(20)
+            make.top.equalTo(0)
+            make.height.equalToSuperview()
+        })
+        sortArrow1?.backgroundColor = UIColor.cyan
+        
         sortBtn2 = UIButton.init()
         backView?.addSubview(sortBtn2 ?? UIView())
         sortBtn2?.snp.makeConstraints({ (make) in
-            make.width.equalTo(UIScreen.width * 0.25)
-            make.left.equalTo(sortBtn1?.snp.right ?? UIView())
+            make.width.equalTo(UIScreen.width * 0.25 - 20)
+            make.left.equalTo(sortArrow1?.snp.right ?? UIView())
             make.top.equalTo(0)
             make.height.equalToSuperview()
         })
@@ -99,11 +114,21 @@ class MainPageDetailVC: UIViewController {
         sortBtn2?.titleLabel?.font = UIFont.PFMedium(13.0)
         sortBtn2?.addTarget(self, action: #selector(sortBtnTapped2), for: .touchUpInside)
         
+        sortArrow2 = UIImageView.init()
+        backView?.addSubview(sortArrow2 ?? UIView())
+        sortArrow2?.snp.makeConstraints({ (make) in
+            make.width.equalTo(20)
+            make.left.equalTo(sortBtn2?.snp.right ?? 0)
+            make.top.equalTo(0)
+            make.height.equalToSuperview()
+        })
+        sortArrow2?.backgroundColor = UIColor.cyan
+        
         sortBtn3 = UIButton.init()
         backView?.addSubview(sortBtn3 ?? UIView())
         sortBtn3?.snp.makeConstraints({ (make) in
-            make.width.equalTo(UIScreen.width * 0.25)
-            make.left.equalTo(sortBtn2?.snp.right ?? UIView())
+            make.width.equalTo(UIScreen.width * 0.25 - 20)
+            make.left.equalTo(sortArrow2?.snp.right ?? UIView())
             make.top.equalTo(0)
             make.height.equalToSuperview()
         })
@@ -112,19 +137,38 @@ class MainPageDetailVC: UIViewController {
         sortBtn3?.titleLabel?.font = UIFont.PFMedium(13.0)
         sortBtn3?.addTarget(self, action: #selector(sortBtnTapped3), for: .touchUpInside)
         
+        sortArrow3 = UIImageView()
+        backView?.addSubview(sortArrow3 ?? UIView())
+        sortArrow3?.snp.makeConstraints({ (make) in
+            make.width.equalTo(20)
+            make.left.equalTo(sortBtn3?.snp.right ?? 0)
+            make.top.equalTo(0)
+            make.height.equalToSuperview()
+        })
+        sortArrow3?.backgroundColor = UIColor.cyan
+        
         sortBtn4 = UIButton.init()
         backView?.addSubview(sortBtn4 ?? UIView())
         sortBtn4?.snp.makeConstraints({ (make) in
-            make.width.equalTo(UIScreen.width * 0.25)
-            make.left.equalTo(sortBtn3?.snp.right ?? UIView())
+            make.width.equalTo(UIScreen.width * 0.25 - 20)
+            make.left.equalTo(sortArrow3?.snp.right ?? UIView())
             make.top.equalToSuperview()
             make.height.equalToSuperview()
-            make.right.equalToSuperview()
         })
         sortBtn4?.setTitle("排序标签", for: .normal)
         sortBtn4?.setTitleColor(UIColor.gray, for: .normal)
         sortBtn4?.titleLabel?.font = UIFont.PFMedium(13.0)
         sortBtn4?.addTarget(self, action: #selector(sortBtnTapped4), for: .touchUpInside)
+        
+        sortArrow4 = UIImageView()
+        backView?.addSubview(sortArrow4 ?? UIView())
+        sortArrow4?.snp.makeConstraints({ (make) in
+            make.right.equalToSuperview()
+            make.left.equalTo(sortBtn4?.snp.right ?? UIView())
+            make.top.equalTo(0)
+            make.height.equalToSuperview()
+        })
+        sortArrow4?.backgroundColor = UIColor.cyan
         
         sortTable1 = UITableView()
         view.addSubview(sortTable1!)

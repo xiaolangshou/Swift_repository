@@ -69,7 +69,7 @@ class Banner: UIView {
             make.right.equalTo(-10)
             make.bottom.equalTo(-10)
         }
-        _pageIcon.setTitle("1/7", for: .normal)
+        _pageIcon.setTitle("1/\(imageArray.count)", for: .normal)
         _pageIcon.setTitleColor(UIColor.white, for: .normal)
         _pageIcon.titleLabel?.font = UIFont.PFExtraLight(11)
     }
@@ -123,5 +123,6 @@ extension Banner: UIScrollViewDelegate {
         
         let page = Int(scrollView.contentOffset.x / scrollView.frame.size.width)
         _pageControl.currentPage = page
+        _pageIcon.setTitle("\(page + 1)/\(imageArray.count)", for: .normal)
     }
 }

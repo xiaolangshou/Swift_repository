@@ -34,5 +34,6 @@ class LeftTableViewCell: UITableViewCell {
             make.top.right.bottom.equalToSuperview()
             make.left.equalTo(10)
         }
+        titleLbl.font = UIFont.PFBold(13.0)
     }
 }

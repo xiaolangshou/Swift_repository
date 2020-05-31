@@ -39,7 +39,7 @@ class RightTableViewCell: UITableViewCell {
         
         self.addSubview(titleLbl)
         titleLbl.text = "名称"
-        titleLbl.font = UIFont.PFRegular(14)
+        titleLbl.font = UIFont.PFRegular(12)
         titleLbl.snp.makeConstraints { (make) in
             make.left.equalTo(imageV.snp.right).offset(10)
             make.right.equalToSuperview()
@@ -49,8 +49,8 @@ class RightTableViewCell: UITableViewCell {
         
         self.addSubview(numLbl)
         numLbl.text = "商品个数"
-        numLbl.font = UIFont.PFRegular(12)
-        numLbl.textColor = UIColor.gray
+        numLbl.font = UIFont.PFRegular(10)
+        numLbl.textColor = UIColor.hex(0x787878)
         numLbl.snp.makeConstraints { (make) in
             make.left.equalTo(imageV.snp.right).offset(10)
             make.right.equalToSuperview()
@@ -59,8 +59,8 @@ class RightTableViewCell: UITableViewCell {
         
         self.addSubview(addBtn)
         addBtn.setTitle("+", for: UIControl.State.normal)
-        addBtn.setTitleColor(UIColor.gray, for: UIControl.State.normal)
-        addBtn.titleLabel?.font = UIFont.PFMedium(23)
+        addBtn.setTitleColor(UIColor.hex(0x939393), for: UIControl.State.normal)
+        addBtn.titleLabel?.font = UIFont.PFMedium(20)
         addBtn.snp.makeConstraints { (make) in
             make.width.height.equalTo(20)
             make.right.bottom.equalToSuperview().offset(-16)
@@ -70,8 +70,8 @@ class RightTableViewCell: UITableViewCell {
         
         self.addSubview(priceLbl)
         priceLbl.text = "￥22"
-        priceLbl.textColor = UIColor.black
-        priceLbl.font = UIFont.PFRegular(16)
+        priceLbl.textColor = UIColor.hex(0x787878)
+        priceLbl.font = UIFont.PFRegular(13.0)
         priceLbl.snp.makeConstraints { (make) in
             make.left.equalTo(imageV.snp.right).offset(10)
             make.bottom.equalToSuperview()

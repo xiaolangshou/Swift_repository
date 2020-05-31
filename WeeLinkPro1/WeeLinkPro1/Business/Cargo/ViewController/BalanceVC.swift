@@ -59,7 +59,7 @@ class BalanceVC: UIViewController {
         view.addSubview(bottomView)
         bottomView.snp.makeConstraints { (make) in
             make.width.equalToSuperview()
-            make.height.equalTo(80)
+            make.height.equalTo(55)
             make.bottom.equalToSuperview()
             make.centerX.equalToSuperview()
         }
@@ -74,35 +74,35 @@ class BalanceVC: UIViewController {
             make.centerY.equalToSuperview()
         }
         submitBtn.layer.cornerRadius = 4.0
-        submitBtn.backgroundColor = UIColor.gray
+        submitBtn.backgroundColor = UIColor.hex(0x939393)
         submitBtn.setTitle("提交订单", for: .normal)
         submitBtn.setTitleColor(UIColor.white, for: .normal)
-        submitBtn.titleLabel?.font = UIFont.PFRegular(15.0)
+        submitBtn.titleLabel?.font = UIFont.PFBold(14.0)
         submitBtn.addTarget(self, action: #selector(submitBtnTapped), for: .touchUpInside)
         
         let sumLbl = UILabel()
         bottomView.addSubview(sumLbl)
         sumLbl.snp.makeConstraints { (make) in
-            make.right.equalTo(submitBtn.snp.left).offset(-10)
-            make.top.equalTo(10)
+            make.right.equalTo(submitBtn.snp.left).offset(-16)
+            make.top.equalTo(5)
             make.left.equalToSuperview()
-            make.height.equalTo(30)
+            make.height.equalTo(25)
         }
         sumLbl.textAlignment = .right
         sumLbl.text = "合计：￥ 193.00"
-        sumLbl.font = UIFont.PFRegular(14.0)
+        sumLbl.font = UIFont.PFMedium(15.0)
         
         let shipFeeLbl = UILabel()
         bottomView.addSubview(shipFeeLbl)
         shipFeeLbl.snp.makeConstraints { (make) in
-            make.right.equalTo(submitBtn.snp.left).offset(-10)
+            make.right.equalTo(submitBtn.snp.left).offset(-16)
             make.top.equalTo(sumLbl.snp.bottom)
-            make.height.equalTo(30)
+            make.bottom.equalToSuperview()
             make.left.equalToSuperview()
         }
         shipFeeLbl.textAlignment = .right
         shipFeeLbl.text = "运费：￥ 12.00"
-        shipFeeLbl.font = UIFont.PFRegular(14.0)
+        shipFeeLbl.font = UIFont.PFMedium(13.0)
     }
     
     @objc func submitBtnTapped() {

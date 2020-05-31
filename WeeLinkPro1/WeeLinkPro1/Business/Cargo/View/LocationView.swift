@@ -38,8 +38,8 @@ class LocationView: UIView {
         
         self.addSubview(locationLogo)
         locationLogo.snp.makeConstraints { (make) in
-            make.width.height.equalTo(30)
-            make.left.equalTo(10)
+            make.width.height.equalTo(36)
+            make.left.equalTo(12)
             make.centerY.equalToSuperview()
         }
         locationLogo.image = UIImage.init(color: UIColor.cyan)
@@ -51,7 +51,7 @@ class LocationView: UIView {
             make.right.equalTo(-23)
             make.height.equalTo(18)
         }
-        nameLbl.font = UIFont.PFRegular(14.0)
+        nameLbl.font = UIFont.PFMedium(15.0)
         nameLbl.textColor = UIColor.lightGray
         
         self.addSubview(addressLbl)
@@ -61,7 +61,7 @@ class LocationView: UIView {
             make.right.equalTo(-23)
             make.bottom.equalTo(nameLbl.snp.top).offset(4)
         }
-        addressLbl.font = UIFont.PFRegular(15.0)
+        addressLbl.font = UIFont.PFMedium(15.0)
         addressLbl.numberOfLines = 0
         addressLbl.lineBreakMode = .byWordWrapping
         
@@ -69,7 +69,7 @@ class LocationView: UIView {
         arrow.snp.makeConstraints { (make) in
             make.width.equalTo(12)
             make.height.equalTo(15)
-            make.right.equalTo(-10)
+            make.right.equalTo(-14)
             make.centerY.equalToSuperview()
         }
         arrow.image = UIImage.init(color: UIColor.cyan)
