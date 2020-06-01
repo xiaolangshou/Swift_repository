@@ -97,6 +97,7 @@ class Banner: UIView {
         _pageControl.center.x = self.frame.size.width / 2
         _pageControl.frame.origin.y = self.frame.size.height - 10 + _pageControl.frame.size.height
         _pageControl.numberOfPages = count
+        _pageIcon.setTitle("1/\(imageArray.count)", for: .normal)
     }
     
     @objc func onTapImage(_ tap: UITapGestureRecognizer) {

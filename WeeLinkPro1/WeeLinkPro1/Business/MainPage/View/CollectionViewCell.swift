@@ -39,13 +39,15 @@ class CollectionViewCell: UICollectionViewCell {
             make.bottom.equalTo(-60)
         }
         
-        nameLbl.text = "类别四字"
+        nameLbl.text = "商品名称"
         nameLbl.textAlignment = .left
         self.addSubview(nameLbl)
         nameLbl.snp.makeConstraints { make in
             make.left.right.equalToSuperview()
             make.top.equalTo(imgView.snp.bottom)
         }
+        nameLbl.textColor = UIColor.hex(0x787878)
+        nameLbl.font = UIFont.PFMedium(13.0)
         
         numLbl.text = "16(只)"
         numLbl.textAlignment = .left
@@ -55,19 +57,23 @@ class CollectionViewCell: UICollectionViewCell {
             make.width.equalToSuperview()
             make.top.equalTo(nameLbl.snp.bottom)
         }
+        numLbl.textColor = UIColor.hex(0x787878)
+        numLbl.font = UIFont.PFMedium(10.0)
         
-        addBtn.layer.cornerRadius = 4.0
+        addBtn.layer.cornerRadius = 3.0
         addBtn.setTitle("+", for: UIControl.State.normal)
-        addBtn.backgroundColor = UIColor.lightGray
+        addBtn.setTitleColor(UIColor.hex(0x939393), for: UIControl.State.normal)
+        addBtn.titleLabel?.font = UIFont.PFRegular(20.0)
+        addBtn.backgroundColor = UIColor.hex(0xE7E8EA)
         self.addSubview(addBtn)
         addBtn.snp.makeConstraints { (make) in
-            make.width.height.equalTo(15)
+            make.width.height.equalTo(20)
             make.right.equalToSuperview()
             make.bottom.equalToSuperview()
             make.top.equalTo(numLbl.snp.bottom)
         }
         
-        priceLbl.text = "$15"
+        priceLbl.text = "￥15"
         priceLbl.textAlignment = .left
         self.addSubview(priceLbl)
         priceLbl.snp.makeConstraints { (make) in
@@ -76,5 +82,7 @@ class CollectionViewCell: UICollectionViewCell {
             make.bottom.equalToSuperview()
             make.right.equalTo(addBtn.snp.left)
         }
+        priceLbl.textColor = UIColor.hex(0x787878)
+        priceLbl.font = UIFont.PFMedium(15.0)
     }
 }

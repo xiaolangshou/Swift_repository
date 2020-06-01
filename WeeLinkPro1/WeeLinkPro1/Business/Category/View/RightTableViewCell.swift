@@ -34,7 +34,7 @@ class RightTableViewCell: UITableViewCell {
         imageV.backgroundColor = UIColor.red
         imageV.snp.makeConstraints { (make) in
             make.left.top.bottom.equalToSuperview()
-            make.width.equalTo(90)
+            make.width.equalTo(100)
         }
         
         self.addSubview(titleLbl)

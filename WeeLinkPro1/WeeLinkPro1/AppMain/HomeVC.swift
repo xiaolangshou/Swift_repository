@@ -40,19 +40,19 @@ class HomeVC: UITabBarController {
             , selectedImage: nil)
 
         MainPageVC.shared.title = "品牌标题"
-        let firstNavCon = UINavigationController(rootViewController: MainPageVC.shared)
+        let firstNavCon = NavVC(rootViewController: MainPageVC.shared)
         firstNavCon.tabBarItem = mainPageBar
         
         CategoryVC.shared.title = "品牌标题"
-        let secNavCon = UINavigationController(rootViewController: CategoryVC.shared)
+        let secNavCon = NavVC(rootViewController: CategoryVC.shared)
         secNavCon.tabBarItem = categoryBar
         
         CargoVC.shared.title = "品牌标题"
-        let thridNavCon = UINavigationController(rootViewController: CargoVC.shared)
+        let thridNavCon = NavVC(rootViewController: CargoVC.shared)
         thridNavCon.tabBarItem = cargoBar
         
         OrderFormVC.shared.title = "品牌标题"
-        let fourthNavCon = UINavigationController(rootViewController: OrderFormVC.shared)
+        let fourthNavCon = NavVC(rootViewController: OrderFormVC.shared)
         fourthNavCon.tabBarItem = orderFormBar
 
         tabArray.append(firstNavCon)
@@ -62,6 +62,5 @@ class HomeVC: UITabBarController {
         
         self.setViewControllers(tabArray, animated: true)
     }
-
 }
 

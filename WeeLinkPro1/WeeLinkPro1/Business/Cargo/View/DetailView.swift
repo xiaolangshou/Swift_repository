@@ -117,7 +117,7 @@ class DetailView: UIView {
                 make.height.equalTo(SINGLE_LINE_WIDTH)
                 make.top.equalTo(purchaseNumLbl.snp.bottom).offset(10+SINGLE_LINE_ADJUST_OFFSET)
             }
-            line.backgroundColor = UIColor.gray
+            line.backgroundColor = UIColor.lightGray
         })
         
         _ = UIView().then { (back) in
@@ -126,12 +126,12 @@ class DetailView: UIView {
                 make.width.equalTo(86)
                 make.right.equalTo(-10)
                 make.height.equalTo(23)
-                make.bottom.equalTo(purchaseNumLbl.snp.bottom)
+                make.bottom.equalTo(imgV.snp.bottom)
             }
             back.layer.borderColor = UIColor.lightGray.cgColor
             back.layer.borderWidth = 0.5
             back.layer.cornerRadius = 4.0
-
+            
             back.addSubview(plusBtn)
             plusBtn.snp.makeConstraints { (make) in
                 make.right.equalTo(0)
@@ -142,7 +142,7 @@ class DetailView: UIView {
             plusBtn.setTitleColor(UIColor.gray, for: .normal)
             plusBtn.titleLabel?.font = UIFont.PFExtraLight(18)
             plusBtn.addTarget(self, action: #selector(plusBtnTapped), for: .touchUpInside)
-
+            
             back.addSubview(numLbl)
             numLbl.snp.makeConstraints { (make) in
                 make.right.equalTo(plusBtn.snp.left).offset(0.5)
@@ -156,7 +156,7 @@ class DetailView: UIView {
             numLbl.font = UIFont.PFExtraLight(14)
             numLbl.layer.borderColor = UIColor.lightGray.cgColor
             numLbl.layer.borderWidth = 0.5
-
+            
             back.addSubview(minusBtn)
             minusBtn.snp.makeConstraints { (make) in
                 make.right.equalTo(numLbl.snp.left).offset(0.5)
@@ -200,12 +200,12 @@ class DetailView: UIView {
                 make.height.equalTo(SINGLE_LINE_WIDTH)
                 make.top.equalTo(cupponLbl.snp.bottom).offset(10+SINGLE_LINE_ADJUST_OFFSET)
             }
-            line.backgroundColor = UIColor.gray
+            line.backgroundColor = UIColor.lightGray
         })
         
         self.addSubview(feeLbl)
         feeLbl.snp.makeConstraints { (make) in
-            make.width.equalTo(90)
+            make.width.equalTo(100)
             make.left.equalTo(10)
             make.top.equalTo(cupponLbl.snp.bottom).offset(15)
             make.height.equalTo(23)
@@ -233,12 +233,12 @@ class DetailView: UIView {
                 make.height.equalTo(SINGLE_LINE_WIDTH)
                 make.top.equalTo(feeLbl.snp.bottom).offset(10 + SINGLE_LINE_ADJUST_OFFSET)
             }
-            line.backgroundColor = UIColor.gray
+            line.backgroundColor = UIColor.lightGray
         })
         
         self.addSubview(descriprionTitleLbl)
         descriprionTitleLbl.snp.makeConstraints { (make) in
-            make.width.equalTo(90)
+            make.width.equalTo(100)
             make.left.equalTo(10)
             make.top.equalTo(feePriceLbl.snp.bottom).offset(15)
             make.height.equalTo(23)
@@ -269,7 +269,7 @@ class DetailView: UIView {
                 make.height.equalTo(SINGLE_LINE_WIDTH)
                 make.top.equalTo(descriptionLbl.snp.bottom).offset(10+SINGLE_LINE_ADJUST_OFFSET)
             }
-            line.backgroundColor = UIColor.gray
+            line.backgroundColor = UIColor.lightGray
         })
         
         self.addSubview(sumLbl)

@@ -48,7 +48,7 @@ class MainPageVC: UIViewController {
             make.width.equalToSuperview()
         }
     }
-
+    
     func setupSearchBar() {
         
         containerView.addSubview(searchBar)
@@ -102,7 +102,7 @@ class MainPageVC: UIViewController {
         collectionView1?.snp.makeConstraints({ make in
             make.left.equalToSuperview()
             make.right.equalToSuperview()
-            make.height.equalTo(250)
+            make.height.equalTo(235)
             make.top.equalTo(banner.snp.bottom)
         })
         collectionView1?.tag = 1
@@ -132,7 +132,7 @@ class MainPageVC: UIViewController {
         collectionView2?.snp.makeConstraints({ make in
             make.left.equalToSuperview()
             make.right.equalToSuperview()
-            make.height.equalTo(300)
+            make.height.equalTo(285)
             make.top.equalTo(collectionView1?.snp.bottom ?? UICollectionView().snp.bottom).offset(20)
         })
         collectionView2?.tag = 2
@@ -162,7 +162,7 @@ class MainPageVC: UIViewController {
         collectionView3?.snp.makeConstraints({ make in
             make.left.equalToSuperview()
             make.right.equalToSuperview()
-            make.height.equalTo(300)
+            make.height.equalTo(285)
             make.bottom.equalToSuperview()
             make.top.equalTo(collectionView2?.snp.bottom ?? UICollectionView().snp.bottom).offset(20)
         })

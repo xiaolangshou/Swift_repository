@@ -57,6 +57,9 @@ class CategoryVC: UIViewController {
         leftView.register(LeftTableViewCell.self, forCellReuseIdentifier: "CELL")
         leftView.rowHeight = 50
         leftView.separatorStyle = .none
+        let path = IndexPath(row: 0, section: 0)
+        leftView.selectRow(at: path, animated: true, scrollPosition: .top)
+        leftView.delegate?.tableView?(leftView, didSelectRowAt: path)
         
         rightView.delegate = self
         rightView.dataSource = self

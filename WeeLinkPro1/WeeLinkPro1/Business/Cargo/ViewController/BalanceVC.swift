@@ -53,7 +53,6 @@ class BalanceVC: UIViewController {
             make.right.equalTo(locationView.snp.right)
             make.top.equalTo(locationView.snp.bottom).offset(10)
             make.height.equalTo(UIScreen.width - 50)
-            
         }
         
         view.addSubview(bottomView)
