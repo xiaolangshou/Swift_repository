@@ -16,7 +16,7 @@ extension UIDevice {
 
 extension UIWindow {
     static var keyWindow: UIWindow? {
-        return UIApplication.shared.keyWindow
+        return UIApplication.shared.windows.filter {$0.isKeyWindow}.first
     }
 }
 

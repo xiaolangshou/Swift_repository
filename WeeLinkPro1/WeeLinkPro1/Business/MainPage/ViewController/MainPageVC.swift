@@ -78,6 +78,7 @@ class MainPageVC: UIViewController {
         
         banner.onClickBanner = { [unowned self] idx in
             print(idx)
+            print(self.banner)
         }
     }
     
@@ -234,7 +235,7 @@ extension MainPageVC: UICollectionViewDelegate, UICollectionViewDataSource {
         var supplementaryView: UICollectionReusableView? = nil
         let header: CollectionReusableView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "SimpleCollectionHeaderView", for: indexPath) as! CollectionReusableView
         supplementaryView = header
-        header.rightBtnTap = { [weak self] in
+        header.rightBtnTap = {
             print("rightBtnTap")
         }
         

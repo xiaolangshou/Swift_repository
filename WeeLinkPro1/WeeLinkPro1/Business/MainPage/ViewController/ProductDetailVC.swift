@@ -173,7 +173,7 @@ class ProductDetailVC: UIViewController {
         banner!.imageArray.append(UIImage(named: "11")!)
         banner!.count = 7
         
-        banner!.onClickBanner = { [unowned self] idx in
+        banner!.onClickBanner = { idx in
             print(idx)
         }
     }
@@ -280,7 +280,7 @@ class ProductDetailVC: UIViewController {
                 s.font = UIFont.PFRegular(15.0)
             }
 
-            let specsficationLbl = UILabel().then { (s) in
+            _ = UILabel().then { (s) in
                 v.addSubview(s)
                 s.snp.makeConstraints { (make) in
                     make.width.equalTo(120)
@@ -292,7 +292,7 @@ class ProductDetailVC: UIViewController {
                 s.font = UIFont.PFRegular(14.0)
             }
             
-            let arrow = UIImageView().then { (a) in
+            _ = UIImageView().then { (a) in
                 v.addSubview(a)
                 a.snp.makeConstraints { (make) in
                     make.width.equalTo(12)
