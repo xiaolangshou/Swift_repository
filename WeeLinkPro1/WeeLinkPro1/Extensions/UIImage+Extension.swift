@@ -10,6 +10,7 @@ import UIKit
 
 extension UIImage {
     
+    /// 根据颜色和尺寸创建图片
     public convenience init?(color: UIColor, size: CGSize = CGSize(width: 1, height: 1)) {
         
       let rect = CGRect(origin: .zero, size: size)

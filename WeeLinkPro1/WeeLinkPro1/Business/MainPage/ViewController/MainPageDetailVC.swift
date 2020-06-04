@@ -30,6 +30,11 @@ class MainPageDetailVC: UIViewController {
     var sortTable3: UITableView?
     var sortTable4: UITableView?
     
+    var dataArr = [["1","2","3","4"],
+                   ["1","2","3","4"],
+                   ["1","2","3","4"],
+                   ["1","2","3","4"]]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -180,6 +185,11 @@ class MainPageDetailVC: UIViewController {
         })
         sortTable1?.backgroundColor = UIColor.green
         sortTable1?.isHidden = true
+        sortTable1?.tag = 1
+        sortTable1?.delegate = self
+        sortTable1?.dataSource = self
+        sortTable1?.register(UITableViewCell.self, forCellReuseIdentifier: "CELL")
+        sortTable1?.rowHeight = 40
         
         sortTable2 = UITableView.init()
         view.addSubview(sortTable2!)
@@ -191,6 +201,11 @@ class MainPageDetailVC: UIViewController {
         })
         sortTable2?.backgroundColor = UIColor.green
         sortTable2?.isHidden = true
+        sortTable2?.tag = 2
+        sortTable2?.delegate = self
+        sortTable2?.dataSource = self
+        sortTable2?.register(UITableViewCell.self, forCellReuseIdentifier: "CELL")
+        sortTable2?.rowHeight = 40
         
         sortTable3 = UITableView.init()
         view.addSubview(sortTable3!)
@@ -202,6 +217,11 @@ class MainPageDetailVC: UIViewController {
         })
         sortTable3?.backgroundColor = UIColor.green
         sortTable3?.isHidden = true
+        sortTable3?.tag = 3
+        sortTable3?.delegate = self
+        sortTable3?.dataSource = self
+        sortTable3?.register(UITableViewCell.self, forCellReuseIdentifier: "CELL")
+        sortTable3?.rowHeight = 40
         
         sortTable4 = UITableView.init()
         view.addSubview(sortTable4!)
@@ -213,6 +233,11 @@ class MainPageDetailVC: UIViewController {
         })
         sortTable4?.backgroundColor = UIColor.green
         sortTable4?.isHidden = true
+        sortTable4?.tag = 4
+        sortTable4?.delegate = self
+        sortTable4?.dataSource = self
+        sortTable4?.register(UITableViewCell.self, forCellReuseIdentifier: "CELL")
+        sortTable4?.rowHeight = 40
     }
     
     @objc func sortBtnTapped1() {
@@ -272,17 +297,61 @@ class MainPageDetailVC: UIViewController {
 extension MainPageDetailVC: UISearchBarDelegate {
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-
+        print(#function)
     }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-
+        print(#function)
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         print(#function)
         searchBar.resignFirstResponder()
     }
+}
+
+extension MainPageDetailVC: UITableViewDelegate, UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        switch tableView.tag {
+        case 1:
+            return dataArr[0].count
+        case 2:
+            return dataArr[1].count
+        case 3:
+            return dataArr[2].count
+        case 4:
+            return dataArr[3].count
+        default:
+            return 0
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CELL") else { return UITableViewCell() }
+        
+        switch tableView.tag {
+        case 1:
+            cell.textLabel?.text = dataArr[0][indexPath.row]
+        case 2:
+            cell.textLabel?.text = dataArr[1][indexPath.row]
+        case 3:
+            cell.textLabel?.text = dataArr[2][indexPath.row]
+        case 4:
+            cell.textLabel?.text = dataArr[3][indexPath.row]
+        default:
+            return UITableViewCell()
+        }
+        
+        return cell
+    }
+    
 }
 
 class MainPageDetailCell: UIView {

@@ -10,7 +10,8 @@ import UIKit
 
 class HistoryView: UIView {
     
-    var dataArr = ["铅笔", "小龙虾", "榴莲", "香蕉", "苹果", "梨", "圣女果", "铅笔", "小龙虾", "榴莲", "香蕉", "苹果", "梨", "圣女果", "铅笔", "lskd", "dsfsdf", "asdfsd", "asdfdf", "aaa"]
+    var dataArr = ["铅笔", "小龙虾", "榴莲", "香蕉", "苹果", "梨", "圣女果", "铅笔", "小龙虾", "榴莲", "香蕉",
+                   "苹果", "梨", "圣女果", "铅笔", "lskd", "dsfsdf", "asdfsd", "asdfdf", "aaa"]
     
     let titleLbl = UILabel()
     

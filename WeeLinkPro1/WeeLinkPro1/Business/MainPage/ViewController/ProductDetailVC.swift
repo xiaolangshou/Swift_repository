@@ -324,17 +324,18 @@ class ProductDetailVC: UIViewController {
             lbl.textColor = UIColor.hex(0x787878)
             lbl.font = UIFont.PFRegular(14.0)
             
-            let more = UILabel.init()
+            let more = UIButton.init()
             v.addSubview(more)
             more.snp.makeConstraints { (make) in
                 make.right.equalToSuperview().offset(-10)
                 make.top.bottom.equalToSuperview()
                 make.left.equalTo(lbl.snp.right)
             }
-            more.text = "更多"
-            more.textAlignment = .right
-            more.textColor = UIColor.hex(0x787878)
-            more.font = UIFont.PFRegular(14.0)
+            more.setTitle("更多", for: .normal)
+            more.setTitleColor(UIColor.hex(0x787878), for: .normal)
+            more.titleLabel?.textAlignment = .right
+            more.titleLabel?.font = UIFont.PFRegular(14.0)
+            more.addTarget(self, action: #selector(moreBtnTapped), for: .touchUpInside)
         }
         
         var prevCell: DetailCell?
@@ -368,6 +369,10 @@ class ProductDetailVC: UIViewController {
                 self?.navigationController?.pushViewController(vc, animated: true)
             }
         }
+    }
+    
+    @objc func moreBtnTapped() {
+        print(#function)
     }
 }
 

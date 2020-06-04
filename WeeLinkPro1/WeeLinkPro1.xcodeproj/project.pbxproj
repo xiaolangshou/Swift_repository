@@ -18,6 +18,12 @@
 		0472921A246FBF64007D0498 /* CollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04729219246FBF64007D0498 /* CollectionReusableView.swift */; };
 		0472921C246FD6F7007D0498 /* LeftTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0472921B246FD6F7007D0498 /* LeftTableViewCell.swift */; };
 		0472921E246FD700007D0498 /* RightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0472921D246FD700007D0498 /* RightTableViewCell.swift */; };
+		048AB31F2488E4D100B7D94A /* PingFang_Light copy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 048AB3192488E4D000B7D94A /* PingFang_Light copy.ttf */; };
+		048AB3202488E4D100B7D94A /* PingFang_Medium copy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 048AB31A2488E4D000B7D94A /* PingFang_Medium copy.ttf */; };
+		048AB3212488E4D100B7D94A /* PingFang_Regular copy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 048AB31B2488E4D000B7D94A /* PingFang_Regular copy.ttf */; };
+		048AB3222488E4D100B7D94A /* PingFang_Heavy copy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 048AB31C2488E4D000B7D94A /* PingFang_Heavy copy.ttf */; };
+		048AB3232488E4D100B7D94A /* PingFang_ExtraLight copy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 048AB31D2488E4D100B7D94A /* PingFang_ExtraLight copy.ttf */; };
+		048AB3242488E4D100B7D94A /* PingFang_Bold copy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 048AB31E2488E4D100B7D94A /* PingFang_Bold copy.ttf */; };
 		04AA6938246E77E500F93605 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AA6937246E77E500F93605 /* Banner.swift */; };
 		04AA6941246E924D00F93605 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AA6940246E924D00F93605 /* UIColor+Extension.swift */; };
 		04B1FD7124721701008A6C4D /* CargoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1FD7024721701008A6C4D /* CargoCell.swift */; };
@@ -77,6 +83,12 @@
 		04729219246FBF64007D0498 /* CollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionReusableView.swift; sourceTree = "<group>"; };
 		0472921B246FD6F7007D0498 /* LeftTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftTableViewCell.swift; sourceTree = "<group>"; };
 		0472921D246FD700007D0498 /* RightTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightTableViewCell.swift; sourceTree = "<group>"; };
+		048AB3192488E4D000B7D94A /* PingFang_Light copy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PingFang_Light copy.ttf"; sourceTree = "<group>"; };
+		048AB31A2488E4D000B7D94A /* PingFang_Medium copy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PingFang_Medium copy.ttf"; sourceTree = "<group>"; };
+		048AB31B2488E4D000B7D94A /* PingFang_Regular copy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PingFang_Regular copy.ttf"; sourceTree = "<group>"; };
+		048AB31C2488E4D000B7D94A /* PingFang_Heavy copy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PingFang_Heavy copy.ttf"; sourceTree = "<group>"; };
+		048AB31D2488E4D100B7D94A /* PingFang_ExtraLight copy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PingFang_ExtraLight copy.ttf"; sourceTree = "<group>"; };
+		048AB31E2488E4D100B7D94A /* PingFang_Bold copy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PingFang_Bold copy.ttf"; sourceTree = "<group>"; };
 		04AA6937246E77E500F93605 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
 		04AA6940246E924D00F93605 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		04B1FD7024721701008A6C4D /* CargoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CargoCell.swift; sourceTree = "<group>"; };
@@ -365,6 +377,12 @@
 		04B1FD7D24727158008A6C4D /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				048AB31E2488E4D100B7D94A /* PingFang_Bold copy.ttf */,
+				048AB31D2488E4D100B7D94A /* PingFang_ExtraLight copy.ttf */,
+				048AB31C2488E4D000B7D94A /* PingFang_Heavy copy.ttf */,
+				048AB31B2488E4D000B7D94A /* PingFang_Regular copy.ttf */,
+				048AB31A2488E4D000B7D94A /* PingFang_Medium copy.ttf */,
+				048AB3192488E4D000B7D94A /* PingFang_Light copy.ttf */,
 			);
 			name = Font;
 			path = "../../../../项目/CameraDemo/CameraDemo/Resources/Font";
@@ -557,9 +575,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				048AB3232488E4D100B7D94A /* PingFang_ExtraLight copy.ttf in Resources */,
 				CF633658246D79C500FAC724 /* LaunchScreen.storyboard in Resources */,
+				048AB3222488E4D100B7D94A /* PingFang_Heavy copy.ttf in Resources */,
+				048AB3242488E4D100B7D94A /* PingFang_Bold copy.ttf in Resources */,
+				048AB3202488E4D100B7D94A /* PingFang_Medium copy.ttf in Resources */,
 				CF633655246D79C500FAC724 /* Assets.xcassets in Resources */,
 				CF633653246D79C000FAC724 /* Main.storyboard in Resources */,
+				048AB31F2488E4D100B7D94A /* PingFang_Light copy.ttf in Resources */,
+				048AB3212488E4D100B7D94A /* PingFang_Regular copy.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

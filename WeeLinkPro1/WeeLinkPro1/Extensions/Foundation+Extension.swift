@@ -36,6 +36,7 @@ extension Int {
 
 // MARK: CGFloat
 extension CGFloat {
+    
     var int: Int {
         if self.isNaN {
             return 0
