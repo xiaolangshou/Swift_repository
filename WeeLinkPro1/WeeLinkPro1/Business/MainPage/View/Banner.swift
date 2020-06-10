@@ -62,9 +62,10 @@ class Banner: UIView {
         
         self.addSubview(pageIcon)
         pageIcon.backgroundColor = UIColor.hex(0x5F6062)
-        pageIcon.layer.cornerRadius = 8.0
+        pageIcon.alpha = 0.7
+        pageIcon.layer.cornerRadius = 10.0
         pageIcon.snp.makeConstraints { (make) in
-            make.width.equalTo(30)
+            make.width.equalTo(32)
             make.height.equalTo(20)
             make.right.equalTo(-10)
             make.bottom.equalTo(-10)

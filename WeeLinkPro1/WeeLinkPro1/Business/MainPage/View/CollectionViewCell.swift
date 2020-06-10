@@ -30,7 +30,8 @@ class CollectionViewCell: UICollectionViewCell {
     
     func setupView() {
         
-        imgView.backgroundColor = UIColor.cyan
+        imgView.layer.borderColor = UIColor.systemGroupedBackground.cgColor
+        imgView.layer.borderWidth = 1
         imgView.layer.cornerRadius = 5
         self.addSubview(imgView)
         imgView.snp.makeConstraints { make in

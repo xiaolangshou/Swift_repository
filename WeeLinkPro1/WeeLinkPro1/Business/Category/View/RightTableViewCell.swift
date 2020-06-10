@@ -31,7 +31,7 @@ class RightTableViewCell: UITableViewCell {
     func setupView() {
         
         self.addSubview(imageV)
-        imageV.backgroundColor = UIColor.red
+        imageV.backgroundColor = UIColor.hex(0xE7E8EA)
         imageV.snp.makeConstraints { (make) in
             make.left.top.bottom.equalToSuperview()
             make.width.equalTo(100)
@@ -58,15 +58,12 @@ class RightTableViewCell: UITableViewCell {
         }
         
         self.addSubview(addBtn)
-        addBtn.setTitle("+", for: UIControl.State.normal)
-        addBtn.setTitleColor(UIColor.hex(0x939393), for: UIControl.State.normal)
-        addBtn.titleLabel?.font = UIFont.PFMedium(20)
         addBtn.snp.makeConstraints { (make) in
             make.width.height.equalTo(20)
             make.right.bottom.equalToSuperview().offset(-16)
         }
         addBtn.layer.cornerRadius = 3.0
-        addBtn.backgroundColor = UIColor.systemBackColor
+        addBtn.setBackgroundImage(UIImage.init(named: "商品_加"), for: UIControl.State.normal)
         
         self.addSubview(priceLbl)
         priceLbl.text = "￥22"

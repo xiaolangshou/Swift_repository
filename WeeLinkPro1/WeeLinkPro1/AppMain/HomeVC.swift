@@ -28,31 +28,30 @@ class HomeVC: UITabBarController {
     }
     
     func setupVCs() {
-        
-        let mainPageBar = UITabBarItem(title: "首页", image: nil
-            , selectedImage: nil)
-        let categoryBar = UITabBarItem(title: "分类", image: nil
-            , selectedImage: nil)
-        let cargoBar = UITabBarItem(title: "购物车", image: nil
-            , selectedImage: nil)
-        let orderFormBar = UITabBarItem(title: "我的订单", image: nil
-            , selectedImage: nil)
 
-        MainPageVC.shared.title = "品牌标题"
-        let firstNavCon = NavVC(rootViewController: MainPageVC.shared)
-        firstNavCon.tabBarItem = mainPageBar
+        let firstNavCon = NavVC(rootViewController: setupTabbarCons(controller: MainPageVC.shared,
+                                                                    title: "品牌标题",
+                                                                    barTitle: "首页",
+                                                                    image: "底部导航_首页0",
+                                                                    selectImage: "底部导航_首页1"))
         
-        CategoryVC.shared.title = "品牌标题"
-        let secNavCon = NavVC(rootViewController: CategoryVC.shared)
-        secNavCon.tabBarItem = categoryBar
+        let secNavCon = NavVC(rootViewController: setupTabbarCons(controller: CategoryVC.shared,
+                                                                  title: "品牌标题",
+                                                                  barTitle: "分类",
+                                                                  image: "底部导航_分类0",
+                                                                  selectImage: "底部导航_分类1"))
         
-        CargoVC.shared.title = "品牌标题"
-        let thridNavCon = NavVC(rootViewController: CargoVC.shared)
-        thridNavCon.tabBarItem = cargoBar
+        let thridNavCon = NavVC(rootViewController: setupTabbarCons(controller: CargoVC.shared,
+                                                                    title: "品牌标题",
+                                                                    barTitle: "购物车",
+                                                                    image: "底部导航_购物车0",
+                                                                    selectImage: "底部导航_购物车1"))
         
-        OrderFormVC.shared.title = "品牌标题"
-        let fourthNavCon = NavVC(rootViewController: OrderFormVC.shared)
-        fourthNavCon.tabBarItem = orderFormBar
+        let fourthNavCon = NavVC(rootViewController: setupTabbarCons(controller: OrderFormVC.shared,
+                                                                     title: "品牌标题",
+                                                                     barTitle: "我的订单",
+                                                                     image: "底部导航_我的订单0",
+                                                                     selectImage: "底部导航_我的订单1"))
 
         tabArray.append(firstNavCon)
         tabArray.append(secNavCon)
@@ -61,5 +60,17 @@ class HomeVC: UITabBarController {
         
         self.setViewControllers(tabArray, animated: true)
     }
+    
+    func setupTabbarCons(controller: UIViewController, title: String, barTitle: String, image: String, selectImage: String) -> UIViewController {
+        controller.title = title
+        controller.tabBarItem.title = barTitle
+        controller.tabBarItem.image = UIImage.init(named: image)
+        
+        controller.tabBarItem.selectedImage = UIImage.init(named: selectImage)?.withRenderingMode(.alwaysOriginal)
+        controller.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor.hex(0x8DC64F)], for: .selected)
+        
+        return controller
+    }
+
 }
 

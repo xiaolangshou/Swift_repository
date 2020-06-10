@@ -10,6 +10,10 @@ import UIKit
 
 class BottomIcon: UIView {
     
+    let imgV = UIButton()
+    let title = UILabel()
+    let icon = UIButton()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -24,34 +28,34 @@ class BottomIcon: UIView {
     
     func setupView() {
         
-        let imgV = UIImageView()
         self.addSubview(imgV)
         imgV.snp.makeConstraints { (make) in
             make.width.height.equalTo(30)
-            make.top.equalTo(3)
+            make.top.equalTo(8)
             make.centerX.equalToSuperview()
         }
-        imgV.backgroundColor = UIColor.cyan
+        imgV.contentMode = .scaleToFill
         
-        let title = UILabel()
         self.addSubview(title)
         title.snp.makeConstraints { (make) in
-            make.top.equalTo(imgV.snp.bottom).offset(3)
+            make.top.equalTo(imgV.snp.bottom)
             make.width.equalToSuperview()
-            make.bottom.equalTo(0)
+            make.height.equalTo(15)
             make.centerX.equalToSuperview()
         }
         title.textAlignment = .center
         title.textColor = UIColor.hex(0x787878)
         title.font = UIFont.PFRegular(10.0)
-        title.text = "收藏"
         
-        let icon = UIImageView()
+        icon.layer.cornerRadius = 6
+        icon.setTitle("2", for: .normal)
+        icon.setTitleColor(UIColor.white, for: .normal)
+        icon.titleLabel?.font = UIFont.PFHeavy(12.0)
         self.addSubview(icon)
         icon.snp.makeConstraints { (make) in
-            make.width.height.equalTo(icon)
-            make.right.equalTo(0)
-            make.top.equalTo(0)
+            make.width.height.equalTo(12)
+            make.right.equalTo(-10)
+            make.top.equalTo(10)
         }
         icon.backgroundColor = UIColor.red
     }
@@ -64,6 +68,7 @@ class ProductDetailVC: UIViewController {
     
     var banner: Banner?
     var dataArr = [1,1,1,1]
+    var imgArr: [String] = ["商品详情_咨询","商品详情_收藏标记","商品详情_购物车"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,55 +91,78 @@ class ProductDetailVC: UIViewController {
         bView.snp.makeConstraints { (make) in
             make.left.right.equalToSuperview()
             make.bottom.equalToSuperview()
-            make.height.equalTo(70)
+            if UIDevice.isPhoneX {
+                make.height.equalTo(70 + UIScreen.safeAreaBottomHeight)
+            } else {
+                make.height.equalTo(70)
+            }
         }
         bView.backgroundColor = UIColor.white
         
         bView.addSubview(consult)
         consult.snp.makeConstraints { (make) in
-            make.left.top.bottom.equalToSuperview()
+            make.top.equalTo(4)
+            make.left.equalToSuperview()
             make.width.equalTo(UIScreen.width / 8)
+            make.height.equalTo(70)
         }
+        consult.imgV.setBackgroundImage(UIImage.init(named: imgArr[0]), for: UIControl.State.normal)
+        consult.title.text = "在线咨询"
+        consult.icon.isHidden = true
         
         bView.addSubview(collect)
         collect.snp.makeConstraints { (make) in
             make.left.equalTo(consult.snp.right).offset(10)
-            make.top.bottom.equalToSuperview()
+            make.height.equalTo(70)
+            make.top.equalTo(4)
             make.width.equalTo(UIScreen.width / 8)
         }
+        collect.imgV.setBackgroundImage(UIImage.init(named: imgArr[1]), for: UIControl.State.normal)
+        collect.title.text = "已收藏"
+        collect.icon.isHidden = true
+        collect.imgV.addTarget(self, action: #selector(collectBtnTapped(btn:)), for: UIControl.Event.touchUpInside)
         
         bView.addSubview(cargo)
         cargo.snp.makeConstraints { (make) in
             make.left.equalTo(collect.snp.right).offset(10)
-            make.top.bottom.equalToSuperview()
+            make.height.equalTo(70)
+            make.top.equalTo(4)
             make.width.equalTo(UIScreen.width / 8)
         }
+        cargo.imgV.setBackgroundImage(UIImage.init(named: imgArr[2]), for: UIControl.State.normal)
+        cargo.title.text = "购物车"
         
         bView.addSubview(purchaseBtn)
         purchaseBtn.snp.makeConstraints { (make) in
             make.width.equalTo(94)
             make.height.equalTo(40)
             make.right.equalTo(-10)
-            make.centerY.equalToSuperview()
+            make.centerY.equalTo(consult.snp.centerY)
         }
         purchaseBtn.layer.cornerRadius = 6.0
-        purchaseBtn.backgroundColor = UIColor.hex(0x787878)
+        purchaseBtn.backgroundColor = UIColor.hex(0x8DC64F)
         purchaseBtn.setTitle("立即购买", for: UIControl.State.normal)
         purchaseBtn.setTitleColor(UIColor.white, for: UIControl.State.normal)
-        purchaseBtn.titleLabel?.font = UIFont.PFBold(14.0)
+        purchaseBtn.titleLabel?.font = UIFont.PFHeavy(14.0)
         
         bView.addSubview(cargoBtn)
         cargoBtn.snp.makeConstraints { (make) in
             make.width.equalTo(94)
             make.height.equalTo(40)
             make.right.equalTo(purchaseBtn.snp.left).offset(-10)
-            make.centerY.equalToSuperview()
+            make.centerY.equalTo(consult.snp.centerY)
         }
         cargoBtn.layer.cornerRadius = 6.0
-        cargoBtn.backgroundColor = UIColor.hex(0x787878)
+        cargoBtn.backgroundColor = UIColor.hex(0xFF9A29)
         cargoBtn.setTitle("加入购物车", for: UIControl.State.normal)
         cargoBtn.setTitleColor(UIColor.white, for: UIControl.State.normal)
-        cargoBtn.titleLabel?.font = UIFont.PFBold(14.0)
+        cargoBtn.titleLabel?.font = UIFont.PFHeavy(14.0)
+    }
+    
+    @objc func collectBtnTapped(btn: UIButton) {
+        print(#function)
+//        btn.setBackgroundImage(UIImage.init(named: "商品详情_已收藏"), for: UIControl.State.normal)
+//        btn.setBackgroundImage(UIImage.init(named: "商品详情_已收藏"), for: UIControl.State.normal)
     }
     
     func setupView() {
@@ -164,13 +192,13 @@ class ProductDetailVC: UIViewController {
             make.left.right.top.equalToSuperview()
             make.height.equalTo(300)
         }
-        banner!.imageArray.append(UIImage(named: "11")!)
-        banner!.imageArray.append(UIImage(named: "22")!)
-        banner!.imageArray.append(UIImage(named: "11")!)
-        banner!.imageArray.append(UIImage(named: "22")!)
-        banner!.imageArray.append(UIImage(named: "11")!)
-        banner!.imageArray.append(UIImage(named: "22")!)
-        banner!.imageArray.append(UIImage(named: "11")!)
+        banner!.imageArray.append(UIImage(named: "百香果_详情1")!)
+        banner!.imageArray.append(UIImage(named: "百香果_详情2")!)
+        banner!.imageArray.append(UIImage(named: "百香果_详情3")!)
+        banner!.imageArray.append(UIImage(named: "百香果_详情1")!)
+        banner!.imageArray.append(UIImage(named: "百香果_详情2")!)
+        banner!.imageArray.append(UIImage(named: "百香果_详情3")!)
+        banner!.imageArray.append(UIImage(named: "百香果_详情1")!)
         banner!.count = 7
         
         banner!.onClickBanner = { idx in
@@ -299,7 +327,8 @@ class ProductDetailVC: UIViewController {
                     make.height.equalToSuperview()
                     make.right.equalTo(-15)
                 }
-                a.backgroundColor = UIColor.cyan
+                a.image = UIImage.init(named: "列表_进入")
+                a.contentMode = .center
             }
         }
         
@@ -329,7 +358,7 @@ class ProductDetailVC: UIViewController {
             more.snp.makeConstraints { (make) in
                 make.right.equalToSuperview().offset(-10)
                 make.top.bottom.equalToSuperview()
-                make.left.equalTo(lbl.snp.right)
+                make.width.equalTo(45)
             }
             more.setTitle("更多", for: .normal)
             more.setTitleColor(UIColor.hex(0x787878), for: .normal)
@@ -448,7 +477,7 @@ class DetailCell: UIView {
             make.top.equalTo(avatar.snp.bottom).offset(5)
             make.height.equalTo(60)
         }
-        comment.text = "评价: ................................................................................................................."
+        comment.text = "评价: 又实惠，老板还送了一些实用的小礼品小礼品小礼品小礼品小礼品小便宜，老板还送了一些实用的小礼品小礼品小礼品小便宜"
         comment.textColor = UIColor.hex(0x787878)
         comment.font = UIFont.PFRegular(14.0)
         comment.lineBreakMode = .byWordWrapping
@@ -474,10 +503,10 @@ class DetailCell: UIView {
         imgV2.layer.cornerRadius = 4.0
         imgV3.layer.cornerRadius = 4.0
         imgV4.layer.cornerRadius = 4.0
-        imgV1.image = UIImage.init(named: "11")
-        imgV2.image = UIImage.init(named: "22")
-        imgV3.image = UIImage.init(named: "11")
-        imgV4.image = UIImage.init(named: "22")
+        imgV1.image = UIImage.init(named: "评论1_")
+        imgV2.image = UIImage.init(named: "评论2_")
+        imgV3.image = UIImage.init(named: "评论3_")
+        imgV4.image = UIImage.init(named: "评论4_")
         imgStack.addArrangedSubview(imgV1)
         imgStack.addArrangedSubview(imgV2)
         imgStack.addArrangedSubview(imgV3)

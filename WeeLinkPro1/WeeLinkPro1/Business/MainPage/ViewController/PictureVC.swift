@@ -13,10 +13,10 @@ class PictureVC: UIViewController {
     let bottomView = UITextView()
     let scrollView = UIScrollView()
     var data = [1,1,1,1]
-    var imageArray: [UIImage] = [UIImage.init(named: "11")!,
-                                 UIImage.init(named: "22")!,
-                                 UIImage.init(named: "11")!,
-                                 UIImage.init(named: "22")!]
+    var imageArray: [UIImage] = [UIImage.init(named: "评论_点击大图")!,
+                                 UIImage.init(named: "评论_点击大图")!,
+                                 UIImage.init(named: "评论_点击大图")!,
+                                 UIImage.init(named: "评论_点击大图")!]
     
     override func viewDidLoad() {
         super.viewDidLoad()

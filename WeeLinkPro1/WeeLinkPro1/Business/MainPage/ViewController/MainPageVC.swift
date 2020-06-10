@@ -23,6 +23,13 @@ class MainPageVC: UIViewController {
     var collectionView2: UICollectionView?
     var collectionView3: UICollectionView?
     
+    var miniCellArr: [[String]] = [["热销","首页图标_热门"], ["新品","首页图标_新品"], ["苹果","首页图标_苹果"],
+                                   ["香蕉","首页图标_香蕉"], ["樱桃","首页图标_樱桃"], ["柠檬","首页图标_柠檬"],
+                                   ["西瓜","首页图标_西瓜"], ["猕猴桃","首页图标_猕猴桃"], ["草莓","首页图标_草莓"],
+                                   ["葡萄","首页图标_葡萄"]]
+    var cellArr: [[String]] = [["苹果","水果_苹果"],["蓝莓","水果_蓝莓"],["杨梅","水果_杨梅"],
+                               ["香蕉","水果_香蕉"],["百香果","水果_百香果"],["橙子","水果_橙子"]]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -66,15 +73,13 @@ class MainPageVC: UIViewController {
         containerView.addSubview(banner)
         banner.snp.makeConstraints { (make) in
             make.top.equalTo(searchBar.snp.bottom)
-            make.height.equalTo(203)
+            make.height.equalTo(UIScreen.width * 203 / 375)
             make.left.right.equalToSuperview()
         }
-        banner.imageArray.append(UIImage.init(named: "11")!)
-        banner.imageArray.append(UIImage.init(named: "22")!)
-        banner.imageArray.append(UIImage.init(named: "11")!)
-        banner.imageArray.append(UIImage.init(named: "22")!)
-        banner.imageArray.append(UIImage.init(named: "11")!)
-        banner.count = 5
+        banner.imageArray.append(UIImage.init(named: "百香果_详情1")!)
+        banner.imageArray.append(UIImage.init(named: "百香果_详情2")!)
+        banner.imageArray.append(UIImage.init(named: "百香果_详情3")!)
+        banner.count = 3
         
         banner.onClickBanner = { [unowned self] idx in
             print(idx)
@@ -192,25 +197,34 @@ extension MainPageVC: UICollectionViewDelegate, UICollectionViewDataSource {
         -> UICollectionViewCell
     {
         
-        var cell: UICollectionViewCell?
-        
         switch collectionView.tag {
         case 1:
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier1,
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier1,
                                                           for: indexPath) as! MiniCollectionViewCell
+            cell.imgView.image = UIImage.init(named: miniCellArr[indexPath.row][1])
+            cell.subscriptLbl.text = miniCellArr[indexPath.row][0]
+            
+            return cell
+            
         case 2:
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier2,
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier2,
                                                           for: indexPath) as! CollectionViewCell
+            cell.imgView.image = UIImage.init(named: cellArr[indexPath.row][1])
+            cell.nameLbl.text = cellArr[indexPath.row][0]
+            
+            return cell
         case 3:
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier2,
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier2,
                                                           for: indexPath) as! CollectionViewCell
+            cell.imgView.image = UIImage.init(named: cellArr[indexPath.row][1])
+            cell.nameLbl.text = cellArr[indexPath.row][0]
+            return cell
         default:
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier2,
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier2,
                                                           for: indexPath) as! CollectionViewCell
+            return cell
         }
-        
-        
-        return cell ?? UICollectionViewCell()
+
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -227,7 +241,6 @@ extension MainPageVC: UICollectionViewDelegate, UICollectionViewDataSource {
             navigationController?.pushViewController(vc, animated: true)
         default: break
         }
-//        cell = collectionView.cellForItem(at: indexPath) as! MiniCollectionViewCell
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {

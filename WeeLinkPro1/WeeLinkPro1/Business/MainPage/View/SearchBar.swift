@@ -25,5 +25,8 @@ class SearchBar: UISearchBar {
     
     func setupView() {
         
+        self.setImage(UIImage.init(named: "搜索栏_搜索"),
+                      for: UISearchBar.Icon.search,
+                      state: UIControl.State.normal)
     }
 }

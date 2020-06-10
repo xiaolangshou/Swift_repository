@@ -10,8 +10,8 @@ import UIKit
 
 class MiniCollectionViewCell: UICollectionViewCell {
     
-    fileprivate let imgView = UIImageView()
-    fileprivate let subscriptLbl = UILabel()
+    let imgView = UIImageView()
+    let subscriptLbl = UILabel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -27,7 +27,6 @@ class MiniCollectionViewCell: UICollectionViewCell {
     
     func setupView() {
         
-        imgView.backgroundColor = UIColor.cyan
         imgView.layer.cornerRadius = 5
         self.addSubview(imgView)
         imgView.snp.makeConstraints { make in
@@ -46,6 +45,7 @@ class MiniCollectionViewCell: UICollectionViewCell {
             make.width.equalTo(imgView.snp.width)
             make.bottom.equalToSuperview()
             make.top.equalTo(imgView.snp.bottom)
+            make.centerX.equalToSuperview()
         }
     }
 }

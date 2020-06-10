@@ -35,6 +35,10 @@ class MainPageDetailVC: UIViewController {
                    ["1","2","3","4"],
                    ["1","2","3","4"]]
     
+
+    var detailDataArr: [[String]] = [["水果_苹果","苹果"], ["水果_蓝莓","蓝莓"], ["水果_杨梅","杨梅"],
+                                     ["水果_香蕉","香蕉"], ["水果_百香果","百香果"], ["水果_橙子","橙子"]]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -104,7 +108,8 @@ class MainPageDetailVC: UIViewController {
             make.top.equalTo(0)
             make.height.equalToSuperview()
         })
-        sortArrow1?.backgroundColor = UIColor.cyan
+        sortArrow1?.image = UIImage.init(named: "排序_下拉")
+        sortArrow1?.contentMode = .center
         
         sortBtn2 = UIButton.init()
         backView?.addSubview(sortBtn2 ?? UIView())
@@ -127,7 +132,8 @@ class MainPageDetailVC: UIViewController {
             make.top.equalTo(0)
             make.height.equalToSuperview()
         })
-        sortArrow2?.backgroundColor = UIColor.cyan
+        sortArrow2?.image = UIImage.init(named: "排序_下拉")
+        sortArrow2?.contentMode = .center
         
         sortBtn3 = UIButton.init()
         backView?.addSubview(sortBtn3 ?? UIView())
@@ -150,7 +156,8 @@ class MainPageDetailVC: UIViewController {
             make.top.equalTo(0)
             make.height.equalToSuperview()
         })
-        sortArrow3?.backgroundColor = UIColor.cyan
+        sortArrow3?.image = UIImage.init(named: "排序_下拉")
+        sortArrow3?.contentMode = .center
         
         sortBtn4 = UIButton.init()
         backView?.addSubview(sortBtn4 ?? UIView())
@@ -173,7 +180,8 @@ class MainPageDetailVC: UIViewController {
             make.top.equalTo(0)
             make.height.equalToSuperview()
         })
-        sortArrow4?.backgroundColor = UIColor.cyan
+        sortArrow4?.image = UIImage.init(named: "排序_下拉")
+        sortArrow4?.contentMode = .center
         
         sortTable1 = UITableView()
         view.addSubview(sortTable1!)
@@ -242,25 +250,48 @@ class MainPageDetailVC: UIViewController {
     
     @objc func sortBtnTapped1() {
         sortTable1!.isHidden = !sortTable1!.isHidden
+        
+        if sortTable1!.isHidden {
+            sortArrow1?.image = UIImage.init(named: "排序_下拉")
+        } else {
+            sortArrow1?.image = UIImage.init(named: "排序_收起")
+        }
     }
     
     @objc func sortBtnTapped2() {
         sortTable2!.isHidden = !sortTable2!.isHidden
+        
+        if sortTable2!.isHidden {
+            sortArrow2?.image = UIImage.init(named: "排序_下拉")
+        } else {
+            sortArrow2?.image = UIImage.init(named: "排序_收起")
+        }
     }
     
     @objc func sortBtnTapped3() {
         sortTable3!.isHidden = !sortTable3!.isHidden
+        
+        if sortTable3!.isHidden {
+            sortArrow3?.image = UIImage.init(named: "排序_下拉")
+        } else {
+            sortArrow3?.image = UIImage.init(named: "排序_收起")
+        }
     }
     
     @objc func sortBtnTapped4() {
         sortTable4!.isHidden = !sortTable4!.isHidden
+        
+        if sortTable4!.isHidden {
+            sortArrow4?.image = UIImage.init(named: "排序_下拉")
+        } else {
+            sortArrow4?.image = UIImage.init(named: "排序_收起")
+        }
     }
     
     func setupListView() {
         
-        let dataArr = [1,1,1,1,1,1,1,1,1]
         var prevCell: MainPageDetailCell?
-        for (index, _) in dataArr.enumerated() {
+        for (index, _) in detailDataArr.enumerated() {
             let cell = MainPageDetailCell()
             containerView.addSubview(cell)
             
@@ -270,7 +301,7 @@ class MainPageDetailVC: UIViewController {
                     make.centerX.equalToSuperview()
                     make.height.equalTo(120)
                     make.top.equalTo(prevCell.snp.bottom).offset(1)
-                    if index == dataArr.count - 1 {
+                    if index == detailDataArr.count - 1 {
                         make.bottom.equalToSuperview()
                     }
                 }
@@ -290,6 +321,9 @@ class MainPageDetailVC: UIViewController {
                 vc.hidesBottomBarWhenPushed = true
                 self?.navigationController?.pushViewController(vc, animated: true)
             }
+            
+            cell.imgV.image = UIImage.init(named: detailDataArr[index][0])
+            cell.pName.text = detailDataArr[index][1]
         }
     }
 }
@@ -386,8 +420,9 @@ class MainPageDetailCell: UIView {
             make.centerY.equalToSuperview()
             make.left.equalTo(6)
         }
-        imgV.backgroundColor = UIColor.cyan
         imgV.layer.cornerRadius = 5.0
+        imgV.layer.borderColor = UIColor.systemGroupedBackground.cgColor
+        imgV.layer.borderWidth = 1
         
         self.addSubview(pName)
         pName.snp.makeConstraints { (make) in
@@ -416,7 +451,7 @@ class MainPageDetailCell: UIView {
             make.left.equalTo(imgV.snp.right).offset(8)
             make.width.equalTo(80)
             make.height.equalTo(20)
-            make.bottom.equalTo(-10)
+            make.bottom.equalTo(-20)
         }
         priceLbl.text = "￥20.5"
         priceLbl.font = UIFont.PFMedium(17.0)
@@ -426,13 +461,10 @@ class MainPageDetailCell: UIView {
         addBtn.snp.makeConstraints { (make) in
             make.width.height.equalTo(20)
             make.right.equalTo(-12)
-            make.bottom.equalTo(-28)
+            make.bottom.equalTo(-20)
         }
         addBtn.layer.cornerRadius = 3.0
-        addBtn.backgroundColor = UIColor.hex(0xF2F2F2)
-        addBtn.setTitle("+", for: .normal)
-        addBtn.setTitleColor(UIColor.hex(0x939393), for: .normal)
-        addBtn.titleLabel?.font = UIFont.PFRegular(20)
+        addBtn.setBackgroundImage(UIImage.init(named: "商品_加"), for: .normal)
         
         let gesture = UITapGestureRecognizer(target: self, action: #selector(cellTapped))
         self.addGestureRecognizer(gesture)
