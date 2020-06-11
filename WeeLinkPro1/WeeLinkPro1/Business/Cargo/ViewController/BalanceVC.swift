@@ -58,7 +58,11 @@ class BalanceVC: UIViewController {
         view.addSubview(bottomView)
         bottomView.snp.makeConstraints { (make) in
             make.width.equalToSuperview()
-            make.height.equalTo(55)
+            if UIDevice.isPhoneX {
+                make.height.equalTo(55 + UIScreen.safeAreaBottomHeight)
+            } else {
+                make.height.equalTo(55)
+            }
             make.bottom.equalToSuperview()
             make.centerX.equalToSuperview()
         }
@@ -70,10 +74,10 @@ class BalanceVC: UIViewController {
             make.width.equalTo(90)
             make.height.equalTo(40)
             make.right.equalTo(-10)
-            make.centerY.equalToSuperview()
+            make.top.equalTo(10)
         }
         submitBtn.layer.cornerRadius = 4.0
-        submitBtn.backgroundColor = UIColor.hex(0x939393)
+        submitBtn.backgroundColor = UIColor.hex(0x8DC64F)
         submitBtn.setTitle("提交订单", for: .normal)
         submitBtn.setTitleColor(UIColor.white, for: .normal)
         submitBtn.titleLabel?.font = UIFont.PFBold(14.0)
@@ -96,7 +100,7 @@ class BalanceVC: UIViewController {
         shipFeeLbl.snp.makeConstraints { (make) in
             make.right.equalTo(submitBtn.snp.left).offset(-16)
             make.top.equalTo(sumLbl.snp.bottom)
-            make.bottom.equalToSuperview()
+            make.height.equalTo(15)
             make.left.equalToSuperview()
         }
         shipFeeLbl.textAlignment = .right

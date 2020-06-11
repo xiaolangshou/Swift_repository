@@ -76,6 +76,7 @@ class CategoryVC: UIViewController {
         rightView.tag = 1
         rightView.register(RightTableViewCell.self, forCellReuseIdentifier: "CELL2")
         rightView.rowHeight = 100
+        rightView.separatorStyle = .none
     }
 }
 
@@ -129,6 +130,13 @@ extension CategoryVC: UITableViewDelegate, UITableViewDataSource {
             cell.titleLbl.text = "\(rightData[indexPath.row][1])"
             cell.numLbl.text = "\(rightData[indexPath.row][2])"
             cell.priceLbl.text = "￥ \(rightData[indexPath.row][3])"
+            if indexPath.row == 0 {
+                cell.miniImgV.image = UIImage.init(named: "分类_角标_新品")
+            } else if indexPath.row == 1 {
+                cell.miniImgV.image = UIImage.init(named: "分类_角标_促销")
+            } else if indexPath.row == 2 {
+                cell.miniImgV.image = UIImage.init(named: "分类_折扣_新品")
+            } else { }
             
             return cell
         } else {

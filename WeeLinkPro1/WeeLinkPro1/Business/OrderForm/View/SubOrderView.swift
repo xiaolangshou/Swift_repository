@@ -43,19 +43,18 @@ class SubOrderView: UIView {
         
         self.addSubview(imgV)
         imgV.snp.makeConstraints { (make) in
-            make.width.height.equalTo(80)
+            make.width.height.equalTo(60)
             make.centerX.equalToSuperview()
-            make.centerY.equalToSuperview().offset(-5)
-            make.bottom.equalTo(-25)
+            make.centerY.equalToSuperview().offset(-15)
+            make.bottom.equalTo(-45)
         }
-        imgV.backgroundColor = UIColor.cyan
         
         self.addSubview(titleLbl)
         titleLbl.snp.makeConstraints { (make) in
             make.left.equalTo(imgV.snp.left)
             make.right.equalTo(imgV.snp.right)
             make.top.equalTo(imgV.snp.bottom)
-            make.bottom.equalTo(-5)
+            make.bottom.equalTo(-10)
         }
         titleLbl.textAlignment = .center
         titleLbl.font = UIFont.PFRegular(14.0)

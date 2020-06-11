@@ -11,10 +11,14 @@ import UIKit
 class RightTableViewCell: UITableViewCell {
 
     var imageV = UIImageView()
+    var miniImgV = UIImageView()
     var titleLbl = UILabel()
     var numLbl = UILabel()
     var priceLbl = UILabel()
     var addBtn = UIButton()
+    
+    let leftLine = UIView()
+    let rightLine = UIView()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -36,6 +40,30 @@ class RightTableViewCell: UITableViewCell {
             make.left.top.bottom.equalToSuperview()
             make.width.equalTo(100)
         }
+        
+        imageV.addSubview(miniImgV)
+        miniImgV.snp.makeConstraints { (make) in
+            make.top.right.equalToSuperview()
+            make.width.height.equalTo(22)
+        }
+        
+        self.addSubview(leftLine)
+        leftLine.snp.makeConstraints { (make) in
+            make.left.equalTo(0)
+            make.width.equalTo(100)
+            make.height.equalTo(SINGLE_LINE_WIDTH)
+            make.bottom.equalTo(-SINGLE_LINE_ADJUST_OFFSET)
+        }
+        leftLine.backgroundColor = UIColor.white
+        
+        self.addSubview(rightLine)
+        rightLine.snp.makeConstraints { (make) in
+            make.right.equalToSuperview()
+            make.left.equalTo(imageV.snp.right)
+            make.height.equalTo(SINGLE_LINE_WIDTH)
+            make.bottom.equalTo(-SINGLE_LINE_ADJUST_OFFSET)
+        }
+        rightLine.backgroundColor = UIColor.systemBackColor
         
         self.addSubview(titleLbl)
         titleLbl.text = "名称"

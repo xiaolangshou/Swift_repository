@@ -15,7 +15,6 @@ class OrderFormVC: UIViewController {
     var avatarView: UIImageView?
     var orderView: UIView?
     var cupponView: UIView?
-    var funcView: UICollectionView?
     var logoView: UIView?
     
     var scrollV: UIScrollView?
@@ -54,21 +53,25 @@ class OrderFormVC: UIViewController {
             containerView!.addSubview(v)
             v.snp.makeConstraints { (make) in
                 make.width.equalToSuperview()
-                make.height.equalTo(120)
+                make.height.equalTo(125)
                 make.centerX.equalToSuperview()
                 make.top.equalToSuperview()
             }
-            v.image = UIImage.init(named: "11")
+            v.image = UIImage.init(named: "我的_个人设置_背景")
+            v.contentMode = .scaleAspectFill
 
             let avatar = UIImageView()
             v.addSubview(avatar)
             avatar.snp.makeConstraints { (make) in
-                make.width.height.equalTo(50)
+                make.width.height.equalTo(60)
                 make.centerY.equalToSuperview()
                 make.left.equalTo(15)
             }
-            avatar.layer.cornerRadius = 25
+            avatar.layer.borderColor = UIColor.white.cgColor
+            avatar.layer.borderWidth = 2.0
+            avatar.layer.cornerRadius = 30
             avatar.image = UIImage.init(named: "22")
+            avatar.clipsToBounds = true
 
             let name = UILabel()
             name.text = "thomas"
@@ -77,19 +80,19 @@ class OrderFormVC: UIViewController {
                 make.width.equalTo(80)
                 make.height.equalTo(30)
                 make.centerY.equalToSuperview()
-                make.left.equalTo(avatar.snp.right).offset(10)
+                make.left.equalTo(avatar.snp.right).offset(20)
             }
             name.textColor = UIColor.white
-            name.font = UIFont.PFHeavy(15)
+            name.font = UIFont.PFHeavy(16)
 
             let settings = UIButton()
             v.addSubview(settings)
             settings.snp.makeConstraints { (make) in
-                make.width.height.equalTo(40)
+                make.width.height.equalTo(30)
                 make.centerY.equalToSuperview()
                 make.right.equalTo(-10)
             }
-            settings.backgroundColor = UIColor.cyan
+            settings.setBackgroundImage(UIImage.init(named: "设置"), for: .normal)
             settings.addTarget(self, action: #selector(settingBtnTapped(btn:)), for: .touchUpInside)
         })
         
@@ -109,15 +112,19 @@ class OrderFormVC: UIViewController {
             
             let payView = SubOrderView.init().then { (b) in
                 b.title = "待支付"
+                b.img = UIImage.init(named: "我的_待支付")
             }
             let cargoView = SubOrderView.init().then { (c) in
                 c.title = "待收货"
+                c.img = UIImage.init(named: "我的_待收货")
             }
             let completeView = SubOrderView.init().then { (c) in
                 c.title = "已完成"
+                c.img = UIImage.init(named: "我的_已完成")
             }
             let orderView = SubOrderView.init().then { (c) in
                 c.title = "全部订单"
+                c.img = UIImage.init(named: "我的_全部订单")
             }
             o.addArrangedSubview(payView)
             payView.snp.makeConstraints { (make) in
@@ -173,6 +180,8 @@ class OrderFormVC: UIViewController {
                 }
                 descripe.textAlignment = .center
                 descripe.text = "浏览足迹"
+                descripe.font = UIFont.PFRegular(15)
+                descripe.textColor = UIColor.hex(0x363636)
             }
             let cargoView = UIView.init().then { (c) in
                 c.backgroundColor = UIColor.white
@@ -196,6 +205,8 @@ class OrderFormVC: UIViewController {
                 }
                 descripe.textAlignment = .center
                 descripe.text = "商品收藏"
+                descripe.font = UIFont.PFRegular(15)
+                descripe.textColor = UIColor.hex(0x363636)
             }
             let completeView = UIView.init().then { (c) in
                 c.backgroundColor = UIColor.white
@@ -219,6 +230,8 @@ class OrderFormVC: UIViewController {
                 }
                 descripe.textAlignment = .center
                 descripe.text = "优惠券"
+                descripe.font = UIFont.PFRegular(15)
+                descripe.textColor = UIColor.hex(0x363636)
             }
 
             c.addArrangedSubview(payView)
@@ -235,48 +248,104 @@ class OrderFormVC: UIViewController {
             }
         })
         
-        let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: (UIScreen.width - 40) / 6,
-                                 height: 80)
-        layout.minimumInteritemSpacing = 8
-        layout.minimumLineSpacing = 10
-        layout.sectionInset = UIEdgeInsets(top: 16, left: 14, bottom: 0, right: 18)
-        layout.headerReferenceSize = CGSize(width: UIScreen.width, height: 40)
-        
-        funcView = UICollectionView(frame: UIScreen.main.bounds, collectionViewLayout: layout)
-        funcView!.isScrollEnabled = false
-        funcView!.delegate = self
-        funcView!.dataSource = self
-        funcView!.register(MiniCollectionViewCell.self,
-                                 forCellWithReuseIdentifier: cellReuseIdentifier1)
-        funcView!.backgroundColor = UIColor.white
-        containerView!.addSubview(funcView!)
-        funcView!.snp.makeConstraints({ make in
-            make.width.equalToSuperview()
-            make.centerX.equalToSuperview()
-            make.height.equalTo(250)
-            make.top.equalTo(cupponView!.snp.bottom).offset(10)
-        })
-        funcView!.tag = 1
-        
-        logoView = UIView().then({ (l) in
-            containerView?.addSubview(l)
-            l.snp.makeConstraints { (make) in
+        logoView = UIStackView().then({ (c) in
+            containerView!.addSubview(c)
+            c.snp.makeConstraints { (make) in
                 make.width.equalToSuperview()
                 make.centerX.equalToSuperview()
-                make.height.equalTo(90)
-                make.top.equalTo(funcView!.snp.bottom).offset(15)
-                make.bottom.equalToSuperview()
+                make.top.equalTo((cupponView?.snp.bottom)!).offset(10)
+                make.height.equalTo(100)
             }
-            l.backgroundColor = UIColor.white
+            c.backgroundColor = UIColor.white
             
-            _ = UIImageView().then { (i) in
-                l.addSubview(i)
-                i.snp.makeConstraints { (make) in
+            c.alignment = .fill
+            c.axis = .horizontal
+            c.distribution = .equalSpacing
+            
+            let payView = UIView.init().then { (b) in
+                b.backgroundColor = UIColor.white
+                let num = UIImageView()
+                b.addSubview(num)
+                num.snp.makeConstraints { (make) in
                     make.width.height.equalTo(60)
-                    make.center.equalToSuperview()
+                    make.centerX.equalToSuperview()
+                    make.centerY.equalToSuperview().offset(-15)
                 }
-                i.backgroundColor = UIColor.green
+                num.image = UIImage.init(named: "我的_收货地址")
+                
+                let descripe = UILabel()
+                b.addSubview(descripe)
+                descripe.snp.makeConstraints { (make) in
+                    make.left.equalTo(10)
+                    make.right.equalTo(-10)
+                    make.centerY.equalToSuperview().offset(15)
+                    make.height.equalTo(15)
+                }
+                descripe.textAlignment = .center
+                descripe.text = "收货地址"
+                descripe.font = UIFont.PFRegular(15)
+                descripe.textColor = UIColor.hex(0x363636)
+            }
+            let cargoView = UIView.init().then { (c) in
+                c.backgroundColor = UIColor.white
+                let num = UIImageView()
+                c.addSubview(num)
+                num.snp.makeConstraints { (make) in
+                    make.width.height.equalTo(60)
+                    make.centerX.equalToSuperview()
+                    make.centerY.equalToSuperview().offset(-15)
+                }
+                num.image = UIImage.init(named: "我的_在线客服")
+                
+                let descripe = UILabel()
+                c.addSubview(descripe)
+                descripe.snp.makeConstraints { (make) in
+                    make.left.equalTo(10)
+                    make.right.equalTo(-10)
+                    make.centerY.equalToSuperview().offset(15)
+                    make.height.equalTo(15)
+                }
+                descripe.textAlignment = .center
+                descripe.text = "在线客服"
+                descripe.font = UIFont.PFRegular(15)
+                descripe.textColor = UIColor.hex(0x363636)
+            }
+            let completeView = UIView.init().then { (c) in
+                c.backgroundColor = UIColor.white
+                let num = UIImageView()
+                c.addSubview(num)
+                num.snp.makeConstraints { (make) in
+                    make.width.height.equalTo(60)
+                    make.centerX.equalToSuperview()
+                    make.centerY.equalToSuperview().offset(-15)
+                }
+                num.image = UIImage.init(named: "我的_我的_公司简介")
+                
+                let descripe = UILabel()
+                c.addSubview(descripe)
+                descripe.snp.makeConstraints { (make) in
+                    make.left.equalTo(10)
+                    make.right.equalTo(-10)
+                    make.centerY.equalToSuperview().offset(15)
+                    make.height.equalTo(15)
+                }
+                descripe.textAlignment = .center
+                descripe.text = "商铺简介"
+                descripe.font = UIFont.PFRegular(15)
+                descripe.textColor = UIColor.hex(0x363636)
+            }
+
+            c.addArrangedSubview(payView)
+            payView.snp.makeConstraints { (make) in
+                make.width.equalTo(UIScreen.width * 0.33)
+            }
+            c.addArrangedSubview(cargoView)
+            cargoView.snp.makeConstraints { (make) in
+                make.width.equalTo(UIScreen.width * 0.33)
+            }
+            c.addArrangedSubview(completeView)
+            completeView.snp.makeConstraints { (make) in
+                make.width.equalTo(UIScreen.width * 0.33)
             }
         })
     }
@@ -284,38 +353,4 @@ class OrderFormVC: UIViewController {
     @objc func settingBtnTapped(btn: UIButton) {
         print(#function)
     }
-}
-
-extension OrderFormVC: UICollectionViewDelegate, UICollectionViewDataSource {
-    
-    func numberOfSections(in _collectionView: UICollectionView)
-        -> Int
-    {
-        return 1
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int)
-        -> Int
-    {
-        return 10
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath)
-        -> UICollectionViewCell
-    {
-        
-        var cell: UICollectionViewCell?
-        
-        cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier1,
-                                                          for: indexPath) as! MiniCollectionViewCell
-        
-        
-        return cell ?? UICollectionViewCell()
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //let cell = collectionView.cellForItem(at: indexPath) as! MiniCollectionViewCell
-        
-    }
-    
 }

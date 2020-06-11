@@ -12,8 +12,10 @@ import Then
 class CargoVC: UIViewController {
 
     static let shared = CargoVC()
-    typealias dataType = (Bool, Int)
-    var productArr: [dataType] = [(false, 1), (false, 1), (false, 1)]
+    typealias dataType = (Bool, Int, String)
+    var productArr: [dataType] = [(false, 1, "水果_苹果"), (false, 1, "水果_蓝莓"), (false, 1, "水果_杨梅"),
+                                  (false, 1, "水果_香蕉"), (false, 1, "水果_百香果"), (false, 1, "水果_橙子")
+    ]
     
     let scrollView = UIScrollView()
     let containerView = UIView()
@@ -79,7 +81,7 @@ class CargoVC: UIViewController {
                     make.height.equalTo(124)
                     make.top.equalTo(prevCell.snp.bottom).offset(12)
                     if index == productArr.count - 1 {
-                        make.bottom.equalToSuperview()
+                        make.bottom.equalToSuperview().offset(-70)
                     }
                 }
             } else {
@@ -94,6 +96,7 @@ class CargoVC: UIViewController {
             prevCell = cell
             
             cell.tag = index
+            cell.imgV.image = UIImage.init(named: productArr[index].2)
             
             cell.selectBtnTap = { [weak self] in
                 if (cell.viewWithTag(100) == nil) {
@@ -123,7 +126,7 @@ class CargoVC: UIViewController {
             }
             cell.minusBtnTap = { [weak self] num in
             
-                self?.productArr[index] = (cell.checkBtn.isSelected, num)
+                self?.productArr[index] = (cell.checkBtn.isSelected, num, self!.productArr[index].2)
                 var sum = 0
                 
                 for i in self!.productArr {
@@ -136,7 +139,7 @@ class CargoVC: UIViewController {
             }
             cell.plusBtnTap = { [weak self] num in
                 
-                self?.productArr[index] = (cell.checkBtn.isSelected, num)
+                self?.productArr[index] = (cell.checkBtn.isSelected, num, self!.productArr[index].2)
                 var sum = 0
                 
                 for i in self!.productArr {

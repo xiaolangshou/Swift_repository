@@ -42,7 +42,7 @@ class LocationView: UIView {
             make.left.equalTo(12)
             make.centerY.equalToSuperview()
         }
-        locationLogo.image = UIImage.init(color: UIColor.cyan)
+        locationLogo.image = UIImage.init(named: "填写地址")
         
         self.addSubview(nameLbl)
         nameLbl.snp.makeConstraints { (make) in
@@ -67,12 +67,13 @@ class LocationView: UIView {
         
         self.addSubview(arrow)
         arrow.snp.makeConstraints { (make) in
-            make.width.equalTo(12)
-            make.height.equalTo(15)
-            make.right.equalTo(-14)
+            make.width.equalTo(16)
+            make.height.equalTo(20)
+            make.right.equalTo(-9)
             make.centerY.equalToSuperview()
         }
-        arrow.image = UIImage.init(color: UIColor.cyan)
+        arrow.image = UIImage.init(named: "列表_进入")
+        arrow.contentMode = .scaleAspectFill
     }
 
 }

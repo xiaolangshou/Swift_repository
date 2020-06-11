@@ -56,8 +56,9 @@ class DetailView: UIView {
             make.width.height.equalTo(100)
             make.left.top.equalTo(12)
         }
-        imgV.backgroundColor = UIColor.cyan
+        imgV.image = UIImage.init(named: "水果_苹果")
         imgV.layer.cornerRadius = 6.0
+        imgV.backgroundColor = UIColor.hex(0xE7E8EA)
         
         self.addSubview(productLbl)
         productLbl.snp.makeConstraints { (make) in

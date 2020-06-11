@@ -43,8 +43,8 @@ class BottomView: UIView {
             make.centerY.equalToSuperview()
             make.left.equalToSuperview().offset(12)
         }
-        checkBtn.backgroundColor = UIColor.yellow
-        checkBtn.addTarget(self, action: #selector(selectAllBtnTapped), for: .touchUpInside)
+        checkBtn.setBackgroundImage(UIImage(named: "勾选_未选中"), for: .normal)
+        checkBtn.addTarget(self, action: #selector(selectAllBtnTapped(btn:)), for: .touchUpInside)
         
         self.addSubview(checkLbl)
         checkLbl.text = "全选"
@@ -66,7 +66,7 @@ class BottomView: UIView {
         }
         editBtn.layer.cornerRadius = 4.0
         editBtn.setTitle("编辑", for: .normal)
-        editBtn.backgroundColor = UIColor.hex(0x939393)
+        editBtn.backgroundColor = UIColor.hex(0x8DC64F)
         editBtn.setTitleColor(UIColor.white, for: .normal)
         editBtn.titleLabel?.font = UIFont.PFMedium(13)
         editBtn.addTarget(self, action: #selector(editBtnTapped), for: .touchUpInside)
@@ -81,7 +81,7 @@ class BottomView: UIView {
             make.centerY.equalToSuperview()
             make.right.equalTo(-10)
         }
-        sumBtn.backgroundColor = UIColor.hex(0x939393)
+        sumBtn.backgroundColor = UIColor.hex(0x8DC64F)
         sumBtn.addTarget(self, action: #selector(sumBtnTapped), for: .touchUpInside)
         
         self.addSubview(sumLbl)
@@ -105,7 +105,7 @@ class BottomView: UIView {
             make.centerY.equalToSuperview()
             make.right.equalTo(-10)
         }
-        deleteBtn.backgroundColor = UIColor.hex(0x939393)
+        deleteBtn.backgroundColor = UIColor.hex(0xF0555B)
         deleteBtn.addTarget(self, action: #selector(deleteBtnTapped), for: .touchUpInside)
         deleteBtn.isHidden = true
         
@@ -119,13 +119,19 @@ class BottomView: UIView {
             make.centerY.equalToSuperview()
             make.right.equalTo(deleteBtn.snp.left).offset(-5)
         }
-        cancelBtn.backgroundColor = UIColor.hex(0x939393)
+        cancelBtn.backgroundColor = UIColor.hex(0xC8CCD1)
         cancelBtn.addTarget(self, action: #selector(cancelBtnTapped), for: .touchUpInside)
         cancelBtn.isHidden = true
     }
     
-    @objc func selectAllBtnTapped() {
+    @objc func selectAllBtnTapped(btn: UIButton) {
         print(#function)
+        btn.isSelected = !btn.isSelected
+        if btn.isSelected {
+            btn.setBackgroundImage(UIImage.init(named: "勾选_选中"), for: .normal)
+        } else {
+            btn.setBackgroundImage(UIImage.init(named: "勾选_未选中"), for: .normal)
+        }
         selectAllBtnTap!()
     }
     

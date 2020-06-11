@@ -50,8 +50,7 @@ class CargoCell: UIView {
             make.centerY.equalToSuperview()
             make.width.height.equalTo(20)
         }
-        checkBtn.layer.borderWidth = 1
-        checkBtn.layer.borderColor = UIColor.cyan.cgColor
+        checkBtn.setBackgroundImage(UIImage(named: "勾选_未选中"), for: .normal)
         checkBtn.addTarget(self, action: #selector(checkBtnTapped(btn:)), for: .touchUpInside)
         
         self.addSubview(imgV)
@@ -60,7 +59,7 @@ class CargoCell: UIView {
             make.centerY.equalToSuperview()
             make.width.height.equalTo(100)
         }
-        imgV.backgroundColor = UIColor.cyan
+        imgV.backgroundColor = UIColor.hex(0xE7E8EA)
         imgV.layer.cornerRadius = 6.0
         
         self.addSubview(proudctName)
@@ -167,9 +166,9 @@ class CargoCell: UIView {
         print(#function)
         btn.isSelected = !btn.isSelected
         if btn.isSelected {
-            btn.setBackgroundImage(UIImage.init(color: UIColor.cyan), for: .normal)
+            btn.setBackgroundImage(UIImage.init(named: "勾选_选中"), for: .normal)
         } else {
-            btn.setBackgroundImage(UIImage.init(color: UIColor.white), for: .normal)
+            btn.setBackgroundImage(UIImage.init(named: "勾选_未选中"), for: .normal)
         }
         checkBtnTap?()
     }
