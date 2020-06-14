@@ -20,7 +20,7 @@ class CargoVC: UIViewController {
     let scrollView = UIScrollView()
     let containerView = UIView()
     let popOverView = UITableView().then {
-        $0.backgroundColor = UIColor.green
+        $0.backgroundColor = UIColor.systemBackColor
         $0.tag = 100
     }
     let bottomView = BottomView()

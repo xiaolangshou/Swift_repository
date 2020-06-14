@@ -96,6 +96,9 @@ class MainPageVC: UIViewController {
             make.height.equalTo(40)
             make.top.equalTo(banner.snp.bottom)
         }
+        header.rightBtnTap = {
+            print(#function)
+        }
         
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: (UIScreen.width - 40) / 6,
@@ -131,6 +134,9 @@ class MainPageVC: UIViewController {
             make.height.equalTo(40)
             make.top.equalTo(collectionView1?.snp.bottom ?? UICollectionView().snp.bottom).offset(20)
         }
+        header.rightBtnTap = {
+            print(#function)
+        }
         
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: 160,
@@ -138,7 +144,6 @@ class MainPageVC: UIViewController {
         layout.minimumInteritemSpacing = 8
         layout.minimumLineSpacing = 10
         layout.sectionInset = UIEdgeInsets(top: 16, left: 14, bottom: 0, right: 18)
-        layout.headerReferenceSize = CGSize(width: UIScreen.width, height: 40)
         layout.scrollDirection = .horizontal
         
         collectionView2 = UICollectionView(frame: UIScreen.main.bounds, collectionViewLayout: layout)
@@ -166,6 +171,9 @@ class MainPageVC: UIViewController {
             make.height.equalTo(40)
             make.top.equalTo(collectionView2?.snp.bottom ?? UICollectionView().snp.bottom).offset(20)
         }
+        header.rightBtnTap = {
+            print(#function)
+        }
         
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: 160,
@@ -173,7 +181,6 @@ class MainPageVC: UIViewController {
         layout.minimumInteritemSpacing = 8
         layout.minimumLineSpacing = 10
         layout.sectionInset = UIEdgeInsets(top: 16, left: 14, bottom: 0, right: 18)
-        layout.headerReferenceSize = CGSize(width: UIScreen.width, height: 40)
         layout.scrollDirection = .horizontal
         
         collectionView3 = UICollectionView(frame: UIScreen.main.bounds, collectionViewLayout: layout)

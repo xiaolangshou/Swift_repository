@@ -191,13 +191,12 @@ class MainPageDetailVC: UIViewController {
             make.height.equalTo(60)
             make.centerX.equalTo((sortBtn1?.snp.centerX)!)
         })
-        sortTable1?.backgroundColor = UIColor.green
         sortTable1?.isHidden = true
         sortTable1?.tag = 1
         sortTable1?.delegate = self
         sortTable1?.dataSource = self
         sortTable1?.register(UITableViewCell.self, forCellReuseIdentifier: "CELL")
-        sortTable1?.rowHeight = 40
+        sortTable1?.rowHeight = 25
         
         sortTable2 = UITableView.init()
         view.addSubview(sortTable2!)
@@ -207,13 +206,12 @@ class MainPageDetailVC: UIViewController {
             make.height.equalTo(60)
             make.centerX.equalTo((sortBtn2?.snp.centerX)!)
         })
-        sortTable2?.backgroundColor = UIColor.green
         sortTable2?.isHidden = true
         sortTable2?.tag = 2
         sortTable2?.delegate = self
         sortTable2?.dataSource = self
         sortTable2?.register(UITableViewCell.self, forCellReuseIdentifier: "CELL")
-        sortTable2?.rowHeight = 40
+        sortTable2?.rowHeight = 25
         
         sortTable3 = UITableView.init()
         view.addSubview(sortTable3!)
@@ -223,13 +221,12 @@ class MainPageDetailVC: UIViewController {
             make.height.equalTo(60)
             make.centerX.equalTo((sortBtn3?.snp.centerX)!)
         })
-        sortTable3?.backgroundColor = UIColor.green
         sortTable3?.isHidden = true
         sortTable3?.tag = 3
         sortTable3?.delegate = self
         sortTable3?.dataSource = self
         sortTable3?.register(UITableViewCell.self, forCellReuseIdentifier: "CELL")
-        sortTable3?.rowHeight = 40
+        sortTable3?.rowHeight = 25
         
         sortTable4 = UITableView.init()
         view.addSubview(sortTable4!)
@@ -239,13 +236,12 @@ class MainPageDetailVC: UIViewController {
             make.height.equalTo(60)
             make.centerX.equalTo((sortBtn4?.snp.centerX)!)
         })
-        sortTable4?.backgroundColor = UIColor.green
         sortTable4?.isHidden = true
         sortTable4?.tag = 4
         sortTable4?.delegate = self
         sortTable4?.dataSource = self
         sortTable4?.register(UITableViewCell.self, forCellReuseIdentifier: "CELL")
-        sortTable4?.rowHeight = 40
+        sortTable4?.rowHeight = 25
     }
     
     @objc func sortBtnTapped1() {
@@ -382,6 +378,8 @@ extension MainPageDetailVC: UITableViewDelegate, UITableViewDataSource {
         default:
             return UITableViewCell()
         }
+        
+        cell.textLabel?.textColor = UIColor.gray
         
         return cell
     }
