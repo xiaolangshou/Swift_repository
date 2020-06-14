@@ -18,12 +18,6 @@
 		0472921A246FBF64007D0498 /* CollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04729219246FBF64007D0498 /* CollectionReusableView.swift */; };
 		0472921C246FD6F7007D0498 /* LeftTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0472921B246FD6F7007D0498 /* LeftTableViewCell.swift */; };
 		0472921E246FD700007D0498 /* RightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0472921D246FD700007D0498 /* RightTableViewCell.swift */; };
-		048AB31F2488E4D100B7D94A /* PingFang_Light copy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 048AB3192488E4D000B7D94A /* PingFang_Light copy.ttf */; };
-		048AB3202488E4D100B7D94A /* PingFang_Medium copy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 048AB31A2488E4D000B7D94A /* PingFang_Medium copy.ttf */; };
-		048AB3212488E4D100B7D94A /* PingFang_Regular copy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 048AB31B2488E4D000B7D94A /* PingFang_Regular copy.ttf */; };
-		048AB3222488E4D100B7D94A /* PingFang_Heavy copy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 048AB31C2488E4D000B7D94A /* PingFang_Heavy copy.ttf */; };
-		048AB3232488E4D100B7D94A /* PingFang_ExtraLight copy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 048AB31D2488E4D100B7D94A /* PingFang_ExtraLight copy.ttf */; };
-		048AB3242488E4D100B7D94A /* PingFang_Bold copy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 048AB31E2488E4D100B7D94A /* PingFang_Bold copy.ttf */; };
 		04AA6938246E77E500F93605 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AA6937246E77E500F93605 /* Banner.swift */; };
 		04AA6941246E924D00F93605 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AA6940246E924D00F93605 /* UIColor+Extension.swift */; };
 		04B1FD7124721701008A6C4D /* CargoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1FD7024721701008A6C4D /* CargoCell.swift */; };
@@ -52,6 +46,7 @@
 		CF633680246D7CD100FAC724 /* CargoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF63367F246D7CD100FAC724 /* CargoVC.swift */; };
 		CF633682246D7D8E00FAC724 /* OrderFormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF633681246D7D8E00FAC724 /* OrderFormVC.swift */; };
 		CF9302D9247A2ECD003468F8 /* PictureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9302D8247A2ECD003468F8 /* PictureVC.swift */; };
+		CFEE38362495F0350053B509 /* CollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEE38352495F0350053B509 /* CollectionViewHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,12 +78,6 @@
 		04729219246FBF64007D0498 /* CollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionReusableView.swift; sourceTree = "<group>"; };
 		0472921B246FD6F7007D0498 /* LeftTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftTableViewCell.swift; sourceTree = "<group>"; };
 		0472921D246FD700007D0498 /* RightTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightTableViewCell.swift; sourceTree = "<group>"; };
-		048AB3192488E4D000B7D94A /* PingFang_Light copy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PingFang_Light copy.ttf"; sourceTree = "<group>"; };
-		048AB31A2488E4D000B7D94A /* PingFang_Medium copy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PingFang_Medium copy.ttf"; sourceTree = "<group>"; };
-		048AB31B2488E4D000B7D94A /* PingFang_Regular copy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PingFang_Regular copy.ttf"; sourceTree = "<group>"; };
-		048AB31C2488E4D000B7D94A /* PingFang_Heavy copy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PingFang_Heavy copy.ttf"; sourceTree = "<group>"; };
-		048AB31D2488E4D100B7D94A /* PingFang_ExtraLight copy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PingFang_ExtraLight copy.ttf"; sourceTree = "<group>"; };
-		048AB31E2488E4D100B7D94A /* PingFang_Bold copy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PingFang_Bold copy.ttf"; sourceTree = "<group>"; };
 		04AA6937246E77E500F93605 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
 		04AA6940246E924D00F93605 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		04B1FD7024721701008A6C4D /* CargoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CargoCell.swift; sourceTree = "<group>"; };
@@ -125,6 +114,13 @@
 		CF63367F246D7CD100FAC724 /* CargoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CargoVC.swift; sourceTree = "<group>"; };
 		CF633681246D7D8E00FAC724 /* OrderFormVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderFormVC.swift; sourceTree = "<group>"; };
 		CF9302D8247A2ECD003468F8 /* PictureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureVC.swift; sourceTree = "<group>"; };
+		CFEE382F2495DE710053B509 /* PingFang_ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PingFang_ExtraLight.ttf; sourceTree = "<group>"; };
+		CFEE38302495DE710053B509 /* PingFang_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PingFang_Regular.ttf; sourceTree = "<group>"; };
+		CFEE38312495DE710053B509 /* PingFang_Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PingFang_Heavy.ttf; sourceTree = "<group>"; };
+		CFEE38322495DE710053B509 /* PingFang_Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PingFang_Light.ttf; sourceTree = "<group>"; };
+		CFEE38332495DE710053B509 /* PingFang_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PingFang_Bold.ttf; sourceTree = "<group>"; };
+		CFEE38342495DE710053B509 /* PingFang_Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PingFang_Medium.ttf; sourceTree = "<group>"; };
+		CFEE38352495F0350053B509 /* CollectionViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -316,6 +312,7 @@
 				04277CF8246F7D4600FECA7D /* CollectionViewCell.swift */,
 				04729217246F8E31007D0498 /* SearchBar.swift */,
 				04729219246FBF64007D0498 /* CollectionReusableView.swift */,
+				CFEE38352495F0350053B509 /* CollectionViewHeader.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -377,12 +374,12 @@
 		04B1FD7D24727158008A6C4D /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				048AB31E2488E4D100B7D94A /* PingFang_Bold copy.ttf */,
-				048AB31D2488E4D100B7D94A /* PingFang_ExtraLight copy.ttf */,
-				048AB31C2488E4D000B7D94A /* PingFang_Heavy copy.ttf */,
-				048AB31B2488E4D000B7D94A /* PingFang_Regular copy.ttf */,
-				048AB31A2488E4D000B7D94A /* PingFang_Medium copy.ttf */,
-				048AB3192488E4D000B7D94A /* PingFang_Light copy.ttf */,
+				CFEE38332495DE710053B509 /* PingFang_Bold.ttf */,
+				CFEE382F2495DE710053B509 /* PingFang_ExtraLight.ttf */,
+				CFEE38312495DE710053B509 /* PingFang_Heavy.ttf */,
+				CFEE38322495DE710053B509 /* PingFang_Light.ttf */,
+				CFEE38342495DE710053B509 /* PingFang_Medium.ttf */,
+				CFEE38302495DE710053B509 /* PingFang_Regular.ttf */,
 			);
 			name = Font;
 			path = "../../../../项目/CameraDemo/CameraDemo/Resources/Font";
@@ -575,15 +572,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				048AB3232488E4D100B7D94A /* PingFang_ExtraLight copy.ttf in Resources */,
 				CF633658246D79C500FAC724 /* LaunchScreen.storyboard in Resources */,
-				048AB3222488E4D100B7D94A /* PingFang_Heavy copy.ttf in Resources */,
-				048AB3242488E4D100B7D94A /* PingFang_Bold copy.ttf in Resources */,
-				048AB3202488E4D100B7D94A /* PingFang_Medium copy.ttf in Resources */,
 				CF633655246D79C500FAC724 /* Assets.xcassets in Resources */,
 				CF633653246D79C000FAC724 /* Main.storyboard in Resources */,
-				048AB31F2488E4D100B7D94A /* PingFang_Light copy.ttf in Resources */,
-				048AB3212488E4D100B7D94A /* PingFang_Regular copy.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -677,6 +668,7 @@
 				04C1908D247B515C0024CF66 /* UIImage+Extension.swift in Sources */,
 				04B1FD7524726CF8008A6C4D /* Foundation+Extension.swift in Sources */,
 				04CA72832474BD5100CC90AB /* ProductDetailVC.swift in Sources */,
+				CFEE38362495F0350053B509 /* CollectionViewHeader.swift in Sources */,
 				04277CF7246F771100FECA7D /* MiniCollectionViewCell.swift in Sources */,
 				04B1FD8B2472789F008A6C4D /* BottomView.swift in Sources */,
 				0472921C246FD6F7007D0498 /* LeftTableViewCell.swift in Sources */,

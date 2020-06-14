@@ -89,6 +89,14 @@ class MainPageVC: UIViewController {
     
     func setupMiniCategory() {
         
+        let header = CollectionViewHeader()
+        containerView.addSubview(header)
+        header.snp.makeConstraints { (make) in
+            make.left.right.equalToSuperview()
+            make.height.equalTo(40)
+            make.top.equalTo(banner.snp.bottom)
+        }
+        
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: (UIScreen.width - 40) / 6,
                                  height: 80)
@@ -109,15 +117,20 @@ class MainPageVC: UIViewController {
             make.left.equalToSuperview()
             make.right.equalToSuperview()
             make.height.equalTo(235)
-            make.top.equalTo(banner.snp.bottom)
+            make.top.equalTo(header.snp.bottom)
         })
         collectionView1?.tag = 1
-        collectionView1?.register(CollectionReusableView.self,
-                                  forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
-                                  withReuseIdentifier: "SimpleCollectionHeaderView")
     }
     
     func setupCategory2() {
+        
+        let header = CollectionViewHeader()
+        containerView.addSubview(header)
+        header.snp.makeConstraints { (make) in
+            make.left.right.equalToSuperview()
+            make.height.equalTo(40)
+            make.top.equalTo(collectionView1?.snp.bottom ?? UICollectionView().snp.bottom).offset(20)
+        }
         
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: 160,
@@ -126,9 +139,9 @@ class MainPageVC: UIViewController {
         layout.minimumLineSpacing = 10
         layout.sectionInset = UIEdgeInsets(top: 16, left: 14, bottom: 0, right: 18)
         layout.headerReferenceSize = CGSize(width: UIScreen.width, height: 40)
+        layout.scrollDirection = .horizontal
         
         collectionView2 = UICollectionView(frame: UIScreen.main.bounds, collectionViewLayout: layout)
-        collectionView2?.isScrollEnabled = false
         collectionView2?.delegate = self
         collectionView2?.dataSource = self
         collectionView2?.register(CollectionViewCell.self,
@@ -139,15 +152,20 @@ class MainPageVC: UIViewController {
             make.left.equalToSuperview()
             make.right.equalToSuperview()
             make.height.equalTo(285)
-            make.top.equalTo(collectionView1?.snp.bottom ?? UICollectionView().snp.bottom).offset(20)
+            make.top.equalTo(header.snp.bottom)
         })
         collectionView2?.tag = 2
-        collectionView2?.register(CollectionReusableView.self,
-                                  forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
-                                  withReuseIdentifier: "SimpleCollectionHeaderView")
     }
     
     func setupCategory3() {
+        
+        let header = CollectionViewHeader()
+        containerView.addSubview(header)
+        header.snp.makeConstraints { (make) in
+            make.left.right.equalToSuperview()
+            make.height.equalTo(40)
+            make.top.equalTo(collectionView2?.snp.bottom ?? UICollectionView().snp.bottom).offset(20)
+        }
         
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: 160,
@@ -156,9 +174,9 @@ class MainPageVC: UIViewController {
         layout.minimumLineSpacing = 10
         layout.sectionInset = UIEdgeInsets(top: 16, left: 14, bottom: 0, right: 18)
         layout.headerReferenceSize = CGSize(width: UIScreen.width, height: 40)
+        layout.scrollDirection = .horizontal
         
         collectionView3 = UICollectionView(frame: UIScreen.main.bounds, collectionViewLayout: layout)
-        collectionView3?.isScrollEnabled = false
         collectionView3?.delegate = self
         collectionView3?.dataSource = self
         collectionView3?.register(CollectionViewCell.self,
@@ -170,12 +188,9 @@ class MainPageVC: UIViewController {
             make.right.equalToSuperview()
             make.height.equalTo(285)
             make.bottom.equalToSuperview()
-            make.top.equalTo(collectionView2?.snp.bottom ?? UICollectionView().snp.bottom).offset(20)
+            make.top.equalTo(header.snp.bottom)
         })
         collectionView3?.tag = 3
-        collectionView3?.register(CollectionReusableView.self,
-                                  forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
-                                  withReuseIdentifier: "SimpleCollectionHeaderView")
     }
 }
 
@@ -190,7 +205,16 @@ extension MainPageVC: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int)
         -> Int
     {
-        return 10
+        switch collectionView.tag {
+        case 1:
+            return miniCellArr.count
+        case 2:
+            return cellArr.count
+        case 3:
+            return cellArr.count
+        default:
+            return miniCellArr.count
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath)
@@ -209,6 +233,8 @@ extension MainPageVC: UICollectionViewDelegate, UICollectionViewDataSource {
         case 2:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier2,
                                                           for: indexPath) as! CollectionViewCell
+            print(cellArr.count)
+            print("indexPath.row = \(indexPath.row)")
             cell.imgView.image = UIImage.init(named: cellArr[indexPath.row][1])
             cell.nameLbl.text = cellArr[indexPath.row][0]
             
@@ -241,18 +267,6 @@ extension MainPageVC: UICollectionViewDelegate, UICollectionViewDataSource {
             navigationController?.pushViewController(vc, animated: true)
         default: break
         }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        
-        var supplementaryView: UICollectionReusableView? = nil
-        let header: CollectionReusableView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "SimpleCollectionHeaderView", for: indexPath) as! CollectionReusableView
-        supplementaryView = header
-        header.rightBtnTap = {
-            print("rightBtnTap")
-        }
-        
-        return supplementaryView!
     }
 }
 
