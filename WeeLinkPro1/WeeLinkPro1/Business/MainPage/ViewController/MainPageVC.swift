@@ -101,8 +101,13 @@ class MainPageVC: UIViewController {
         }
         
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: (UIScreen.width - 40) / 6,
+        if UIDevice.isPhoneX {
+            layout.itemSize = CGSize(width: (UIScreen.width - 40) / 6,
                                  height: 80)
+        } else {
+            layout.itemSize = CGSize(width: (UIScreen.width - 40) / 6,
+                                     height: 75)
+        }
         layout.minimumInteritemSpacing = 8
         layout.minimumLineSpacing = 10
         layout.sectionInset = UIEdgeInsets(top: 16, left: 14, bottom: 0, right: 18)
@@ -265,12 +270,15 @@ extension MainPageVC: UICollectionViewDelegate, UICollectionViewDataSource {
         switch collectionView.tag {
         case 1:
             let vc = MainPageDetailVC()
+            vc.hidesBottomBarWhenPushed = true
             navigationController?.pushViewController(vc, animated: true)
         case 2:
             let vc = ProductDetailVC()
+            vc.hidesBottomBarWhenPushed = true
             navigationController?.pushViewController(vc, animated: true)
         case 3:
             let vc = ProductDetailVC()
+            vc.hidesBottomBarWhenPushed = true
             navigationController?.pushViewController(vc, animated: true)
         default: break
         }

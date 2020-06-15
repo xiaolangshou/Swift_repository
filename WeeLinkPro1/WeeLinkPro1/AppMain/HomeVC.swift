@@ -64,8 +64,7 @@ class HomeVC: UITabBarController {
     func setupTabbarCons(controller: UIViewController, title: String, barTitle: String, image: String, selectImage: String) -> UIViewController {
         controller.title = title
         controller.tabBarItem.title = barTitle
-        controller.tabBarItem.image = UIImage.init(named: image)
-        
+        controller.tabBarItem.image = UIImage.init(named: image)?.withRenderingMode(.alwaysOriginal)
         controller.tabBarItem.selectedImage = UIImage.init(named: selectImage)?.withRenderingMode(.alwaysOriginal)
         controller.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor.hex(0x8DC64F)], for: .selected)
         

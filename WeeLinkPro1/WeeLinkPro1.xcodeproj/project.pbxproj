@@ -32,6 +32,7 @@
 		04C19091247B9DBC0024CF66 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C19090247B9DBC0024CF66 /* LocationView.swift */; };
 		04C19093247BA8060024CF66 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C19092247BA8060024CF66 /* DetailView.swift */; };
 		04CA72832474BD5100CC90AB /* ProductDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA72822474BD5100CC90AB /* ProductDetailVC.swift */; };
+		04FEDEB924970D92000BAA1B /* RecomendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FEDEB824970D92000BAA1B /* RecomendCollectionViewCell.swift */; };
 		A4E0672049FA5A94FFD7D6E9 /* Pods_WeeLinkPro1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17245B7C540FC608721D29B1 /* Pods_WeeLinkPro1.framework */; };
 		CF63364C246D79C000FAC724 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF63364B246D79C000FAC724 /* AppDelegate.swift */; };
 		CF63364E246D79C000FAC724 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF63364D246D79C000FAC724 /* SceneDelegate.swift */; };
@@ -92,6 +93,7 @@
 		04C19090247B9DBC0024CF66 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		04C19092247BA8060024CF66 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		04CA72822474BD5100CC90AB /* ProductDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailVC.swift; sourceTree = "<group>"; };
+		04FEDEB824970D92000BAA1B /* RecomendCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecomendCollectionViewCell.swift; sourceTree = "<group>"; };
 		17245B7C540FC608721D29B1 /* Pods_WeeLinkPro1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeeLinkPro1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		545C467D5C95E0B933581B49 /* Pods-WeeLinkPro1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeeLinkPro1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeeLinkPro1/Pods-WeeLinkPro1.debug.xcconfig"; sourceTree = "<group>"; };
 		CB746CF6A0A304DB97EAFD71 /* Pods-WeeLinkPro1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeeLinkPro1.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeeLinkPro1/Pods-WeeLinkPro1.release.xcconfig"; sourceTree = "<group>"; };
@@ -310,6 +312,7 @@
 				046BE519247E3FA500B5D9A9 /* HistoryView.swift */,
 				04277CF6246F771100FECA7D /* MiniCollectionViewCell.swift */,
 				04277CF8246F7D4600FECA7D /* CollectionViewCell.swift */,
+				04FEDEB824970D92000BAA1B /* RecomendCollectionViewCell.swift */,
 				04729217246F8E31007D0498 /* SearchBar.swift */,
 				04729219246FBF64007D0498 /* CollectionReusableView.swift */,
 				CFEE38352495F0350053B509 /* CollectionViewHeader.swift */,
@@ -644,6 +647,7 @@
 				CF633682246D7D8E00FAC724 /* OrderFormVC.swift in Sources */,
 				046BE51C247E55B700B5D9A9 /* HistoryVC.swift in Sources */,
 				CF633650246D79C000FAC724 /* HomeVC.swift in Sources */,
+				04FEDEB924970D92000BAA1B /* RecomendCollectionViewCell.swift in Sources */,
 				0467DA122484AC130021AE0F /* NavVC.swift in Sources */,
 				CF633680246D7CD100FAC724 /* CargoVC.swift in Sources */,
 				0472921A246FBF64007D0498 /* CollectionReusableView.swift in Sources */,

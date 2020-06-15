@@ -65,10 +65,15 @@ class ProductDetailVC: UIViewController {
     
     let scrollView = UIScrollView()
     let containerView = UIView()
+    let cellReuseIdentifier1 = "CollectionViewCell1"
+    let header = CollectionViewHeader()
     
+    var collectionV: UICollectionView? = nil
     var banner: Banner?
     var dataArr = [1,1,1,1]
     var imgArr: [String] = ["商品详情_咨询","商品详情_收藏标记","商品详情_购物车"]
+    var cellArr: [[String]] = [["苹果","水果_苹果"],["蓝莓","水果_蓝莓"],["杨梅","水果_杨梅"],
+                               ["香蕉","水果_香蕉"],["百香果","水果_百香果"],["橙子","水果_橙子"]]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -207,6 +212,8 @@ class ProductDetailVC: UIViewController {
     }
     
     func setupDetailView() {
+        
+        setupRecomendView()
         
         let nameLbl = UILabel.init()
         let numLbl = UILabel.init()
@@ -379,7 +386,7 @@ class ProductDetailVC: UIViewController {
                     make.height.equalTo(200)
                     make.top.equalTo(prevCell.snp.bottom).offset(5)
                     if index == dataArr.count - 1 {
-                        make.bottom.equalToSuperview()
+                        make.bottom.equalTo(header.snp.top).offset(-20)
                     }
                 }
             } else {
@@ -400,9 +407,73 @@ class ProductDetailVC: UIViewController {
         }
     }
     
+    func setupRecomendView() {
+        
+        let layout = UICollectionViewFlowLayout()
+        if UIDevice.isPhoneX {
+            layout.itemSize = CGSize(width: 120,
+                                     height: 180)
+        } else {
+            layout.itemSize = CGSize(width: 100,
+                                     height: 160)
+        }
+        layout.minimumInteritemSpacing = 8
+        layout.minimumLineSpacing = 10
+        layout.sectionInset = UIEdgeInsets(top: 16, left: 14, bottom: 0, right: 18)
+        
+        collectionV = UICollectionView(frame: UIScreen.main.bounds, collectionViewLayout: layout)
+        collectionV?.isScrollEnabled = false
+        collectionV?.delegate = self
+        collectionV?.dataSource = self
+        collectionV?.register(RecomendCollectionViewCell.self,
+                                 forCellWithReuseIdentifier: cellReuseIdentifier1)
+        collectionV?.backgroundColor = UIColor.white
+        containerView.addSubview(collectionV ?? UICollectionView())
+        collectionV?.snp.makeConstraints({ make in
+            make.left.equalToSuperview()
+            make.right.equalToSuperview()
+            if UIDevice.isPhoneX {
+                make.bottom.equalTo(-70 - UIScreen.safeAreaBottomHeight)
+                make.height.equalTo(420)
+            } else {
+                make.bottom.equalTo(-70)
+                make.height.equalTo(380)
+            }
+        })
+        collectionV?.tag = 1
+        
+        containerView.addSubview(header)
+        header.snp.makeConstraints { (make) in
+            make.left.right.equalToSuperview()
+            make.height.equalTo(40)
+            make.bottom.equalTo(collectionV!.snp.top)
+        }
+        header.rightBtnTap = {
+            print(#function)
+        }
+        header.leftLbl.text = "推荐商品"
+    }
+    
     @objc func moreBtnTapped() {
         print(#function)
     }
+}
+
+extension ProductDetailVC: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return cellArr.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier1, for: indexPath) as! RecomendCollectionViewCell
+        
+        cell.imgView.image = UIImage.init(named: cellArr[indexPath.row][1])
+        
+        return cell
+    }
+    
 }
 
 class DetailCell: UIView {
@@ -492,7 +563,7 @@ class DetailCell: UIView {
             make.left.equalTo(10)
             make.right.equalTo(-10)
             make.top.equalTo(comment.snp.bottom).offset(5)
-            make.bottom.equalToSuperview()
+            make.bottom.equalToSuperview().offset(-10)
         }
         
         let imgV1 = UIImageView()
