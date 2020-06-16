@@ -45,7 +45,12 @@ class CargoVC: UIViewController {
 
     func setupView() {
         
-        view.backgroundColor = UIColor.systemGroupedBackground
+        if #available(iOS 13.0, *) {
+            view.backgroundColor = UIColor.systemGroupedBackground
+        } else {
+            // Fallback on earlier versions
+            view.backgroundColor = UIColor.systemBackColor
+        }
         
         view.addSubview(bottomView)
         bottomView.snp.makeConstraints { (make) in

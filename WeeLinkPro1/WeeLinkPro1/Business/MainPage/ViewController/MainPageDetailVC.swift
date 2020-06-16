@@ -419,7 +419,12 @@ class MainPageDetailCell: UIView {
             make.left.equalTo(6)
         }
         imgV.layer.cornerRadius = 5.0
-        imgV.layer.borderColor = UIColor.systemGroupedBackground.cgColor
+        if #available(iOS 13.0, *) {
+            imgV.layer.borderColor = UIColor.systemGroupedBackground.cgColor
+        } else {
+            // Fallback on earlier versions
+            imgV.layer.borderColor = UIColor.systemBackColor.cgColor
+        }
         imgV.layer.borderWidth = 1
         
         self.addSubview(pName)

@@ -30,7 +30,12 @@ class CollectionViewCell: UICollectionViewCell {
     
     func setupView() {
         
-        imgView.layer.borderColor = UIColor.systemGroupedBackground.cgColor
+        if #available(iOS 13.0, *) {
+            imgView.layer.borderColor = UIColor.systemGroupedBackground.cgColor
+        } else {
+            // Fallback on earlier versions
+            imgView.layer.borderColor = UIColor.systemBackColor.cgColor
+        }
         imgView.layer.borderWidth = 1
         imgView.layer.cornerRadius = 5
         self.addSubview(imgView)
