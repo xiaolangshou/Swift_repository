@@ -10,9 +10,11 @@ import UIKit
 
 class BottomView: UIView {
     
-    var selectAllBtnTap: (() -> Void)?
+    var selectAllBtnTap: ((Bool) -> Void)?
     var editBtnTap: (() -> Void)?
     var sumBtnTap: (() -> Void)?
+    var cancelBtnTap: (() -> Void)?
+    var deleteBtnTap: (() -> Void)?
     
     let checkBtn = UIButton()
     let checkLbl = UILabel()
@@ -132,7 +134,7 @@ class BottomView: UIView {
         } else {
             btn.setBackgroundImage(UIImage.init(named: "勾选_未选中"), for: .normal)
         }
-        selectAllBtnTap!()
+        selectAllBtnTap!(btn.isSelected)
     }
     
     @objc func sumBtnTapped() {
@@ -154,10 +156,17 @@ class BottomView: UIView {
 
     @objc func deleteBtnTapped() {
         print(#function)
-    
+        deleteBtnTap!()
     }
     
     @objc func cancelBtnTapped() {
         print(#function)
+        cancelBtn.isHidden = true
+        deleteBtn.isHidden = true
+        
+        sumBtn.isHidden = false
+        sumLbl.isHidden = false
+        
+        cancelBtnTap!()
     }
 }

@@ -16,6 +16,7 @@ class CargoVC: UIViewController {
     var productArr: [dataType] = [(false, 1, "水果_苹果"), (false, 1, "水果_蓝莓"), (false, 1, "水果_杨梅"),
                                   (false, 1, "水果_香蕉"), (false, 1, "水果_百香果"), (false, 1, "水果_橙子")
     ]
+    var checkArr = [Int]()
     
     let scrollView = UIScrollView()
     let containerView = UIView()
@@ -65,12 +66,37 @@ class CargoVC: UIViewController {
             vc.hidesBottomBarWhenPushed = true
             self?.navigationController?.pushViewController(vc, animated: true)
         }
-        bottomView.selectAllBtnTap = { [weak self] in
+        bottomView.selectAllBtnTap = { [weak self] isSelected in
             for v in (self?.containerView.subviews)! {
                 if v.isMember(of: CargoCell.self) {
                     let cell = v as! CargoCell
-                    cell.checkBtnTapped(btn: cell.checkBtn)
+                    if isSelected {
+                        cell.checkBtn.setBackgroundImage(UIImage(named: "勾选_选中"), for: .normal)
+                    } else {
+                        cell.checkBtn.setBackgroundImage(UIImage(named: "勾选_未选中"), for: .normal)
+                    }
                 }
+            }
+        }
+        bottomView.cancelBtnTap = {
+            
+        }
+        bottomView.deleteBtnTap = { [weak self] in
+            for (i,_) in self!.checkArr.enumerated() {
+                self?.productArr.remove(at: i)
+            }
+            
+            self?.reloadData()
+        }
+        
+        reloadData()
+    }
+    
+    func reloadData() {
+        
+        for v in containerView.subviews {
+            if v.isMember(of: CargoCell.self) {
+                v.removeFromSuperview()
             }
         }
         
@@ -128,6 +154,8 @@ class CargoVC: UIViewController {
                 }
                 
                 self?.bottomView.sumBtn.setTitle("结算(\(sum))", for: .normal)
+                
+                self?.checkArr.append(cell.tag)
             }
             cell.minusBtnTap = { [weak self] num in
             
