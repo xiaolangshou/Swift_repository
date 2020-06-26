@@ -16,7 +16,6 @@ class CargoVC: UIViewController {
     var productArr: [dataType] = [(false, 1, "水果_苹果"), (false, 1, "水果_蓝莓"), (false, 1, "水果_杨梅"),
                                   (false, 1, "水果_香蕉"), (false, 1, "水果_百香果"), (false, 1, "水果_橙子")
     ]
-    var checkArr = [Int]()
     
     let scrollView = UIScrollView()
     let containerView = UIView()
@@ -67,9 +66,22 @@ class CargoVC: UIViewController {
             self?.navigationController?.pushViewController(vc, animated: true)
         }
         bottomView.selectAllBtnTap = { [weak self] isSelected in
+            
+            var j: dataType = (false, 1, "")
+            for (index,i) in self!.productArr.enumerated() {
+                j = i
+                j.0 = isSelected
+                print("isSelected = \(j.0)")
+                j.1 = i.1
+                j.2 = i.2
+                
+                self?.productArr[index] = j
+            }
+            
             for v in (self?.containerView.subviews)! {
                 if v.isMember(of: CargoCell.self) {
                     let cell = v as! CargoCell
+                    cell.checkBtn.isSelected = isSelected
                     if isSelected {
                         cell.checkBtn.setBackgroundImage(UIImage(named: "勾选_选中"), for: .normal)
                     } else {
@@ -77,13 +89,26 @@ class CargoVC: UIViewController {
                     }
                 }
             }
+            
+            var sum = 0
+            for i in self!.productArr {
+                if i.0 {
+                    sum += i.1
+                }
+            }
+            self?.bottomView.sumBtn.setTitle("结算(\(sum))", for: .normal)
         }
+        
         bottomView.cancelBtnTap = {
             
         }
+        
         bottomView.deleteBtnTap = { [weak self] in
-            for (i,_) in self!.checkArr.enumerated() {
-                self?.productArr.remove(at: i)
+            
+            for (i, v) in self!.productArr.enumerated() {
+                if v.0 {
+                    self?.productArr.remove(at: i)
+                }
             }
             
             self?.reloadData()
@@ -144,7 +169,10 @@ class CargoVC: UIViewController {
             }
             cell.checkBtnTap = { [weak self] in
                 
-                self?.productArr[index].0 = cell.checkBtn.isSelected
+                self?.productArr[index].0 = !self!.productArr[index].0
+                
+                print("isSelected = \(self!.productArr[index].0)")
+                
                 var sum = 0
                 
                 for i in self!.productArr {
@@ -154,8 +182,7 @@ class CargoVC: UIViewController {
                 }
                 
                 self?.bottomView.sumBtn.setTitle("结算(\(sum))", for: .normal)
-                
-                self?.checkArr.append(cell.tag)
+
             }
             cell.minusBtnTap = { [weak self] num in
             

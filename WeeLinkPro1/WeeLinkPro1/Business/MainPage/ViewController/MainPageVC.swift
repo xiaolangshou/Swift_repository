@@ -245,8 +245,6 @@ extension MainPageVC: UICollectionViewDelegate, UICollectionViewDataSource {
         case 2:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier2,
                                                           for: indexPath) as! CollectionViewCell
-            print(cellArr.count)
-            print("indexPath.row = \(indexPath.row)")
             cell.imgView.image = UIImage.init(named: cellArr[indexPath.row][1])
             cell.nameLbl.text = cellArr[indexPath.row][0]
             

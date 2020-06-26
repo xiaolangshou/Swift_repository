@@ -165,6 +165,7 @@ class CargoCell: UIView {
     @objc func checkBtnTapped(btn: UIButton) {
         print(#function)
         btn.isSelected = !btn.isSelected
+        print("btn.isSelected = \(btn.isSelected)")
         if btn.isSelected {
             btn.setBackgroundImage(UIImage.init(named: "勾选_选中"), for: .normal)
         } else {
