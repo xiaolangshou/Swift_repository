@@ -10,18 +10,20 @@ import UIKit
 import AVKit
 import SnapKit
 import AVFoundation
+import CocoaMQTT
 
 class ControllVC: UIViewController {
     
     static let shared = ControllVC()
     
     let playerView = TLPlayerView()
-    var stickView: StickView?
     
+    var mqttMng: MQTTMng?
+    var stickView: StickView?
+    var slider: UISlider?
     var playerLayer: AVPlayerLayer?
     var player: AVPlayer?
     var playerItem: AVPlayerItem?
-    
     var urlStr = "http://bos.nj.bpc.baidu.com/tieba-smallvideo/11772_3c435014fb2dd9a5fd56a57cc369f6a0.mp4"
 
     override func viewWillAppear(_ animated: Bool) {
@@ -35,6 +37,7 @@ class ControllVC: UIViewController {
         super.viewDidLoad()
 
         setupView()
+        initMQTT()
     }
 
     func setupView() {
@@ -57,6 +60,21 @@ class ControllVC: UIViewController {
         stickView?.rightBtnTap = {
             print(#function)
         }
+        
+        slider = UISlider()
+        view.addSubview(slider!)
+        slider!.snp.makeConstraints { make in
+            make.width.equalTo(120)
+            make.left.equalTo(10)
+            make.top.equalTo(60)
+        }
+        slider!.minimumValue = 0
+        slider!.maximumValue = 100
+        slider!.addTarget(self, action: #selector(SliderChanged), for: .valueChanged)
+    }
+    
+    @objc func SliderChanged(_ slider: UISlider) {
+        print(slider.value)
     }
     
     func setupLayer() {
@@ -80,6 +98,19 @@ class ControllVC: UIViewController {
         }
     }
     
+    func initMQTT() {
+//        self.mqttMng = MQTTMng.init(clientID: <#String#>,
+//                                    host: <#String#>,
+//                                    port: <#UInt16#>,
+//                                    username: <#String#>,
+//                                    password: <#String#>,
+//                                    topic: <#String#>,
+//                                    message: <#String#>,
+//                                    keepAlive: 90)
+        
+        self.mqttMng?.mqtt!.delegate = self
+    }
+    
     deinit {
         playerItem?.removeObserver(self, forKeyPath: "loadedTimeRanges")
         playerItem?.removeObserver(self, forKeyPath: "status")
@@ -100,4 +131,52 @@ class ControllVC: UIViewController {
             }
         }
     }
+}
+
+extension ControllVC: CocoaMQTTDelegate {
+
+    func mqtt(_ mqtt: CocoaMQTT, didConnectAck ack: CocoaMQTTConnAck) {
+        if ack == .accept {
+            mqtt.subscribe("topic", qos: CocoaMQTTQOS.qos1)
+            mqtt.ping()
+        }
+    }
+
+    func mqtt(_ mqtt: CocoaMQTT, didPublishMessage message: CocoaMQTTMessage, id: UInt16) {
+        print("didPublishMessage with message: \(String(describing: message.string))")
+    }
+
+    func mqtt(_ mqtt: CocoaMQTT, didPublishAck id: UInt16) {
+        print("didPublishAck with id: \(id)")
+    }
+
+    func mqtt(_ mqtt: CocoaMQTT, didReceiveMessage message: CocoaMQTTMessage, id: UInt16) {
+
+        print("didReceivedMessage: \(String(describing: message.string)) with id \(id)")
+
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "MQTTMessageNotification"),
+                                        object: self,
+                                        userInfo: ["message": message.string!, "topic": message.topic])
+    }
+
+    func mqtt(_ mqtt: CocoaMQTT, didSubscribeTopic topics: [String]) {
+        print("didSubscribeTopic to \(topics)")
+    }
+
+    func mqtt(_ mqtt: CocoaMQTT, didUnsubscribeTopic topic: String) {
+         print("didUnsubscribeTopic to \(topic)")
+    }
+
+    func mqttDidPing(_ mqtt: CocoaMQTT) {
+        print(#function)
+    }
+
+    func mqttDidReceivePong(_ mqtt: CocoaMQTT) {
+        print(#function)
+    }
+
+    func mqttDidDisconnect(_ mqtt: CocoaMQTT, withError err: Error?) {
+        print(#function)
+    }
+
 }

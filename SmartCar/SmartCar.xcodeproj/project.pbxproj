@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0417873324C51E0000C5D041 /* MQTTMng.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0417873224C51E0000C5D041 /* MQTTMng.swift */; };
 		04BC30EF24C2A854008F4CE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC30EE24C2A854008F4CE4 /* AppDelegate.swift */; };
 		04BC30F124C2A854008F4CE4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC30F024C2A854008F4CE4 /* SceneDelegate.swift */; };
 		04BC30F624C2A854008F4CE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BC30F424C2A854008F4CE4 /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0417873224C51E0000C5D041 /* MQTTMng.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQTTMng.swift; sourceTree = "<group>"; };
 		04BC30EB24C2A854008F4CE4 /* SmartCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BC30EE24C2A854008F4CE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04BC30F024C2A854008F4CE4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,88 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0417872824C51C5A00C5D041 /* Controll */ = {
+			isa = PBXGroup;
+			children = (
+				0417873124C51DC500C5D041 /* ViewController */,
+				0417873024C51CD300C5D041 /* ViewModel */,
+				0417872F24C51CCE00C5D041 /* View */,
+				0417872E24C51CCA00C5D041 /* Model */,
+			);
+			path = Controll;
+			sourceTree = "<group>";
+		};
+		0417872924C51C6E00C5D041 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				0417872D24C51CA500C5D041 /* ViewController */,
+				0417872C24C51C9900C5D041 /* ViewModel */,
+				0417872B24C51C9400C5D041 /* View */,
+				0417872A24C51C8F00C5D041 /* Model */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		0417872A24C51C8F00C5D041 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0417872B24C51C9400C5D041 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0417872C24C51C9900C5D041 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0417872D24C51CA500C5D041 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				04BC312424C2C61F008F4CE4 /* SettingsVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0417872E24C51CCA00C5D041 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0417873224C51E0000C5D041 /* MQTTMng.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0417872F24C51CCE00C5D041 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04BC313224C2E312008F4CE4 /* StickView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0417873024C51CD300C5D041 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0417873124C51DC500C5D041 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				04BC312224C2C5EE008F4CE4 /* ControllVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		04BC30E224C2A854008F4CE4 = {
 			isa = PBXGroup;
 			children = (
@@ -169,9 +253,8 @@
 		04BC312624C2C668008F4CE4 /* Bussiness */ = {
 			isa = PBXGroup;
 			children = (
-				04BC312224C2C5EE008F4CE4 /* ControllVC.swift */,
-				04BC312424C2C61F008F4CE4 /* SettingsVC.swift */,
-				04BC313224C2E312008F4CE4 /* StickView.swift */,
+				0417872924C51C6E00C5D041 /* Settings */,
+				0417872824C51C5A00C5D041 /* Controll */,
 			);
 			path = Bussiness;
 			sourceTree = "<group>";
@@ -470,6 +553,7 @@
 				04BC313124C2CF57008F4CE4 /* DirectionTool.swift in Sources */,
 				04BC312F24C2CA32008F4CE4 /* TLPlayerView.swift in Sources */,
 				04BC312924C2C69E008F4CE4 /* UIColor+Extension.swift in Sources */,
+				0417873324C51E0000C5D041 /* MQTTMng.swift in Sources */,
 				04BC313324C2E312008F4CE4 /* StickView.swift in Sources */,
 				04BC313524C2E797008F4CE4 /* UIScreen+Extension.swift in Sources */,
 				04BC312124C2C540008F4CE4 /* NavVC.swift in Sources */,

@@ -9,6 +9,7 @@ target 'SmartCar' do
   # Pods for SmartCar
   pod 'SnapKit'
   pod 'Then'
+  pod 'CocoaMQTT'
 
   target 'SmartCarTests' do
     inherit! :search_paths
