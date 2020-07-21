@@ -25,6 +25,15 @@ class ControllVC: UIViewController {
     var player: AVPlayer?
     var playerItem: AVPlayerItem?
     var urlStr = "http://bos.nj.bpc.baidu.com/tieba-smallvideo/11772_3c435014fb2dd9a5fd56a57cc369f6a0.mp4"
+    
+    enum controlModel: String {
+        case left = "left"
+        case right = "right"
+        case up = "up"
+        case down = "down"
+    }
+    
+    var speed: Int = 1
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -40,6 +49,12 @@ class ControllVC: UIViewController {
         initMQTT()
     }
 
+    deinit {
+        mqttMng?.mqtt?.disconnect()
+        playerItem?.removeObserver(self, forKeyPath: "loadedTimeRanges")
+        playerItem?.removeObserver(self, forKeyPath: "status")
+    }
+    
     func setupView() {
         
         navigationController?.setNavigationBarHidden(true, animated: true)
@@ -48,17 +63,65 @@ class ControllVC: UIViewController {
         
         stickView = StickView.init(frame: CGRect.init(x: 0, y: 0, width: view.frame.height, height: view.frame.width))
         view.addSubview(stickView ?? UIView())
-        stickView?.frontBtnTap = {
-            print(#function)
+        stickView?.frontBtnTouchdown = {
+            
+            if !GCDTimer.shared.isExistTimer(WithTimerName: "timer") {
+                GCDTimer.shared.scheduledDispatchTimer(WithTimerName: "timer", timeInterval: 0.1, queue: DispatchQueue.main, repeats: true) {
+                    print("\(controlModel.up)" + "\(self.speed)")
+                    let msg = "\(controlModel.up)" + "\(self.speed)"
+                    self.mqttMng?.sendMsg(topic: "EV", msg: msg)
+                }
+            }
         }
-        stickView?.backBtnTap = {
-            print(#function)
+        stickView?.frontBtnTouchcancel = {
+            
+            GCDTimer.shared.cancelTimer(WithTimerName: "timer")
         }
-        stickView?.leftBtnTap = {
-            print(#function)
+        stickView?.backBtnTouchdown = {
+            
+            if !GCDTimer.shared.isExistTimer(WithTimerName: "timer") {
+                GCDTimer.shared.scheduledDispatchTimer(WithTimerName: "timer", timeInterval: 0.1, queue: DispatchQueue.main, repeats: true) {
+                    print("\(controlModel.down)" + "\(self.speed)")
+                    
+                    let msg = "\(controlModel.down)" + "\(self.speed)"
+                    self.mqttMng?.sendMsg(topic: "EV", msg: msg)
+                }
+            }
         }
-        stickView?.rightBtnTap = {
-            print(#function)
+        stickView?.backBtnTouchcancel = {
+
+            GCDTimer.shared.cancelTimer(WithTimerName: "timer")
+        }
+        stickView?.leftBtnTouchdown = {
+            
+            if !GCDTimer.shared.isExistTimer(WithTimerName: "timer") {
+                GCDTimer.shared.scheduledDispatchTimer(WithTimerName: "timer", timeInterval: 0.1, queue: DispatchQueue.main, repeats: true) {
+                    print("\(controlModel.left)" + "\(self.speed)")
+                    
+                    let msg = "\(controlModel.left)" + "\(self.speed)"
+                    self.mqttMng?.sendMsg(topic: "EV", msg: msg)
+                }
+            }
+        }
+        stickView?.leftBtnTouchcancel = {
+            
+            GCDTimer.shared.cancelTimer(WithTimerName: "timer")
+        }
+        
+        stickView?.rightBtnTouchdown = {
+            
+            if !GCDTimer.shared.isExistTimer(WithTimerName: "timer") {
+                GCDTimer.shared.scheduledDispatchTimer(WithTimerName: "timer", timeInterval: 0.1, queue: DispatchQueue.main, repeats: true) {
+                    print("\(controlModel.right)" + "\(self.speed)")
+                    
+                    let msg = "\(controlModel.right)" + "\(self.speed)"
+                    self.mqttMng?.sendMsg(topic: "EV", msg: msg)
+                }
+            }
+        }
+        stickView?.rightBtnTouchcancel = {
+            
+            GCDTimer.shared.cancelTimer(WithTimerName: "timer")
         }
         
         slider = UISlider()
@@ -68,13 +131,15 @@ class ControllVC: UIViewController {
             make.left.equalTo(10)
             make.top.equalTo(60)
         }
-        slider!.minimumValue = 0
-        slider!.maximumValue = 100
+        slider!.value = 1
+        slider!.minimumValue = 1
+        slider!.maximumValue = 3
         slider!.addTarget(self, action: #selector(SliderChanged), for: .valueChanged)
     }
     
     @objc func SliderChanged(_ slider: UISlider) {
-        print(slider.value)
+        print("self.speed = \(slider.value)")
+        self.speed = Int(slider.value)
     }
     
     func setupLayer() {
@@ -99,21 +164,16 @@ class ControllVC: UIViewController {
     }
     
     func initMQTT() {
-//        self.mqttMng = MQTTMng.init(clientID: <#String#>,
-//                                    host: <#String#>,
-//                                    port: <#UInt16#>,
-//                                    username: <#String#>,
-//                                    password: <#String#>,
-//                                    topic: <#String#>,
-//                                    message: <#String#>,
-//                                    keepAlive: 90)
-        
+        self.mqttMng = MQTTMng.init(clientID: "id",
+                                    host: "192.168.1.65",
+                                    port: 1883,
+                                    username: "admin",
+                                    password: "public",
+                                    topic: "EV",
+                                    message: "",
+                                    keepAlive: 60)
+        self.mqttMng?.connect()
         self.mqttMng?.mqtt!.delegate = self
-    }
-    
-    deinit {
-        playerItem?.removeObserver(self, forKeyPath: "loadedTimeRanges")
-        playerItem?.removeObserver(self, forKeyPath: "status")
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
@@ -136,14 +196,15 @@ class ControllVC: UIViewController {
 extension ControllVC: CocoaMQTTDelegate {
 
     func mqtt(_ mqtt: CocoaMQTT, didConnectAck ack: CocoaMQTTConnAck) {
+        print(#function)
         if ack == .accept {
-            mqtt.subscribe("topic", qos: CocoaMQTTQOS.qos1)
+            mqtt.subscribe("EV", qos: CocoaMQTTQOS.qos1)
             mqtt.ping()
         }
     }
 
     func mqtt(_ mqtt: CocoaMQTT, didPublishMessage message: CocoaMQTTMessage, id: UInt16) {
-        print("didPublishMessage with message: \(String(describing: message.string))")
+        print("didPublishMessage with message: \(message.string!)")
     }
 
     func mqtt(_ mqtt: CocoaMQTT, didPublishAck id: UInt16) {
@@ -154,9 +215,9 @@ extension ControllVC: CocoaMQTTDelegate {
 
         print("didReceivedMessage: \(String(describing: message.string)) with id \(id)")
 
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "MQTTMessageNotification"),
-                                        object: self,
-                                        userInfo: ["message": message.string!, "topic": message.topic])
+//        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "MQTTMessageNotification"),
+//                                        object: self,
+//                                        userInfo: ["message": message.string!, "topic": message.topic])
     }
 
     func mqtt(_ mqtt: CocoaMQTT, didSubscribeTopic topics: [String]) {

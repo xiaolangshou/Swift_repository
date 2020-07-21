@@ -27,6 +27,10 @@ class MQTTMng {
         mqtt?.publish(topic, withString: msg, qos: CocoaMQTTQOS.qos1)
     }
     
+    func connect() {
+        mqtt?.connect()
+    }
+    
     func disconnect() {
         mqtt?.disconnect()
     }

@@ -11,10 +11,17 @@ import SnapKit
 
 class StickView: UIView {
     
-    var frontBtnTap: (() -> (Void))?
-    var backBtnTap: (() -> (Void))?
-    var leftBtnTap: (() -> (Void))?
-    var rightBtnTap: (() -> (Void))?
+    var frontBtnTouchdown: (() -> (Void))?
+    var frontBtnTouchcancel: (() -> (Void))?
+    
+    var backBtnTouchdown: (() -> (Void))?
+    var backBtnTouchcancel: (() -> (Void))?
+    
+    var leftBtnTouchdown: (() -> (Void))?
+    var leftBtnTouchcancel: (() -> (Void))?
+    
+    var rightBtnTouchdown: (() -> (Void))?
+    var rightBtnTouchcancel: (() -> (Void))?
     
     var frontBtn = UIButton()
     var backBtn = UIButton()
@@ -46,7 +53,8 @@ class StickView: UIView {
             make.centerY.equalTo(self.snp.centerY).offset(-frame.height * 0.25)
             make.centerX.equalTo(self.snp.centerX).offset(-frame.width * 0.25)
         }
-        frontBtn.addTarget(self, action: #selector(frontBtnTapped), for: .touchUpInside)
+        frontBtn.addTarget(self, action: #selector(frontBtnTouchDown), for: .touchDown)
+        frontBtn.addTarget(self, action: #selector(frontBtnTouchCancel), for: .touchUpInside)
         
         backBtn.backgroundColor = UIColor.cyan
         backBtn.setTitle("BACK", for: UIControl.State.normal)
@@ -57,7 +65,8 @@ class StickView: UIView {
             make.centerY.equalTo(self.snp.centerY).offset(frame.height * 0.25)
             make.centerX.equalTo(self.snp.centerX).offset(-frame.width * 0.25)
         }
-        backBtn.addTarget(self, action: #selector(backBtnTapped), for: .touchUpInside)
+        backBtn.addTarget(self, action: #selector(backBtnTouchDown), for: .touchDown)
+        backBtn.addTarget(self, action: #selector(backBtnTouchCancel), for: .touchUpInside)
         
         leftBtn.setTitle("LEFT", for: UIControl.State.normal)
         leftBtn.backgroundColor = UIColor.cyan
@@ -68,7 +77,8 @@ class StickView: UIView {
             make.centerY.equalTo(self.snp.centerY)
             make.centerX.equalTo(self.snp.centerX).offset(-frame.width * 0.375)
         }
-        leftBtn.addTarget(self, action: #selector(leftBtnTapped), for: .touchUpInside)
+        leftBtn.addTarget(self, action: #selector(leftBtnTouchDown), for: .touchDown)
+        leftBtn.addTarget(self, action: #selector(leftBtnTouchCancel), for: .touchUpInside)
         
         rightBtn.setTitle("RIGHT", for: UIControl.State.normal)
         rightBtn.backgroundColor = UIColor.cyan
@@ -79,22 +89,39 @@ class StickView: UIView {
             make.centerY.equalTo(self.snp.centerY)
             make.centerX.equalTo(self.snp.centerX).offset(-frame.width * 0.125)
         }
-        rightBtn.addTarget(self, action: #selector(rightBtnTapped), for: .touchUpInside)
+        rightBtn.addTarget(self, action: #selector(rightBtnTouchDown), for: .touchDown)
+        rightBtn.addTarget(self, action: #selector(rightBtnTouchCancel), for: .touchUpInside)
     }
 
-    @objc func frontBtnTapped() {
-        frontBtnTap!()
+    @objc func frontBtnTouchDown() {
+        frontBtnTouchdown!()
     }
     
-    @objc func backBtnTapped() {
-        backBtnTap!()
+    @objc func frontBtnTouchCancel() {
+        frontBtnTouchcancel!()
     }
     
-    @objc func leftBtnTapped() {
-        leftBtnTap!()
+    @objc func backBtnTouchDown() {
+        backBtnTouchdown!()
     }
     
-    @objc func rightBtnTapped() {
-        rightBtnTap!()
+    @objc func backBtnTouchCancel() {
+        frontBtnTouchcancel!()
+    }
+    
+    @objc func leftBtnTouchDown() {
+        leftBtnTouchdown!()
+    }
+    
+    @objc func leftBtnTouchCancel() {
+        leftBtnTouchcancel!()
+    }
+    
+    @objc func rightBtnTouchDown() {
+        rightBtnTouchdown!()
+    }
+    
+    @objc func rightBtnTouchCancel() {
+        rightBtnTouchcancel!()
     }
 }
