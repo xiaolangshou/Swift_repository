@@ -7,16 +7,18 @@
 //
 
 import UIKit
+import WebKit
 import AVKit
 import SnapKit
 import AVFoundation
 import CocoaMQTT
 
-class ControllVC: UIViewController {
+class ControllVC: UIViewController, WKUIDelegate {
     
     static let shared = ControllVC()
     
     let playerView = TLPlayerView()
+    var webView = WKWebView()
     
     var mqttMng: MQTTMng?
     var stickView: StickView?
@@ -24,7 +26,7 @@ class ControllVC: UIViewController {
     var playerLayer: AVPlayerLayer?
     var player: AVPlayer?
     var playerItem: AVPlayerItem?
-    var urlStr = "http://bos.nj.bpc.baidu.com/tieba-smallvideo/11772_3c435014fb2dd9a5fd56a57cc369f6a0.mp4"
+    var urlStr = "http://192.168.253.2:8080/javascript_simple.html"
     
     enum controlModel: String {
         case left = "left"
@@ -59,7 +61,8 @@ class ControllVC: UIViewController {
         
         navigationController?.setNavigationBarHidden(true, animated: true)
         
-        setupLayer()
+        // setupLayer()
+        setupWebPlayer()
         
         stickView = StickView.init(frame: CGRect.init(x: 0, y: 0, width: view.frame.height, height: view.frame.width))
         view.addSubview(stickView ?? UIView())
@@ -142,6 +145,28 @@ class ControllVC: UIViewController {
         self.speed = Int(slider.value)
     }
     
+    func setupWebPlayer() {
+        
+        let webConfiguration = WKWebViewConfiguration()
+        webConfiguration.preferences.javaScriptEnabled = true
+        webConfiguration.preferences.javaScriptCanOpenWindowsAutomatically = false
+        let jSString = "var meta = document.createElement('meta'); meta.setAttribute('name', 'viewport'); meta.setAttribute('content', 'width=device-width'); document.getElementsByTagName('head')[0].appendChild(meta);"
+        let wkUserScript = WKUserScript.init(source: jSString,
+                                             injectionTime: WKUserScriptInjectionTime.atDocumentEnd,
+                                             forMainFrameOnly: true)
+        let userContentController = WKUserContentController()
+        userContentController.addUserScript(wkUserScript)
+        webView = WKWebView(frame: CGRect.init(x: 0, y: 0, width: UIScreen.width, height: UIScreen.height),
+                            configuration: webConfiguration)
+        webView.uiDelegate = self
+        webView.scrollView.isScrollEnabled = false
+        view.addSubview(webView)
+        
+        let myURL = URL(string: urlStr)
+        let myRequest = URLRequest(url: myURL!)
+        webView.load(myRequest)
+    }
+    
     func setupLayer() {
         guard let url = URL(string: urlStr) else { fatalError("连接错误") }
         
@@ -165,7 +190,7 @@ class ControllVC: UIViewController {
     
     func initMQTT() {
         self.mqttMng = MQTTMng.init(clientID: "id",
-                                    host: "192.168.1.65",
+                                    host: "192.168.1.220",
                                     port: 1883,
                                     username: "admin",
                                     password: "public",
