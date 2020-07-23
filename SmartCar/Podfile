@@ -1,0 +1,23 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'SmartCar' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  inhibit_all_warnings!
+
+  # Pods for SmartCar
+  pod 'SnapKit'
+  pod 'Then'
+  pod 'CocoaMQTT'
+
+  target 'SmartCarTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'SmartCarUITests' do
+    # Pods for testing
+  end
+
+end
