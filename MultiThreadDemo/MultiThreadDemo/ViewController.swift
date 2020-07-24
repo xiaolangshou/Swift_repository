@@ -322,13 +322,6 @@ class ViewController: UIViewController {
     }
     
     
-    
-    
-    
-    
-    
-    
-    
     /// program mark
     @objc func downloadImage(url: String?) {
         let data = try? Data.init(contentsOf: URL.init(string:url ?? self.imgUrl) ?? URL.init(fileURLWithPath: ""))
