@@ -146,22 +146,15 @@ class ControllVC: UIViewController, WKUIDelegate {
     }
     
     func setupWebPlayer() {
-        
-        let webConfiguration = WKWebViewConfiguration()
-        webConfiguration.preferences.javaScriptEnabled = true
-        webConfiguration.preferences.javaScriptCanOpenWindowsAutomatically = false
-        let jSString = "var meta = document.createElement('meta'); meta.setAttribute('name', 'viewport'); meta.setAttribute('content', 'width=device-width'); document.getElementsByTagName('head')[0].appendChild(meta);"
-        let wkUserScript = WKUserScript.init(source: jSString,
-                                             injectionTime: WKUserScriptInjectionTime.atDocumentEnd,
-                                             forMainFrameOnly: true)
-        let userContentController = WKUserContentController()
-        userContentController.addUserScript(wkUserScript)
-        webView = WKWebView(frame: CGRect.init(x: 0, y: 0, width: UIScreen.width, height: UIScreen.height),
-                            configuration: webConfiguration)
+        webView = WKWebView()
+        webView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         webView.uiDelegate = self
         webView.scrollView.isScrollEnabled = false
         view.addSubview(webView)
-        
+        webView.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
+        }
+
         let myURL = URL(string: urlStr)
         let myRequest = URLRequest(url: myURL!)
         webView.load(myRequest)
