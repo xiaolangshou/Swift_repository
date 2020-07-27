@@ -44,53 +44,53 @@ class StickView: UIView {
         
         self.backgroundColor = UIColor.clear
         
-        frontBtn.backgroundColor = UIColor.cyan
-        frontBtn.setTitle("FRONT", for: UIControl.State.normal)
         self.addSubview(frontBtn)
         frontBtn.snp.makeConstraints { (make) in
             make.width.equalTo(50)
-            make.height.equalTo(120)
+            make.height.equalTo(50)
             make.centerY.equalTo(self.snp.centerY).offset(-frame.height * 0.25)
             make.centerX.equalTo(self.snp.centerX).offset(-frame.width * 0.25)
         }
         frontBtn.addTarget(self, action: #selector(frontBtnTouchDown), for: .touchDown)
         frontBtn.addTarget(self, action: #selector(frontBtnTouchCancel), for: .touchUpInside)
+        frontBtn.setImage(UIImage.init(named: "front"), for: UIControl.State.normal)
+        frontBtn.setImage(UIImage.init(named: "front_touched"), for: UIControl.State.highlighted)
         
-        backBtn.backgroundColor = UIColor.cyan
-        backBtn.setTitle("BACK", for: UIControl.State.normal)
         self.addSubview(backBtn)
         backBtn.snp.makeConstraints { (make) in
             make.width.equalTo(50)
-            make.height.equalTo(120)
+            make.height.equalTo(50)
             make.centerY.equalTo(self.snp.centerY).offset(frame.height * 0.25)
             make.centerX.equalTo(self.snp.centerX).offset(-frame.width * 0.25)
         }
         backBtn.addTarget(self, action: #selector(backBtnTouchDown), for: .touchDown)
         backBtn.addTarget(self, action: #selector(backBtnTouchCancel), for: .touchUpInside)
+        backBtn.setImage(UIImage.init(named: "back"), for: UIControl.State.normal)
+        backBtn.setImage(UIImage.init(named: "back_touched"), for: UIControl.State.highlighted)
         
-        leftBtn.setTitle("LEFT", for: UIControl.State.normal)
-        leftBtn.backgroundColor = UIColor.cyan
         self.addSubview(leftBtn)
         leftBtn.snp.makeConstraints { (make) in
-            make.width.equalTo(120)
+            make.width.equalTo(50)
             make.height.equalTo(50)
             make.centerY.equalTo(self.snp.centerY)
             make.centerX.equalTo(self.snp.centerX).offset(-frame.width * 0.375)
         }
         leftBtn.addTarget(self, action: #selector(leftBtnTouchDown), for: .touchDown)
         leftBtn.addTarget(self, action: #selector(leftBtnTouchCancel), for: .touchUpInside)
-        
-        rightBtn.setTitle("RIGHT", for: UIControl.State.normal)
-        rightBtn.backgroundColor = UIColor.cyan
+        leftBtn.setImage(UIImage.init(named: "left"), for: UIControl.State.normal)
+        leftBtn.setImage(UIImage.init(named: "left_touched"), for: UIControl.State.highlighted)
+
         self.addSubview(rightBtn)
         rightBtn.snp.makeConstraints { (make) in
-            make.width.equalTo(120)
+            make.width.equalTo(50)
             make.height.equalTo(50)
             make.centerY.equalTo(self.snp.centerY)
             make.centerX.equalTo(self.snp.centerX).offset(-frame.width * 0.125)
         }
         rightBtn.addTarget(self, action: #selector(rightBtnTouchDown), for: .touchDown)
         rightBtn.addTarget(self, action: #selector(rightBtnTouchCancel), for: .touchUpInside)
+        rightBtn.setImage(UIImage.init(named: "right"), for: UIControl.State.normal)
+        rightBtn.setImage(UIImage.init(named: "right_touched"), for: UIControl.State.highlighted)
     }
 
     @objc func frontBtnTouchDown() {

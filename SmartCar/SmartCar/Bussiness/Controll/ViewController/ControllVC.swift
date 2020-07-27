@@ -64,7 +64,10 @@ class ControllVC: UIViewController, WKUIDelegate {
         // setupLayer()
         setupWebPlayer()
         
-        stickView = StickView.init(frame: CGRect.init(x: 0, y: 0, width: view.frame.height, height: view.frame.width))
+        stickView = StickView.init(frame: CGRect.init(x: 0,
+                                                      y: 0,
+                                                      width: view.frame.height,
+                                                      height: view.frame.width))
         view.addSubview(stickView ?? UIView())
         stickView?.frontBtnTouchdown = {
             
@@ -130,9 +133,9 @@ class ControllVC: UIViewController, WKUIDelegate {
         slider = UISlider()
         view.addSubview(slider!)
         slider!.snp.makeConstraints { make in
-            make.width.equalTo(120)
-            make.left.equalTo(10)
-            make.top.equalTo(60)
+            make.width.equalTo(UIScreen.width * 0.6)
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview().offset(UIScreen.height * 0.35)
         }
         slider!.value = 1
         slider!.minimumValue = 1
