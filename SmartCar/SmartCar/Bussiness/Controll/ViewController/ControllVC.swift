@@ -26,7 +26,8 @@ class ControllVC: UIViewController, WKUIDelegate {
     var playerLayer: AVPlayerLayer?
     var player: AVPlayer?
     var playerItem: AVPlayerItem?
-    var urlStr = "http://192.168.253.2:8080/javascript_simple.html"
+//    var urlStr = "http://192.168.253.2:8080/javascript_simple.html"
+    var urlStr = "http://192.168.1.76:8080/?action=stream"
     
     enum controlModel: String {
         case left = "left"

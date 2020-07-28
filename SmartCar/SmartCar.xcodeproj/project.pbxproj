@@ -49,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		0417873224C51E0000C5D041 /* MQTTMng.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQTTMng.swift; sourceTree = "<group>"; };
+		044A734124CFF798003516E9 /* Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridge-Header.h"; sourceTree = "<group>"; };
 		04BC30EB24C2A854008F4CE4 /* SmartCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BC30EE24C2A854008F4CE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04BC30F024C2A854008F4CE4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -273,6 +274,7 @@
 			children = (
 				04BC312024C2C540008F4CE4 /* NavVC.swift */,
 				04BC311E24C2C415008F4CE4 /* HomeVC.swift */,
+				044A734124CFF798003516E9 /* Bridge-Header.h */,
 			);
 			path = AppMain;
 			sourceTree = "<group>";
