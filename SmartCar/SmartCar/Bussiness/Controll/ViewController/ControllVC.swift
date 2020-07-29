@@ -50,6 +50,10 @@ class ControllVC: UIViewController, WKUIDelegate {
 
         setupView()
         initMQTT()
+        
+        var arr = [Int]()
+        arr.append(1)
+        for (i,v) in arr.enumerated()
     }
 
     deinit {
