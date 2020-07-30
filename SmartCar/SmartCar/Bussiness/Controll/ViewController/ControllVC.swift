@@ -18,22 +18,28 @@ class ControllVC: UIViewController, WKUIDelegate {
     static let shared = ControllVC()
     
     let playerView = TLPlayerView()
-    var webView = WKWebView()
     
+    var webView = WKWebView()
     var mqttMng: MQTTMng?
     var stickView: StickView?
     var slider: UISlider?
     var playerLayer: AVPlayerLayer?
     var player: AVPlayer?
     var playerItem: AVPlayerItem?
-//    var urlStr = "http://192.168.253.2:8080/javascript_simple.html"
-    var urlStr = "http://192.168.1.76:8080/?action=stream"
+    var urlStr = "http://192.168.253.2:8080/?action=stream"
     
     enum controlModel: String {
-        case left = "left"
-        case right = "right"
-        case up = "up"
-        case down = "down"
+        case left = "3"
+        case right = "4"
+        case up = "1"
+        case down = "2"
+    }
+    
+    enum gimbalModel: String {
+        case up = "top+"
+        case down = "top-"
+        case left = "bt-"
+        case right = "bt+"
     }
     
     var speed: Int = 1
@@ -43,6 +49,35 @@ class ControllVC: UIViewController, WKUIDelegate {
         
         DirectionTool.topViewController = navigationController?.topViewController;
         DirectionTool.forceOrientationAll()
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(recievedRotation),
+                                               name: UIDevice.orientationDidChangeNotification, object: nil)
+    }
+    
+    @objc func recievedRotation() {
+        switch UIDevice.current.orientation {
+        case UIDeviceOrientation.unknown:
+            print("方向未知")
+        case .portrait:
+            print("屏幕直立")
+            self.tabBarController?.tabBar.isHidden = false
+        case .portraitUpsideDown:
+            print("屏幕倒立")
+            self.tabBarController?.tabBar.isHidden = false
+        case .landscapeLeft:
+            print("屏幕左在上方")
+            self.tabBarController?.tabBar.isHidden = true
+        case .landscapeRight:
+            print("屏幕右在上方")
+            self.tabBarController?.tabBar.isHidden = true
+        case .faceUp:
+            print("屏幕朝上")
+        case .faceDown:
+            print("屏幕朝下")
+        @unknown default:
+            fatalError()
+        }
     }
     
     override func viewDidLoad() {
@@ -50,10 +85,6 @@ class ControllVC: UIViewController, WKUIDelegate {
 
         setupView()
         initMQTT()
-        
-        var arr = [Int]()
-        arr.append(1)
-        for (i,v) in arr.enumerated()
     }
 
     deinit {
@@ -78,8 +109,8 @@ class ControllVC: UIViewController, WKUIDelegate {
             
             if !GCDTimer.shared.isExistTimer(WithTimerName: "timer") {
                 GCDTimer.shared.scheduledDispatchTimer(WithTimerName: "timer", timeInterval: 0.1, queue: DispatchQueue.main, repeats: true) {
-                    print("\(controlModel.up)" + "\(self.speed)")
-                    let msg = "\(controlModel.up)" + "\(self.speed)"
+                    print("\(controlModel.up.rawValue)" + "\(self.speed)")
+                    let msg = "\(controlModel.up.rawValue)" + "\(self.speed)"
                     self.mqttMng?.sendMsg(topic: "EV", msg: msg)
                 }
             }
@@ -92,9 +123,9 @@ class ControllVC: UIViewController, WKUIDelegate {
             
             if !GCDTimer.shared.isExistTimer(WithTimerName: "timer") {
                 GCDTimer.shared.scheduledDispatchTimer(WithTimerName: "timer", timeInterval: 0.1, queue: DispatchQueue.main, repeats: true) {
-                    print("\(controlModel.down)" + "\(self.speed)")
+                    print("\(controlModel.down.rawValue)" + "\(self.speed)")
                     
-                    let msg = "\(controlModel.down)" + "\(self.speed)"
+                    let msg = "\(controlModel.down.rawValue)" + "\(self.speed)"
                     self.mqttMng?.sendMsg(topic: "EV", msg: msg)
                 }
             }
@@ -107,9 +138,9 @@ class ControllVC: UIViewController, WKUIDelegate {
             
             if !GCDTimer.shared.isExistTimer(WithTimerName: "timer") {
                 GCDTimer.shared.scheduledDispatchTimer(WithTimerName: "timer", timeInterval: 0.1, queue: DispatchQueue.main, repeats: true) {
-                    print("\(controlModel.left)" + "\(self.speed)")
+                    print("\(controlModel.left.rawValue)" + "\(self.speed)")
                     
-                    let msg = "\(controlModel.left)" + "\(self.speed)"
+                    let msg = "\(controlModel.left.rawValue)" + "\(self.speed)"
                     self.mqttMng?.sendMsg(topic: "EV", msg: msg)
                 }
             }
@@ -123,9 +154,9 @@ class ControllVC: UIViewController, WKUIDelegate {
             
             if !GCDTimer.shared.isExistTimer(WithTimerName: "timer") {
                 GCDTimer.shared.scheduledDispatchTimer(WithTimerName: "timer", timeInterval: 0.1, queue: DispatchQueue.main, repeats: true) {
-                    print("\(controlModel.right)" + "\(self.speed)")
+                    print("\(controlModel.right.rawValue)" + "\(self.speed)")
                     
-                    let msg = "\(controlModel.right)" + "\(self.speed)"
+                    let msg = "\(controlModel.right.rawValue)" + "\(self.speed)"
                     self.mqttMng?.sendMsg(topic: "EV", msg: msg)
                 }
             }
@@ -133,6 +164,22 @@ class ControllVC: UIViewController, WKUIDelegate {
         stickView?.rightBtnTouchcancel = {
             
             GCDTimer.shared.cancelTimer(WithTimerName: "timer")
+        }
+        
+        stickView?.leftAction = {
+            self.mqttMng?.sendMsg(topic: "EV", msg: gimbalModel.left.rawValue)
+        }
+        
+        stickView?.rightAction = {
+            self.mqttMng?.sendMsg(topic: "EV", msg: gimbalModel.right.rawValue)
+        }
+        
+        stickView?.upAction = {
+            self.mqttMng?.sendMsg(topic: "EV", msg: gimbalModel.up.rawValue)
+        }
+        
+        stickView?.downAction = {
+            self.mqttMng?.sendMsg(topic: "EV", msg: gimbalModel.down.rawValue)
         }
         
         slider = UISlider()

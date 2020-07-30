@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0417873324C51E0000C5D041 /* MQTTMng.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0417873224C51E0000C5D041 /* MQTTMng.swift */; };
+		0417912224D25DB700E4E198 /* QMJoyStick.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417912124D25DB700E4E198 /* QMJoyStick.m */; };
 		04BC30EF24C2A854008F4CE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC30EE24C2A854008F4CE4 /* AppDelegate.swift */; };
 		04BC30F124C2A854008F4CE4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC30F024C2A854008F4CE4 /* SceneDelegate.swift */; };
 		04BC30F624C2A854008F4CE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BC30F424C2A854008F4CE4 /* Main.storyboard */; };
@@ -49,7 +50,9 @@
 
 /* Begin PBXFileReference section */
 		0417873224C51E0000C5D041 /* MQTTMng.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQTTMng.swift; sourceTree = "<group>"; };
-		044A734124CFF798003516E9 /* Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridge-Header.h"; sourceTree = "<group>"; };
+		0417911924D24E4B00E4E198 /* SmartCar-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SmartCar-Bridging-Header.h"; sourceTree = "<group>"; };
+		0417912024D25DB700E4E198 /* QMJoyStick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMJoyStick.h; sourceTree = "<group>"; };
+		0417912124D25DB700E4E198 /* QMJoyStick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMJoyStick.m; sourceTree = "<group>"; };
 		04BC30EB24C2A854008F4CE4 /* SmartCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BC30EE24C2A854008F4CE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04BC30F024C2A854008F4CE4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -174,6 +177,8 @@
 		0417872F24C51CCE00C5D041 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0417912024D25DB700E4E198 /* QMJoyStick.h */,
+				0417912124D25DB700E4E198 /* QMJoyStick.m */,
 				04BC313224C2E312008F4CE4 /* StickView.swift */,
 			);
 			path = View;
@@ -274,7 +279,6 @@
 			children = (
 				04BC312024C2C540008F4CE4 /* NavVC.swift */,
 				04BC311E24C2C415008F4CE4 /* HomeVC.swift */,
-				044A734124CFF798003516E9 /* Bridge-Header.h */,
 			);
 			path = AppMain;
 			sourceTree = "<group>";
@@ -285,6 +289,7 @@
 				04BC312C24C2C9FC008F4CE4 /* GCDTimer.swift */,
 				04BC312E24C2CA32008F4CE4 /* TLPlayerView.swift */,
 				04BC313024C2CF57008F4CE4 /* DirectionTool.swift */,
+				0417911924D24E4B00E4E198 /* SmartCar-Bridging-Header.h */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -385,6 +390,7 @@
 				TargetAttributes = {
 					04BC30EA24C2A854008F4CE4 = {
 						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1150;
 					};
 					04BC310024C2A855008F4CE4 = {
 						CreatedOnToolsVersion = 11.5;
@@ -552,6 +558,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04BC312D24C2C9FC008F4CE4 /* GCDTimer.swift in Sources */,
+				0417912224D25DB700E4E198 /* QMJoyStick.m in Sources */,
 				04BC313124C2CF57008F4CE4 /* DirectionTool.swift in Sources */,
 				04BC312F24C2CA32008F4CE4 /* TLPlayerView.swift in Sources */,
 				04BC312924C2C69E008F4CE4 /* UIColor+Extension.swift in Sources */,
@@ -737,6 +744,7 @@
 			baseConfigurationReference = A28062EA18149279D0A4BCC7 /* Pods-SmartCar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LPF3349M6Q;
 				INFOPLIST_FILE = SmartCar/Info.plist;
@@ -746,6 +754,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = TLTech.SmartCar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SmartCar/Utils/SmartCar-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -756,6 +766,7 @@
 			baseConfigurationReference = B6E58986EDF1E0A12B0F7A0A /* Pods-SmartCar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LPF3349M6Q;
 				INFOPLIST_FILE = SmartCar/Info.plist;
@@ -765,6 +776,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = TLTech.SmartCar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SmartCar/Utils/SmartCar-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

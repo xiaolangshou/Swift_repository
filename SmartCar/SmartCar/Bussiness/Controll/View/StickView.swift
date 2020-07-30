@@ -23,10 +23,17 @@ class StickView: UIView {
     var rightBtnTouchdown: (() -> (Void))?
     var rightBtnTouchcancel: (() -> (Void))?
     
+    var upAction: (() -> (Void))?
+    var downAction: (() -> (Void))?
+    var leftAction: (() -> (Void))?
+    var rightAction: (() -> (Void))?
+    
     var frontBtn = UIButton()
     var backBtn = UIButton()
     var leftBtn = UIButton()
     var rightBtn = UIButton()
+    
+    var joystick: QMJoyStick?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -41,8 +48,6 @@ class StickView: UIView {
     }
     
     func setupView(frame: CGRect) {
-        
-        self.backgroundColor = UIColor.clear
         
         self.addSubview(frontBtn)
         frontBtn.snp.makeConstraints { (make) in
@@ -91,6 +96,12 @@ class StickView: UIView {
         rightBtn.addTarget(self, action: #selector(rightBtnTouchCancel), for: .touchUpInside)
         rightBtn.setImage(UIImage.init(named: "right"), for: UIControl.State.normal)
         rightBtn.setImage(UIImage.init(named: "right_touched"), for: UIControl.State.highlighted)
+        
+        joystick = QMJoyStick.init(frame: CGRect.init(x: frame.width * 0.75 + 50,
+                                                      y: frame.height * 0.5 - 50,
+                                                      width: 100,
+                                                      height: 100))
+        self.addSubview(joystick!)
     }
 
     @objc func frontBtnTouchDown() {
@@ -123,5 +134,52 @@ class StickView: UIView {
     
     @objc func rightBtnTouchCancel() {
         rightBtnTouchcancel!()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+
+        let touch = touches.first
+        let point: CGPoint = touch!.location(in: joystick)
+        self.callLineLength(point: point)
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+
+        let touch = touches.first
+        let point: CGPoint = touch!.location(in: joystick)
+        self.callLineLength(point: point)
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        let touch = touches.first
+        let point: CGPoint = touch!.location(in: joystick)
+        self.callLineLength(point: point)
+    }
+    
+    func callLineLength(point: CGPoint) {
+        
+        let centerx = joystick!.frame.size.width/2
+        let centery = joystick!.frame.size.height/2
+        
+        var x: CGFloat = 0
+        var y: CGFloat = 0
+
+        x = point.x - centerx;
+        y = point.y - centery;
+
+        if (x < y && x < -y) {
+            print("left")
+            leftAction!()
+        } else if (x > y && x > -y) {
+            print("right")
+            rightAction!()
+        } else if (x < y && x > -y) {
+            print("down")
+            downAction!()
+        } else {
+            print("up")
+            upAction!()
+        }
     }
 }
