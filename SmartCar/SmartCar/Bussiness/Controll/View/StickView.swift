@@ -138,23 +138,33 @@ class StickView: UIView {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 
-        let touch = touches.first
-        let point: CGPoint = touch!.location(in: joystick)
-        self.callLineLength(point: point)
+        action(touches, with: event)
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
 
-        let touch = touches.first
-        let point: CGPoint = touch!.location(in: joystick)
-        self.callLineLength(point: point)
+        action(touches, with: event)
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-        let touch = touches.first
-        let point: CGPoint = touch!.location(in: joystick)
-        self.callLineLength(point: point)
+        if GCDTimer.shared.isExistTimer(WithTimerName: "timer") {
+            GCDTimer.shared.cancelTimer(WithTimerName: "timer")
+        }
+    }
+    
+    func action(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        if !GCDTimer.shared.isExistTimer(WithTimerName: "timer") {
+            GCDTimer.shared.scheduledDispatchTimer(WithTimerName: "timer",
+                                                   timeInterval: 0.2,
+                                                   queue: DispatchQueue.main, repeats: true)
+            {
+                let touch = touches.first
+                let point: CGPoint = touch!.location(in: self.joystick)
+                self.callLineLength(point: point)
+            }
+        }
     }
     
     func callLineLength(point: CGPoint) {
@@ -167,19 +177,23 @@ class StickView: UIView {
 
         x = point.x - centerx;
         y = point.y - centery;
+        
+        let r = sqrt(x*x + y*y)
 
-        if (x < y && x < -y) {
+        if (x < y && x < -y && r <= 100) {
             print("left")
             leftAction!()
-        } else if (x > y && x > -y) {
+        } else if (x > y && x > -y && r <= 100) {
             print("right")
             rightAction!()
-        } else if (x < y && x > -y) {
+        } else if (x < y && x > -y && r <= 100) {
             print("down")
             downAction!()
-        } else {
+        } else if (r <= 100) {
             print("up")
             upAction!()
+        } else {
+            print("none")
         }
     }
 }

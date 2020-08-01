@@ -26,7 +26,7 @@ class ControllVC: UIViewController, WKUIDelegate {
     var playerLayer: AVPlayerLayer?
     var player: AVPlayer?
     var playerItem: AVPlayerItem?
-    var urlStr = "http://192.168.253.2:8080/?action=stream"
+    var urlStr = "http://192.168.1.88:8080/?action=stream"
     
     enum controlModel: String {
         case left = "3"
@@ -38,8 +38,8 @@ class ControllVC: UIViewController, WKUIDelegate {
     enum gimbalModel: String {
         case up = "top+"
         case down = "top-"
-        case left = "bt-"
-        case right = "bt+"
+        case left = "bt+"
+        case right = "bt-"
     }
     
     var speed: Int = 1
@@ -185,9 +185,9 @@ class ControllVC: UIViewController, WKUIDelegate {
         slider = UISlider()
         view.addSubview(slider!)
         slider!.snp.makeConstraints { make in
-            make.width.equalTo(UIScreen.width * 0.6)
+            make.width.equalTo(200)
             make.centerX.equalToSuperview()
-            make.centerY.equalToSuperview().offset(UIScreen.height * 0.35)
+            make.centerY.equalTo(60)
         }
         slider!.value = 1
         slider!.minimumValue = 1
