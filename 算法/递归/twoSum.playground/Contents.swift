@@ -15,32 +15,45 @@ public class ListNode {
     }
 }
 
-var carry = 0
 
+/*
+ 0.遍历两个节点
+ 1.进位
+ 2.两个临时变量，计算新表node点sum value
+ 3.头节点独立逻辑
+ 4.添加进位产生的新node
+ 5.返回新建node.next指向的表（不包含初始node）
+ */
 func addTwoNums(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
     
-    var v1 = 0
-    var v2 = 0
+    var a: ListNode? = l1
+    var b: ListNode? = l2
     
-    if l1 != nil {
-        v1 = l1!.val
+    var carry = 0
+    let result = ListNode.init(0)
+    var head = result
+    
+    // 遍历
+    while a != nil || b != nil {
+        
+        let sum = (a?.val ?? 0) + (b?.val ?? 0) + carry
+        carry = sum/10
+        
+        // 添加进位产生的新node
+        head.next = ListNode.init(sum % 10)
+        head = head.next!
+        
+        // 返回新建节点next指向的表
+        a = a?.next
+        b = b?.next
     }
-    if l2 != nil {
-        v2 = l2!.val
+    
+    // 头节点独立
+    if carry > 0 {
+        head.next = ListNode.init(carry)
     }
     
-    let temp = (v1 + v2 + carry) % 10
-    carry = (v1 + v2 + carry) / 10
-    
-    let node = ListNode.init(temp)
-    
-    if l1 != nil || l2 != nil {
-        if l1?.next != nil || l2?.next != nil {
-            node.next = addTwoNums(l1!.next, l2!.next)
-        }
-    }
-    
-    return node
+    return result.next
 }
 
 addTwoNums(ListNode.init(342), ListNode.init(465))
