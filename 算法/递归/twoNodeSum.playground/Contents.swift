@@ -28,7 +28,7 @@ public class ListNode {
 5.返回新建node.next指向的表（不包含初始node）*/
 
 func addTwoNumbers(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
-        let result: ListNode = ListNode(0)
+        let result: ListNode = ListNode(0) // 初始节点(无用节点)
         
         var p: ListNode? = l1
         var q: ListNode? = l2
