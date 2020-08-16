@@ -33,4 +33,4 @@ func countBinarySubstrings(_ s: String) -> Int {
     return results
 }
 
-countBinarySubstrings("10111")
+countBinarySubstrings("00110011")
