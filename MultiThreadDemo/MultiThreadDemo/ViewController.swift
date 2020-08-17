@@ -42,9 +42,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         setupView()
-        // threadDemo(threadMethod: ViewController.ThreadMethod.detachNew)
-        // operationDemo()
-        gcdDemo()
+        threadDemo(threadMethod: ViewController.ThreadMethod.detachNew)
+        operationDemo()
+//       gcdDemo()
     }
     
     func setupView() {
@@ -202,7 +202,7 @@ class ViewController: UIViewController {
         }
         
         let queue = OperationQueue.init()
-        queue.maxConcurrentOperationCount = 8
+        queue.maxConcurrentOperationCount = 4
         queue.addOperation(operation1)
         queue.addOperation(operation2)
         queue.addOperation(operation3)
