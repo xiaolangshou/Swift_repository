@@ -25,9 +25,9 @@ class ViewController: UIViewController {
         // serialQsyn()
         // serialQAsyn()
         // conQsyn()
-        // conQAsyn()
+         conQAsyn()
         // dispatchBarrier()
-        groupDemo()
+//        groupDemo()
     }
     
     /// 单线程，同步任务：报错
@@ -43,6 +43,7 @@ class ViewController: UIViewController {
         mainQueue.async {
             print("2")
         }
+        Thread.sleep(forTimeInterval: 3)
         print("3")
     }
     
