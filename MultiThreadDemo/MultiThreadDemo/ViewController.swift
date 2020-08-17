@@ -100,6 +100,7 @@ class ViewController: UIViewController {
                 let t = self?.startTime?.distance(to: self?.endTime ?? 0)
                 print("time consume =", t ?? 0)
             }
+            
             return
         }
         
