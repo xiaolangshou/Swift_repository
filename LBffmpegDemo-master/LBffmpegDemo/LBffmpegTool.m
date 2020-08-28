@@ -144,8 +144,8 @@ static id _instance = nil;
     frame_cnt=0;
     time_start = clock();
     
-    while(av_read_frame(pFormatCtx, packet)>=0){
-        if(packet->stream_index==videoindex){
+    while(av_read_frame(pFormatCtx, packet)>=0) {
+        if(packet->stream_index==videoindex) {
             ret = avcodec_decode_video2(pCodecCtx, pFrame, &got_picture, packet);
             if(ret < 0) {
                 printf("Decode Error.\n");
@@ -216,7 +216,7 @@ static id _instance = nil;
     
     NSString * info_ns = [NSString stringWithFormat:@"%s", info];
     
-//    NSLog(@"解码后的信息%@",info_ns);
+    NSLog(@"解码后的信息%@",info_ns);
     NSLog(@"文件输出路径%@",output_nsstr);
     
     return info_ns;
@@ -228,7 +228,7 @@ static id _instance = nil;
     char output_str_full[500]={0};
     
 //    NSString *input_str= [NSString stringWithFormat:@"resource.bundle/%@",self.input.text];
-    NSString *input_nsstr=[[[NSBundle mainBundle]resourcePath] stringByAppendingPathComponent:input_str];
+    NSString *input_nsstr = [[[NSBundle mainBundle]resourcePath] stringByAppendingPathComponent:input_str];
     
     sprintf(input_str_full,"%s",[input_nsstr UTF8String]);
     sprintf(output_str_full,"%s",[output_rtmpStr UTF8String]);
@@ -263,7 +263,6 @@ static id _instance = nil;
         printf( "Could not open input file.");
         goto end;
     }
-    
     
     if ((ret = avformat_find_stream_info(ifmt_ctx, 0)) < 0) {
         printf( "Failed to retrieve input stream information");
@@ -352,7 +351,6 @@ static id _instance = nil;
             int64_t now_time = av_gettime() - start_time;
             if (pts_time > now_time)
                 av_usleep(pts_time - now_time);
-            
         }
         
         in_stream  = ifmt_ctx->streams[pkt.stream_index];
@@ -394,14 +392,41 @@ end:
     return;
 }
 
-- (void)getMovieDevice:(UIView *)view{
+- (void)setFrameRate {
+    
+    AVCaptureDeviceFormat *bestFormat = nil;
+
+    AVFrameRateRange *bestFrameRateRange = nil;
+
+    for (AVCaptureDeviceFormat *format in [self.captureDevice formats] ) {
+        for ( AVFrameRateRange *range in format.videoSupportedFrameRateRanges ) {
+            if ( range.maxFrameRate > bestFrameRateRange.maxFrameRate ) {
+                bestFormat = format;
+                bestFrameRateRange = range;
+            }
+        }
+    }
+
+    if (bestFormat) {
+        if ([self.captureDevice lockForConfiguration: NULL] == YES ) {
+            self.captureDevice.activeFormat = bestFormat;
+            self.captureDevice.activeVideoMinFrameDuration = CMTimeMake(1, 30);
+            self.captureDevice.activeVideoMaxFrameDuration = CMTimeMake(1, 60);
+            [self.captureDevice unlockForConfiguration];
+        }
+    }
+}
+
+- (void)getMovieDevice:(UIView *)view {
+    
     self.captureSession = [[AVCaptureSession alloc] init];
-    //    captureSession.sessionPreset = AVCaptureSessionPresetMedium;
+    // captureSession.sessionPreset = AVCaptureSessionPresetMedium;
     self.captureSession.sessionPreset = AVCaptureSessionPreset1920x1080;
     
     self.videoSize = [self getVideoSize:self.captureSession.sessionPreset];
     
     self.captureDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    [self setFrameRate];
     
     NSError *error = nil;
     self.captureDeviceInput = [AVCaptureDeviceInput deviceInputWithDevice:self.captureDevice error:&error];
@@ -472,12 +497,10 @@ end:
     if (connection == self.videoCaptureConnection) {
         
         // Video
-        //        NSLog(@"在这里获得video sampleBuffer，做进一步处理（编码H.264）");
-        
+        // NSLog(@"在这里获得video sampleBuffer，做进一步处理（编码H.264）");
         
 #if encodeModel
         // encode
-        
 #else
         CVPixelBufferRef pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
         
@@ -507,16 +530,17 @@ end:
     //        // Audio
     //        NSLog(@"这里获得audio sampleBuffer，做进一步处理（编码AAC）");
     //    }
-    
 }
 
 
-- (void)showDevice{
+- (void)showDevice {
+    
     avdevice_register_all();
     AVFormatContext *pFormatCtx = avformat_alloc_context();
     AVDictionary* options = NULL;
     av_dict_set(&options,"list_devices","true",0);
     AVInputFormat *iformat = av_find_input_format("avfoundation");
+    
     printf("==AVFoundation Device Info===\n");
     avformat_open_input(&pFormatCtx,"",iformat,&options);
     printf("=============================\n");
@@ -524,7 +548,6 @@ end:
         printf("Couldn't open input stream.\n");
         return ;
     }
-    
 }
 
 

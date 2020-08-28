@@ -58,7 +58,6 @@ extern "C"
 @property(nonatomic, strong) AVCaptureVideoPreviewLayer      *previewLayer;
 
 
-
 +(instancetype)sharedInstance;
 
 /*input_str  输入的文件路径
