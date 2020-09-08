@@ -25,6 +25,7 @@ class ViewController: UIViewController {
         
         bindUI()
         TraditionalKVO()
+        flatMap()
     }
 
     fileprivate func bindUI() {
@@ -75,6 +76,36 @@ class ViewController: UIViewController {
     deinit {
         tx.removeObserver(self, forKeyPath: "text")
     }
+    
+    func flatMap() {
+        
+        let packages = [
+            Package(name: "Swift高阶函数编程", number: 1, price: 80.0, address: "中关村"),
+            Package(name: "Swift面向协议编程", number: 2, price: 88.0, address: "西二旗"),
+            Package(name: "Swift基础", number: 3, price: 35.0, address: "798"),
+            nil,
+            Package(name: "Swift进阶", number: 4, price: 80.0, address: "望京soho")
+        ]
+
+        let packageNames = packages.flatMap { (package) -> String? in
+            return package?.name
+        }
+        
+        print(packageNames)
+    }
 
 }
 
+struct Package {
+    var name: String
+    var number: Int
+    var price: Float
+    var address: String
+    
+    init(name: String, number: Int, price: Float, address: String) {
+        self.name = name
+        self.number = number
+        self.price = price
+        self.address = address
+    }
+}
