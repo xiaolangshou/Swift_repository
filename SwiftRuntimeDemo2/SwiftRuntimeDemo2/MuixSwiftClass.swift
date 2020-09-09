@@ -6,7 +6,6 @@
 //  Copyright © 2020 TLLTD. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class MuixSwiftClass: UIViewController {
@@ -51,8 +50,11 @@ extension MuixSwiftClass: SelfAware {
     }
     
     private static let takeOnceTime: Void = {
+        
         let originalSelector = #selector(viewWillAppear(_:))
         let swizzleSelector = #selector(swizzle_viewWillAppear(_:))
-        swizzlingForClass(MuixSwiftClass.self, originalSelector: originalSelector, swizzledSelector: swizzleSelector)
+        swizzlingForClass(MuixSwiftClass.self,
+                          originalSelector: originalSelector,
+                          swizzledSelector: swizzleSelector)
     }()
 }

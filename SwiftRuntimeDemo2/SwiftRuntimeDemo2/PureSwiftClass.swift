@@ -29,6 +29,7 @@ extension PureSwiftClass {
 }
 
 extension PureSwiftClass: SelfAware {
+    
     static func awake() {
         self.takeOnceTime
     }

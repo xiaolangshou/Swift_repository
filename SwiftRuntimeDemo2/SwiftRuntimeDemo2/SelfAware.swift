@@ -45,9 +45,11 @@ class NothingToSeeHere {
 }
 
 extension UIApplication {
+    
     private static let runOnce: Void = {
         NothingToSeeHere.harmlessFunction()
     }()
+    
     override open var next: UIResponder? {
         UIApplication.runOnce
         return super.next
