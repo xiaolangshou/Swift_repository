@@ -1,6 +1,13 @@
 {
   "info" : {
+<<<<<<< HEAD
     "author" : "xcode",
     "version" : 1
   }
 }
+=======
+    "version" : 1,
+    "author" : "xcode"
+  }
+}
+>>>>>>> e297d4e9d9940fb5bb441972aa287eb22254b858
