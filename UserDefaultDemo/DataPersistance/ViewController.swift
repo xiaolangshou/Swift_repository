@@ -10,56 +10,61 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let btn1 = UIButton.init(frame: CGRect.init(x: 30, y: 80, width: 100, height: 25))
-    let btn2 = UIButton.init(frame: CGRect.init(x: 30, y: 120, width: 100, height: 25))
-    let btn3 = UIButton.init(frame: CGRect.init(x: 30, y: 160, width: 100, height: 25))
+    let inputTF1 = UITextField.init(frame: CGRect.init(x: 30, y: 65, width: 120, height: 35))
+    let inputTF2 = UITextField.init(frame: CGRect.init(x: 160, y: 65, width: 120, height: 35))
+    let btn1 = UIButton.init(frame: CGRect.init(x: 30, y: 100, width: 100, height: 25))
+    let btn2 = UIButton.init(frame: CGRect.init(x: 30, y: 140, width: 100, height: 25))
+    let disLbl = UILabel.init(frame: CGRect.init(x: 30, y: 270, width: 200, height: 60))
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        initData()
         setupView()
     }
 
     func setupView() {
         
         view.addSubview(btn1)
-        btn1.setTitle("Userdefault", for: UIControl.State.normal)
+        btn1.setTitle("write data", for: UIControl.State.normal)
         btn1.backgroundColor = UIColor.cyan
         btn1.addTarget(self, action: #selector(btn1Tapped), for: UIControl.Event.touchUpInside)
         
         view.addSubview(btn2)
-        btn2.setTitle("Userdefault", for: UIControl.State.normal)
+        btn2.setTitle("read data", for: UIControl.State.normal)
         btn2.backgroundColor = UIColor.cyan
         btn2.addTarget(self, action: #selector(btn2Tapped), for: UIControl.Event.touchUpInside)
         
-        view.addSubview(btn3)
-        btn3.setTitle("Userdefault", for: UIControl.State.normal)
-        btn3.backgroundColor = UIColor.cyan
-        btn2.addTarget(self, action: #selector(btn3Tapped), for: UIControl.Event.touchUpInside)
+        view.addSubview(inputTF1)
+        inputTF1.placeholder = "input data here"
+        inputTF1.backgroundColor = UIColor.yellow
         
-    }
-    
-    func initData() {
-    
-        // 存账户信息
-        UserDefaults.AccountInfo.set(value: "chilli cheng", forKey: .userName)
-        UserDefaults.LoginInfo.set(value: "token", forKey: .token)
+        view.addSubview(inputTF2)
+        inputTF2.placeholder = "input data here"
+        inputTF2.backgroundColor = UIColor.yellow
+        
+        view.addSubview(disLbl)
+        disLbl.text = ""
+        disLbl.backgroundColor = UIColor.lightGray
     }
     
     @objc func btn1Tapped() {
         
-        let a = UserDefaults.AccountInfo.string(forKey: .userName)
-        let b = UserDefaults.LoginInfo.string(forKey: .token)
-        print("\(a ?? ""): \(b ?? "")")
+        // 存账户信息
+        UserDefaults.AccountInfo.set(value: inputTF1.text, forKey: .userName)
+        UserDefaults.LoginInfo.set(value: inputTF2.text, forKey: .token)
+        
+        let alert = UIAlertController(title: "success", message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+        
     }
     
     @objc func btn2Tapped() {
         
-    }
-    
-    @objc func btn3Tapped() {
+        let a = UserDefaults.AccountInfo.string(forKey: .userName)
+        let b = UserDefaults.LoginInfo.string(forKey: .token)
+        print("\(a ?? ""): \(b ?? "")")
         
+        disLbl.text = "\(a ?? "no input"), \(b ?? "no input")"
     }
 
 }
