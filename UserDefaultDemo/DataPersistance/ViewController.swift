@@ -8,7 +8,7 @@
 
 import UIKit
 
-/// Userdefault 适合存储轻量级的本地客户端数据，如存储大批量数据不推荐使用
+/// Userdefault 适合存储轻量级的本地客户端数据，如存储大批量数据推荐使用FMDB(SqlLite3)
 
 class ViewController: UIViewController {
     
