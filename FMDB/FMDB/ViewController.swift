@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var p = Person()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,19 +22,30 @@ class ViewController: UIViewController {
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-        loadPersons()
+//        loadPersons()
+        
+        deletePersons()
     }
     
     func insertPerson() {
         
-        _ = Person(dict: ["name" : "thomas" as AnyObject, "age": 29 as AnyObject])
+//        p = Person(dict: ["name" : "thomas" as AnyObject, "age": 29 as AnyObject])
+        let p = Person()
+        p.name = "liu tao"
+        p.age = 29
+        p.insertPerson()
     }
     
     func loadPersons() {
         
         Person.loadPersons { (models) -> () in
-            print(models)
+            print("\(models) \n")
         }
+    }
+    
+    func deletePersons() {
+        
+        p.deletePerson()
     }
 
     // dic -> json

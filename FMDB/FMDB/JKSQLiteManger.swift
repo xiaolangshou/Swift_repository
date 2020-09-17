@@ -28,7 +28,11 @@ class JKSQLiteManger: NSObject {
     func createTable() {
         
         // 1.编写SQL语句
-        let sql = "CREATE TABLE IF NOT EXISTS T_Person6( \n" + "id INTEGER PRIMARY KEY AUTOINCREMENT, \n" + "name TEXT, \n" + "age INTEGER \n" + "); \n"
+        let sql = "CREATE TABLE IF NOT EXISTS T_Person6( \n" +
+            "id INTEGER PRIMARY KEY AUTOINCREMENT, \n" +
+            "name TEXT, \n" +
+            "age INTEGER \n" +
+        "); \n"
         
         // 2.执行SQL语句
         // 注意点: 在FMDB中除了查询意外, 都称之为更新
