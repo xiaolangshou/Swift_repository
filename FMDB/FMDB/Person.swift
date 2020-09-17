@@ -38,14 +38,15 @@ class Person: NSObject {
         
         assert(name != nil, "必须要给name赋值")
         
-        let sql = "INSERT INTO T_Person6 (name, age) VALUES ('\(name!),\(age));"
+        let sql = "INSERT INTO T_Person6 (name, age) VALUES (\(name!),\(age));"
         
         JKSQLiteManger.shared.dbQueue?.inTransaction({ (db, rollback) in
             
             if !db.executeUpdate(sql, withArgumentsIn: []) {
                 rollback.pointee = true
+                print("insert success")
             } else {
-                
+                print("insert failed")
             }
         })
     }

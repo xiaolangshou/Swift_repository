@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         
         view.backgroundColor = UIColor.green
         
-       // insertPerson()
+        insertPerson()
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     
     func insertPerson() {
         
-        _ = Person(dict: ["name" : "mm" as AnyObject, "age": 90 as AnyObject])
+        _ = Person(dict: ["name" : "thomas" as AnyObject, "age": 29 as AnyObject])
     }
     
     func loadPersons() {
