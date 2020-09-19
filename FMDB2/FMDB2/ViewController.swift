@@ -14,10 +14,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         createTable()
-        insertElement(arr: ["Thomas", 29])
-        insertElement(arr: ["Liu Tao", 22])
-        updateElement(arr: ["Zhu Lili", 2])
+//        insertElement(arr: ["Thomas", 29])
+//        insertElement(arr: ["Liu Tao", 22])
+//        updateElement(arr: ["Zhu Lili", 2])
         deleteElement(arr: [2])
+//        insertDatas()
     }
 
     // 创建表
@@ -98,6 +99,7 @@ class ViewController: UIViewController {
     func deleteElement(arr: [Any]) {
         
         let sql = "DELETE FROM User WHERE id = ?;"
+        // let sql = "DELETE FROM User WHERE id between 21 and 26;"
         
         let db = SQLiteManager.shareManger().db
         if db.open() {
@@ -108,6 +110,26 @@ class ViewController: UIViewController {
             }
         }
         db.close()
+    }
+    
+    // 批量插入数据
+    func insertDatas() {
+        
+        if let queue = SQLiteManager.shareManger().dbQueue {
+            queue.inTransaction { (db, rollback) in
+                
+                do {
+                    for i in 0..<10 {
+                        try db.executeUpdate("INSERT INTO Userxx (name, age) VALUES (?,?)",
+                                             values: ["Taylor", i])
+                    }
+                    print("插入成功!")
+                } catch {
+                    print("插入失败，进行回滚！")
+                    rollback.pointee = true
+                }
+            }
+        }
     }
 }
 
