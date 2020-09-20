@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 import Alamofire
 
 class ViewController: UIViewController {
@@ -14,18 +15,25 @@ class ViewController: UIViewController {
     let urlStr = "http://freezing-cloud-6077.herokuapp.com/messages.json"
     var sessionManager = SessionManager()
     
-    typealias responseCallback = (DataResponse<Data>) -> Void
+    typealias responseCallback = (DataResponse<Any>) -> Void
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // method 1
         let config = URLSessionConfiguration.default
         config.timeoutIntervalForRequest = 15
         sessionManager = SessionManager.init(configuration: config)
-        
-        sendRequest(urlStr: urlStr) { (data) in
-            print(String.init(data: data.data ?? Data(), encoding: String.Encoding.utf8) ?? "")
+
+        sendRequest(urlStr: urlStr) { json in
+            if let value = json.result.value {
+                let json = JSON(value)
+                print(json[0]["message"])
+            }
         }
+        
+        // method 2
+        // sendRequest2(urlStr: urlStr)
     }
     
     func sendRequest(urlStr: String,
@@ -41,16 +49,26 @@ class ViewController: UIViewController {
                                                      parameters: parameters,
                                                      encoding: encoding,
                                                      headers: headers)
-            dataRequest.responseData { (data) in
-                callback(data)
+            dataRequest.validate().responseJSON { (json) in
+                switch json.result.isSuccess {
+                case true:
+                    callback(json)
+                case false:
+                    print(json.result.error ?? "Error")
+                }
             }
+            /*
+            dataRequest.responseString { (str) in
+                print("-------------")
+                print(str.result.value ?? "")
+            }*/
         } else {
             print("error")
         }
     }
     
-    /*
-    func sendRequest(urlStr: String) {
+    
+    func sendRequest2(urlStr: String) {
         
         if let url = URL.init(string: urlStr) {
             Alamofire.request(url).responseJSON { [weak self] (response) in
@@ -63,7 +81,7 @@ class ViewController: UIViewController {
         } else {
             print("url error")
         }
-    }*/
+    }
     
 }
 

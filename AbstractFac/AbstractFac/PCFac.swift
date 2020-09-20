@@ -20,14 +20,8 @@ protocol Keybo {
 
 class PCFac {
     
-<<<<<<< HEAD
     class func createMouse() -> Mouse { fatalError("nothing") }
     
     class func createKeyBo() -> Keybo { fatalError("nothing") }
-=======
-    func createMouse() -> Mouse { fatalError() }
-    
-    func createKeyBo() -> Keybo { fatalError() }
->>>>>>> ba9f9109965b4760819b84ac3ff1ddf87dd3818a
 
 }
