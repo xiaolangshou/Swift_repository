@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         sendRequest(urlStr: urlStr) { json in
             if let value = json.result.value {
                 let json = JSON(value)
-                print(json[0]["message"])
+                print(json)
             }
         }
         

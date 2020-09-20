@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0437ADFE25175A0800DEC845 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437ADFD25175A0800DEC845 /* Model.swift */; };
 		5645BB29417A353D52D3D860 /* Pods_AlamofireDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78339301247CCFB602B2365A /* Pods_AlamofireDemo.framework */; };
 		CF0E999D21B0E3DC00E62DE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0E999C21B0E3DC00E62DE7 /* AppDelegate.swift */; };
 		CF0E999F21B0E3DC00E62DE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0E999E21B0E3DC00E62DE7 /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0437ADFD25175A0800DEC845 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		6FC5392AA3DD7A2D20171E0E /* Pods-AlamofireDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlamofireDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlamofireDemo/Pods-AlamofireDemo.release.xcconfig"; sourceTree = "<group>"; };
 		78339301247CCFB602B2365A /* Pods_AlamofireDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlamofireDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8F4983BEA0DB1A1EF1CAFA2 /* Pods-AlamofireDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlamofireDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AlamofireDemo/Pods-AlamofireDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			children = (
 				CF0E999C21B0E3DC00E62DE7 /* AppDelegate.swift */,
 				CF0E999E21B0E3DC00E62DE7 /* ViewController.swift */,
+				0437ADFD25175A0800DEC845 /* Model.swift */,
 				CF0E99A021B0E3DC00E62DE7 /* Main.storyboard */,
 				CF0E99A321B0E3DF00E62DE7 /* Assets.xcassets */,
 				CF0E99A521B0E3DF00E62DE7 /* LaunchScreen.storyboard */,
@@ -352,6 +355,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0437ADFE25175A0800DEC845 /* Model.swift in Sources */,
 				CF0E999F21B0E3DC00E62DE7 /* ViewController.swift in Sources */,
 				CF0E999D21B0E3DC00E62DE7 /* AppDelegate.swift in Sources */,
 			);
