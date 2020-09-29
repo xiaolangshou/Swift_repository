@@ -30,10 +30,12 @@ class ViewModel: ViewModelProtocol {
     
     var greetingDidchange: ((ViewModelProtocol) -> ())?
     
+    // 绑定模型
     required init(person: Person) {
         self.person = person
     }
     
+    // 数据解析
     func showGreeting() {
         self.greeting = "Hello" + self.person.firstName! + " " + self.person.lastName!
     }
