@@ -44,9 +44,6 @@ class ViewController: UIViewController {
                                                          height: 50))
         self.showGreetingButton.backgroundColor = UIColor.green
         self.showGreetingButton.setTitle("Click me", for: .normal)
-        self.showGreetingButton.setTitle("You badass", for: .highlighted)
-        self.showGreetingButton.setTitleColor(UIColor.white, for: .normal)
-        self.showGreetingButton.setTitleColor(UIColor.red, for: .highlighted)
         self.showGreetingButton.translatesAutoresizingMaskIntoConstraints = false
         self.showGreetingButton.addTarget(self, action: #selector(didTapButton(sender:)), for: .touchUpInside)
         self.view.addSubview(self.showGreetingButton)
