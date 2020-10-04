@@ -8,6 +8,7 @@
 
 import Foundation
 
+// 结构体类型会自动生产成员构造器(初始函数)
 struct Person {
     
     var firstName: String?
