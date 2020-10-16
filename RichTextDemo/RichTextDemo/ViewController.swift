@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         allow_textView.textContainerInset = .zero
         allow_textView.textContainer.lineFragmentPadding = 0
         allow_textView.linkTextAttributes = [
-            NSAttributedString.Key.foregroundColor: UIColor.cyan
+            NSAttributedString.Key.foregroundColor: UIColor.blue
         ]
         allow_textView.delegate = self
         view.addSubview(allow_textView)
@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         if let font = UIFont(name: "PingFangSC-Medium", size: 12.0) {
             privacyMutableAttrStr = NSMutableAttributedString(string: protocolStr, attributes: [
                 NSAttributedString.Key.font: font,
-                NSAttributedString.Key.foregroundColor: UIColor.black
+                NSAttributedString.Key.foregroundColor: UIColor.cyan
             ])
         }
         
