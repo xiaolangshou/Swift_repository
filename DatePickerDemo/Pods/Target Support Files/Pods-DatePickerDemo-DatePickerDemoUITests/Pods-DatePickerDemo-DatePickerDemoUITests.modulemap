@@ -1,0 +1,6 @@
+framework module Pods_DatePickerDemo_DatePickerDemoUITests {
+  umbrella header "Pods-DatePickerDemo-DatePickerDemoUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
