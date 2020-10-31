@@ -25,6 +25,7 @@ class ViewController: UIViewController {
         getH3()
     }
     
+    // 只能计算单行高度
     func getH1() {
         
         let h = lbl.sizeThatFits(CGSize.init(width: 50, height: CGFloat(MAXFLOAT))).height
@@ -32,6 +33,7 @@ class ViewController: UIViewController {
         print(h)
     }
     
+    // 只能计算单行高度
     func getH2() {
         
         lbl.preferredMaxLayoutWidth = 200
@@ -41,14 +43,16 @@ class ViewController: UIViewController {
         print(h)
     }
     
+    //先算出文本宽度，再除以单行高度(不能识别换行符)
     func getH3() {
         
-        //先算出文本宽度
-        let w = lbl.attributedText?.boundingRect(with: CGSize(width: CGFloat(MAXFLOAT), height: 15),
+        let str = lbl.text!.replacingOccurrences(of: "\n", with: "")
+        let aStr = NSAttributedString.init(string: str)
+        let w = aStr.boundingRect(with: CGSize(width: CGFloat(MAXFLOAT), height: 15),
                                                  options: .usesLineFragmentOrigin,
             context: nil).width
 
-        let h = lbl.intrinsicContentSize.height * (w! / 50)
+        let h = lbl.intrinsicContentSize.height * (w / 50)
 
         print(h)
     }
