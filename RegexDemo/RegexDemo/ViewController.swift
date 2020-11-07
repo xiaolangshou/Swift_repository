@@ -2,68 +2,131 @@
 //  ViewController.swift
 //  RegexDemo
 //
-//  Created by lian shan on 2020/10/28.
+//  Created by lian shan on 2020/11/1.
 //
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
-
-    var loginBtn:UIButton!
-    var textField:UITextField!
+class ViewController: UIViewController {
     
+    let floatTF = UITextField.init(frame: CGRect.init(x: 50, y: 100, width: 100, height: 50))
+    let phoneNumTF = UITextField.init(frame: CGRect.init(x: 50, y: 160, width: 100, height: 50))
+    let cardNumTF = UITextField.init(frame: CGRect.init(x: 50, y: 230, width: 100, height: 50))
+    let expireTF = UITextField.init(frame: CGRect.init(x: 50, y: 300, width: 100, height: 50))
+    let cvvTF = UITextField.init(frame: CGRect.init(x: 50, y: 360, width: 100, height: 50))
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loginBtn = UIButton(frame: CGRect(x: 100, y: 150, width: 60, height: 40))
-        loginBtn.setTitle("Login", for: .normal)
-        loginBtn.backgroundColor = UIColor.lightGray
-        loginBtn.isEnabled = false
-        loginBtn.addTarget(self, action: #selector(login), for: .touchUpInside)
-        view.addSubview(loginBtn)
-
-        textField = UITextField(frame: CGRect(x: 100, y: 100, width: 200, height: 20))
-        textField.borderStyle = .roundedRect
-        textField.keyboardType = .default//设置键盘类型为数字键盘
-        view.addSubview(textField)
-        textField.delegate = self
+        view.addSubview(floatTF)
+        view.addSubview(phoneNumTF)
+        view.addSubview(cardNumTF)
+        view.addSubview(expireTF)
+        view.addSubview(cvvTF)
+        
+        floatTF.placeholder = "float"
+        floatTF.borderStyle = .roundedRect
+        floatTF.tag = 0
+        floatTF.delegate = self
+        
+        phoneNumTF.placeholder = "phone num"
+        phoneNumTF.borderStyle = .roundedRect
+        phoneNumTF.tag = 1
+        phoneNumTF.delegate = self
+        
+        cardNumTF.placeholder = "card num"
+        cardNumTF.borderStyle = .roundedRect
+        cardNumTF.tag = 2
+        cardNumTF.delegate = self
+        
+        expireTF.placeholder = "expire date"
+        expireTF.borderStyle = .roundedRect
+        expireTF.tag = 3
+        expireTF.delegate = self
+        
+        cvvTF.placeholder = "CVV"
+        cvvTF.borderStyle = .roundedRect
+        cvvTF.tag = 4
+        cvvTF.delegate = self
     }
+}
 
-    @objc func login(){
-        print(#function)
+extension ViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
-
+    
     func textField(_ textField: UITextField,
                    shouldChangeCharactersIn range: NSRange,
                    replacementString string: String) -> Bool
     {
-        guard textField.text != nil else {
-            return true
-        }
+        guard let text = textField.text else { return true }
         
         //新输入的
-        if string.count == 0 {
+        if string.count == 0 { return true }
+        
+        if textField.tag == 0 {
+            let regex = "^\\-?([1-9]\\d*|0)(\\.\\d{0,2})?$"
+            return isValid(text: text, replacementString: string, regex: regex, range: range)
+        } else if textField.tag == 1 {
+            return validateNumber(textField, range: range, string: string, limit: 11)
+        } else if textField.tag == 2 {
+            let regex = ""
+        } else if textField.tag == 3 {
+            // (0[1-9]|1[0-2])\/[0-9]{2}
+        } else if textField.tag == 4 {
+            
+        } else {
+            return false
+        }
+
+    }
+
+    func isValid(text: String,
+                 replacementString string: String,
+                 regex: String,
+                 range: NSRange) -> Bool
+    {
+        
+        let checkStr = (text as NSString).replacingCharacters(in: range, with: string)
+        
+        //正则表达式（只支持两位小数）
+        // "^\\-?([1-9]\\d*|0)(\\.\\d{0,2})?(\n)?$"
+        let predicte = NSPredicate(format:"SELF MATCHES %@", regex)
+        return predicte.evaluate(with: checkStr)
+    }
+    
+    // 11位数字
+    func validateNumber(_ textField: UITextField,
+                        range: NSRange,
+                        string: String,
+                        limit: Int = 11) -> Bool
+    {
+        
+        guard let text = textField.text else { return false }
+
+        let afterStr = (text as NSString).replacingCharacters(in: range, with: string)
+        print(afterStr)
+        
+        ///限制长度
+        if afterStr.count > limit {
+            textField.text = (afterStr as NSString).substring(to: limit)
+            return false
+        }
+        
+        ///是否都是数字
+        let set = CharacterSet(charactersIn: "0123456789").inverted
+        let filteredStr = string.components(separatedBy: set).joined(separator: "")
+        
+        if filteredStr == string {
             return true
         }
         
-        let str = textField.text
-            let expression = "^((13\\d)|(14[5|7])|(15([0-3]|[5-9]))|(18[^14]))\\d{8}$"//"|"表示什么就不用说了吧，[5|7]表示满足其中任意一个即匹配，数量唯一，"[0-3]"则表示满足0到之间的数字即匹配，数量唯一，[^14]表示匹配除1和4以外的任意字符，这里包括了字母，所以建议弹出键盘类型为数字键盘
-
-            let regex = try! NSRegularExpression(pattern: expression, options: .allowCommentsAndWhitespace)//生成NSRegularExpression实例
-
-        let numberOfMatches = regex.numberOfMatches(in: str ?? "", options:.reportProgress, range: NSMakeRange(0, (str! as NSString).length))//获取匹配的个数
-
-            if numberOfMatches != 0 {//如果匹配，则登录按钮生效，否则反之
-                loginBtn.backgroundColor = UIColor.brown
-                loginBtn.isEnabled = true
-                
-                return true
-            }else{
-                loginBtn.backgroundColor = UIColor.lightGray
-                loginBtn.isEnabled = false
-                
-                return false
-            }
+        return false
     }
+
 }
+
 

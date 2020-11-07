@@ -1,13 +1,14 @@
 //
 //  AppDelegate.swift
-//  RegexDemo
+//  PlistToVCDemo
 //
-//  Created by lian shan on 2020/11/1.
+//  Created by Thomas Lau on 2020/10/31.
+//  Copyright © 2020 TLLTD. All rights reserved.
 //
 
 import UIKit
 
-@main
+@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
