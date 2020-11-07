@@ -68,16 +68,28 @@ extension ViewController: UITextFieldDelegate {
         if string.count == 0 { return true }
         
         if textField.tag == 0 {
+            // ^ 开始
+            // \\- 用于选取一个字符域
+            // ? 重复单字符或表达式零或一次
+            // [1-9] 单个字符，1到9的
+            // \\d 数字
+            // * 重复单字符或表达式零次以上
+            // () 对表达式进行分隔
+            // \\. 点
+            // {0,2} 0到2个数字
             let regex = "^\\-?([1-9]\\d*|0)(\\.\\d{0,2})?$"
             return isValid(text: text, replacementString: string, regex: regex, range: range)
-        } else if textField.tag == 1 {
-            return validateNumber(textField, range: range, string: string, limit: 11)
-        } else if textField.tag == 2 {
-            let regex = ""
+        } else if textField.tag == 1 { // name on card
+            return true
+        } else if textField.tag == 2 {// card num
+            let regex = "^([1-9]\\d{0,3})?(\\s\\d{0,4})?(\\s\\d{0,4})?(\\s\\d{0,4})?$"
+            return isValid(text: text, replacementString: string, regex: regex, range: range)
         } else if textField.tag == 3 {
-            // (0[1-9]|1[0-2])\/[0-9]{2}
+            let regex = "^(0[1-9]|1[0-2])?\\/[0-9]{2}?$"
+            return isValid(text: text, replacementString: string, regex: regex, range: range)
         } else if textField.tag == 4 {
-            
+            let regex = "^([1-9]\\d{0,2})?$"// cvv
+            return isValid(text: text, replacementString: string, regex: regex, range: range)
         } else {
             return false
         }
@@ -98,11 +110,11 @@ extension ViewController: UITextFieldDelegate {
         return predicte.evaluate(with: checkStr)
     }
     
-    // 11位数字
+    // 16位数字
     func validateNumber(_ textField: UITextField,
                         range: NSRange,
                         string: String,
-                        limit: Int = 11) -> Bool
+                        limit: Int = 16) -> Bool
     {
         
         guard let text = textField.text else { return false }
