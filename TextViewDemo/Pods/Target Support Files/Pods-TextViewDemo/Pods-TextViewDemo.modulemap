@@ -1,0 +1,6 @@
+framework module Pods_TextViewDemo {
+  umbrella header "Pods-TextViewDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}
