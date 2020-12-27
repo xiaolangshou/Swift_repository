@@ -9,11 +9,22 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let lbl = UILabel.init(frame: CGRect.init(x: 100,
+                                              y: 200,
+                                              width: 150,
+                                              height: 50))
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         view.backgroundColor = UIColor.cyan
+        
+        title = "aaa"
+        
+        
+        view.addSubview(lbl)
+        lbl.text = "ni hao ma"
     }
 
 

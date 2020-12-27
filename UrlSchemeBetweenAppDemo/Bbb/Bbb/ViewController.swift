@@ -24,7 +24,6 @@ class ViewController: UIViewController {
     @objc func btnTapped() {
         
         let url = URL(string: "aaa://TLTech.Aaa")!
-//        let url = URL(string: "https://")!
         
         if UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.openURL(url)

@@ -11,17 +11,23 @@ import UIKit
 class ViewController: UIViewController {
 
     
-    let lbl = UILabel()
+    let lbl = UILabel.init(frame: CGRect.init(x: 80,
+                                              y: 100,
+                                              width: 200,
+                                              height: 0))
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        view.addSubview(lbl)
+        view.addSubview(lbl)
+        lbl.backgroundColor = UIColor.cyan
+        lbl.numberOfLines = 0
+        lbl.lineBreakMode = .byWordWrapping
         
         lbl.text = "asdfjlaksdjflakjjjjjjjjjjjjjjj\n\nadklsjflaskdjflkasjdflkasjdflkjasdklfjaslkdflkasdflasdfsahdajdskfjaklsjdfklsjdflasjdflkajsdflkjalk\n\nsdjflaksjdflksjdflkasdjlkfajsdflkajsdlkfjaklsdjfldsjflkasdjflkasjdlfkjadslkdfjkladjflkadsjflksa\n\ndjflkajsdfkljaskdfjlaskjdflkasdjfklsajflksdfliasduitrutgjkdbv;kadfhpasidfhiasdjfsdjfo;i\n\nsdjgfhdskjgasdog[oiadshgsdfj;aldskhflasdjfiu[qeuthkjfl;asdkjflksdjfldksjf\n\ndls;kjflksdjflsdjfadgdufidsfjsdnvskdvmds"
         
-        getH1()
-        getH2()
+//        getH1()
+//        getH2()
         getH3()
     }
     
@@ -48,13 +54,14 @@ class ViewController: UIViewController {
         
         let str = lbl.text!.replacingOccurrences(of: "\n", with: "")
         let aStr = NSAttributedString.init(string: str)
-        let w = aStr.boundingRect(with: CGSize(width: CGFloat(MAXFLOAT), height: 15),
+        let h = aStr.boundingRect(with: CGSize(width: UIScreen.main.bounds.width, height: 15),
                                                  options: .usesLineFragmentOrigin,
-            context: nil).width
-
-        let h = lbl.intrinsicContentSize.height * (w / 50)
+            context: nil).height
 
         print(h)
+        
+        lbl.frame.size.height = h
+        lbl.setNeedsLayout()
     }
 
 
