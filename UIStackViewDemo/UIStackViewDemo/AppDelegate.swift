@@ -2,13 +2,12 @@
 //  AppDelegate.swift
 //  UIStackViewDemo
 //
-//  Created by Liu Tao on 2020/5/24.
-//  Copyright © 2020 Liu Tao. All rights reserved.
+//  Created by lian shan on 2021/1/6.
 //
 
 import UIKit
 
-@UIApplicationMain
+@main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 

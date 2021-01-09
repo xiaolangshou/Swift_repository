@@ -1,0 +1,757 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02848515F4E3A0DC772BE761 /* Pods_GradientLayerDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1426D473AEB606C1E68676AA /* Pods_GradientLayerDemoTests.framework */; };
+		6869AD8FA09AE6C41A7021B4 /* Pods_GradientLayerDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9181CA3ADFB27B9863A7D119 /* Pods_GradientLayerDemo.framework */; };
+		CB30D6E125A5783A00AFC425 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB30D6E025A5783A00AFC425 /* AppDelegate.swift */; };
+		CB30D6E325A5783A00AFC425 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB30D6E225A5783A00AFC425 /* SceneDelegate.swift */; };
+		CB30D6E525A5783A00AFC425 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB30D6E425A5783A00AFC425 /* ViewController.swift */; };
+		CB30D6E825A5783A00AFC425 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB30D6E625A5783A00AFC425 /* Main.storyboard */; };
+		CB30D6EA25A5783D00AFC425 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB30D6E925A5783D00AFC425 /* Assets.xcassets */; };
+		CB30D6ED25A5783D00AFC425 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB30D6EB25A5783D00AFC425 /* LaunchScreen.storyboard */; };
+		CB30D6F825A5783D00AFC425 /* GradientLayerDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB30D6F725A5783D00AFC425 /* GradientLayerDemoTests.swift */; };
+		CB30D70325A5783D00AFC425 /* GradientLayerDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB30D70225A5783D00AFC425 /* GradientLayerDemoUITests.swift */; };
+		CB30D88825A59FAA00AFC425 /* LAPBottomLineTF.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB30D88725A59FAA00AFC425 /* LAPBottomLineTF.swift */; };
+		F0D350E70AFEE3EE81E8F701 /* Pods_GradientLayerDemo_GradientLayerDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB6A7A70F65A77E89A588D5A /* Pods_GradientLayerDemo_GradientLayerDemoUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CB30D6F425A5783D00AFC425 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB30D6D525A5783A00AFC425 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB30D6DC25A5783A00AFC425;
+			remoteInfo = GradientLayerDemo;
+		};
+		CB30D6FF25A5783D00AFC425 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB30D6D525A5783A00AFC425 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB30D6DC25A5783A00AFC425;
+			remoteInfo = GradientLayerDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0867416DC9993106E39371CC /* Pods-GradientLayerDemo-GradientLayerDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GradientLayerDemo-GradientLayerDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-GradientLayerDemo-GradientLayerDemoUITests/Pods-GradientLayerDemo-GradientLayerDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1426D473AEB606C1E68676AA /* Pods_GradientLayerDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GradientLayerDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		195217627BEDBBEEDC1E0E4A /* Pods-GradientLayerDemo-GradientLayerDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GradientLayerDemo-GradientLayerDemoUITests.release.xcconfig"; path = "Target Support Files/Pods-GradientLayerDemo-GradientLayerDemoUITests/Pods-GradientLayerDemo-GradientLayerDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6E9FDE921D15A12E493880F2 /* Pods-GradientLayerDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GradientLayerDemoTests.release.xcconfig"; path = "Target Support Files/Pods-GradientLayerDemoTests/Pods-GradientLayerDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		8C7BB4925B1E78DC26F1465A /* Pods-GradientLayerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GradientLayerDemo.debug.xcconfig"; path = "Target Support Files/Pods-GradientLayerDemo/Pods-GradientLayerDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		9181CA3ADFB27B9863A7D119 /* Pods_GradientLayerDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GradientLayerDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0C67D738F382935F54ED293 /* Pods-GradientLayerDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GradientLayerDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-GradientLayerDemoTests/Pods-GradientLayerDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CB30D6DD25A5783A00AFC425 /* GradientLayerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GradientLayerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB30D6E025A5783A00AFC425 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CB30D6E225A5783A00AFC425 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CB30D6E425A5783A00AFC425 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CB30D6E725A5783A00AFC425 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CB30D6E925A5783D00AFC425 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CB30D6EC25A5783D00AFC425 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CB30D6EE25A5783D00AFC425 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB30D6F325A5783D00AFC425 /* GradientLayerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GradientLayerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB30D6F725A5783D00AFC425 /* GradientLayerDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLayerDemoTests.swift; sourceTree = "<group>"; };
+		CB30D6F925A5783D00AFC425 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB30D6FE25A5783D00AFC425 /* GradientLayerDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GradientLayerDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB30D70225A5783D00AFC425 /* GradientLayerDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLayerDemoUITests.swift; sourceTree = "<group>"; };
+		CB30D70425A5783D00AFC425 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB30D88725A59FAA00AFC425 /* LAPBottomLineTF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LAPBottomLineTF.swift; sourceTree = "<group>"; };
+		DB6A7A70F65A77E89A588D5A /* Pods_GradientLayerDemo_GradientLayerDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GradientLayerDemo_GradientLayerDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFFF5DAABE06C73BB1665814 /* Pods-GradientLayerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GradientLayerDemo.release.xcconfig"; path = "Target Support Files/Pods-GradientLayerDemo/Pods-GradientLayerDemo.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CB30D6DA25A5783A00AFC425 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6869AD8FA09AE6C41A7021B4 /* Pods_GradientLayerDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB30D6F025A5783D00AFC425 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02848515F4E3A0DC772BE761 /* Pods_GradientLayerDemoTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB30D6FB25A5783D00AFC425 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0D350E70AFEE3EE81E8F701 /* Pods_GradientLayerDemo_GradientLayerDemoUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		139708337E542EEC0BED42C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9181CA3ADFB27B9863A7D119 /* Pods_GradientLayerDemo.framework */,
+				DB6A7A70F65A77E89A588D5A /* Pods_GradientLayerDemo_GradientLayerDemoUITests.framework */,
+				1426D473AEB606C1E68676AA /* Pods_GradientLayerDemoTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		79298B83A1A8EB4E4CE787B8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8C7BB4925B1E78DC26F1465A /* Pods-GradientLayerDemo.debug.xcconfig */,
+				DFFF5DAABE06C73BB1665814 /* Pods-GradientLayerDemo.release.xcconfig */,
+				0867416DC9993106E39371CC /* Pods-GradientLayerDemo-GradientLayerDemoUITests.debug.xcconfig */,
+				195217627BEDBBEEDC1E0E4A /* Pods-GradientLayerDemo-GradientLayerDemoUITests.release.xcconfig */,
+				B0C67D738F382935F54ED293 /* Pods-GradientLayerDemoTests.debug.xcconfig */,
+				6E9FDE921D15A12E493880F2 /* Pods-GradientLayerDemoTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CB30D6D425A5783A00AFC425 = {
+			isa = PBXGroup;
+			children = (
+				CB30D6DF25A5783A00AFC425 /* GradientLayerDemo */,
+				CB30D6F625A5783D00AFC425 /* GradientLayerDemoTests */,
+				CB30D70125A5783D00AFC425 /* GradientLayerDemoUITests */,
+				CB30D6DE25A5783A00AFC425 /* Products */,
+				79298B83A1A8EB4E4CE787B8 /* Pods */,
+				139708337E542EEC0BED42C8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CB30D6DE25A5783A00AFC425 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB30D6DD25A5783A00AFC425 /* GradientLayerDemo.app */,
+				CB30D6F325A5783D00AFC425 /* GradientLayerDemoTests.xctest */,
+				CB30D6FE25A5783D00AFC425 /* GradientLayerDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CB30D6DF25A5783A00AFC425 /* GradientLayerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				CB30D6E025A5783A00AFC425 /* AppDelegate.swift */,
+				CB30D6E225A5783A00AFC425 /* SceneDelegate.swift */,
+				CB30D6E425A5783A00AFC425 /* ViewController.swift */,
+				CB30D88725A59FAA00AFC425 /* LAPBottomLineTF.swift */,
+				CB30D6E625A5783A00AFC425 /* Main.storyboard */,
+				CB30D6E925A5783D00AFC425 /* Assets.xcassets */,
+				CB30D6EB25A5783D00AFC425 /* LaunchScreen.storyboard */,
+				CB30D6EE25A5783D00AFC425 /* Info.plist */,
+			);
+			path = GradientLayerDemo;
+			sourceTree = "<group>";
+		};
+		CB30D6F625A5783D00AFC425 /* GradientLayerDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				CB30D6F725A5783D00AFC425 /* GradientLayerDemoTests.swift */,
+				CB30D6F925A5783D00AFC425 /* Info.plist */,
+			);
+			path = GradientLayerDemoTests;
+			sourceTree = "<group>";
+		};
+		CB30D70125A5783D00AFC425 /* GradientLayerDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CB30D70225A5783D00AFC425 /* GradientLayerDemoUITests.swift */,
+				CB30D70425A5783D00AFC425 /* Info.plist */,
+			);
+			path = GradientLayerDemoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CB30D6DC25A5783A00AFC425 /* GradientLayerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB30D70725A5783D00AFC425 /* Build configuration list for PBXNativeTarget "GradientLayerDemo" */;
+			buildPhases = (
+				30846162D9DF363FEB2D6735 /* [CP] Check Pods Manifest.lock */,
+				CB30D6D925A5783A00AFC425 /* Sources */,
+				CB30D6DA25A5783A00AFC425 /* Frameworks */,
+				CB30D6DB25A5783A00AFC425 /* Resources */,
+				35444036EA0D8E87A94EC638 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GradientLayerDemo;
+			productName = GradientLayerDemo;
+			productReference = CB30D6DD25A5783A00AFC425 /* GradientLayerDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CB30D6F225A5783D00AFC425 /* GradientLayerDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB30D70A25A5783D00AFC425 /* Build configuration list for PBXNativeTarget "GradientLayerDemoTests" */;
+			buildPhases = (
+				2FD2E9A87422610ECAC12797 /* [CP] Check Pods Manifest.lock */,
+				CB30D6EF25A5783D00AFC425 /* Sources */,
+				CB30D6F025A5783D00AFC425 /* Frameworks */,
+				CB30D6F125A5783D00AFC425 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CB30D6F525A5783D00AFC425 /* PBXTargetDependency */,
+			);
+			name = GradientLayerDemoTests;
+			productName = GradientLayerDemoTests;
+			productReference = CB30D6F325A5783D00AFC425 /* GradientLayerDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CB30D6FD25A5783D00AFC425 /* GradientLayerDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB30D70D25A5783D00AFC425 /* Build configuration list for PBXNativeTarget "GradientLayerDemoUITests" */;
+			buildPhases = (
+				8961C259D364221053944A6D /* [CP] Check Pods Manifest.lock */,
+				CB30D6FA25A5783D00AFC425 /* Sources */,
+				CB30D6FB25A5783D00AFC425 /* Frameworks */,
+				CB30D6FC25A5783D00AFC425 /* Resources */,
+				5FA0F51168C0F5E5122259CF /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CB30D70025A5783D00AFC425 /* PBXTargetDependency */,
+			);
+			name = GradientLayerDemoUITests;
+			productName = GradientLayerDemoUITests;
+			productReference = CB30D6FE25A5783D00AFC425 /* GradientLayerDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CB30D6D525A5783A00AFC425 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					CB30D6DC25A5783A00AFC425 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					CB30D6F225A5783D00AFC425 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = CB30D6DC25A5783A00AFC425;
+					};
+					CB30D6FD25A5783D00AFC425 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = CB30D6DC25A5783A00AFC425;
+					};
+				};
+			};
+			buildConfigurationList = CB30D6D825A5783A00AFC425 /* Build configuration list for PBXProject "GradientLayerDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CB30D6D425A5783A00AFC425;
+			productRefGroup = CB30D6DE25A5783A00AFC425 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CB30D6DC25A5783A00AFC425 /* GradientLayerDemo */,
+				CB30D6F225A5783D00AFC425 /* GradientLayerDemoTests */,
+				CB30D6FD25A5783D00AFC425 /* GradientLayerDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CB30D6DB25A5783A00AFC425 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB30D6ED25A5783D00AFC425 /* LaunchScreen.storyboard in Resources */,
+				CB30D6EA25A5783D00AFC425 /* Assets.xcassets in Resources */,
+				CB30D6E825A5783A00AFC425 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB30D6F125A5783D00AFC425 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB30D6FC25A5783D00AFC425 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2FD2E9A87422610ECAC12797 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GradientLayerDemoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		30846162D9DF363FEB2D6735 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GradientLayerDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		35444036EA0D8E87A94EC638 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GradientLayerDemo/Pods-GradientLayerDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GradientLayerDemo/Pods-GradientLayerDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GradientLayerDemo/Pods-GradientLayerDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5FA0F51168C0F5E5122259CF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GradientLayerDemo-GradientLayerDemoUITests/Pods-GradientLayerDemo-GradientLayerDemoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GradientLayerDemo-GradientLayerDemoUITests/Pods-GradientLayerDemo-GradientLayerDemoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GradientLayerDemo-GradientLayerDemoUITests/Pods-GradientLayerDemo-GradientLayerDemoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8961C259D364221053944A6D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GradientLayerDemo-GradientLayerDemoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CB30D6D925A5783A00AFC425 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB30D88825A59FAA00AFC425 /* LAPBottomLineTF.swift in Sources */,
+				CB30D6E525A5783A00AFC425 /* ViewController.swift in Sources */,
+				CB30D6E125A5783A00AFC425 /* AppDelegate.swift in Sources */,
+				CB30D6E325A5783A00AFC425 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB30D6EF25A5783D00AFC425 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB30D6F825A5783D00AFC425 /* GradientLayerDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB30D6FA25A5783D00AFC425 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB30D70325A5783D00AFC425 /* GradientLayerDemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CB30D6F525A5783D00AFC425 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CB30D6DC25A5783A00AFC425 /* GradientLayerDemo */;
+			targetProxy = CB30D6F425A5783D00AFC425 /* PBXContainerItemProxy */;
+		};
+		CB30D70025A5783D00AFC425 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CB30D6DC25A5783A00AFC425 /* GradientLayerDemo */;
+			targetProxy = CB30D6FF25A5783D00AFC425 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CB30D6E625A5783A00AFC425 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB30D6E725A5783A00AFC425 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CB30D6EB25A5783D00AFC425 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB30D6EC25A5783D00AFC425 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CB30D70525A5783D00AFC425 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CB30D70625A5783D00AFC425 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CB30D70825A5783D00AFC425 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C7BB4925B1E78DC26F1465A /* Pods-GradientLayerDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LPF3349M6Q;
+				INFOPLIST_FILE = GradientLayerDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lazada.GradientLayerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		CB30D70925A5783D00AFC425 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFFF5DAABE06C73BB1665814 /* Pods-GradientLayerDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LPF3349M6Q;
+				INFOPLIST_FILE = GradientLayerDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lazada.GradientLayerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		CB30D70B25A5783D00AFC425 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0C67D738F382935F54ED293 /* Pods-GradientLayerDemoTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LPF3349M6Q;
+				INFOPLIST_FILE = GradientLayerDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lazada.GradientLayerDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GradientLayerDemo.app/GradientLayerDemo";
+			};
+			name = Debug;
+		};
+		CB30D70C25A5783D00AFC425 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E9FDE921D15A12E493880F2 /* Pods-GradientLayerDemoTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LPF3349M6Q;
+				INFOPLIST_FILE = GradientLayerDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lazada.GradientLayerDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GradientLayerDemo.app/GradientLayerDemo";
+			};
+			name = Release;
+		};
+		CB30D70E25A5783D00AFC425 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0867416DC9993106E39371CC /* Pods-GradientLayerDemo-GradientLayerDemoUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LPF3349M6Q;
+				INFOPLIST_FILE = GradientLayerDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lazada.GradientLayerDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GradientLayerDemo;
+			};
+			name = Debug;
+		};
+		CB30D70F25A5783D00AFC425 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 195217627BEDBBEEDC1E0E4A /* Pods-GradientLayerDemo-GradientLayerDemoUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LPF3349M6Q;
+				INFOPLIST_FILE = GradientLayerDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lazada.GradientLayerDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GradientLayerDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CB30D6D825A5783A00AFC425 /* Build configuration list for PBXProject "GradientLayerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB30D70525A5783D00AFC425 /* Debug */,
+				CB30D70625A5783D00AFC425 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB30D70725A5783D00AFC425 /* Build configuration list for PBXNativeTarget "GradientLayerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB30D70825A5783D00AFC425 /* Debug */,
+				CB30D70925A5783D00AFC425 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB30D70A25A5783D00AFC425 /* Build configuration list for PBXNativeTarget "GradientLayerDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB30D70B25A5783D00AFC425 /* Debug */,
+				CB30D70C25A5783D00AFC425 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB30D70D25A5783D00AFC425 /* Build configuration list for PBXNativeTarget "GradientLayerDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB30D70E25A5783D00AFC425 /* Debug */,
+				CB30D70F25A5783D00AFC425 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CB30D6D525A5783A00AFC425 /* Project object */;
+}

@@ -1,0 +1,6 @@
+framework module Pods_GradientLayerDemo_GradientLayerDemoUITests {
+  umbrella header "Pods-GradientLayerDemo-GradientLayerDemoUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
