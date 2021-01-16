@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-WeexDemo-WeexDemoUITests/Pods-WeexDemo-WeexDemoUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework
+${BUILT_PRODUCTS_DIR}/WeexSDK/WeexSDK.framework

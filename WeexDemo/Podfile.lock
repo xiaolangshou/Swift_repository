@@ -1,0 +1,20 @@
+PODS:
+  - SnapKit (4.2.0)
+  - WeexSDK (0.28.0)
+
+DEPENDENCIES:
+  - SnapKit
+  - WeexSDK (= 0.28.0)
+
+SPEC REPOS:
+  trunk:
+    - SnapKit
+    - WeexSDK
+
+SPEC CHECKSUMS:
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  WeexSDK: 78861d2f8b78f67e30580c15a54f5b420456db39
+
+PODFILE CHECKSUM: cd22472f22c01bcbd7d7869fffc1477432a9e70c
+
+COCOAPODS: 1.9.3
