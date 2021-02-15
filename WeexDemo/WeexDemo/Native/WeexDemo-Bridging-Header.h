@@ -10,6 +10,5 @@
 
 #import "WXSwiftTestModule.h"
 #import "WeexSDK.h"
-#import "WXImgLoaderDefaultImpl.h"
 
 #endif /* Header_h */

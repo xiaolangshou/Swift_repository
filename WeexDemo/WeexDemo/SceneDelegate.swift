@@ -13,22 +13,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     @available(iOS 13.0, *)
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
         window = UIWindow.init(windowScene: windowScene)
         window?.backgroundColor = UIColor.white
         window?.makeKeyAndVisible()
 
-        initWeex()
+        let url = "https://market.wapa.taobao.com/app/crazy-code/weex_demo/pages/index?wh_weex=true&queryType=openFloatingLayer"
+//        let url = "file://\(Bundle.main.bundlePath)/index.js"
+        var vc: ViewController?
+        if url.hasPrefix("http") {
+            vc = ViewController.init(server: url)
+        } else {
+            vc = ViewController.init(bundle: "index")
+        }
+        window?.rootViewController = UINavigationController.init(rootViewController: vc!)
 
-        let vc = ViewController.shared
-        let path = Bundle.main.path(forResource: "index", ofType: "js")
-        vc.urlStr = path!
-        window?.rootViewController = UINavigationController.init(rootViewController: vc)
-        
+        initWeex()
     }
 
     func initWeex() {
@@ -36,15 +38,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         WXAppConfiguration.setAppGroup("Lazada")
         WXAppConfiguration.setAppName("WeexDemo")
         WXAppConfiguration.setAppVersion("1.0")
+        WXAppConfiguration.setExternalUserAgent("ExternalUA")
 
         //Initialize WeexSDK
         WXSDKEngine.initSDKEnvironment()
 
         //Register custom modules and components, optional.
-        WXSDKEngine.registerModule("mymodule2", with: NSClassFromString("WXSwiftTestModule")!)
+        WXSDKEngine.registerModule(PaymentWxModule.TAG, with: NSClassFromString("PaymentWxModule")!)
 
         //Register the implementation of protocol, optional.
-        WXSDKEngine.registerHandler(WXNavigationDefaultImpl(), with: NSProtocolFromString("WXNavigationProtocol")!)
+        WXSDKEngine.registerHandler(WXNavigationDefaultImpl(),
+                                    with: NSProtocolFromString("WXNavigationProtocol")!)
 
         //Set the log level, optional
         WXLog.setLogLevel(.WXLogLevelAll)

@@ -1,0 +1,735 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8D28772CC53DDAD781A7139C /* Pods_ShadowOffsetDemo_ShadowOffsetDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047392390F23B29B58A695E1 /* Pods_ShadowOffsetDemo_ShadowOffsetDemoUITests.framework */; };
+		90C7F1A9F5368B61AAF5BDD4 /* Pods_ShadowOffsetDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3383DA95D4C9CAE6A7871EB4 /* Pods_ShadowOffsetDemo.framework */; };
+		CBBE39A425CBE88100D7ACF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBE39A325CBE88100D7ACF4 /* AppDelegate.swift */; };
+		CBBE39A625CBE88100D7ACF4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBE39A525CBE88100D7ACF4 /* SceneDelegate.swift */; };
+		CBBE39A825CBE88100D7ACF4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBE39A725CBE88100D7ACF4 /* ViewController.swift */; };
+		CBBE39AB25CBE88100D7ACF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBBE39A925CBE88100D7ACF4 /* Main.storyboard */; };
+		CBBE39AD25CBE88400D7ACF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBBE39AC25CBE88400D7ACF4 /* Assets.xcassets */; };
+		CBBE39B025CBE88400D7ACF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBBE39AE25CBE88400D7ACF4 /* LaunchScreen.storyboard */; };
+		CBBE39BB25CBE88400D7ACF4 /* ShadowOffsetDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBE39BA25CBE88400D7ACF4 /* ShadowOffsetDemoTests.swift */; };
+		CBBE39C625CBE88400D7ACF4 /* ShadowOffsetDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBE39C525CBE88400D7ACF4 /* ShadowOffsetDemoUITests.swift */; };
+		ED5A586CC5235E927FB729CD /* Pods_ShadowOffsetDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B83C99047EBE7B92292CA7 /* Pods_ShadowOffsetDemoTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CBBE39B725CBE88400D7ACF4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CBBE399825CBE88100D7ACF4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CBBE399F25CBE88100D7ACF4;
+			remoteInfo = ShadowOffsetDemo;
+		};
+		CBBE39C225CBE88400D7ACF4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CBBE399825CBE88100D7ACF4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CBBE399F25CBE88100D7ACF4;
+			remoteInfo = ShadowOffsetDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03E8B9EF7C49A4797AFE68C4 /* Pods-ShadowOffsetDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShadowOffsetDemo.release.xcconfig"; path = "Target Support Files/Pods-ShadowOffsetDemo/Pods-ShadowOffsetDemo.release.xcconfig"; sourceTree = "<group>"; };
+		047392390F23B29B58A695E1 /* Pods_ShadowOffsetDemo_ShadowOffsetDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShadowOffsetDemo_ShadowOffsetDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		06B8A10F022D1138D844215E /* Pods-ShadowOffsetDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShadowOffsetDemo.debug.xcconfig"; path = "Target Support Files/Pods-ShadowOffsetDemo/Pods-ShadowOffsetDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		07B83C99047EBE7B92292CA7 /* Pods_ShadowOffsetDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShadowOffsetDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3383DA95D4C9CAE6A7871EB4 /* Pods_ShadowOffsetDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShadowOffsetDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B720297B5C7D7ED963385C4 /* Pods-ShadowOffsetDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShadowOffsetDemoTests.release.xcconfig"; path = "Target Support Files/Pods-ShadowOffsetDemoTests/Pods-ShadowOffsetDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		A28FAC65690C7940FE81E9B1 /* Pods-ShadowOffsetDemo-ShadowOffsetDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShadowOffsetDemo-ShadowOffsetDemoUITests.release.xcconfig"; path = "Target Support Files/Pods-ShadowOffsetDemo-ShadowOffsetDemoUITests/Pods-ShadowOffsetDemo-ShadowOffsetDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A6FEBED2AFB55A6CCFB1892C /* Pods-ShadowOffsetDemo-ShadowOffsetDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShadowOffsetDemo-ShadowOffsetDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-ShadowOffsetDemo-ShadowOffsetDemoUITests/Pods-ShadowOffsetDemo-ShadowOffsetDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CBBE39A025CBE88100D7ACF4 /* ShadowOffsetDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShadowOffsetDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBBE39A325CBE88100D7ACF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CBBE39A525CBE88100D7ACF4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CBBE39A725CBE88100D7ACF4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CBBE39AA25CBE88100D7ACF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CBBE39AC25CBE88400D7ACF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CBBE39AF25CBE88400D7ACF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CBBE39B125CBE88400D7ACF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBBE39B625CBE88400D7ACF4 /* ShadowOffsetDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShadowOffsetDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBBE39BA25CBE88400D7ACF4 /* ShadowOffsetDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowOffsetDemoTests.swift; sourceTree = "<group>"; };
+		CBBE39BC25CBE88400D7ACF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBBE39C125CBE88400D7ACF4 /* ShadowOffsetDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShadowOffsetDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBBE39C525CBE88400D7ACF4 /* ShadowOffsetDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowOffsetDemoUITests.swift; sourceTree = "<group>"; };
+		CBBE39C725CBE88400D7ACF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0F5535DC70324AC03D8A745 /* Pods-ShadowOffsetDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShadowOffsetDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-ShadowOffsetDemoTests/Pods-ShadowOffsetDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CBBE399D25CBE88100D7ACF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90C7F1A9F5368B61AAF5BDD4 /* Pods_ShadowOffsetDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBBE39B325CBE88400D7ACF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED5A586CC5235E927FB729CD /* Pods_ShadowOffsetDemoTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBBE39BE25CBE88400D7ACF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D28772CC53DDAD781A7139C /* Pods_ShadowOffsetDemo_ShadowOffsetDemoUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8388E2AA1A775AA3F4117B11 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				06B8A10F022D1138D844215E /* Pods-ShadowOffsetDemo.debug.xcconfig */,
+				03E8B9EF7C49A4797AFE68C4 /* Pods-ShadowOffsetDemo.release.xcconfig */,
+				A6FEBED2AFB55A6CCFB1892C /* Pods-ShadowOffsetDemo-ShadowOffsetDemoUITests.debug.xcconfig */,
+				A28FAC65690C7940FE81E9B1 /* Pods-ShadowOffsetDemo-ShadowOffsetDemoUITests.release.xcconfig */,
+				F0F5535DC70324AC03D8A745 /* Pods-ShadowOffsetDemoTests.debug.xcconfig */,
+				6B720297B5C7D7ED963385C4 /* Pods-ShadowOffsetDemoTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CBBE399725CBE88100D7ACF4 = {
+			isa = PBXGroup;
+			children = (
+				CBBE39A225CBE88100D7ACF4 /* ShadowOffsetDemo */,
+				CBBE39B925CBE88400D7ACF4 /* ShadowOffsetDemoTests */,
+				CBBE39C425CBE88400D7ACF4 /* ShadowOffsetDemoUITests */,
+				CBBE39A125CBE88100D7ACF4 /* Products */,
+				8388E2AA1A775AA3F4117B11 /* Pods */,
+				DF7C8B516F49E5389BA22B3E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CBBE39A125CBE88100D7ACF4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CBBE39A025CBE88100D7ACF4 /* ShadowOffsetDemo.app */,
+				CBBE39B625CBE88400D7ACF4 /* ShadowOffsetDemoTests.xctest */,
+				CBBE39C125CBE88400D7ACF4 /* ShadowOffsetDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CBBE39A225CBE88100D7ACF4 /* ShadowOffsetDemo */ = {
+			isa = PBXGroup;
+			children = (
+				CBBE39A325CBE88100D7ACF4 /* AppDelegate.swift */,
+				CBBE39A525CBE88100D7ACF4 /* SceneDelegate.swift */,
+				CBBE39A725CBE88100D7ACF4 /* ViewController.swift */,
+				CBBE39A925CBE88100D7ACF4 /* Main.storyboard */,
+				CBBE39AC25CBE88400D7ACF4 /* Assets.xcassets */,
+				CBBE39AE25CBE88400D7ACF4 /* LaunchScreen.storyboard */,
+				CBBE39B125CBE88400D7ACF4 /* Info.plist */,
+			);
+			path = ShadowOffsetDemo;
+			sourceTree = "<group>";
+		};
+		CBBE39B925CBE88400D7ACF4 /* ShadowOffsetDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				CBBE39BA25CBE88400D7ACF4 /* ShadowOffsetDemoTests.swift */,
+				CBBE39BC25CBE88400D7ACF4 /* Info.plist */,
+			);
+			path = ShadowOffsetDemoTests;
+			sourceTree = "<group>";
+		};
+		CBBE39C425CBE88400D7ACF4 /* ShadowOffsetDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CBBE39C525CBE88400D7ACF4 /* ShadowOffsetDemoUITests.swift */,
+				CBBE39C725CBE88400D7ACF4 /* Info.plist */,
+			);
+			path = ShadowOffsetDemoUITests;
+			sourceTree = "<group>";
+		};
+		DF7C8B516F49E5389BA22B3E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3383DA95D4C9CAE6A7871EB4 /* Pods_ShadowOffsetDemo.framework */,
+				047392390F23B29B58A695E1 /* Pods_ShadowOffsetDemo_ShadowOffsetDemoUITests.framework */,
+				07B83C99047EBE7B92292CA7 /* Pods_ShadowOffsetDemoTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CBBE399F25CBE88100D7ACF4 /* ShadowOffsetDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBBE39CA25CBE88400D7ACF4 /* Build configuration list for PBXNativeTarget "ShadowOffsetDemo" */;
+			buildPhases = (
+				9CF162889CC719E5AF095F69 /* [CP] Check Pods Manifest.lock */,
+				CBBE399C25CBE88100D7ACF4 /* Sources */,
+				CBBE399D25CBE88100D7ACF4 /* Frameworks */,
+				CBBE399E25CBE88100D7ACF4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShadowOffsetDemo;
+			productName = ShadowOffsetDemo;
+			productReference = CBBE39A025CBE88100D7ACF4 /* ShadowOffsetDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CBBE39B525CBE88400D7ACF4 /* ShadowOffsetDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBBE39CD25CBE88400D7ACF4 /* Build configuration list for PBXNativeTarget "ShadowOffsetDemoTests" */;
+			buildPhases = (
+				39AD24D4D8181AC8DF63124C /* [CP] Check Pods Manifest.lock */,
+				CBBE39B225CBE88400D7ACF4 /* Sources */,
+				CBBE39B325CBE88400D7ACF4 /* Frameworks */,
+				CBBE39B425CBE88400D7ACF4 /* Resources */,
+				347B80EFD7DD9815C1CAE9CC /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CBBE39B825CBE88400D7ACF4 /* PBXTargetDependency */,
+			);
+			name = ShadowOffsetDemoTests;
+			productName = ShadowOffsetDemoTests;
+			productReference = CBBE39B625CBE88400D7ACF4 /* ShadowOffsetDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CBBE39C025CBE88400D7ACF4 /* ShadowOffsetDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBBE39D025CBE88400D7ACF4 /* Build configuration list for PBXNativeTarget "ShadowOffsetDemoUITests" */;
+			buildPhases = (
+				39A772CDA767678D3AC17DDD /* [CP] Check Pods Manifest.lock */,
+				CBBE39BD25CBE88400D7ACF4 /* Sources */,
+				CBBE39BE25CBE88400D7ACF4 /* Frameworks */,
+				CBBE39BF25CBE88400D7ACF4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CBBE39C325CBE88400D7ACF4 /* PBXTargetDependency */,
+			);
+			name = ShadowOffsetDemoUITests;
+			productName = ShadowOffsetDemoUITests;
+			productReference = CBBE39C125CBE88400D7ACF4 /* ShadowOffsetDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CBBE399825CBE88100D7ACF4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					CBBE399F25CBE88100D7ACF4 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					CBBE39B525CBE88400D7ACF4 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = CBBE399F25CBE88100D7ACF4;
+					};
+					CBBE39C025CBE88400D7ACF4 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = CBBE399F25CBE88100D7ACF4;
+					};
+				};
+			};
+			buildConfigurationList = CBBE399B25CBE88100D7ACF4 /* Build configuration list for PBXProject "ShadowOffsetDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CBBE399725CBE88100D7ACF4;
+			productRefGroup = CBBE39A125CBE88100D7ACF4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CBBE399F25CBE88100D7ACF4 /* ShadowOffsetDemo */,
+				CBBE39B525CBE88400D7ACF4 /* ShadowOffsetDemoTests */,
+				CBBE39C025CBE88400D7ACF4 /* ShadowOffsetDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CBBE399E25CBE88100D7ACF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBBE39B025CBE88400D7ACF4 /* LaunchScreen.storyboard in Resources */,
+				CBBE39AD25CBE88400D7ACF4 /* Assets.xcassets in Resources */,
+				CBBE39AB25CBE88100D7ACF4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBBE39B425CBE88400D7ACF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBBE39BF25CBE88400D7ACF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		347B80EFD7DD9815C1CAE9CC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShadowOffsetDemoTests/Pods-ShadowOffsetDemoTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShadowOffsetDemoTests/Pods-ShadowOffsetDemoTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShadowOffsetDemoTests/Pods-ShadowOffsetDemoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		39A772CDA767678D3AC17DDD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShadowOffsetDemo-ShadowOffsetDemoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		39AD24D4D8181AC8DF63124C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShadowOffsetDemoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9CF162889CC719E5AF095F69 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShadowOffsetDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CBBE399C25CBE88100D7ACF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBBE39A825CBE88100D7ACF4 /* ViewController.swift in Sources */,
+				CBBE39A425CBE88100D7ACF4 /* AppDelegate.swift in Sources */,
+				CBBE39A625CBE88100D7ACF4 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBBE39B225CBE88400D7ACF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBBE39BB25CBE88400D7ACF4 /* ShadowOffsetDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBBE39BD25CBE88400D7ACF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBBE39C625CBE88400D7ACF4 /* ShadowOffsetDemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CBBE39B825CBE88400D7ACF4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CBBE399F25CBE88100D7ACF4 /* ShadowOffsetDemo */;
+			targetProxy = CBBE39B725CBE88400D7ACF4 /* PBXContainerItemProxy */;
+		};
+		CBBE39C325CBE88400D7ACF4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CBBE399F25CBE88100D7ACF4 /* ShadowOffsetDemo */;
+			targetProxy = CBBE39C225CBE88400D7ACF4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CBBE39A925CBE88100D7ACF4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBBE39AA25CBE88100D7ACF4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CBBE39AE25CBE88400D7ACF4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBBE39AF25CBE88400D7ACF4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CBBE39C825CBE88400D7ACF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CBBE39C925CBE88400D7ACF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CBBE39CB25CBE88400D7ACF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06B8A10F022D1138D844215E /* Pods-ShadowOffsetDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LPF3349M6Q;
+				INFOPLIST_FILE = ShadowOffsetDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lazada.ShadowOffsetDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CBBE39CC25CBE88400D7ACF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03E8B9EF7C49A4797AFE68C4 /* Pods-ShadowOffsetDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LPF3349M6Q;
+				INFOPLIST_FILE = ShadowOffsetDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lazada.ShadowOffsetDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CBBE39CE25CBE88400D7ACF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0F5535DC70324AC03D8A745 /* Pods-ShadowOffsetDemoTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LPF3349M6Q;
+				INFOPLIST_FILE = ShadowOffsetDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lazada.ShadowOffsetDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShadowOffsetDemo.app/ShadowOffsetDemo";
+			};
+			name = Debug;
+		};
+		CBBE39CF25CBE88400D7ACF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B720297B5C7D7ED963385C4 /* Pods-ShadowOffsetDemoTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LPF3349M6Q;
+				INFOPLIST_FILE = ShadowOffsetDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lazada.ShadowOffsetDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShadowOffsetDemo.app/ShadowOffsetDemo";
+			};
+			name = Release;
+		};
+		CBBE39D125CBE88400D7ACF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6FEBED2AFB55A6CCFB1892C /* Pods-ShadowOffsetDemo-ShadowOffsetDemoUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LPF3349M6Q;
+				INFOPLIST_FILE = ShadowOffsetDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lazada.ShadowOffsetDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ShadowOffsetDemo;
+			};
+			name = Debug;
+		};
+		CBBE39D225CBE88400D7ACF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A28FAC65690C7940FE81E9B1 /* Pods-ShadowOffsetDemo-ShadowOffsetDemoUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LPF3349M6Q;
+				INFOPLIST_FILE = ShadowOffsetDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lazada.ShadowOffsetDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ShadowOffsetDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CBBE399B25CBE88100D7ACF4 /* Build configuration list for PBXProject "ShadowOffsetDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBBE39C825CBE88400D7ACF4 /* Debug */,
+				CBBE39C925CBE88400D7ACF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBBE39CA25CBE88400D7ACF4 /* Build configuration list for PBXNativeTarget "ShadowOffsetDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBBE39CB25CBE88400D7ACF4 /* Debug */,
+				CBBE39CC25CBE88400D7ACF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBBE39CD25CBE88400D7ACF4 /* Build configuration list for PBXNativeTarget "ShadowOffsetDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBBE39CE25CBE88400D7ACF4 /* Debug */,
+				CBBE39CF25CBE88400D7ACF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBBE39D025CBE88400D7ACF4 /* Build configuration list for PBXNativeTarget "ShadowOffsetDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBBE39D125CBE88400D7ACF4 /* Debug */,
+				CBBE39D225CBE88400D7ACF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CBBE399825CBE88100D7ACF4 /* Project object */;
+}

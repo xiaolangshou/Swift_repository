@@ -8,14 +8,7 @@ target 'WeexDemo' do
   # Pods for WeexDemo
   pod 'SnapKit'
   pod 'WeexSDK', '0.28.0'
-
-  target 'WeexDemoTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'WeexDemoUITests' do
-    # Pods for testing
-  end
+  pod 'WXDevtool'
+  pod 'SDWebImage', '3.7.5'
 
 end

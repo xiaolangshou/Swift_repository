@@ -1,9 +1,9 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/SnapKit" "${PODS_CONFIGURATION_BUILD_DIR}/WeexSDK" '$(PODS_ROOT)/WeexSDK'
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage" "${PODS_CONFIGURATION_BUILD_DIR}/SnapKit" "${PODS_CONFIGURATION_BUILD_DIR}/SocketRocket" "${PODS_CONFIGURATION_BUILD_DIR}/WXDevtool" "${PODS_CONFIGURATION_BUILD_DIR}/WeexSDK" '$(PODS_ROOT)/WeexSDK'
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/SnapKit/SnapKit.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/WeexSDK/WeexSDK.framework/Headers"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage/SDWebImage.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/SnapKit/SnapKit.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/SocketRocket/SocketRocket.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/WXDevtool/WXDevtool.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/WeexSDK/WeexSDK.framework/Headers"
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_LDFLAGS = $(inherited) -l"c++" -framework "AVFoundation" -framework "AVKit" -framework "CoreGraphics" -framework "CoreMedia" -framework "CoreText" -framework "GLKit" -framework "JavaScriptCore" -framework "MediaPlayer" -framework "OpenGLES" -framework "QuartzCore" -framework "SnapKit" -framework "WeexSDK"
+OTHER_LDFLAGS = $(inherited) -l"c++" -l"icucore" -l"z" -framework "AVFoundation" -framework "AVKit" -framework "CFNetwork" -framework "CoreData" -framework "CoreGraphics" -framework "CoreMedia" -framework "CoreText" -framework "Foundation" -framework "GLKit" -framework "ImageIO" -framework "JavaScriptCore" -framework "MediaPlayer" -framework "OpenGLES" -framework "QuartzCore" -framework "SDWebImage" -framework "Security" -framework "SnapKit" -framework "SocketRocket" -framework "UIKit" -framework "WXDevtool" -framework "WeexSDK"
 OTHER_LINK_FLAG = $(inherited) -ObjC
 OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS
 PODS_BUILD_DIR = ${BUILD_DIR}
