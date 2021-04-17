@@ -15,6 +15,8 @@ class ViewController: UIViewController {
 
     var sourceURL: URL?
     var params: [String: Any]?
+    var theWidth = 750
+    var theHeight = 450
 
     let instance = WXSDKInstance.init()
     var weexView = UIView()
@@ -63,7 +65,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         instance.viewController = self
-        instance.frame = self.view.frame
+        instance.frame = self.view.bounds
 
         instance.onCreate = { [weak self] view in
             guard let self = self else { return }
@@ -71,8 +73,9 @@ class ViewController: UIViewController {
             self.weexView = view
             self.view.addSubview(self.weexView)
             self.weexView.snp.makeConstraints {
-                $0.left.right.bottom.equalToSuperview()
-                $0.top.equalTo(100)
+                $0.left.right.equalToSuperview()
+                $0.top.equalTo(90)
+                $0.height.equalTo(100)
             }
             self.weexView.backgroundColor = UIColor.cyan
         }
@@ -90,8 +93,22 @@ class ViewController: UIViewController {
             return
         }
         let dict = url.urlParams
-        let dic = NSDictionary.init(dictionary: ["fields" : ["alipayImage": "sss"]])
-        _ = self.getJSONStringFromDictionary(dictionary: dic)
+        let tempDic = NSMutableDictionary.init()
+        tempDic.addEntries(from: ["title": "Open Floating Layer(打开半浮层)"])
+        tempDic.addEntries(from: ["subTitle" : "DBS Installment"])
+        tempDic.addEntries(from: ["icon" : "https://laz-img-cdn.alicdn.com/tfs/TB1Sx_2k29TBuNjy1zbXXXpepXa-400-400.png"])
+
+        let templateDic = NSMutableDictionary.init()
+        templateDic.addEntries(from: ["type" : "weex"])
+        templateDic.addEntries(from: ["url" : "https://market.wapa.taobao.com/app/crazy-code/weex_demo/pages/index?wh_weex=true&queryType=openFloatingLayer"])
+
+        let customize = NSMutableDictionary.init()
+        customize.addEntries(from: ["width" : 750])
+        customize.addEntries(from: ["height" : 450])
+        templateDic.addEntries(from: ["customize" : customize])
+
+        tempDic.addEntries(from: ["template" : templateDic])
+        let dic = NSDictionary.init(dictionary: ["fields" : tempDic])
 
         instance.render(with: url, options: self.params ?? dict ?? [:], data: dic)
     }

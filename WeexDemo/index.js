@@ -108,7 +108,7 @@ module.exports = __vue_exports__
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('text', {
     staticClass: ["message"]
-  }, [_vm._v("Now, let's use Vue.js to build your Weex app.")])
+  }, [_vm._v("Now, let's use Vue.js to build thomas Weex app.")])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 

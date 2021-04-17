@@ -9,7 +9,7 @@ import Foundation
 
 extension PaymentWxModule {
 
-    static let TAG = "PaymentWxModule"
+    static let TAG = "paymentWx"
 
     /// 提交数据
     /// - Parameter componentKey: 组件key值

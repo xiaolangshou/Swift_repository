@@ -10,7 +10,7 @@
 		041028D425BF216E00908408 /* OCBridge.h in Sources */ = {isa = PBXBuildFile; fileRef = CBAB667225B1633D00CA0B15 /* OCBridge.h */; };
 		CB14F74E25A872B40054B77E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB14F74D25A872B40054B77E /* SceneDelegate.swift */; };
 		CBAB666C25B1625700CA0B15 /* PaymentWxModule.m in Sources */ = {isa = PBXBuildFile; fileRef = CBAB666B25B1625700CA0B15 /* PaymentWxModule.m */; };
-		CBAB666E25B162DB00CA0B15 /* PaymentWxModule +Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAB666D25B162DB00CA0B15 /* PaymentWxModule +Ex.swift */; };
+		CBAB666E25B162DB00CA0B15 /* PaymentWxModule+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAB666D25B162DB00CA0B15 /* PaymentWxModule+Ex.swift */; };
 		CBAB894325B4931300CA0B15 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CBAB894225B4931300CA0B15 /* Info.plist */; };
 		CBCC308B25ABF2930092C684 /* HelloWorld.js in Resources */ = {isa = PBXBuildFile; fileRef = CBCC308625ABF2930092C684 /* HelloWorld.js */; };
 		CBCC308C25ABF2930092C684 /* HelloWorld.web.js in Resources */ = {isa = PBXBuildFile; fileRef = CBCC308725ABF2930092C684 /* HelloWorld.web.js */; };
@@ -38,7 +38,7 @@
 		CB14F74D25A872B40054B77E /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CBAB666A25B1625700CA0B15 /* PaymentWxModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaymentWxModule.h; sourceTree = "<group>"; };
 		CBAB666B25B1625700CA0B15 /* PaymentWxModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaymentWxModule.m; sourceTree = "<group>"; };
-		CBAB666D25B162DB00CA0B15 /* PaymentWxModule +Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PaymentWxModule +Ex.swift"; sourceTree = "<group>"; };
+		CBAB666D25B162DB00CA0B15 /* PaymentWxModule+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PaymentWxModule+Ex.swift"; sourceTree = "<group>"; };
 		CBAB667225B1633D00CA0B15 /* OCBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCBridge.h; sourceTree = "<group>"; };
 		CBAB894225B4931300CA0B15 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBCC308625ABF2930092C684 /* HelloWorld.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = HelloWorld.js; sourceTree = "<group>"; };
@@ -86,7 +86,7 @@
 			children = (
 				CBAB666A25B1625700CA0B15 /* PaymentWxModule.h */,
 				CBAB666B25B1625700CA0B15 /* PaymentWxModule.m */,
-				CBAB666D25B162DB00CA0B15 /* PaymentWxModule +Ex.swift */,
+				CBAB666D25B162DB00CA0B15 /* PaymentWxModule+Ex.swift */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -283,7 +283,7 @@
 				CBDD209125A7349100CE7F8B /* AppDelegate.swift in Sources */,
 				CBCC32EE25AC30E70092C684 /* WXImgLoaderDefaultImpl.m in Sources */,
 				CBAB666C25B1625700CA0B15 /* PaymentWxModule.m in Sources */,
-				CBAB666E25B162DB00CA0B15 /* PaymentWxModule +Ex.swift in Sources */,
+				CBAB666E25B162DB00CA0B15 /* PaymentWxModule+Ex.swift in Sources */,
 				CBCC32ED25AC30E70092C684 /* WXImageLoaderDefaultImplement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,6 +360,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -415,6 +416,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
