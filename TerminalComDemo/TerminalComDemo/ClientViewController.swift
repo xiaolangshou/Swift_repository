@@ -15,7 +15,7 @@ import SwiftSocket
 class ClientViewController: UIViewController {
 
     lazy var client: TCPClient = {
-        let client = TCPClient(address: "192.168.8.100", port: 7878)
+        let client = TCPClient(address: "120.79.149.226", port: 1883)
         return client
     }()
     
