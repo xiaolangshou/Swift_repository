@@ -37,7 +37,7 @@ class ViewController: UIViewController {
 
         let timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(run), userInfo: nil, repeats: true)
 
-        // 改变定时器的mode为commonmodel，可以让定时器运行在defaultMode和trackingModel两种模式下，不会出现滚动scrollview导致定时器失效的故障
+        // 改变定时器的mode为commonmode，可以让定时器运行在defaultMode和trackingModel两种模式下，不会出现滚动scrollview导致定时器失效的故障
         RunLoop.current.add(timer, forMode: RunLoop.Mode.common)
     }
 

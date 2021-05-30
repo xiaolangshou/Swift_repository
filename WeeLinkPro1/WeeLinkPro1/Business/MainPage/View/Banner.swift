@@ -57,8 +57,8 @@ class Banner: UIView {
         pageControl.currentPage = 0
         pageControl.pageIndicatorTintColor = UIColor.blue
         pageControl.currentPageIndicatorTintColor = UIColor.red
-        pageControl.setValue(UIImage(named: "banner_unselected"), forKey: "_pageImage")
-        pageControl.setValue(UIImage(named: "banner_selected"), forKey: "_currentPageImage")
+//        pageControl.setValue(UIImage(named: "banner_unselected"), forKey: "_pageImage")
+//        pageControl.setValue(UIImage(named: "banner_selected"), forKey: "_currentPageImage")
         
         self.addSubview(pageIcon)
         pageIcon.backgroundColor = UIColor.hex(0x5F6062)

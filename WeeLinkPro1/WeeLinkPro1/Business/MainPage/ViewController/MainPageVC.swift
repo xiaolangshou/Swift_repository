@@ -293,7 +293,7 @@ extension MainPageVC: UISearchBarDelegate {
         let vc = HistoryVC.shared
         
         vc.hidesBottomBarWhenPushed = true
-        navigationController?.pushViewController(vc, animated: true)
+        navigationController?.pushViewController(vc, animated: false)
     }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {

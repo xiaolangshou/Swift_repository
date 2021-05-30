@@ -16,8 +16,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        demo1()
-        demo2()
+        demo1()
+//        demo2()
     }
 
     /// 在所有UI相关的操作之前处理任务: 按钮点击之前,先执行observe方法里面的代码
@@ -66,7 +66,7 @@ class ViewController: UIViewController {
         print(" 点击了Btn")
     }
 
-    /// 后台常驻线程检测触屏
+    /// 常驻子线程检测触屏
     /*
      a.如果没有实现添加NSPort或者NSTimer，会发现执行完run方法，线程就会消亡，后续再执行touchbegan方法无效。
      b.我们必须保证线程不消亡，才可以在后台接受事件处理
